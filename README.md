@@ -1,16 +1,7 @@
 
 
-  ## [Page]()
+  ## [Page](https://studio-yarrr.github.io/website-orteam/)
 
-  ## [Figma]()
+  ## [Figma](https://www.figma.com/design/yJwOSZwrc7TEFJcP1MUAsG/Orteam?node-id=1-1323&t=qWUp81Q5SXwT1CQe-0)
 
 
-  ### [Аккордеон](https://codepen.io/Ruslan-Shketsik/pen/rNPyjaw)
-
-  ### [Выпадающее меню](https://codepen.io/Ruslan-Shketsik/pen/abXrZqG)
-
-  ### [Табы](https://codepen.io/Ruslan-Shketsik/pen/ExMzLaa)
-
-  ### [Модальное окно](https://codepen.io/Ruslan-Shketsik/pen/BabergY)
-
-  ### [Анимация svg](https://codepen.io/Ruslan-Shketsik/pen/jORzzON)
