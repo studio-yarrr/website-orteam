@@ -124,6 +124,14 @@ a {
   }
 }
 
+.list__swiper {
+  @include breakpoint($sm-bp) {
+    width: 100vw;
+    height: 584px;
+    overflow: hidden;
+  }
+}
+
 ::-webkit-scrollbar {
   // width: 0.8rem;
   // height: 0;
