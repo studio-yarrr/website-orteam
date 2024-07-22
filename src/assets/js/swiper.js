@@ -6,9 +6,9 @@ function isMobile() {
 if (isMobile()) {
     const swiper = new Swiper('.list__swiper', {
         slidesPerView: 1.5,
-        spaceBetween: 50, // Отступ между слайдами
-        centeredSlides: true, // Второй слайд будет по центру
-        initialSlide: 1, // Начальный слайд (второй)
+        spaceBetween: 50,
+        centeredSlides: true,
+        initialSlide: 1,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -19,3 +19,30 @@ if (isMobile()) {
         },
     });
 }
+
+const slider2 = new Swiper('.team__swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 2,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.5,
+        },
+
+        768: {
+            slidesPerView: 2,
+        },
+
+        1024: {
+            slidesPerView: 2,
+        }
+
+    },
+})

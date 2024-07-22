@@ -132,6 +132,25 @@ a {
   }
 }
 
+.team__swiper {
+  width: 121.6rem;
+  height: auto;
+  overflow: hidden;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 2rem!important;
+  color: var(--color1)!important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+
 ::-webkit-scrollbar {
   // width: 0.8rem;
   // height: 0;
