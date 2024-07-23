@@ -132,22 +132,58 @@ a {
   }
 }
 
+.details__swiper {
+  @include breakpoint($sm-bp) {
+    width: 100vw;
+    height: 372px;
+    overflow: hidden;
+  }
+}
+
 .team__swiper {
   width: 121.6rem;
   height: auto;
   overflow: hidden;
+  @include breakpoint($xl-bp) {
+    width: 60rem;
+  }
+  @include breakpoint($sm-bp) {
+    width: 45rem;
+  }
+}
+
+.process__swiper {
+  width: 121.6rem;
+  height: auto;
+  overflow: hidden;
+  @include breakpoint($xl-bp) {
+    width: 60rem;
+  }
+  @include breakpoint($sm-bp) {
+    width: 45rem;
+  }
 }
 
 .swiper-button-prev:after,
-.swiper-button-next:after {
+.swiper-button-next:after,
+.process-button-prev:after,
+.process-button-next:after{
   font-size: 2rem!important;
   color: var(--color1)!important;
 }
 
 .swiper-button-prev,
-.swiper-button-next {
+.swiper-button-next,
+.process-button-prev,
+.process-button-next {
   width: 3.2rem;
   height: 3.2rem;
+}
+
+.dn--mob {
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
 }
 
 

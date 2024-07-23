@@ -7,6 +7,21 @@
   font-weight: 700;
 }
 
+.button--light {
+  background-color: var(--white);
+  text-align: center;
+  font-weight: 700;
+  padding: 2rem  4.8rem;
+  border-radius: 1.2rem;
+  border: 1px solid var(--color2);
+}
+
+.button--light:hover {
+  cursor: pointer;
+  background-color: var(--color2);
+  color: var(--color1);
+}
+
 .button:hover {
   cursor: pointer;
   background-color: var(--color1);
@@ -14,5 +29,14 @@
 }
 
 .button-slider__item {
-
+  padding: 1.6rem 3rem;
 }
+
+.button-standards {
+  padding: 0.8rem 2rem;
+  font-weight: 400;
+  @include breakpoint($sm-bp) {
+    padding: 0.8rem 1rem;
+  }
+}
+
