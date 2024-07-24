@@ -200,6 +200,12 @@ body {
     line-height: 2rem;
 }
 
+select {
+    color: var(--color1);
+    border: none;
+    outline: none;
+}
+
 img {
     width: 100%;
     height: 100%;
@@ -4440,6 +4446,13 @@ sup {
     background-repeat: no-repeat;
     background-position: bottom right;
     height: 62rem;
+    margin-bottom: 8.7rem;
+}
+
+@media (max-width: 768px) {
+    .record-content {
+        margin-bottom: 6.7rem;
+    }
 }
 
 .record {
@@ -4449,10 +4462,17 @@ sup {
     padding: 2rem;
 }
 
+@media (max-width: 768px) {
+    .record {
+        padding: 1.2rem;
+    }
+}
+
 .record__title {
     font-weight: 800;
     font-size: 3.2rem;
     line-height: 3.8rem;
+    margin-bottom: 2.4rem;
 }
 
 @media (max-width: 768px) {
@@ -4461,6 +4481,51 @@ sup {
         font-size: 2.4rem;
         line-height: 3.1rem;
     }
+}
+
+.record__icon {
+    margin-bottom: 2.4rem;
+}
+
+.form {
+    margin: 4rem 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+@media (max-width: 768px) {
+    .form {
+        margin: 2.4rem 0;
+    }
+}
+
+.form span {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.form button {
+    margin: 1.6rem 0 2.4rem;
+}
+
+.form select {
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.record__subtitle {
+    max-width: 80%;
+}
+
+.input {
+    border-bottom: 1px solid var(--grey);
+}
+
+.italic {
+    font-style: italic;
 }
 
 /*------footer-----*/

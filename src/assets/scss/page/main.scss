@@ -823,6 +823,10 @@ a.order4 .list__item {
   background-repeat: no-repeat;
   background-position: bottom right;
   height: 62rem;
+  margin-bottom: 8.7rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 6.7rem;
+  }
 }
 
 .record {
@@ -830,15 +834,60 @@ a.order4 .list__item {
   border-radius: 1.2rem;
   background-color: var(--white);
   padding: 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
 }
 
 .record__title {
   font-weight: 800;
   font-size: 3.2rem;
   line-height: 3.8rem;
+  margin-bottom: 2.4rem;
   @include breakpoint($sm-bp) {
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;
   }
 }
+
+.record__icon {
+  margin-bottom: 2.4rem;
+}
+
+.form {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @include breakpoint($sm-bp) {
+    margin: 2.4rem 0;
+  }
+}
+
+.form span {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.form button {
+  margin: 1.6rem 0 2.4rem;
+}
+
+.form select {
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.record__subtitle {
+  max-width: 80%;
+}
+
+.input {
+  border-bottom: 1px solid var(--grey);
+}
+
+.italic {
+  font-style: italic;
+}
+
