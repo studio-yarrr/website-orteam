@@ -107,6 +107,7 @@ button,
 a {
   text-decoration: none;
   color: inherit;
+  outline: none;
 }
 
 .text {
@@ -159,7 +160,8 @@ a {
   }
 }
 
-.process__swiper {
+.process__swiper,
+.reviews__swiper {
   width: 121.6rem;
   height: auto;
   overflow: hidden;

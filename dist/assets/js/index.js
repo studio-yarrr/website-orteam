@@ -1,8 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  // Fancybox.bind("[data-fancybox]", {
-  //   // Your custom options
-  // });
+    Fancybox.bind('[data-fancybox]', {
+        // Ваши настройки
+        hideScrollbar: false
+    });
+
 
   const headerBurger = document.querySelector('.header__burger');
   const menuWrapper = document.querySelector('.menu__wrapper');
@@ -76,6 +78,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     );
   }
   addMask();
+// copy text
+
+    const reviewTexts = document.querySelectorAll('.reviews__item-text');
+    const reviewPopups = document.querySelectorAll('.review-popup');
+
+    reviewPopups.forEach(function(popup, index) {
+        popup.innerHTML = reviewTexts[index].innerHTML;
+    });
 
 
 });

@@ -81,3 +81,30 @@ const slider4 = new Swiper('.process__swiper', {
 
     },
 })
+
+const slider5 = new Swiper('.reviews__swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 4,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.5,
+        },
+
+        768: {
+            slidesPerView: 3,
+        },
+
+        1024: {
+            slidesPerView: 4,
+        }
+
+    },
+})
