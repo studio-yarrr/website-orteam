@@ -148,7 +148,8 @@ a {
   }
 }
 
-.team__swiper {
+.team__swiper,
+.braces__swiper {
   width: 121.6rem;
   height: auto;
   overflow: hidden;
@@ -195,6 +196,60 @@ a {
   }
 }
 
+.reviews-button-next img,
+.reviews-button-prev img,
+.braces-button-next img,
+.braces-button-prev img {
+  width: 1.2rem;
+  height: 2rem;
+}
+
+.reviews-button-prev,
+.reviews-button-next,
+.braces-button-next,
+.braces-button-prev {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews-button-next.swiper-button-disabled,
+.reviews-button-prev.swiper-button-disabled,
+.braces-button-next.swiper-button-disabled,
+.braces-button-prev.swiper-button-disabled {
+  opacity: 0.2;
+}
+
+.reviews-button-prev,
+.braces-button-prev {
+  transform: rotate(180deg);
+}
+
+.reviews-button-next:hover,
+.braces-button-prev:hover,
+.reviews-button-prev:hover,
+.braces-button-next:hover{
+  cursor: pointer;
+}
+
+.reviews__buttons-container,
+.braces__buttons {
+  display: flex;
+  position: absolute;
+  right: 0;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.braces__buttons {
+  top: 0;
+}
+
+.reviews__buttons-container {
+  bottom: 0;
+}
 
 ::-webkit-scrollbar {
   // width: 0.8rem;

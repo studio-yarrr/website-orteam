@@ -894,7 +894,7 @@ a.order4 .list__item {
 .reviews__slider {
   position: relative;
   margin-top: 5.6rem;
-  margin-bottom: 5.6rem;
+  padding-bottom: 5.6rem;
   @include breakpoint($sm-bp) {
     margin-top: 2.4rem;
   }
@@ -1004,11 +1004,11 @@ a.order4 .list__item {
   bottom: 0;
 }
 
-.reviews__buttons-container {
-  position: absolute;
-  bottom: -5%;
-  right: 0;
-  width: 12rem;
+.braces {
+  margin-bottom: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 6.4rem;
+  }
 }
 
 .braces h2,
@@ -1019,7 +1019,7 @@ a.order4 .list__item {
 }
 
 .braces__text {
-  margin: 2.4rem 0 5.6rem;
+  margin-top: 2.4rem;
   max-width: 37%;
   @include breakpoint($sm-bp) {
     margin: 2.4rem 0;
@@ -1032,6 +1032,7 @@ a.order4 .list__item {
   border-radius: 1.2rem;
   background-color: var(--white);
   padding-bottom: 2rem;
+  overflow: hidden;
   @include breakpoint($sm-bp) {
     padding-bottom: 1.2rem;
   }
@@ -1043,9 +1044,32 @@ a.order4 .list__item {
   font-size: 2.4rem;
   line-height: 3.1rem;
   text-align: end;
+  margin-top: 1.6rem;
   @include breakpoint($sm-bp) {
     font-size: 1.6rem;
     line-height: 2rem;
     padding-right: 1.2rem;
   }
 }
+
+.braces__item-img {
+  height: 38rem;
+  @include breakpoint($sm-bp) {
+    height: 32rem;
+  }
+}
+
+.braces__text-subslider {
+  max-width: 45%;
+  margin-top: 2.4rem;
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
+}
+
+.braces__slider {
+  padding-top: 5.6rem;
+  position: relative;
+}
+
+

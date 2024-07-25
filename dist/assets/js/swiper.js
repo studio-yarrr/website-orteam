@@ -88,8 +88,8 @@ const slider5 = new Swiper('.reviews__swiper', {
     slidesPerView: 4,
 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.reviews-button-next',
+        prevEl: '.reviews-button-prev',
     },
 
     breakpoints: {
@@ -104,6 +104,33 @@ const slider5 = new Swiper('.reviews__swiper', {
 
         1024: {
             slidesPerView: 4,
+        }
+
+    },
+})
+
+const slider6 = new Swiper('.braces__swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 2.5,
+
+    navigation: {
+        nextEl: '.braces-button-next',
+        prevEl: '.braces-button-prev',
+    },
+
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.5,
+        },
+
+        768: {
+            slidesPerView: 2.5,
+        },
+
+        1024: {
+            slidesPerView: 2.5,
         }
 
     },
