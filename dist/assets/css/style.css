@@ -3315,6 +3315,13 @@ li.active {
     font-weight: 700;
 }
 
+.button__bg-dark {
+    background-color: var(--color1);
+    color: var(--white);
+    text-align: left;
+    padding: 2rem;
+}
+
 .button--light {
     background-color: var(--white);
     text-align: center;
@@ -4113,7 +4120,10 @@ sup {
     width: 12rem;
 }
 
+.price h2,
+.surgery h2,
 .standards h2,
+.analytics h2,
 .details {
     text-align: center;
 }
@@ -4170,12 +4180,14 @@ sup {
     margin-bottom: -4%;
 }
 
+.surgery__img,
 .standards__item-img {
     height: 40rem;
 }
 
 @media (max-width: 1024px) {
-    .standards__item-img {
+    .surgery__img,
+  .standards__item-img {
         height: 27rem;
     }
 }
@@ -4730,12 +4742,14 @@ sup {
     bottom: 0;
 }
 
-.braces {
+.braces,
+.analytics {
     margin-bottom: 8.4rem;
 }
 
 @media (max-width: 768px) {
-    .braces {
+    .braces,
+  .analytics {
         margin-bottom: 6.4rem;
     }
 }
@@ -4814,6 +4828,173 @@ sup {
 .braces__slider {
     padding-top: 5.6rem;
     position: relative;
+}
+
+.surgery {
+    margin-bottom: 10.4rem;
+}
+
+@media (max-width: 768px) {
+    .surgery {
+        margin-bottom: 6.4rem;
+    }
+}
+
+.surgery__container,
+.analytics__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 5.6rem;
+}
+
+@media (max-width: 768px) {
+    .surgery__container,
+  .analytics__container {
+        margin-top: 2.4rem;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+}
+
+.surgery__container {
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .surgery__container {
+        gap: 0;
+    }
+}
+
+.analytics__item {
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    padding: 2rem;
+    display: -ms-flexbox;
+    display: flex;
+    height: 40rem;
+    width: 60rem;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .analytics__item {
+        padding: 1.2rem;
+    }
+}
+
+.analytics__text,
+.surgery__item-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.analytics__button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 37rem;
+}
+
+@media (max-width: 768px) {
+    .analytics__button {
+        padding: 100%;
+    }
+}
+
+.surgery__item {
+    height: 53rem;
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    padding: 2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .surgery__item {
+        padding: 1.2rem;
+    }
+}
+
+.surgery__img-container {
+    border-radius: 1.2rem;
+    position: relative;
+    width: 33rem;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border: 1px solid var(--color2);
+    background-color: var(--white);
+}
+
+.surgery__img {
+    margin-bottom: 2.4rem;
+}
+
+.surgery__img-container a {
+    margin: 0 4.6rem;
+    position: absolute;
+    bottom: -3%;
+}
+
+.surgery__img-container .standards__img-subtitle {
+    margin: 0.8rem 0;
+}
+
+.price {
+    background-color: var(--white);
+    border-radius: 1.2rem;
+    padding: 8.4rem 2rem 10.4rem 2rem;
+}
+
+.price__item {
+    border-radius: 1.2rem;
+    padding: 2rem;
+    background-color: var(--grey);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.6rem;
+    border: 1px solid var(--color2);
+}
+
+.price__title {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+}
+
+.price__sum {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #4A6169;
 }
 
 /*------footer-----*/

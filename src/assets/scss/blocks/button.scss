@@ -7,6 +7,13 @@
   font-weight: 700;
 }
 
+.button__bg-dark {
+  background-color: var(--color1);
+  color: var(--white);
+  text-align: left;
+  padding: 2rem;
+}
+
 .button--light {
   background-color: var(--white);
   text-align: center;
