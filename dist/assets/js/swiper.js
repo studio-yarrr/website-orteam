@@ -26,6 +26,28 @@ if (isMobile()) {
             clickable: true,
         },
     });
+
+    const slider7 = new Swiper('.price-swiper', {
+        spaceBetween: 20,
+        speed: 800,
+        slidesPerView: 4,
+
+        // breakpoints: {
+        //
+        //     320: {
+        //         slidesPerView: 1.5,
+        //     },
+        //
+        //     768: {
+        //         slidesPerView: 2.5,
+        //     },
+        //
+        //     1024: {
+        //         slidesPerView: 2.5,
+        //     }
+        //
+        // },
+    })
 }
 
 const slider2 = new Swiper('.team__swiper', {
@@ -131,6 +153,60 @@ const slider6 = new Swiper('.braces__swiper', {
 
         1024: {
             slidesPerView: 2.5,
+        }
+
+    },
+})
+
+const slider8 = new Swiper('.articles-swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 2.5,
+
+    navigation: {
+        nextEl: '.articles-button-next',
+        prevEl: '.articles-button-prev',
+    },
+
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.5,
+        },
+
+        768: {
+            slidesPerView: 2.5,
+        },
+
+        1024: {
+            slidesPerView: 3.5,
+        }
+
+    },
+})
+
+const slider9 = new Swiper('.video-swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 2.5,
+
+    navigation: {
+        nextEl: '.video-button-next',
+        prevEl: '.video-button-prev',
+    },
+
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.5,
+        },
+
+        768: {
+            slidesPerView: 2.5,
+        },
+
+        1024: {
+            slidesPerView: 3.5,
         }
 
     },

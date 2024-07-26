@@ -132,10 +132,10 @@ a {
   }
 }
 
-.list__swiper {
+.list__swiper,
+.price__container {
   @include breakpoint($sm-bp) {
     width: 100vw;
-    height: 584px;
     overflow: hidden;
   }
 }
@@ -148,6 +148,8 @@ a {
   }
 }
 
+.video-swiper,
+.articles-swiper,
 .team__swiper,
 .braces__swiper {
   width: 121.6rem;
@@ -159,6 +161,10 @@ a {
   @include breakpoint($sm-bp) {
     width: 45rem;
   }
+}
+
+.price-swiper {
+  height: 55rem;
 }
 
 .process__swiper,
@@ -196,6 +202,10 @@ a {
   }
 }
 
+.video-button-next img,
+.video-button-prev img,
+.articles-button-next img,
+.articles-button-prev img,
 .reviews-button-next img,
 .reviews-button-prev img,
 .braces-button-next img,
@@ -204,6 +214,10 @@ a {
   height: 2rem;
 }
 
+.video-button-prev,
+.video-button-next,
+.articles-button-prev,
+.articles-button-next,
 .reviews-button-prev,
 .reviews-button-next,
 .braces-button-next,
@@ -215,6 +229,10 @@ a {
   justify-content: center;
 }
 
+.video-button-next.swiper-button-disabled,
+.video-button-prev.swiper-button-disabled,
+.articles-button-next.swiper-button-disabled,
+.articles-button-prev.swiper-button-disabled,
 .reviews-button-next.swiper-button-disabled,
 .reviews-button-prev.swiper-button-disabled,
 .braces-button-next.swiper-button-disabled,
@@ -222,11 +240,17 @@ a {
   opacity: 0.2;
 }
 
+.video-button-prev,
+.articles-button-prev,
 .reviews-button-prev,
 .braces-button-prev {
   transform: rotate(180deg);
 }
 
+.video-button-next:hover,
+.video-button-prev:hover,
+.articles-button-next:hover,
+.articles-button-prev:hover,
 .reviews-button-next:hover,
 .braces-button-prev:hover,
 .reviews-button-prev:hover,
@@ -234,6 +258,9 @@ a {
   cursor: pointer;
 }
 
+
+.video__buttons,
+.articles__buttons,
 .reviews__buttons-container,
 .braces__buttons {
   display: flex;
@@ -243,12 +270,37 @@ a {
   align-items: center;
 }
 
+.video__buttons,
+.articles__buttons,
 .braces__buttons {
   top: 0;
 }
 
 .reviews__buttons-container {
   bottom: 0;
+}
+
+.accordion__title.active {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.accordion-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
+}
+
+.accordion-content.active {
+  visibility: visible;
+  opacity: 1;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out, visibility 0.1s ease-out;
+}
+
+.questions__svg svg.active  {
+  stroke: #4A6169;
+  transform: rotate(180deg);
 }
 
 ::-webkit-scrollbar {

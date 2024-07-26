@@ -1016,6 +1016,7 @@ a.order4 .list__item {
   }
 }
 
+.calculator__container h2,
 .braces h2,
 .reviews h2 {
   @include breakpoint($sm-bp) {
@@ -1072,6 +1073,8 @@ a.order4 .list__item {
   }
 }
 
+.video__slider,
+.articles__slider,
 .braces__slider {
   padding-top: 5.6rem;
   position: relative;
@@ -1180,11 +1183,12 @@ a.order4 .list__item {
 .price__item {
   border-radius: 1.2rem;
   padding: 2rem;
-  background-color: var(--grey);
+  background-color: #DDDFE4;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  border: 1px solid var(--color2);
+  align-items: center;
+  position: relative;
 }
 
 .price__title {
@@ -1197,6 +1201,7 @@ a.order4 .list__item {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  align-items: center
 }
 
 
@@ -1204,4 +1209,262 @@ a.order4 .list__item {
   width: 100%;
   height: 0.1rem;
   background-color: #4A6169;
+}
+
+.price__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.price__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.price__item-svg {
+  width: 2.4rem;
+  height: 2.7rem;
+  flex-shrink: 0;
+}
+
+.price__item-dark {
+  background-color: var(--color1);
+  color: #FEFEFE;
+;
+}
+
+.price__item-dark .price__title {
+  text-transform: uppercase;
+}
+
+.price-swiper__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 5.6rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+  }
+}
+
+.price__choice {
+  background-color: var(--color2);
+  position: absolute;
+  border-radius: 1.2rem;
+  top: -3%;
+  padding: 0.8rem 2rem;
+  margin: 0 auto;
+}
+
+.calculator__container {
+  margin-top: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 6.4rem;
+  }
+}
+
+.calculator__subtitle {
+  margin: 4rem 0 5.4rem;
+  max-width: 55%;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  @include breakpoint($xl-bp) {
+    margin: 4rem 0;
+    max-width: 100%;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+.calculator__inf {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calculator__inf-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calculator__right-top {
+  border-radius: 1.2rem;
+  padding: 2rem;
+  background-color: var(--color1);
+}
+
+.calculator__top-item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.calculator__top-num,
+.questions__num {
+  color: var(--color2);
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 5.4rem;
+  flex-shrink: 0;
+}
+
+.calculator__top-text {
+  color: var(--white);
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+.calculator__right-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.questions {
+  width: 80rem;
+  margin: 8.4rem auto;
+  @include breakpoint($sm-bp) {
+    margin: 6.4rem 0;
+  }
+}
+
+.questions h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5.6rem;
+  @include breakpoint($sm-bp) {
+    margin: 2.4rem 0;
+  }
+}
+
+.questions__items {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.questions__subtitle {
+  background-color: var(--color1);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.questions__question {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.questions__subheading {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.questions__svg svg {
+  stroke: var(--color2);
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.questions__block div {
+  padding: 2rem;
+}
+
+.questions__item:hover {
+  cursor: pointer;
+}
+
+.video {
+  margin-top: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 6.4rem;
+  }
+}
+
+.video__title,
+.articles__title {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: block;
+    align-items: center;
+  }
+}
+
+.video .team__title,
+.articles .team__title {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.articles__item {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  height: 55rem;
+}
+
+.articles__item-title {
+  font-weight: 700;
+  margin: 2rem 0 1.2rem;
+  @include breakpoint($sm-bp) {
+    margin: 1.2rem 0;
+  }
+}
+
+.articles__item-linc {
+  text-decoration: underline;
+  justify-content: center;
+  display: flex;
+  margin-top: 3.7rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 3.3rem;
+  }
+}
+
+.articles-text {
+  padding: 0 2rem 2rem 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 0 1.2rem 1.2rem 1.2rem;
+  }
+}
+
+.articles__text {
+  max-height: 5em;
+  overflow: hidden;
+}
+
+.video-item__title {
+  font-weight: 700;
+}
+
+.video-item {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.video-text__slider {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
 }

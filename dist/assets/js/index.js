@@ -88,4 +88,40 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
 
+    //accordion
+    const titles = document.querySelectorAll('\.accordion__title');
+    const contents = document.querySelectorAll('\.accordion-content');
+    const svg = document.querySelectorAll('\.questions__item \.questions__svg svg');
+
+    titles.forEach(item => item.addEventListener('click', () => {
+        const activeContent = document.querySelector('#' + item.dataset.tab);
+
+        if (activeContent.classList.contains('active')) {
+            activeContent.classList.remove('active');
+            item.classList.remove('active');
+            activeContent.style.maxHeight = 0;
+            svg.forEach(element => element.classList.remove('active'));
+        } else {
+            contents.forEach(element => {
+                element.classList.remove('active');
+                element.style.maxHeight = 0;
+            });
+
+            titles.forEach(element => element.classList.remove('active'));
+
+            item.classList.add('active');
+            activeContent.classList.add('active');
+            activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
+            svg.forEach(element => element.classList.remove('active'));
+            svg.forEach((element, index) => {
+                if (index === Array.from(contents).indexOf(activeContent)) {
+                    element.classList.add('active');
+                }
+            });
+
+        }
+    }));
+
+
+
 });
