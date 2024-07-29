@@ -5,8 +5,10 @@
   background-position: 100% 100%;
   border-radius: 1.2rem;
   padding: 8.4rem 13.7rem 3.7rem;
+  background-size: 76rem;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
+    background-size: 36rem;
   }
 }
 
