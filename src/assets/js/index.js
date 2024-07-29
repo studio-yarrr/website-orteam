@@ -122,6 +122,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }));
 
+    //map
+    ymaps.ready(function () {
+
+        let myMap = new ymaps.Map("YMapsID", {
+            center: [60.012085, 30.328723],
+            zoom: 11,
+        });
+
+
+        let myPlacemark = new ymaps.Placemark([60.012085, 30.328723], {
+        });
+        myMap.behaviors.disable('scrollZoom');
+
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            myMap.behaviors.disable('drag');
+        }
+
+        myMap.geoObjects.add(myPlacemark);
+
+    });
 
 
 });
