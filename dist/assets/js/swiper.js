@@ -3,9 +3,18 @@ function isMobile() {
 }
 
 if (isMobile()) {
+    const swiperBanner =  new Swiper('.swiper-container', {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+        pagination: {
+            el: '.banner-pagination',
+            clickable: true,
+        },
+    })
+
     const swiper = new Swiper('.list__swiper', {
         slidesPerView: 1.5,
-        spaceBetween: 50,
+        spaceBetween: 0,
         centeredSlides: true,
         initialSlide: 1,
         navigation: {
@@ -56,8 +65,8 @@ const slider2 = new Swiper('.team__swiper', {
     slidesPerView: 2,
 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.team-button-next',
+        prevEl: '.team-button-prev',
     },
 
     breakpoints: {

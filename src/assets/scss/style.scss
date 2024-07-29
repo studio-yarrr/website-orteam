@@ -82,8 +82,8 @@ h1 {
   font-size: 4rem;
   line-height: 4.8rem;
   @include breakpoint($xl-bp) {
-    font-size: 2.4rem;
-    line-height: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
 
   @include breakpoint($sm-bp) {}
@@ -127,8 +127,9 @@ a {
 
 .swiper-container {
   @include breakpoint($sm-bp) {
-    width: 35rem;
+    width: 33rem;
     height: 17rem;
+    overflow: hidden;
   }
 }
 
@@ -188,13 +189,13 @@ a {
   color: var(--color1)!important;
 }
 
-.swiper-button-prev,
-.swiper-button-next,
-.process-button-prev,
-.process-button-next {
-  width: 3.2rem;
-  height: 3.2rem;
-}
+//.swiper-button-prev,
+//.swiper-button-next,
+//.process-button-prev,
+//.process-button-next {
+//  width: 3.2rem;
+//  height: 3.2rem;
+//}
 
 .dn--mob {
   @include breakpoint($xl-bp) {
@@ -202,6 +203,8 @@ a {
   }
 }
 
+.team-button-prev img,
+.team-button-next img,
 .video-button-next img,
 .video-button-prev img,
 .articles-button-next img,
@@ -214,6 +217,8 @@ a {
   height: 2rem;
 }
 
+.team-button-prev,
+.team-button-next,
 .video-button-prev,
 .video-button-next,
 .articles-button-prev,
@@ -229,6 +234,8 @@ a {
   justify-content: center;
 }
 
+.team-button-prev.swiper-button-disabled,
+.team-button-next.swiper-button-disabled,
 .video-button-next.swiper-button-disabled,
 .video-button-prev.swiper-button-disabled,
 .articles-button-next.swiper-button-disabled,
@@ -240,6 +247,7 @@ a {
   opacity: 0.2;
 }
 
+.team-button-prev,
 .video-button-prev,
 .articles-button-prev,
 .reviews-button-prev,
@@ -247,6 +255,8 @@ a {
   transform: rotate(180deg);
 }
 
+.team-button-next:hover,
+.team-button-prev:hover,
 .video-button-next:hover,
 .video-button-prev:hover,
 .articles-button-next:hover,
@@ -258,7 +268,7 @@ a {
   cursor: pointer;
 }
 
-
+.team__buttons-container,
 .video__buttons,
 .articles__buttons,
 .reviews__buttons-container,
@@ -268,8 +278,13 @@ a {
   right: 0;
   gap: 2.4rem;
   align-items: center;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+
 }
 
+.team__buttons-container,
 .video__buttons,
 .articles__buttons,
 .braces__buttons {
@@ -301,6 +316,33 @@ a {
 .questions__svg svg.active  {
   stroke: #4A6169;
   transform: rotate(180deg);
+}
+
+.banner-pagination {
+  @include breakpoint($sm-bp) {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    overflow: hidden;
+    width: 50%;
+  }
+}
+
+.banner-pagination .swiper-pagination-bullet {
+  border-radius: 0;
+}
+
+.banner-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--color1);
+}
+
+.banner__slider {
+  @include breakpoint($sm-bp) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 ::-webkit-scrollbar {

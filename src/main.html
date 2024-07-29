@@ -1,31 +1,31 @@
-<main class=" wrapper">
-    <section class="banner">
+<main>
+    <section class="banner wrapper">
         <div class="banner__wrapper">
             <div class="banner__inf">
-                <h1 >Идеальная улыбка с Orteam:<br>
-                    Брекеты по лучшей цене!</h1>
-                <div>
+                <h1>Идеальная улыбка с Orteam:<br><br class="">
+                    <span class="title-mob">Брекеты по лучшей цене!</span></h1>
+                <div class="banner__slider">
                     <div class="swiper-container">
-                        <div class="banner__container">
-                            <div class="banner__item">
+                        <div class="swiper-wrapper banner__container">
+                            <div class="swiper-slide banner__item">
                                 <div class="banner__item-title">Понятно работаем</div>
                                 <div>
                                     Составляем и полностью реализуем план лечения на основе медицинской аналитики
                                 </div>
                             </div>
-                            <div class="banner__item">
+                            <div class="swiper-slide banner__item">
                                 <div class="banner__item-title">Понятно объясняем</div>
                                 <div>
                                     Расскажем о нюансах лечения настолько подробно, насколько вы захотите
                                 </div>
                             </div>
-                            <div class="banner__item">
+                            <div class="swiper-slide banner__item">
                                 <div class="banner__item-title">Понятные цены</div>
                                 <div>
                                     Цены как на сайте, без доплат. Удобный тарифный план и способ оплаты для каждого
                                 </div>
                             </div>
-                            <div class="banner__item">
+                            <div class="swiper-slide banner__item">
                                 <div class="banner__item-title">Понятные гарантии</div>
                                 <div>
                                     Уложимся в сроки или долечим бесплатно. Бессрочная гарантия на результат
@@ -33,6 +33,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="banner-pagination"></div>
                 </div>
                 <button class="button">Хочу на консультацию</button>
             </div>
@@ -49,7 +50,7 @@
             </svg>
         </button>
     </section>
-    <section class="list list__swiper">
+    <section class="list list__swiper wrapper">
         <div class="list__container swiper-wrapper">
             <div class="list__column swiper-slide">
                 <a href="#" target="_blank">
@@ -177,12 +178,12 @@
             </div>
         </div>
     </section>
-    <section class="content">
+    <section class="content wrapper">
         <div class="content__left">
             <div class="content__list-container">
                 <ol class="content__list">
                     <li>
-                        <a href="">
+                        <a href="#team">
                            <sup>1.</sup> Команда
                         </a>
                     </li>
@@ -236,7 +237,7 @@
             <div>
                 <picture class="content__img">
                     <source srcset="assets/images/content-mob.png" media="(max-width:1024px)">
-                    <img src="assets/images/content.png" alt="banner">
+                    <img src="assets/images/content.png" alt="banner"  class="content__img">
                 </picture>
             </div>
         </div>
@@ -251,8 +252,9 @@
             </div>
         </div>
     </section>
-    <section class="team">
-        <h2 class="team__title">Команда Orteam</h2>
+
+    <section class="team wrapper" id="team">
+        <h2 class="team__title wrapper">Команда Orteam</h2>
         <div class="team__slider">
             <div class="team__swiper">
                 <div class="swiper-wrapper">
@@ -266,7 +268,7 @@
                                 <p class="team__item-subtitle">Ведущий врач, стоматолог-ортодонт</p>
                             </div>
                             <div class="team__linc-container">
-                                <a href="">
+                                <a href="https://proxiclinic.ru/vrachi/pankov-vladislav-evgenevich/#fb">
                                     <div class="team__linc">
                                         <div class="team__item-icon">
                                             <img src="assets/images/email.svg" alt="icon">
@@ -274,7 +276,7 @@
                                         <p class="team__linc-text">Отзывы о враче</p>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a data-fancybox data-src="https://www.youtube.com/watch?v=k_vy0qEuP84&t=2s">
                                     <div class="team__linc">
                                         <div class="team__item-icon">
                                             <img src="assets/images/play.svg" alt="icon">
@@ -282,7 +284,7 @@
                                         <p class="team__linc-text">Видеообращение врача</p>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a href="https://proxiclinic.ru/vrachi/pankov-vladislav-evgenevich/">
                                     <div class="team__linc">
                                         <div class="team__item-icon">
                                             <img src="assets/images/person.svg" alt="icon">
@@ -304,7 +306,7 @@
                                 <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
                             </div>
                             <div class="team__linc-container">
-                                <a href="">
+                                <a href="https://proxiclinic.ru/vrachi/pryazhennik-yuliya-maksimovna/#fb">
                                     <div class="team__linc">
                                         <div class="team__item-icon">
                                             <img src="assets/images/email.svg" alt="icon">
@@ -312,7 +314,7 @@
                                         <p class="team__linc-text">Отзывы о враче</p>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a  data-fancybox data-src="https://www.youtube.com/watch?v=rrU0WlEiAdM">
                                     <div class="team__linc">
                                         <div class="team__item-icon">
                                             <img src="assets/images/play.svg" alt="icon">
@@ -320,7 +322,7 @@
                                         <p class="team__linc-text">Видеообращение врача</p>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a href="https://proxiclinic.ru/vrachi/pryazhennik-yuliya-maksimovna/">
                                     <div class="team__linc">
                                         <div class="team__item-icon">
                                             <img src="assets/images/person.svg" alt="icon">
@@ -334,15 +336,15 @@
                     </div>
                     <div class="swiper-slide team__item">
                         <div class="team__item-img">
-                            <img src="assets/images/img2-doctor.png" alt="image">
+                            <img src="assets/images/doc3.jpg" alt="image">
                         </div>
                         <div class="team__item-desc">
                             <div class="team__item-person">
-                                <p class="team__item-title">Пряженник Юлия Максимовна</p>
+                                <p class="team__item-title">Чорная Ксения Александровна</p>
                                 <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
                             </div>
                             <div class="team__linc-container">
-                                <a href="">
+                                <a href="https://proxiclinic.ru/vrachi/sarycheva-kseniya-aleksandrovna/#fb">
                                     <div class="team__linc">
                                         <div class="team__item-icon">
                                             <img src="assets/images/email.svg" alt="icon">
@@ -350,7 +352,7 @@
                                         <p class="team__linc-text">Отзывы о враче</p>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a data-fancybox data-src="https://www.youtube.com/watch?v=TwlxBPrZCTQ&t=8s">
                                     <div class="team__linc">
                                         <div class="team__item-icon">
                                             <img src="assets/images/play.svg" alt="icon">
@@ -358,7 +360,7 @@
                                         <p class="team__linc-text">Видеообращение врача</p>
                                     </div>
                                 </a>
-                                <a href="">
+                                <a href="https://proxiclinic.ru/vrachi/sarycheva-kseniya-aleksandrovna/">
                                     <div class="team__linc">
                                         <div class="team__item-icon">
                                             <img src="assets/images/person.svg" alt="icon">
@@ -367,18 +369,49 @@
                                     </div>
                                 </a>
                             </div>
+                            <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide team__item">
+                        <div class="team__item-img">
+                            <img src="assets/images/doc4.jpg" alt="image">
+                        </div>
+                        <div class="team__item-desc">
+                            <div class="team__item-person">
+                                <p class="team__item-title">Волянская Людмила Сергеевна</p>
+                                <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
+                            </div>
+
+                            <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide team__item">
+                        <div class="team__item-img">
+                            <img src="assets/images/do5.jpg" alt="image">
+                        </div>
+                        <div class="team__item-desc">
+                            <div class="team__item-person">
+                                <p class="team__item-title">Платонов Даниил Дмитриевич</p>
+                                <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
+                            </div>
+
                             <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="team__buttons-container">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="team-button-prev">
+                    <img src="assets/images/next.svg" alt="">
+                </div>
+                <div class="team-button-next">
+                    <img src="assets/images/next.svg" alt="">
+                </div>
             </div>
         </div>
     </section>
-    <section class="standards">
+
+    <section class="standards wrapper">
         <h2 class="team__title">Стандарты лечения Orteam</h2>
         <div class="standards__container">
             <a href="#" target="_blank" class="order4">
@@ -427,7 +460,8 @@
             </div>
         </div>
     </section>
-    <section class="details">
+
+    <section class="details wrapper">
         <h2 class="team__title">Узнайте о нюансах лечения настолько<br> подробно, насколько захотите</h2>
         <div class="details__slider">
             <div class="details__swiper details__swiper-container">
@@ -457,7 +491,8 @@
             </div>
         </div>
     </section>
-    <section class="process">
+
+    <section class="process wrapper">
         <h2 class="team__title">До и после</h2>
         <div class="process__slider">
             <div class="process__swiper">
@@ -621,10 +656,11 @@
         </div>
     </section>
 
-    <section class="record-content">
+    <section class="record-content wrapper">
         {{> record }}
     </section>
-    <section class="reviews">
+
+    <section class="reviews wrapper">
         <h2 class="team__title">Отзывы</h2>
         <div class="reviews__slider">
             <div class="reviews__swiper">
@@ -882,7 +918,7 @@
         </div>
     </section>
 
-    <section class="braces">
+    <section class="braces wrapper">
         <h2 class="team__title">Как выглядят брекеты?</h2>
         <div class="braces__text">Здесь вы можете посмотреть какое впечатление производят люди с брекетами и элайнерами</div>
         <div class="braces__slider">
@@ -922,7 +958,7 @@
         </div>
     </section>
 
-    <section class="analytics">
+    <section class="analytics wrapper">
         <h2 class="team__title">Медицинская аналитика</h2>
         <div class="analytics__container">
             <div class="analytics__item">
@@ -956,7 +992,7 @@
         </div>
     </section>
 
-    <section class="surgery">
+    <section class="surgery wrapper">
         <h2 class="team__title">Ортогнатическая хирургия в клинике Orteam</h2>
         <div class="surgery__container">
             <div class="surgery__item">
@@ -992,7 +1028,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section class="price wrapper" >
         <h2 class="team__title">Стоимость лечения</h2>
         <div class="price__container">
             <div class="price-swiper">
@@ -1235,7 +1271,7 @@
         </div>
     </section>
 
-    <section class="questions">
+    <section class="questions wrapper">
         <h2 class="team__title">F.A.Q.</h2>
         <div class="questions__items">
             <div class="questions__item ">
@@ -1430,7 +1466,7 @@
         </div>
     </section>
 
-    <section class="articles">
+    <section class="articles wrapper">
         <h2 class="team__title">Наши статьи о брекетах</h2>
         <h2 class="articles__title">Статьи</h2>
             <div class="articles__slider">
@@ -1493,7 +1529,7 @@
             </div>
     </section>
 
-    <section class="video">
+    <section class="video wrapper">
         <h2 class="team__title">Видео нашего Youtube-канала</h2>
         <h2 class="video__title">Наш You-Tube</h2>
         <div class="video__slider">
@@ -1556,7 +1592,7 @@
         </div>
     </section>
 
-    <div class="record__container">
+    <div class="record__container wrapper">
         {{> record }}
     </div>
 </main>

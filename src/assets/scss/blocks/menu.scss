@@ -3,6 +3,10 @@
   background-color: #0B384780;
   position: fixed;
   inset: 0;
+  z-index: 55;
+  @include breakpoint($sm-bp) {
+    overflow: scroll;
+  }
 }
 
 .menu__wrapper.active {
@@ -16,15 +20,27 @@
   background-color: var(--white);
   position: absolute;
   top: 0;
-  right: 0;
+  right: 17%;
   margin-top: 1.9rem;
   margin-right: 1.9rem;
   display: flex;
   flex-direction: column;
+  @include breakpoint($sm-bp) {
+    margin: 2.5rem 2rem;
+    right: 0;
+    padding: 2.4rem;
+    position: relative;
+  }
 }
 
 .menu__content.active {
   transform: translateX(0);
+}
+
+.menu__content .close {
+  @include breakpoint($sm-bp) {
+    position: absolute;
+  }
 }
 
 .close {
@@ -35,6 +51,10 @@
     cursor: pointer;
     opacity: 0.5;
   }
+  @include breakpoint($sm-bp) {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .menu__list {
@@ -43,12 +63,19 @@
   gap: 2.4rem;
   margin-bottom: 9.7rem;
   padding-right: 9.7rem;
+  @include breakpoint($sm-bp) {
+    gap: 1.2rem;
+    margin-bottom: 2.4rem;
+  }
 }
 
 .menu__social-container {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+  }
 }
 
 .menu__content .close {
@@ -64,3 +91,17 @@
   width: 4rem;
   height: 4rem;
 }
+
+.menu__list li a:hover {
+  color: var(--color2);
+}
+
+.menu__social a {
+  transition: transform 0.3s ease;
+}
+
+.menu__social a:hover {
+  transform: scale(1.1);
+
+}
+

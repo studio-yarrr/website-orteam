@@ -1,4 +1,17 @@
 @media (min-width:1024px) {
+  .element-animation-scale {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 2s;
+  }
+
+  .element-animation-scale.element-show {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 2s;
+  }
+
+
   .element-animation-left {
     opacity: 0;
     transform: translateX(-40%);
@@ -27,7 +40,19 @@
   .element-animation.element-show {
     transform: translateY(0);
     opacity: 1;
-    transition-duration: 1s;
+    transition-duration: 2s;
+  }
+
+  .element-animation-bottom {
+    opacity: 0;
+    transform: translateY(60%);
+    transition-duration: 2s;
+  }
+
+  .element-animation-bottom.element-show {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 2s;
   }
 
   .element-animation-opacity {
@@ -40,5 +65,6 @@
     transition: all 2s;
   }
 }
+
 
 @media (max-width:1024px) {}

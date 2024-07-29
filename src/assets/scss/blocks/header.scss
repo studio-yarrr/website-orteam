@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  @include breakpoint($sm-bp) {
+    padding: 3.2rem 0 2.4rem;
+  }
 }
 
 .logo {
@@ -36,6 +39,13 @@
   padding: 1.2rem 2.4rem;
   border-radius: 1.2rem;
   border: 1px solid var(--color2);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.border:hover {
+  cursor: pointer;
+  background-color: var(--color2);
+  color: var(--color1);
 }
 
 .menu {
@@ -96,6 +106,11 @@
   gap: 1.6rem;
 }
 
+.header__location:hover {
+  cursor: pointer;
+  color: black;
+}
+
 .header__location div {
   width: 4rem;
   height: 4rem;
@@ -121,4 +136,38 @@
   display: flex;
   gap: 4rem;
   align-items: center;
+}
+
+.hide {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.line.hide-desc,
+.menu-mob.hide-desc {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: block;
+  }
+}
+
+.menu-mob.hide-desc {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+.tel-icon {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: block;
+  }
+}
+
+.header-line {
+  margin: 2.4rem 0;
 }
