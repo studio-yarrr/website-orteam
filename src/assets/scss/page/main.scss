@@ -1439,6 +1439,10 @@ a.order4 .list__item {
 
 .articles-text {
   padding: 0 2rem 2rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @include breakpoint($sm-bp) {
     padding: 0 1.2rem 1.2rem 1.2rem;
   }
@@ -1466,5 +1470,15 @@ a.order4 .list__item {
   gap: 0.8rem;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
+  }
+}
+
+.record__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem 0;
+  @include breakpoint($sm-bp) {
+    margin: 5.4rem 0 7.5rem;
   }
 }
