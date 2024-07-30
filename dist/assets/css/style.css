@@ -3310,13 +3310,15 @@ button.swiper-pagination-bullet {
     }
 }
 
+.button.hide-desc,
 .line.hide-desc,
 .menu-mob.hide-desc {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .line.hide-desc,
+    .button.hide-desc,
+  .line.hide-desc,
   .menu-mob.hide-desc {
         display: block;
     }
@@ -3787,13 +3789,15 @@ button.swiper-pagination-bullet {
     }
 }
 
+.button.hide-desc,
 .line.hide-desc,
 .menu-mob.hide-desc {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .line.hide-desc,
+    .button.hide-desc,
+  .line.hide-desc,
   .menu-mob.hide-desc {
         display: block;
     }
