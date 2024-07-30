@@ -14,15 +14,12 @@ if (isMobile()) {
 
     const swiper = new Swiper('.list__swiper', {
         slidesPerView: 1.5,
-        spaceBetween: 0,
         centeredSlides: true,
         initialSlide: 1,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        spaceBetween: 8,
+
         pagination: {
-            el: '.swiper-pagination',
+            el: '.list-pagination',
             clickable: true,
         },
     });
@@ -30,10 +27,10 @@ if (isMobile()) {
     const swiper3 = new Swiper('.details__swiper', {
         slidesPerView: 1.5,
         spaceBetween: 20,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+        // pagination: {
+        //     el: '.details-pagination',
+        //     clickable: true,
+        // },
     });
 
     const slider7 = new Swiper('.price-swiper', {
@@ -69,6 +66,11 @@ const slider2 = new Swiper('.team__swiper', {
         prevEl: '.team-button-prev',
     },
 
+    pagination: {
+        el: '.team-pagination',
+        clickable: true,
+    },
+
     breakpoints: {
 
         320: {
@@ -94,6 +96,11 @@ const slider4 = new Swiper('.process__swiper', {
     navigation: {
         nextEl: '.process-button-next',
         prevEl: '.process-button-prev',
+    },
+
+    pagination: {
+        el: '.process-pagination',
+        clickable: true,
     },
 
     breakpoints: {

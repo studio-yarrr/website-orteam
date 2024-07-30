@@ -32,8 +32,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="pagination banner-pagination"></div>
                     </div>
-                    <div class="banner-pagination"></div>
+
                 </div>
                 <button class="button">Хочу на консультацию</button>
             </div>
@@ -50,7 +51,8 @@
             </svg>
         </button>
     </section>
-    <section class="list list__swiper wrapper">
+
+    <section class="list list__swiper">
         <div class="list__container swiper-wrapper">
             <div class="list__column swiper-slide">
                 <a href="#" target="_blank">
@@ -177,7 +179,9 @@
                 </a>
             </div>
         </div>
+        <div class="pagination list-pagination"></div>
     </section>
+
     <section class="content wrapper">
         <div class="content__left">
             <div class="content__list-container">
@@ -253,161 +257,179 @@
         </div>
     </section>
 
-    <section class="team wrapper" id="team">
-        <h2 class="team__title wrapper">Команда Orteam</h2>
-        <div class="team__slider">
-            <div class="team__swiper">
-                <div class="swiper-wrapper">
-                     <div class="swiper-slide team__item">
-                        <div class="team__item-img">
-                            <img src="assets/images/img-doctor.png" alt="image">
-                        </div>
-                        <div class="team__item-desc">
-                            <div class="team__item-person">
-                                <p class="team__item-title">Панков Владислав Евгеньевич</p>
-                                <p class="team__item-subtitle">Ведущий врач, стоматолог-ортодонт</p>
+    <section class="team team__wrapper" id="team">
+        <h2 class="team__title">Команда Orteam</h2>
+        <div class="team-slider__container">
+            <div class="team__slider">
+                <div class="team__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide team__item">
+                            <div class="team__item-img">
+                                <picture class="content__img">
+                                    <source srcset="assets/images/img-doctor__img.jpg" media="(max-width:1024px)">
+                                    <img src="assets/images/img-doctor.png" alt="image">
+                                </picture>
                             </div>
-                            <div class="team__linc-container">
-                                <a href="https://proxiclinic.ru/vrachi/pankov-vladislav-evgenevich/#fb">
-                                    <div class="team__linc">
-                                        <div class="team__item-icon">
-                                            <img src="assets/images/email.svg" alt="icon">
+                            <div class="team__item-desc">
+                                <div class="team__item-person">
+                                    <p class="team__item-title">Панков Владислав Евгеньевич</p>
+                                    <p class="team__item-subtitle">Ведущий врач, стоматолог-ортодонт</p>
+                                </div>
+                                <div class="team__linc-container">
+                                    <a href="https://proxiclinic.ru/vrachi/pankov-vladislav-evgenevich/#fb">
+                                        <div class="team__linc">
+                                            <div class="team__item-icon">
+                                                <img src="assets/images/email.svg" alt="icon">
+                                            </div>
+                                            <p class="team__linc-text">Отзывы о враче</p>
                                         </div>
-                                        <p class="team__linc-text">Отзывы о враче</p>
-                                    </div>
-                                </a>
-                                <a data-fancybox data-src="https://www.youtube.com/watch?v=k_vy0qEuP84&t=2s">
-                                    <div class="team__linc">
-                                        <div class="team__item-icon">
-                                            <img src="assets/images/play.svg" alt="icon">
+                                    </a>
+                                    <a data-fancybox data-src="https://www.youtube.com/watch?v=k_vy0qEuP84&t=2s">
+                                        <div class="team__linc">
+                                            <div class="team__item-icon">
+                                                <img src="assets/images/play.svg" alt="icon">
+                                            </div>
+                                            <p class="team__linc-text">Видеообращение врача</p>
                                         </div>
-                                        <p class="team__linc-text">Видеообращение врача</p>
-                                    </div>
-                                </a>
-                                <a href="https://proxiclinic.ru/vrachi/pankov-vladislav-evgenevich/">
-                                    <div class="team__linc">
-                                        <div class="team__item-icon">
-                                            <img src="assets/images/person.svg" alt="icon">
+                                    </a>
+                                    <a href="https://proxiclinic.ru/vrachi/pankov-vladislav-evgenevich/">
+                                        <div class="team__linc">
+                                            <div class="team__item-icon">
+                                                <img src="assets/images/person.svg" alt="icon">
+                                            </div>
+                                            <p class="team__linc-text">Смотреть страницу врача</p>
                                         </div>
-                                        <p class="team__linc-text">Смотреть страницу врача</p>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
+                                <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
                             </div>
-                            <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
                         </div>
-                    </div>
-                    <div class="swiper-slide team__item">
-                        <div class="team__item-img">
-                            <img src="assets/images/img2-doctor.png" alt="image">
-                        </div>
-                        <div class="team__item-desc">
-                            <div class="team__item-person">
-                                <p class="team__item-title">Пряженник Юлия Максимовна</p>
-                                <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
+                        <div class="swiper-slide team__item">
+                            <div class="team__item-img">
+                                <picture class="content__img">
+                                    <source srcset="assets/images/img2-doctor__mob.jpg" media="(max-width:1024px)">
+                                    <img src="assets/images/img2-doctor.png" alt="image">
+                                </picture>
                             </div>
-                            <div class="team__linc-container">
-                                <a href="https://proxiclinic.ru/vrachi/pryazhennik-yuliya-maksimovna/#fb">
-                                    <div class="team__linc">
-                                        <div class="team__item-icon">
-                                            <img src="assets/images/email.svg" alt="icon">
+                            <div class="team__item-desc">
+                                <div class="team__item-person">
+                                    <p class="team__item-title">Пряженник Юлия Максимовна</p>
+                                    <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
+                                </div>
+                                <div class="team__linc-container">
+                                    <a href="https://proxiclinic.ru/vrachi/pryazhennik-yuliya-maksimovna/#fb">
+                                        <div class="team__linc">
+                                            <div class="team__item-icon">
+                                                <img src="assets/images/email.svg" alt="icon">
+                                            </div>
+                                            <p class="team__linc-text">Отзывы о враче</p>
                                         </div>
-                                        <p class="team__linc-text">Отзывы о враче</p>
-                                    </div>
-                                </a>
-                                <a  data-fancybox data-src="https://www.youtube.com/watch?v=rrU0WlEiAdM">
-                                    <div class="team__linc">
-                                        <div class="team__item-icon">
-                                            <img src="assets/images/play.svg" alt="icon">
+                                    </a>
+                                    <a  data-fancybox data-src="https://www.youtube.com/watch?v=rrU0WlEiAdM">
+                                        <div class="team__linc">
+                                            <div class="team__item-icon">
+                                                <img src="assets/images/play.svg" alt="icon">
+                                            </div>
+                                            <p class="team__linc-text">Видеообращение врача</p>
                                         </div>
-                                        <p class="team__linc-text">Видеообращение врача</p>
-                                    </div>
-                                </a>
-                                <a href="https://proxiclinic.ru/vrachi/pryazhennik-yuliya-maksimovna/">
-                                    <div class="team__linc">
-                                        <div class="team__item-icon">
-                                            <img src="assets/images/person.svg" alt="icon">
+                                    </a>
+                                    <a href="https://proxiclinic.ru/vrachi/pryazhennik-yuliya-maksimovna/">
+                                        <div class="team__linc">
+                                            <div class="team__item-icon">
+                                                <img src="assets/images/person.svg" alt="icon">
+                                            </div>
+                                            <p class="team__linc-text">Смотреть страницу врача</p>
                                         </div>
-                                        <p class="team__linc-text">Смотреть страницу врача</p>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
+                                <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
                             </div>
-                            <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
                         </div>
-                    </div>
-                    <div class="swiper-slide team__item">
-                        <div class="team__item-img">
-                            <img src="assets/images/doc3.jpg" alt="image">
-                        </div>
-                        <div class="team__item-desc">
-                            <div class="team__item-person">
-                                <p class="team__item-title">Чорная Ксения Александровна</p>
-                                <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
+                        <div class="swiper-slide team__item">
+                            <div class="team__item-img">
+                                <picture class="content__img">
+                                    <source srcset="assets/images/doc3__mob.jpg" media="(max-width:1024px)">
+                                    <img src="assets/images/doc3.jpg" alt="image">
+                                </picture>
                             </div>
-                            <div class="team__linc-container">
-                                <a href="https://proxiclinic.ru/vrachi/sarycheva-kseniya-aleksandrovna/#fb">
-                                    <div class="team__linc">
-                                        <div class="team__item-icon">
-                                            <img src="assets/images/email.svg" alt="icon">
+                            <div class="team__item-desc">
+                                <div class="team__item-person">
+                                    <p class="team__item-title">Чорная Ксения Александровна</p>
+                                    <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
+                                </div>
+                                <div class="team__linc-container">
+                                    <a href="https://proxiclinic.ru/vrachi/sarycheva-kseniya-aleksandrovna/#fb">
+                                        <div class="team__linc">
+                                            <div class="team__item-icon">
+                                                <img src="assets/images/email.svg" alt="icon">
+                                            </div>
+                                            <p class="team__linc-text">Отзывы о враче</p>
                                         </div>
-                                        <p class="team__linc-text">Отзывы о враче</p>
-                                    </div>
-                                </a>
-                                <a data-fancybox data-src="https://www.youtube.com/watch?v=TwlxBPrZCTQ&t=8s">
-                                    <div class="team__linc">
-                                        <div class="team__item-icon">
-                                            <img src="assets/images/play.svg" alt="icon">
+                                    </a>
+                                    <a data-fancybox data-src="https://www.youtube.com/watch?v=TwlxBPrZCTQ&t=8s">
+                                        <div class="team__linc">
+                                            <div class="team__item-icon">
+                                                <img src="assets/images/play.svg" alt="icon">
+                                            </div>
+                                            <p class="team__linc-text">Видеообращение врача</p>
                                         </div>
-                                        <p class="team__linc-text">Видеообращение врача</p>
-                                    </div>
-                                </a>
-                                <a href="https://proxiclinic.ru/vrachi/sarycheva-kseniya-aleksandrovna/">
-                                    <div class="team__linc">
-                                        <div class="team__item-icon">
-                                            <img src="assets/images/person.svg" alt="icon">
+                                    </a>
+                                    <a href="https://proxiclinic.ru/vrachi/sarycheva-kseniya-aleksandrovna/">
+                                        <div class="team__linc">
+                                            <div class="team__item-icon">
+                                                <img src="assets/images/person.svg" alt="icon">
+                                            </div>
+                                            <p class="team__linc-text">Смотреть страницу врача</p>
                                         </div>
-                                        <p class="team__linc-text">Смотреть страницу врача</p>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
+                                <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
                             </div>
-                            <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
                         </div>
-                    </div>
-                    <div class="swiper-slide team__item">
-                        <div class="team__item-img">
-                            <img src="assets/images/doc4.jpg" alt="image">
-                        </div>
-                        <div class="team__item-desc">
-                            <div class="team__item-person">
-                                <p class="team__item-title">Волянская Людмила Сергеевна</p>
-                                <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
+                        <div class="swiper-slide team__item">
+                            <div class="team__item-img">
+                                <picture class="content__img">
+                                    <source srcset="assets/images/doc4__mob.jpg" media="(max-width:1024px)">
+                                    <img src="assets/images/doc4.jpg" alt="image">
+                                </picture>
                             </div>
+                            <div class="team__item-desc">
+                                <div class="team__item-person">
+                                    <p class="team__item-title">Волянская Людмила Сергеевна</p>
+                                    <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
+                                </div>
 
-                            <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
+                                <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide team__item">
+                            <div class="team__item-img">
+                                <picture class="content__img">
+                                    <source srcset="assets/images/doc4__mob.jpg" media="(max-width:1024px)">
+                                    <img src="assets/images/doc4.jpg" alt="image">
+                                </picture>
+                            </div>
+                            <div class="team__item-desc">
+                                <div class="team__item-person">
+                                    <p class="team__item-title">Платонов Даниил Дмитриевич</p>
+                                    <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
+                                </div>
+
+                                <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="swiper-slide team__item">
-                        <div class="team__item-img">
-                            <img src="assets/images/do5.jpg" alt="image">
-                        </div>
-                        <div class="team__item-desc">
-                            <div class="team__item-person">
-                                <p class="team__item-title">Платонов Даниил Дмитриевич</p>
-                                <p class="team__item-subtitle">Врач стоматолог-ортодонт</p>
-                            </div>
-
-                            <button class="button button-slider__item">Записаться<span class="dn--mob"> на консультацию</span></button>
-                        </div>
+                </div>
+                <div class="team__buttons-container">
+                    <div class="team-button-prev">
+                        <img src="assets/images/next.svg" alt="">
+                    </div>
+                    <div class="team-button-next">
+                        <img src="assets/images/next.svg" alt="">
                     </div>
                 </div>
             </div>
-            <div class="team__buttons-container">
-                <div class="team-button-prev">
-                    <img src="assets/images/next.svg" alt="">
-                </div>
-                <div class="team-button-next">
-                    <img src="assets/images/next.svg" alt="">
-                </div>
-            </div>
+            <div class="pagination team-pagination wrapper"></div>
         </div>
     </section>
 
@@ -437,7 +459,7 @@
                 <div class="standards__item-img">
                     <picture class="standards__item-img--border">
                         <source srcset="./assets/images/doc-mob.jpg" media="(max-width:1024px)">
-                        <img src="assets/images/doc.jpg" alt="image">
+                        <img src="assets/images/stan-img.jpg" alt="image">
                     </picture>
                 </div>
                 <p class="standards__img-title">Панков Владислав Евгеньевич</p>
@@ -461,38 +483,41 @@
         </div>
     </section>
 
-    <section class="details wrapper">
+    <section class="details details__wrapper">
         <h2 class="team__title">Узнайте о нюансах лечения настолько<br> подробно, насколько захотите</h2>
         <div class="details__slider">
-            <div class="details__swiper details__swiper-container">
-                <a href="#" class="swiper-slide details__item">
-                    <div class="details__text">
-                        <p class="details__item-title">Я вам доверяю</p>
-                        <p class="details__item-subtitle">Лайфхаки о брекетах за 1 минуту в день</p>
-                    </div>
-                    <button class="button">Хочу на консультацию</button>
-                </a>
-                <a href="#" class="swiper-slide details__item details__item--dark">
-                    <div class="details__text">
-                        <p class="details__item-title">База</p>
-                        <p class="details__item-subtitle">Самые важные статьи</p>
-                    </div>
-                    <div class="details__img">
-                        <img src="assets/images/details-img.jpg" alt="image">
-                    </div>
-                </a>
-                <div class="swiper-slide details__item details__item--light">
-                    <div class="details__text">
-                        <p class="details__item-title">Я вам доверяю</p>
-                        <a href="#" class="details__item-subtitle details__item-subtitle--dark">Узнать о тонкостях ортодонтии</a>
-                    </div>
-                    <a href="#" class="button--light">YouTube Orteam</a>
-                </div>
+            <div class="details__swiper">
+               <div class="swiper-wrapper details__swiper-container">
+                   <a href="#" class="swiper-slide details__item">
+                       <div class="details__text">
+                           <p class="details__item-title">Я вам доверяю</p>
+                           <p class="details__item-subtitle">Лайфхаки о брекетах за 1 минуту в день</p>
+                       </div>
+                       <button class="button">Хочу на консультацию</button>
+                   </a>
+                   <a href="#" class="swiper-slide details__item details__item--dark">
+                       <div class="details__text">
+                           <p class="details__item-title">База</p>
+                           <p class="details__item-subtitle">Самые важные статьи</p>
+                       </div>
+                       <div class="details__img">
+                           <img src="assets/images/details-img.jpg" alt="image">
+                       </div>
+                   </a>
+                   <div class="swiper-slide details__item details__item--light">
+                       <div class="details__text">
+                           <p class="details__item-title">Я вам доверяю</p>
+                           <a href="#" class="details__item-subtitle details__item-subtitle--dark">Узнать о тонкостях ортодонтии</a>
+                       </div>
+                       <a href="#" class="button--light">YouTube Orteam</a>
+                   </div>
+               </div>
             </div>
+<!--            <div class="pagination details-pagination"></div>-->
         </div>
     </section>
 
-    <section class="process wrapper">
+    <section class="process process__wrapper">
         <h2 class="team__title">До и после</h2>
         <div class="process__slider">
             <div class="process__swiper">
@@ -649,10 +674,16 @@
                     </div>
                 </div>
             </div>
-            <div class="team__buttons-container">
-                <div class="swiper-button-prev process-button-prev"></div>
-                <div class="swiper-button-next process-button-next"></div>
+            <div class="process__buttons-container">
+                <div class="process-button-prev prev">
+                    <img src="assets/images/next.svg" alt="">
+                </div>
+                <div class="process-button-next next">
+                    <img src="assets/images/next.svg" alt="">
+                </div>
             </div>
+            <div class="pagination process-pagination"></div>
+
         </div>
     </section>
 

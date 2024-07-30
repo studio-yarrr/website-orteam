@@ -51,6 +51,9 @@ body {
   background-color: var(--bg-main);
   font-size: 1.6rem;
   line-height: 2rem;
+  @include breakpoint($sm-bp) {
+    font-size: 1.2rem;
+  }
 }
 
 select {
@@ -127,9 +130,10 @@ a {
 
 .swiper-container {
   @include breakpoint($sm-bp) {
-    width: 33rem;
+    width: 36rem;
     height: 17rem;
     overflow: hidden;
+    padding-left: 2rem;
   }
 }
 
@@ -141,17 +145,41 @@ a {
   }
 }
 
-.details__swiper {
+.process__wrapper,
+.details__swiper,
+.list__swiper,
+.team__wrapper {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  @include breakpoint($xl-bp) {
+    max-width: 80rem;
+  }
   @include breakpoint($sm-bp) {
-    width: 100vw;
-    height: 372px;
-    overflow: hidden;
+    position: relative;
   }
 }
 
+.process__wrapper,
+.team__wrapper,
+.details__wrapper {
+  @include breakpoint($sm-bp) {
+    padding-left: 2rem;
+  }
+}
+
+.list-pagination {
+  @include breakpoint($sm-bp) {
+    position: absolute;
+  }
+}
+
+
+.process-swiper,
 .video-swiper,
 .articles-swiper,
 .team__swiper,
+
 .braces__swiper {
   width: 121.6rem;
   height: auto;
@@ -159,15 +187,13 @@ a {
   @include breakpoint($xl-bp) {
     width: 60rem;
   }
-  @include breakpoint($sm-bp) {
-    width: 45rem;
-  }
 }
 
 .price-swiper {
   height: 55rem;
 }
 
+.details__swiper,
 .process__swiper,
 .reviews__swiper {
   width: 121.6rem;
@@ -189,13 +215,6 @@ a {
   color: var(--color1)!important;
 }
 
-//.swiper-button-prev,
-//.swiper-button-next,
-//.process-button-prev,
-//.process-button-next {
-//  width: 3.2rem;
-//  height: 3.2rem;
-//}
 
 .dn--mob {
   @include breakpoint($xl-bp) {
@@ -203,6 +222,8 @@ a {
   }
 }
 
+.prev img,
+.next img,
 .team-button-prev img,
 .team-button-next img,
 .video-button-next img,
@@ -217,6 +238,8 @@ a {
   height: 2rem;
 }
 
+.prev,
+.next,
 .team-button-prev,
 .team-button-next,
 .video-button-prev,
@@ -234,6 +257,8 @@ a {
   justify-content: center;
 }
 
+.next.swiper-button-disabled,
+.prev.swiper-button-disabled,
 .team-button-prev.swiper-button-disabled,
 .team-button-next.swiper-button-disabled,
 .video-button-next.swiper-button-disabled,
@@ -247,6 +272,7 @@ a {
   opacity: 0.2;
 }
 
+.prev,
 .team-button-prev,
 .video-button-prev,
 .articles-button-prev,
@@ -255,6 +281,9 @@ a {
   transform: rotate(180deg);
 }
 
+
+.next:hover,
+.prev:hover,
 .team-button-next:hover,
 .team-button-prev:hover,
 .video-button-next:hover,
@@ -268,6 +297,7 @@ a {
   cursor: pointer;
 }
 
+.process__buttons-container,
 .team__buttons-container,
 .video__buttons,
 .articles__buttons,
@@ -284,6 +314,7 @@ a {
 
 }
 
+.process__buttons-container,
 .team__buttons-container,
 .video__buttons,
 .articles__buttons,
@@ -318,21 +349,46 @@ a {
   transform: rotate(180deg);
 }
 
-.banner-pagination {
+.process-pagination,
+.team-pagination {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: flex;
+  }
+}
+
+.pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
     position: absolute;
-    bottom: 10%;
     left: 50%;
-    overflow: hidden;
+    bottom: 10%;
     width: 50%;
   }
 }
 
-.banner-pagination .swiper-pagination-bullet {
+.list-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include breakpoint($sm-bp) {
+    bottom: 5%;
+  }
+}
+
+.team-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include breakpoint($sm-bp) {
+    bottom: -2%;
+  }
+}
+
+.process-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include breakpoint($sm-bp) {
+    bottom: 0;
+  }
+}
+
+.pagination .swiper-pagination-bullet {
   border-radius: 0;
 }
 
-.banner-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: var(--color1);
 }
 
