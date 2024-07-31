@@ -6342,6 +6342,94 @@ sup {
     gap: 2.1rem;
 }
 
+.requisites__page {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 10rem;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 10rem;
+}
+
+@media (max-width: 1024px) {
+    .requisites__page {
+        gap: 7.2rem;
+        padding-bottom: 7.2rem;
+    }
+}
+
+.requisites h1 {
+    padding-top: 5.6rem;
+}
+
+@media (max-width: 1024px) {
+    .requisites h1 {
+        gap: 2.4rem;
+    }
+}
+
+.requisites {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 5.6rem;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .requisites {
+        gap: 2.4rem;
+    }
+}
+
+.requisites__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 24rem auto;
+    -webkit-column-gap: 5.6rem;
+    -moz-column-gap: 5.6rem;
+    column-gap: 5.6rem;
+    row-gap: 2rem;
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .requisites__content {
+        padding: 1.2rem;
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+    }
+}
+
+.requisites__content-title {
+    font-weight: 700;
+}
+
+.requisites__linc-svg {
+    position: absolute;
+    right: 2%;
+    bottom: 4%;
+}
+
+@media (max-width: 1024px) {
+    .requisites__linc-svg {
+        right: 3%;
+        bottom: 1%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .requisites__content div:not(.requisites__content-title) {
+        margin-bottom: 0.4rem;
+    }
+}
+
 /*------footer-----*/
 .footer {
     background-color: var(--white);
@@ -6349,14 +6437,14 @@ sup {
     background-repeat: no-repeat;
     background-position: 100% 100%;
     border-radius: 1.2rem;
-    padding: 8.4rem 13.7rem 3.7rem;
+    padding: 3.7rem 13.7rem 3.7rem;
     background-size: 76rem;
 }
 
 @media (max-width: 1024px) {
     .footer {
         padding: 1.2rem;
-        background-size: 36rem;
+        background-size: 32rem;
     }
 }
 
@@ -6377,6 +6465,7 @@ sup {
     gap: 8.4rem;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    margin-bottom: 8.4rem;
 }
 
 @media (max-width: 1024px) {
@@ -6476,7 +6565,7 @@ sup {
 }
 
 .footer__list {
-    margin: 8.4rem auto 5.6rem;
+    margin: 0 auto 5.6rem;
 }
 
 @media (max-width: 1024px) {

@@ -4,11 +4,11 @@
   background-repeat: no-repeat;
   background-position: 100% 100%;
   border-radius: 1.2rem;
-  padding: 8.4rem 13.7rem 3.7rem;
+  padding: 3.7rem 13.7rem 3.7rem;
   background-size: 76rem;
   @include breakpoint($xl-bp) {
     padding: 1.2rem;
-    background-size: 36rem;
+    background-size: 32rem;
   }
 }
 
@@ -24,6 +24,7 @@
   display: flex;
   gap: 8.4rem;
   justify-content: space-between;
+  margin-bottom: 8.4rem;
   @include breakpoint($xl-bp) {
     flex-direction: column;
     gap: 2.4rem;
@@ -99,7 +100,7 @@
 }
 
 .footer__list {
-  margin: 8.4rem auto 5.6rem;
+  margin: 0 auto 5.6rem;
   @include breakpoint($xl-bp) {
     margin: 0 auto 7.2rem;
   }
