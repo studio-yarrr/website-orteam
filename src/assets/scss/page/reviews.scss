@@ -1,0 +1,50 @@
+.reviews__page {
+  padding: 10.4rem 0;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($xl-bp) {
+    padding: 5.6rem 0 7.2rem;
+  }
+}
+
+.reviews__text {
+  width: 50%;
+  margin-left: auto;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  background-color: var(--white);
+  padding: 2rem;
+  @include breakpoint($xl-bp) {
+    padding: 1.2rem;
+    width: 100%;
+  }
+}
+
+.reviews__text-title {
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  font-weight: 700;
+  @include breakpoint($xl-bp) {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+
+.reviews__button {
+  margin-top: 2.8rem;
+  padding-left: 11rem;
+  padding-right: 11rem;
+  align-self: center;
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
+}
+
+.reviews__record {
+  margin-top: 10.4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 5rem;
+  }
+}
