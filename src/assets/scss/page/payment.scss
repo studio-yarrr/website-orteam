@@ -1,0 +1,73 @@
+.payment__title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment__top {
+  display: grid;
+  grid-template-columns: auto 60rem;
+  gap: 2rem;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.payment__img {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
+}
+
+.payment__text {
+  margin-top: 7.2rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 5.6rem;
+  }
+}
+
+.payment__text-title {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.payment__text-container {
+  max-width: 101rem;
+  margin-top: 5.6rem;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows:  27rem 34rem;
+  gap: 2rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr;
+    margin-bottom: 7.2rem;
+    grid-template-rows:  27rem 29rem 27rem 50rem;
+  }
+}
+
+.payment__text-item {
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
+}
+
+.payment__text-content {
+  display: flex;
+  gap: 1.6rem;
+  flex-direction: column;
+}

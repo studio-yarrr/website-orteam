@@ -244,6 +244,14 @@ h1 {
     }
 }
 
+@media (max-width: 1024px) {
+    h3 {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3.1rem;
+    }
+}
+
 button,
 a {
     text-decoration: none;
@@ -6645,6 +6653,107 @@ sup {
     .reviews__record {
         margin-top: 5rem;
     }
+}
+
+.payment__title-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2.4rem;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.payment__top {
+    display: grid;
+    grid-template-columns: auto 60rem;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .payment__top {
+        grid-template-columns: 1fr;
+    }
+}
+
+.payment__img {
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .payment__img {
+        display: none;
+    }
+}
+
+.payment__text {
+    margin-top: 7.2rem;
+}
+
+@media (max-width: 1024px) {
+    .payment__text {
+        margin-top: 5.6rem;
+    }
+}
+
+.payment__text-title {
+    font-weight: 800;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+}
+
+@media (max-width: 768px) {
+    .payment__text-title {
+        display: none;
+    }
+}
+
+.payment__text-container {
+    max-width: 101rem;
+    margin-top: 5.6rem;
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 27rem 34rem;
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .payment__text-container {
+        grid-template-columns: 1fr;
+        margin-bottom: 7.2rem;
+        grid-template-rows: 27rem 29rem 27rem 50rem;
+    }
+}
+
+.payment__text-item {
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    padding: 1.6rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .payment__text-item {
+        padding: 1.2rem;
+    }
+}
+
+.payment__text-content {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.6rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 /*------footer-----*/
