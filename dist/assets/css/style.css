@@ -385,7 +385,7 @@ a {
   .details__swiper,
   .process__swiper,
   .reviews__swiper {
-        width: 60rem;
+        width: 90rem;
     }
 }
 
@@ -6685,7 +6685,7 @@ sup {
     margin-bottom: 8.4rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .footer__top {
         -ms-flex-direction: column;
         flex-direction: column;
@@ -6706,6 +6706,7 @@ sup {
 
 @media (max-width: 1024px) {
     .footer__mob {
+        width: 100%;
         display: block;
         margin-top: 2.4rem;
     }

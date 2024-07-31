@@ -25,7 +25,7 @@
   gap: 8.4rem;
   justify-content: space-between;
   margin-bottom: 8.4rem;
-  @include breakpoint($xl-bp) {
+  @include breakpoint($sm-bp) {
     flex-direction: column;
     gap: 2.4rem;
     margin-bottom: 7.2rem;
@@ -41,6 +41,7 @@
 .footer__mob {
   display: none;
   @include breakpoint($xl-bp) {
+    width: 100%;
     display: block;
     margin-top: 2.4rem;
   }

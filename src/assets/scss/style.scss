@@ -215,7 +215,7 @@ a {
   height: auto;
   overflow: hidden;
   @include breakpoint($xl-bp) {
-    width: 60rem;
+    width: 90rem;
   }
   @include breakpoint($sm-bp) {
     width: 34rem;
