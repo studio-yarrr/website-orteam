@@ -207,6 +207,7 @@ a {
   }
 }
 
+.doc__swiper,
 .details__swiper,
 .process__swiper,
 .reviews__swiper {
@@ -388,6 +389,12 @@ a {
 .list-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
     bottom: 5%;
+  }
+}
+
+.doc-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include breakpoint($sm-bp) {
+    bottom: -12%;
   }
 }
 

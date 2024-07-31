@@ -252,5 +252,16 @@ const slider9 = new Swiper('.video-swiper', {
     },
 })
 
+const swiper10 = new Swiper('.doc__swiper', {
+    slidesPerView: 1.15,
+    spaceBetween: 20,
+    centeredSlides: true,
+    initialSlide: 1,
+    pagination: {
+        el: '.doc-pagination',
+        clickable: true,
+    },
+});
+
 
 
