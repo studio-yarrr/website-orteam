@@ -146,12 +146,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     const contacts = document.querySelector('.contacts');
     const requisites = document.querySelector('.requisites');
+    const doc = document.querySelector('.doc');
     if (contacts) {
         document.querySelector('.footer__top').style.display = 'none';
         document.querySelector('.footer h2').style.display = 'none';
     }
 
     if (requisites) {
+        document.querySelector('.footer__top').style.display = 'none';
+        document.querySelector('.footer h2').style.display = 'none';
+    }
+
+    if (doc) {
         document.querySelector('.footer__top').style.display = 'none';
         document.querySelector('.footer h2').style.display = 'none';
     }

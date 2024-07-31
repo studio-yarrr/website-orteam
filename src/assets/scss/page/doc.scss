@@ -1,0 +1,76 @@
+.doc__page {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+  padding-bottom: 10rem;
+  @include breakpoint($xl-bp) {
+    gap: 7.2rem;
+    padding-bottom: 7.2rem;
+  }
+}
+
+.doc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5.6rem;
+  align-items: center;
+  @include breakpoint($xl-bp) {
+    gap: 2.4rem;
+  }
+}
+
+
+.doc__slider {
+  margin-top: 5.4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2.4rem;
+  }
+}
+
+.doc h1 {
+  margin-top: 8.4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 6.4rem;
+  }
+}
+
+.doc__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 24rem);
+  gap: 2rem;
+}
+
+.doc__item {
+  border-radius: 1.2rem;
+  padding: 2rem;
+  font-weight: 700;
+  font-size: 2.3rem;
+  line-height: 3.1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include breakpoint($xl-bp) {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+.bg__color1 {
+  background-color: var(--color1);
+  color: var(--white);
+}
+
+.bg__white {
+  background-color: var(--white);
+  color: var(--color1);
+}
+
+.bg__green {
+  background: #405F64;
+  color: var(--white);
+}

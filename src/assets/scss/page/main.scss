@@ -674,6 +674,7 @@ sup {
 .icon {
   width: 4rem;
   height: 4rem;
+  flex-shrink: 0;
 }
 
 .standards__item-img--border img {
