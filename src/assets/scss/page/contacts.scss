@@ -1,0 +1,87 @@
+.contacts__page {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+  padding-bottom: 10rem;
+  @include breakpoint($sm-bp) {
+    gap: 7.2rem;
+    padding-bottom: 7.2rem;
+  }
+}
+
+.contacts {
+  background-color: var(--white);
+  border-radius: 1.2rem;
+  padding: 8.4rem 13.7rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
+}
+
+.contacts h2 {
+  font-size: 4rem;
+  line-height: 4.8rem;
+  font-weight: 800;
+  text-align: center;
+  @include breakpoint($sm-bp) {
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+  }
+}
+
+.contacts__container {
+  margin-top: 5.6rem;
+  display: flex;
+  gap: 8.4rem;
+  justify-content: space-between;
+  @include breakpoint($xl-bp) {
+    margin-top: 2.4rem;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+}
+
+.contacts__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contacts__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.wrapper-map {
+  width: 51.2rem;
+  height: 32.6rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  @include breakpoint($sm-bp) {
+    width: 30rem;
+    height: 22.7rem;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.contacts__item--work {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contacts__title {
+  font-weight: 700;
+}
+
+.contacts__icon {
+  display: flex;
+  gap: 2.1rem;
+}

@@ -1033,6 +1033,9 @@ a.order4 .list__item {
 
 .record__subtitle {
   max-width: 80%;
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
 }
 
 .input {

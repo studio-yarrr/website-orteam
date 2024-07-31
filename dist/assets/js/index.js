@@ -144,5 +144,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     });
 
+    const contacts = document.querySelector('.contacts');
+
+    if (contacts) {
+        document.querySelector('.footer__top').style.display = 'none';
+        document.querySelector('.footer h2').style.display = 'none';
+    }
+
 
 });

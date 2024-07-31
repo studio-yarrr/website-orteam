@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     padding: 3.2rem 0 2.4rem;
   }
 }
@@ -11,7 +11,7 @@
 .logo {
   width: 13.8rem;
   height: 3.8rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     width: 8.7rem;
     height: 2.4rem;
   }
@@ -30,7 +30,7 @@
 }
 
 .header__logo-container div:not(:first-child) {
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: none;
   }
 }
@@ -51,7 +51,7 @@
 .menu {
   display: flex;
   gap: 4rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: none;
   }
 }
@@ -139,14 +139,14 @@
 }
 
 .hide {
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: none;
   }
 }
 
 .hide-desc {
   display: none;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: block;
   }
 }
@@ -155,14 +155,14 @@
 .line.hide-desc,
 .menu-mob.hide-desc {
   display: none;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: block;
   }
 }
 
 .menu-mob.hide-desc {
   display: none;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -171,7 +171,7 @@
 
 .tel-icon {
   display: none;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: block;
   }
 }
