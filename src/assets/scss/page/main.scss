@@ -254,6 +254,9 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  @include breakpoint($xl-bp) {
+    gap: 0.6rem;
+  }
 }
 
 .card--bg1 .list__item-desc{
@@ -446,6 +449,7 @@ sup {
   margin-bottom: 8.4rem;
   @include breakpoint($sm-bp) {
     margin-bottom: 6.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -748,6 +752,8 @@ a.order4 .list__item {
   @include breakpoint($sm-bp) {
     margin-top: 2.4rem;
     overflow: hidden;
+    padding-bottom: 3rem;
+    position: relative;
   }
 }
 
@@ -832,6 +838,10 @@ a.order4 .list__item {
 .details__img img {
   border-bottom-left-radius: 1.2rem;
   border-bottom-right-radius: 1.2rem;
+}
+
+.details__button:hover {
+  background-color: var(--grey);
 }
 
 .process {
@@ -931,7 +941,8 @@ a.order4 .list__item {
   font-weight: 700;
   align-self: flex-end;
   @include breakpoint($sm-bp) {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    align-self: center;
   }
 }
 
@@ -962,6 +973,7 @@ a.order4 .list__item {
   @include breakpoint($sm-bp) {
     margin-bottom: 6.7rem;
     background-image: none;
+    height: 52rem;
   }
 }
 
@@ -1065,6 +1077,7 @@ a.order4 .list__item {
   flex-direction: column;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
+    height: 39rem;
   }
 }
 
@@ -1118,6 +1131,10 @@ a.order4 .list__item {
   margin: 1.6rem 0;
   max-height: 11em;
   overflow: hidden;
+  @include breakpoint($sm-bp) {
+    max-height: 20em;
+    margin: 1.3rem 0;
+  }
 }
 
 .reviews__linc {
@@ -1165,7 +1182,7 @@ a.order4 .list__item {
   max-width: 37%;
   @include breakpoint($sm-bp) {
     margin: 2.4rem 0;
-    width: 100%;
+    max-width: 100%;
     padding: 0 2.4rem;
   }
 }
@@ -1177,8 +1194,10 @@ a.order4 .list__item {
   overflow: hidden;
   @include breakpoint($sm-bp) {
     padding-bottom: 1.2rem;
+    width: 40rem;
   }
 }
+
 
 .braces__title {
   padding-right: 2rem;
@@ -1214,6 +1233,17 @@ a.order4 .list__item {
 .braces__slider {
   padding-top: 5.6rem;
   position: relative;
+  @include breakpoint($sm-bp) {
+    padding-top: 3.6rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.braces__slider {
+  @include breakpoint($sm-bp) {
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
 }
 
 .surgery {
@@ -1273,6 +1303,8 @@ a.order4 .list__item {
   width: 37rem;
   @include breakpoint($sm-bp) {
     width: 100%;
+    font-weight: 400;
+    margin-top: 3rem;
   }
 }
 
@@ -1312,6 +1344,7 @@ a.order4 .list__item {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     width: 100%;
+    padding-bottom: 2rem;
   }
 }
 
@@ -1326,6 +1359,9 @@ a.order4 .list__item {
   margin: 0 4.6rem;
   position: absolute;
   bottom: -3%;
+  @include breakpoint($sm-bp) {
+    margin: 0 4.6rem;
+  }
 }
 
 .surgery__img-container .standards__img-subtitle {
@@ -1336,6 +1372,10 @@ a.order4 .list__item {
   background-color: var(--white);
   border-radius: 1.2rem;
   padding: 8.4rem 2rem 10.4rem 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 0 2rem 6.4rem 2rem;
+    background-color: var(--bg-main);
+  }
 }
 
 .price__item {
@@ -1347,6 +1387,13 @@ a.order4 .list__item {
   gap: 1.6rem;
   align-items: center;
   position: relative;
+  @include breakpoint($sm-bp) {
+    background-color: var(--white);
+  }
+}
+
+.price__item.border:hover {
+  background-color: var(--white);
 }
 
 .price__title {
@@ -1404,6 +1451,7 @@ a.order4 .list__item {
   margin-top: 5.6rem;
   @include breakpoint($sm-bp) {
     margin-top: 2.4rem;
+    gap: 0;
   }
 }
 
@@ -1429,7 +1477,7 @@ a.order4 .list__item {
   font-size: 2.4rem;
   line-height: 2.8rem;
   @include breakpoint($xl-bp) {
-    margin: 4rem 0;
+    margin: 2.4rem 0;
     max-width: 100%;
     font-size: 1.6rem;
     line-height: 2rem;
@@ -1449,18 +1497,27 @@ a.order4 .list__item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include breakpoint($sm-bp) {
+   gap: 1.2rem;
+  }
 }
 
 .calculator__right-top {
   border-radius: 1.2rem;
   padding: 2rem;
   background-color: var(--color1);
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
 }
 
 .calculator__top-item {
   display: flex;
   gap: 2rem;
   align-items: center;
+  @include breakpoint($sm-bp) {
+    gap: 1.2rem;
+  }
 }
 
 .calculator__top-num,
@@ -1492,7 +1549,8 @@ a.order4 .list__item {
   width: 80rem;
   margin: 8.4rem auto;
   @include breakpoint($sm-bp) {
-    margin: 6.4rem 0;
+    margin: 0  auto 6.4rem ;
+    width: 32rem;
   }
 }
 
@@ -1534,6 +1592,14 @@ a.order4 .list__item {
   stroke: var(--color2);
   width: 3.2rem;
   height: 3.2rem;
+  @include breakpoint($sm-bp) {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+.questions__block {
+  background-color: var(--white);
 }
 
 .questions__block div {
@@ -1556,7 +1622,10 @@ a.order4 .list__item {
   display: none;
   @include breakpoint($sm-bp) {
     display: block;
-    align-items: center;
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+    font-weight: 800;
   }
 }
 
@@ -1575,6 +1644,16 @@ a.order4 .list__item {
   align-items: center;
   flex-direction: column;
   height: 55rem;
+  @include breakpoint($sm-bp) {
+    height: 43rem;
+  }
+}
+
+.articles-img {
+  @include breakpoint($sm-bp) {
+    height: 20rem;
+    width: 100%;
+  }
 }
 
 .articles__item-title {
@@ -1613,6 +1692,8 @@ a.order4 .list__item {
 
 .video-item__title {
   font-weight: 700;
+  overflow: hidden;
+  height: 2em;
 }
 
 .video-item {
@@ -1631,12 +1712,16 @@ a.order4 .list__item {
   }
 }
 
+.video-text__slider div {
+  height: 2em;
+}
+
 .record__container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10rem 0;
   @include breakpoint($sm-bp) {
-    margin: 5.4rem 0 7.5rem;
+    margin: 5.4rem auto 7.5rem;
   }
 }

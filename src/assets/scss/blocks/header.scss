@@ -144,6 +144,12 @@
   }
 }
 
+.hide-desc {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: block;
+  }
+}
 
 .button.hide-desc,
 .line.hide-desc,

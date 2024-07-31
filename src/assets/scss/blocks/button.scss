@@ -5,6 +5,9 @@
   color: var(--color1);
   text-align: center;
   font-weight: 700;
+  @include breakpoint($sm-bp) {
+    padding: 1.6rem  4.8rem;
+  }
 }
 
 .button__bg-dark {

@@ -2,7 +2,7 @@
     <section class="banner wrapper">
         <div class="banner__wrapper">
             <div class="banner__inf">
-                <h1>Идеальная улыбка с Orteam:<br><br class="">
+                <h1 class="element-animation-right">Идеальная улыбка с Orteam:<br><br class="hide-desc">
                     <span class="title-mob">Брекеты по лучшей цене!</span></h1>
                 <div class="banner__slider">
                     <div class="swiper-container">
@@ -36,9 +36,9 @@
                     </div>
 
                 </div>
-                <button class="button">Хочу на консультацию</button>
+                <button class="button element-animation-scale">Хочу на консультацию</button>
             </div>
-            <a href="#" class="banner__linc">
+            <a href="#" class="banner__linc element-animation-bottom">
                 Найдёте условия лучше,<br> сделаем скидку
                 <div class="banner__linc-svg">
                     <img src="assets/images/linc-arrow.svg" alt="icon">
@@ -54,7 +54,7 @@
 
     <section class="list list__swiper">
         <div class="list__container swiper-wrapper">
-            <div class="list__column swiper-slide">
+            <div class="list__column swiper-slide element-animation-left">
                 <a href="#" target="_blank">
                     <div class="list__item">
                         <div class="list__item-title">
@@ -103,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            <div class="list__column swiper-slide">
+            <div class="list__column swiper-slide element-animation-bottom">
                 <a href="#" target="_blank">
                     <div class="list__item list__item--darc">
                         <div class="list__item-title">
@@ -141,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="list__column swiper-slide">
+            <div class="list__column swiper-slide element-animation-right">
                 <div class="list__item card--bg5">
                     <div class="list__item-desc">
                         <div class="list__item-title">Комфортная атмосфера</div>
@@ -238,7 +238,7 @@
                     </li>
                 </ol>
             </div>
-            <div>
+            <div class="element-animation-opacity">
                 <picture class="content__img">
                     <source srcset="assets/images/content-mob.png" media="(max-width:1024px)">
                     <img src="assets/images/content.png" alt="banner"  class="content__img">
@@ -405,8 +405,8 @@
                         <div class="swiper-slide team__item">
                             <div class="team__item-img">
                                 <picture class="content__img">
-                                    <source srcset="assets/images/doc4__mob.jpg" media="(max-width:1024px)">
-                                    <img src="assets/images/doc4.jpg" alt="image">
+                                    <source srcset="assets/images/doc5__mob.jpg" media="(max-width:1024px)">
+                                    <img src="assets/images/doc5.jpg" alt="image">
                                 </picture>
                             </div>
                             <div class="team__item-desc">
@@ -436,7 +436,7 @@
     <section class="standards wrapper">
         <h2 class="team__title">Стандарты лечения Orteam</h2>
         <div class="standards__container">
-            <a href="#" target="_blank" class="order4">
+            <a href="#" target="_blank" class="order4 element-animation-right">
                 <div class="list__item list__item--darc">
                     <div class="standards__item-title">
                         Углублённая диагностика для каждого
@@ -455,7 +455,7 @@
                 </div>
                 <p>Проводим еженедельные консилиумы, разбираем сложные случаи, новые протоколы и методы лечения</p>
             </div>
-            <div class="standards__item order5">
+            <div class="standards__item order5 element-animation-left">
                 <div class="standards__item-img">
                     <picture class="standards__item-img--border">
                         <source srcset="./assets/images/doc-mob.jpg" media="(max-width:1024px)">
@@ -484,7 +484,7 @@
     </section>
 
     <section class="details details__wrapper">
-        <h2 class="team__title">Узнайте о нюансах лечения настолько<br> подробно, насколько захотите</h2>
+        <h2 class="team__title element-animation-left">Узнайте о нюансах лечения настолько<br> подробно, насколько захотите</h2>
         <div class="details__slider">
             <div class="details__swiper">
                <div class="swiper-wrapper details__swiper-container">
@@ -493,7 +493,7 @@
                            <p class="details__item-title">Я вам доверяю</p>
                            <p class="details__item-subtitle">Лайфхаки о брекетах за 1 минуту в день</p>
                        </div>
-                       <button class="button">Хочу на консультацию</button>
+                       <button class="button details__button">Хочу на консультацию</button>
                    </a>
                    <a href="#" class="swiper-slide details__item details__item--dark">
                        <div class="details__text">
@@ -513,7 +513,7 @@
                    </div>
                </div>
             </div>
-<!--            <div class="pagination details-pagination"></div>-->
+            <div class="pagination details-pagination"></div>
         </div>
     </section>
 
@@ -687,12 +687,12 @@
         </div>
     </section>
 
-    <section class="record-content wrapper">
+    <section class="record-content wrapper element-animation-opacity">
         {{> record }}
     </section>
 
     <section class="reviews wrapper">
-        <h2 class="team__title">Отзывы</h2>
+        <h2 class="team__title element-animation-scale">Отзывы</h2>
         <div class="reviews__slider">
             <div class="reviews__swiper">
                 <div class="swiper-wrapper">
@@ -946,12 +946,13 @@
                     </div>
                 </div>
             </div>
+            <div class="pagination reviews-pagination"></div>
         </div>
     </section>
 
     <section class="braces wrapper">
-        <h2 class="team__title">Как выглядят брекеты?</h2>
-        <div class="braces__text">Здесь вы можете посмотреть какое впечатление производят люди с брекетами и элайнерами</div>
+        <h2 class="team__title element-animation-scale">Как выглядят брекеты?</h2>
+        <div class="braces__text element-animation-bottom">Здесь вы можете посмотреть какое впечатление производят люди с брекетами и элайнерами</div>
         <div class="braces__slider">
             <div class="braces__swiper">
                 <div class="swiper-wrapper">
@@ -983,6 +984,7 @@
                     <img src="assets/images/next.svg" alt="">
                 </div>
             </div>
+            <div class="pagination braces-pagination"></div>
         </div>
         <div class="braces__text-subslider">
             Картинки предназначены для формирования общего впечатления. Генерация с использованием нейросети. Есть отличия в деталях.
@@ -993,7 +995,7 @@
         <h2 class="team__title">Медицинская аналитика</h2>
         <div class="analytics__container">
             <div class="analytics__item">
-                <div class="analytics__text">
+                <div class="analytics__text element-animation-left">
                     <p>В Orteam лечение пациентов основано на детальном анализе и интерпретации данных, полученных в ходе диагностики. </p>
                     <p>Наша цель — выявить закономерности и причины, которые привели к возникновению конкретной клинической картины. Затем мы оцениваем анатомические особенности и ограничения каждого пациента.
                     </p>
@@ -1008,7 +1010,7 @@
                 </a>
             </div>
             <div class="analytics__item">
-                <div class="analytics__text">
+                <div class="analytics__text element-animation-right">
                     <p>В нашей клинике мы применяем авторскую концепцию этиологической ортодонтии. Её разрабатывал и совершенствовал в течение восьми лет главный врач клиники — Панков В.Е. Суть этиологической ортодонтии в том, чтобы разделить клиническую картину на составные элементы — отдельные аномалии, и сосредоточиться на выявлении причин, следствий и взаимосвязей между ними.</p>
                     <p>Концепция отличается от классической ортодонтии, но схожа с ней по методам и протоколам. Она является развитием, а не противоположностью мейнстримной ортодонтии.</p>
                 </div>
@@ -1060,7 +1062,7 @@
     </section>
 
     <section class="price wrapper" >
-        <h2 class="team__title">Стоимость лечения</h2>
+        <h2 class="team__title element-animation-opacity">Стоимость лечения</h2>
         <div class="price__container">
             <div class="price-swiper">
                 <div class="swiper-wrapper price-swiper__container">
@@ -1246,10 +1248,11 @@
                         </ul>
                     </div>
                 </div>
+                <div class="pagination price-pagination"></div>
             </div>
         </div>
         <div class="calculator__container">
-            <h2 class="team__title">Калькулятор стоимости ортодонтиии</h2>
+            <h2 class="team__title element-animation-opacity">Калькулятор стоимости ортодонтиии</h2>
             <p class="calculator__subtitle">Здесь можно рассчитать стоимость лечения в Orteam, в зависимости от срока и тарифного плана.</p>
             <div class="calculator__inf">
                     <div>
@@ -1303,7 +1306,7 @@
     </section>
 
     <section class="questions wrapper">
-        <h2 class="team__title">F.A.Q.</h2>
+        <h2 class="team__title element-animation-opacity">F.A.Q.</h2>
         <div class="questions__items">
             <div class="questions__item ">
 
@@ -1498,13 +1501,13 @@
     </section>
 
     <section class="articles wrapper">
-        <h2 class="team__title">Наши статьи о брекетах</h2>
+        <h2 class="team__title element-animation-bottom">Наши статьи о брекетах</h2>
         <h2 class="articles__title">Статьи</h2>
             <div class="articles__slider">
                 <div class="articles-swiper">
                     <div class="swiper-wrapper">
                         <a href="https://proxiclinic.ru/journal/chto-takoe-pravilnyj-prikus-vidy-i-kak-opredelit/" class="swiper-slide articles__item">
-                            <div>
+                            <div class="articles-img">
                                 <img src="assets/images/atricles1.jpg" alt="article">
                             </div>
                             <div class="articles-text">
@@ -1518,7 +1521,7 @@
                             </div>
                         </a>
                         <a href="https://proxiclinic.ru/journal/chto-takoe-breket-sistemy-kak-vyranivayut-zuby/" class="swiper-slide articles__item">
-                            <div>
+                            <div class="articles-img">
                                 <img src="assets/images/articles2.jpg" alt="article">
                             </div>
                             <div class="articles-text">
@@ -1528,7 +1531,7 @@
                             </div>
                         </a>
                         <a href="https://proxiclinic.ru/journal/skolko-nosyat-brekety-minimalnye-sroki-nosheniya/" class="swiper-slide articles__item">
-                            <div>
+                            <div class="articles-img">
                                 <img src="assets/images/articles3.jpg" alt="article">
                             </div>
                             <div class="articles-text">
@@ -1538,7 +1541,7 @@
                             </div>
                         </a>
                         <a href="https://proxiclinic.ru/journal/skolko-nosyat-brekety-minimalnye-sroki-nosheniya/" class="swiper-slide articles__item">
-                            <div>
+                            <div class="articles-img">
                                 <img src="assets/images/articles4.jpg" alt="article">
                             </div>
                             <div class="articles-text">
@@ -1557,11 +1560,12 @@
                         <img src="assets/images/next.svg" alt="">
                     </div>
                 </div>
+                <div class="pagination articles-pagination"></div>
             </div>
     </section>
 
     <section class="video wrapper">
-        <h2 class="team__title">Видео нашего Youtube-канала</h2>
+        <h2 class="team__title element-animation-bottom">Видео нашего Youtube-канала</h2>
         <h2 class="video__title">Наш You-Tube</h2>
         <div class="video__slider">
             <div class="video-swiper">
@@ -1611,6 +1615,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="pagination video-pagination"></div>
             </div>
             <div class="video__buttons">
                 <div class="video-button-prev">
@@ -1623,7 +1628,7 @@
         </div>
     </section>
 
-    <div class="record__container wrapper">
+    <section class="record__container wrapper">
         {{> record }}
-    </div>
+    </section>
 </main>

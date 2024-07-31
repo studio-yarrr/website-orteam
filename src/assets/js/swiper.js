@@ -25,34 +25,38 @@ if (isMobile()) {
     });
 
     const swiper3 = new Swiper('.details__swiper', {
-        slidesPerView: 1.5,
+        slidesPerView: 1.15,
         spaceBetween: 20,
-        // pagination: {
-        //     el: '.details-pagination',
-        //     clickable: true,
-        // },
+        pagination: {
+            el: '.details-pagination',
+            clickable: true,
+        },
     });
 
     const slider7 = new Swiper('.price-swiper', {
         spaceBetween: 20,
         speed: 800,
         slidesPerView: 4,
+        pagination: {
+            el: '.price-pagination',
+            clickable: true,
+        },
 
-        // breakpoints: {
-        //
-        //     320: {
-        //         slidesPerView: 1.5,
-        //     },
-        //
-        //     768: {
-        //         slidesPerView: 2.5,
-        //     },
-        //
-        //     1024: {
-        //         slidesPerView: 2.5,
-        //     }
-        //
-        // },
+        breakpoints: {
+
+            320: {
+                slidesPerView: 1.15,
+            },
+
+            768: {
+                slidesPerView: 2.,
+            },
+
+            1024: {
+                slidesPerView: 4,
+            }
+
+        },
     })
 }
 
@@ -74,7 +78,7 @@ const slider2 = new Swiper('.team__swiper', {
     breakpoints: {
 
         320: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.15,
         },
 
         768: {
@@ -106,7 +110,7 @@ const slider4 = new Swiper('.process__swiper', {
     breakpoints: {
 
         320: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.15,
         },
 
         768: {
@@ -130,10 +134,15 @@ const slider5 = new Swiper('.reviews__swiper', {
         prevEl: '.reviews-button-prev',
     },
 
+    pagination: {
+        el: '.reviews-pagination',
+        clickable: true,
+    },
+
     breakpoints: {
 
         320: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.15,
         },
 
         768: {
@@ -157,10 +166,15 @@ const slider6 = new Swiper('.braces__swiper', {
         prevEl: '.braces-button-prev',
     },
 
+    pagination: {
+        el: '.braces-pagination',
+        clickable: true,
+    },
+
     breakpoints: {
 
         320: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.15,
         },
 
         768: {
@@ -184,10 +198,15 @@ const slider8 = new Swiper('.articles-swiper', {
         prevEl: '.articles-button-prev',
     },
 
+    pagination: {
+        el: '.articles-pagination',
+        clickable: true,
+    },
+
     breakpoints: {
 
         320: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.15,
         },
 
         768: {
@@ -211,10 +230,15 @@ const slider9 = new Swiper('.video-swiper', {
         prevEl: '.video-button-prev',
     },
 
+    pagination: {
+        el: '.video-pagination',
+        clickable: true,
+    },
+
     breakpoints: {
 
         320: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.15,
         },
 
         768: {

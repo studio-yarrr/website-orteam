@@ -51,9 +51,7 @@ body {
   background-color: var(--bg-main);
   font-size: 1.6rem;
   line-height: 2rem;
-  @include breakpoint($sm-bp) {
-    font-size: 1.2rem;
-  }
+
 }
 
 select {
@@ -145,6 +143,13 @@ a {
   }
 }
 
+.price__container {
+  @include breakpoint($sm-bp) {
+    width: 32rem;
+    padding-bottom: 3rem;
+  }
+}
+
 .process__wrapper,
 .details__swiper,
 .list__swiper,
@@ -179,7 +184,6 @@ a {
 .video-swiper,
 .articles-swiper,
 .team__swiper,
-
 .braces__swiper {
   width: 121.6rem;
   height: auto;
@@ -187,10 +191,17 @@ a {
   @include breakpoint($xl-bp) {
     width: 60rem;
   }
+  @include breakpoint($sm-bp) {
+    width: 34rem;
+  }
 }
 
 .price-swiper {
   height: 55rem;
+  @include breakpoint($sm-bp) {
+    position: relative;
+    padding-bottom: 3rem;
+  }
 }
 
 .details__swiper,
@@ -203,7 +214,13 @@ a {
     width: 60rem;
   }
   @include breakpoint($sm-bp) {
-    width: 45rem;
+    width: 34rem;
+  }
+}
+
+.reviews__swiper {
+  @include breakpoint($sm-bp) {
+    width: 34rem;
   }
 }
 
@@ -349,8 +366,7 @@ a {
   transform: rotate(180deg);
 }
 
-.process-pagination,
-.team-pagination {
+.pagination {
   display: none;
   @include breakpoint($sm-bp) {
     display: flex;
@@ -360,7 +376,7 @@ a {
 .pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
     position: absolute;
-    left: 50%;
+    left: 45%;
     bottom: 10%;
     width: 50%;
   }
@@ -372,15 +388,38 @@ a {
   }
 }
 
+.video-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
 .team-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
     bottom: -2%;
   }
 }
 
+.details-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include breakpoint($sm-bp) {
+    left: 22%;
+  }
+}
+
+
+.details-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+.articles-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+.braces-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
 .process-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
     bottom: 0;
+  }
+}
+
+.reviews-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include breakpoint($sm-bp) {
+    bottom: 3%;
+  }
+}
+
+.price-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include breakpoint($sm-bp) {
+    bottom: -3%;
   }
 }
 
