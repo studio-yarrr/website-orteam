@@ -5873,6 +5873,7 @@ sup {
 }
 
 .price__item.border:hover {
+    cursor: none;
     background-color: var(--white);
 }
 
@@ -5945,6 +5946,7 @@ sup {
 
 @media (max-width: 768px) {
     .price-swiper__container {
+        grid-template-columns: repeat(4, 1fr);
         margin-top: 2.4rem;
         gap: 0;
     }

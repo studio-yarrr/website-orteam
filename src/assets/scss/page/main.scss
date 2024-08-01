@@ -1418,6 +1418,7 @@ a.order4 .list__item {
 }
 
 .price__item.border:hover {
+  cursor: none;
   background-color: var(--white);
 }
 
@@ -1478,6 +1479,7 @@ a.order4 .list__item {
     grid-template-columns: repeat(2, 1fr);
   }
   @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 2.4rem;
     gap: 0;
   }
