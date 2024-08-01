@@ -1325,6 +1325,7 @@ a.order4 .list__item {
   display: flex;
   justify-content: space-between;
   width: 37rem;
+  align-items: center;
   @include breakpoint($sm-bp) {
     width: 100%;
     font-weight: 400;

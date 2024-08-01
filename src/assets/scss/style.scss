@@ -100,10 +100,11 @@ h2 {
 }
 
 h3 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
   @include breakpoint($xl-bp) {
-    font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 3.1rem;
+
   }
 
   @include breakpoint($sm-bp) {}
@@ -505,6 +506,7 @@ a {
 @import './page/reviews.scss';
 @import './page/payment.scss';
 @import './page/guarantee.scss';
+@import './page/assurance.scss';
 
 /*------footer-----*/
 @import './blocks/footer.scss';

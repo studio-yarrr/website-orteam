@@ -42,6 +42,10 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
+.border a {
+  white-space: nowrap;
+}
+
 .border:hover {
   cursor: pointer;
   background-color: var(--color2);
