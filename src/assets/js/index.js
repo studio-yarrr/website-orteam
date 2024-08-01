@@ -162,5 +162,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
         document.querySelector('.footer h2').style.display = 'none';
     }
 
+    const listDoctors = document.getElementById('listDoctors');
+    const selectDoctors = document.getElementById('selectDoctors');
+    const ulList = document.querySelectorAll('.doctors__item');
+    const doctorsCard = document.querySelectorAll('.doctors__content-item');
+
+    ulList.forEach(li => {
+        const option = document.createElement('option');
+        option.value = li.id;
+        option.textContent = li.textContent;
+        selectDoctors.appendChild(option);
+    });
+
+    function cardFilter(event) {
+        let e = event.target;
+        if (e.classList.contains('doctors__item') || e.tagName === 'SELECT') {
+            const selectedValue = e.value || e.getAttribute('id');
+
+            ulList.forEach(elem => {
+                elem.classList.remove('active');
+            });
+            ulList.forEach(elem => {
+                if (elem.id === selectedValue) {
+                    elem.classList.add('active');
+                }
+            });
+
+            doctorsCard.forEach(card => {
+                card.style.display = 'none';
+                const cardCategory = card.getAttribute('data-item');
+                card.style.display = cardCategory === selectedValue || selectedValue === 'all'
+                    ? 'flex'
+                    : 'none';
+            });
+        }
+    }
+
+    listDoctors.addEventListener('click', cardFilter);
+    selectDoctors.addEventListener('change', cardFilter);
 
 });
