@@ -40,6 +40,9 @@
 
 .button-slider__item {
   padding: 1.6rem 3rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+  }
   @include breakpoint($sm-bp) {
     margin-top: 4rem;
   }

@@ -354,7 +354,7 @@ a {
   .articles-swiper,
   .team__swiper,
   .braces__swiper {
-        width: 60rem;
+        width: 95rem;
     }
 }
 
@@ -372,8 +372,15 @@ a {
     height: 55rem;
 }
 
+@media (max-width: 1024px) {
+    .price-swiper {
+        height: 100rem;
+    }
+}
+
 @media (max-width: 768px) {
     .price-swiper {
+        height: 55rem;
         position: relative;
         padding-bottom: 3rem;
     }
@@ -3765,6 +3772,12 @@ button.swiper-pagination-bullet {
     padding: 1.6rem 3rem;
 }
 
+@media (max-width: 1024px) {
+    .button-slider__item {
+        margin-top: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .button-slider__item {
         margin-top: 4rem;
@@ -4058,21 +4071,23 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 1024px) {
     .banner {
-        margin-bottom: 0;
+        background-image: url("../images/banner-mob.png");
+        background-size: contain;
+        padding: 2rem;
+        position: relative;
+        gap: 3rem;
     }
 }
 
 @media (max-width: 768px) {
     .banner {
-        background-image: url("../images/banner-mob.png");
-        background-size: contain;
         padding: 0;
         position: relative;
         gap: 7rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .banner__inf h1 {
         position: absolute;
         top: 2%;
@@ -4088,6 +4103,12 @@ button.swiper-pagination-bullet {
     -ms-flex-align: start;
     align-items: flex-start;
     gap: 14rem;
+}
+
+@media (max-width: 1024px) {
+    .banner__wrapper {
+        gap: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -4168,6 +4189,12 @@ button.swiper-pagination-bullet {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 65rem;
+}
+
+@media (max-width: 1024px) {
+    .banner__container {
+        margin-top: 13rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -4450,7 +4477,14 @@ button.swiper-pagination-bullet {
 @media (max-width: 1024px) {
     .content {
         grid-template-columns: 1fr;
+        margin-bottom: 6.4rem;
         background-color: var(--bg-main);
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
         padding: 0;
         gap: 0;
         margin-bottom: 6.4rem;
@@ -4463,7 +4497,7 @@ button.swiper-pagination-bullet {
     border-radius: 1.2rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .content__left {
         -ms-flex-direction: column;
         flex-direction: column;
@@ -4481,7 +4515,7 @@ button.swiper-pagination-bullet {
     border-bottom-left-radius: 1.2rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .content__list-container {
         padding: 1.2rem 3.2rem;
         border-radius: 1.2rem;
@@ -4505,7 +4539,7 @@ button.swiper-pagination-bullet {
     white-space: nowrap;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .content__list {
         font-size: 1.6rem;
         line-height: 2rem;
@@ -4535,7 +4569,7 @@ sup {
     flex-shrink: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .content__img {
         width: 32rem;
         height: 30rem;
@@ -4548,7 +4582,7 @@ sup {
     height: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .content__img img {
         border-top-right-radius: 1.2rem;
         border-top-left-radius: 1.2rem;
@@ -4565,7 +4599,7 @@ sup {
     justify-content: space-between;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .content__right {
         background-color: var(--white);
         gap: 4.2rem;
@@ -4588,7 +4622,7 @@ sup {
     gap: 2.4rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .content__right-top {
         font-size: 1.6rem;
         line-height: 2rem;
@@ -4607,7 +4641,7 @@ sup {
     gap: 4rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .content__right-bottom {
         font-size: 1.6rem;
         line-height: 2rem;
@@ -4688,6 +4722,13 @@ sup {
 }
 
 @media (max-width: 1024px) {
+    .team__item-img {
+        width: auto;
+        height: 33rem;
+    }
+}
+
+@media (max-width: 768px) {
     .team__item-img {
         width: auto;
         height: 29.1rem;
@@ -5648,6 +5689,10 @@ sup {
     }
 }
 
+.analytics__container {
+    gap: 2rem;
+}
+
 .surgery__container {
     gap: 2rem;
 }
@@ -5881,6 +5926,12 @@ sup {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 5.6rem;
+}
+
+@media (max-width: 1024px) {
+    .price-swiper__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -6849,12 +6900,14 @@ sup {
     border-radius: 1.2rem;
     padding: 3.7rem 13.7rem 3.7rem;
     background-size: 76rem;
+    margin-bottom: 2.7rem;
 }
 
 @media (max-width: 1024px) {
     .footer {
         padding: 1.2rem;
         background-size: 32rem;
+        margin-bottom: 3.2rem;
     }
 }
 

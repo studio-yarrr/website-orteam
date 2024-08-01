@@ -82,7 +82,7 @@ const slider2 = new Swiper('.team__swiper', {
         },
 
         768: {
-            slidesPerView: 2,
+            slidesPerView: 1.25,
         },
 
         1024: {

@@ -196,7 +196,7 @@ a {
   height: auto;
   overflow: hidden;
   @include breakpoint($xl-bp) {
-    width: 60rem;
+    width: 95rem;
   }
   @include breakpoint($sm-bp) {
     width: 34rem;
@@ -205,7 +205,11 @@ a {
 
 .price-swiper {
   height: 55rem;
+  @include breakpoint($xl-bp) {
+    height: 100rem;
+  }
   @include breakpoint($sm-bp) {
+    height: 55rem;
     position: relative;
     padding-bottom: 3rem;
   }
