@@ -1,11 +1,10 @@
-
 .guarantee__wrapper {
   background-color: var(--white);
   border-radius: 1.2rem;
   padding: 8.4rem 0;
   margin-bottom: 10rem;
   @include breakpoint($sm-bp) {
-    padding: 1.2rem 0;
+    padding: 1.2rem;
     margin-bottom: 7.2rem;
   }
 }
@@ -42,6 +41,7 @@
   @include breakpoint($sm-bp) {
     margin-top: 2.4rem;
     gap: 1.2rem;
+    width: 100%;
   }
 }
 
@@ -66,4 +66,13 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+}
+
+.guarantee__item-list {
+  margin-top: 1.6rem;
+  list-style: square inside;
+}
+
+.guarantee__item-list li::marker {
+  color: var(--color2)
 }

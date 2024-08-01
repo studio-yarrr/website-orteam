@@ -6816,7 +6816,7 @@ sup {
 
 @media (max-width: 768px) {
     .guarantee__wrapper {
-        padding: 1.2rem 0;
+        padding: 1.2rem;
         margin-bottom: 7.2rem;
     }
 }
@@ -6859,6 +6859,7 @@ sup {
     .guarantee__content {
         margin-top: 2.4rem;
         gap: 1.2rem;
+        width: 100%;
     }
 }
 
@@ -6889,6 +6890,15 @@ sup {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1.6rem;
+}
+
+.guarantee__item-list {
+    margin-top: 1.6rem;
+    list-style: square inside;
+}
+
+.guarantee__item-list li::marker {
+    color: var(--color2);
 }
 
 /*------footer-----*/
