@@ -658,48 +658,6 @@
         </div>
     </div>
     <div class="record-content doctors__record">
-        <div class="record">
-            <div class="record__title">
-                Запишитесь на приём
-            </div>
-            <div class="record__subtitle">
-                Оставьте контакты, и&nbsp;мы&nbsp;свяжемся с&nbsp;вами  в&nbsp;ближайшее время
-            </div>
-            <form class="form">
-                <label class="input">
-                    <input type="text" name="name" placeholder="Имя*" required="">
-                </label>
-                <label class="input">
-                    <input type="tel" name="tel" placeholder="Телефон*" class="custom-input" required="">
-                </label>
-                <label class="input">
-                    <select name="list">
-                        <option value="1">Напишите мне в WhatsApp</option>
-                        <option value="2">Напишите мне в Telegram</option>
-                        <option value="3">Перезвоните мне</option>
-                    </select>
-                </label>
-                <button class="button" type="submit">Записаться</button>
-                <span>Нажимая на&nbsp;кнопку «Записаться», я&nbsp;принимаю условия пользовательского соглашения и&nbsp;даю&nbsp;согласие на&nbsp;обработку своих персональных данных.</span>
-            </form>
-            <div class="record__icon">Или&nbsp;свяжитесь с&nbsp;нами прямо сейчас</div>
-            <div class="menu__social">
-                <a href="#">
-                    <div>
-                        <img src="assets/images/tel.svg" alt="icon">
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        <img src="assets/images/wt.svg" alt="icon">
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        <img src="assets/images/tl.svg" alt="icon">
-                    </div>
-                </a>
-            </div>
-        </div>
+        {{> record }}
     </div>
 </section>

@@ -208,14 +208,40 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const onList = document.querySelector('.doctor-qualification__linc');
     const list = document.querySelector('.doctor-qualification__list');
 
-    onList.addEventListener('click', () => {
-        if (list.classList.contains('active')) {
-            list.classList.remove('active');
-            onList.textContent = 'Развернуть';
-        } else {
-            list.classList.add('active');
-            onList.textContent = 'Свернуть';
-        }
-    });
+   if(onList) {
+       onList.addEventListener('click', () => {
+           if (list.classList.contains('active')) {
+               list.classList.remove('active');
+               onList.textContent = 'Развернуть';
+           } else {
+               list.classList.add('active');
+               onList.textContent = 'Свернуть';
+           }
+       });
+   }
 
+
+    const portfolioList = document.querySelector('.portfolio__list');
+    const portfolioContent = document.querySelectorAll('.portfolio__content');
+    const portfolioItem = document.querySelectorAll('.portfolio__item');
+    const portfolioButton = document.querySelector('.portfolio__button');
+
+    if(portfolioList || portfolioContent ) {
+        portfolioList.addEventListener('click', (event) => {
+            const e = event.target;
+            if(e.classList.contains('portfolio__item')) {
+                portfolioItem.forEach( item => {
+                    item.classList.remove('active')
+                })
+                e.classList.add("active")
+
+                portfolioContent.forEach( item => {
+                    item.classList.remove('active')
+                })
+                const index = Array.from(portfolioItem).indexOf(e);
+                portfolioContent[index].classList.add('active');
+            }
+        })
+
+    }
 });
