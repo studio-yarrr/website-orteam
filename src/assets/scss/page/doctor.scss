@@ -218,6 +218,7 @@
   overflow: hidden;
   @include breakpoint($sm-bp) {
     margin-top: 1.2rem;
+    max-height: 50rem;
   }
 }
 
@@ -257,4 +258,21 @@
   width: 100%;
   left: 0;
   background: var(--grey);
+}
+
+.doctor .articles {
+  margin-top: 5rem;
+}
+
+.doctor .video h2,
+.doctor .articles h2 {
+  @include breakpoint($sm-bp) {
+    text-align: center;
+  }
+}
+
+.doctor .video {
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+  }
 }
