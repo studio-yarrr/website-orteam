@@ -87,7 +87,6 @@ select {
   }
 }
 
-
 .doctors__content-item .team__item-desc {
   @include breakpoint($xl-bp) {
     flex-grow: 1;
