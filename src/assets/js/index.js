@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     //accordion
-    const titles = document.querySelectorAll('\.accordion__title');
-    const contents = document.querySelectorAll('\.accordion-content');
-    const svg = document.querySelectorAll('\.questions__item \.questions__svg svg');
+    const titles = document.querySelectorAll('.accordion__title');
+    const contents = document.querySelectorAll('.accordion-content');
+    const svg = document.querySelectorAll('.questions__item .questions__svg svg');
 
     titles.forEach(item => item.addEventListener('click', () => {
         const activeContent = document.querySelector('#' + item.dataset.tab);
@@ -198,7 +198,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
-    listDoctors.addEventListener('click', cardFilter);
-    selectDoctors.addEventListener('change', cardFilter);
+    if(listDoctors || selectDoctors) {
+        listDoctors.addEventListener('click', cardFilter);
+        selectDoctors.addEventListener('change', cardFilter);
+    }
+
+
+
+    const onList = document.querySelector('.doctor-qualification__linc');
+    const list = document.querySelector('.doctor-qualification__list');
+
+    onList.addEventListener('click', () => {
+        if (list.classList.contains('active')) {
+            list.classList.remove('active');
+            onList.textContent = 'Развернуть';
+        } else {
+            list.classList.add('active');
+            onList.textContent = 'Свернуть';
+        }
+    });
 
 });

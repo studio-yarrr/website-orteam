@@ -263,5 +263,32 @@ const swiper10 = new Swiper('.doc__swiper', {
     },
 });
 
+const slider11 = new Swiper('.doctor-certificate__swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 2.45,
+
+    navigation: {
+        nextEl: '.certificate-button-next',
+        prevEl: '.certificate-button-prev',
+    },
+
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.15,
+        },
+
+        768: {
+            slidesPerView: 2.5,
+        },
+
+        1024: {
+            slidesPerView: 2.45,
+        }
+
+    },
+})
+
 
 

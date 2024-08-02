@@ -1,0 +1,260 @@
+.doctor h3 {
+  text-align: center;
+}
+
+.bread-crumbs {
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-end;
+  color: var(--grey);
+  margin: 5.6rem 0;
+  @include breakpoint($sm-bp) {
+    margin: 2.4rem 0;
+  }
+}
+
+.bread-crumbs__icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  @include breakpoint($sm-bp) {
+    height: 3rem;
+  }
+}
+
+.doctor__title {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  @include breakpoint($sm-bp) {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+  }
+}
+
+.doctor-inf {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33.4rem 50rem;
+  grid-template-rows: 49rem;
+  gap: 2rem;
+  margin-bottom: 5.2rem;
+  justify-content: center;
+  @include breakpoint($xl-bp) {
+    grid-template-rows: 40rem;
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+    gap: 0;
+    grid-template-rows: 35rem;
+  }
+}
+
+.doctor-inf__text {
+  display: grid;
+  gap: 2rem;
+  grid-template-rows: 18rem 13rem;
+  align-content: flex-end;
+  @include breakpoint($sm-bp) {
+    grid-template-rows: auto;
+    gap: 0;
+  }
+}
+
+.doctor-inf__text-item {
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  text-align: center;
+  @include breakpoint($sm-bp) {
+    gap: 1.6rem;
+    border-radius: 0;
+  }
+}
+
+.doctor-inf__text-item:nth-child(1) {
+  @include breakpoint($sm-bp) {
+    padding-top: 5rem;
+  }
+}
+
+.doctor-inf__text-item:nth-child(2) {
+  padding: 1.6rem;
+  @include breakpoint($sm-bp) {
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+  }
+}
+
+.doctor-inf__text-item:nth-child(2) .doctor-inf__text-desc {
+  font-weight: 700;
+  @include breakpoint($sm-bp) {
+    font-weight: 400;
+  }
+}
+
+.doctor-inf__text-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.doctor-inf__img-container {
+  position: relative;
+}
+
+.doctor-inf__img {
+  overflow: hidden;
+  border-radius: 1.2rem;
+  height: 100%;
+  border: 1px solid var(--color2);
+  @include breakpoint($sm-bp) {
+    height: 37rem;
+  }
+}
+
+.doctor-inf__img picture img {
+  object-fit: inherit;
+}
+
+.doctor-inf__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.doctor-inf__button {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: -4%;
+  padding: 1.2rem 2rem;
+  left: 6%;
+  @include breakpoint($xl-bp) {
+    bottom: 2%;
+    left: 4%;
+  }
+  @include breakpoint($sm-bp) {
+    bottom: -12%;
+  }
+}
+
+.doctor-certificate__slider {
+  position: relative;
+  padding-top: 5.6rem;
+  margin-bottom: 5.6rem;
+  @include breakpoint($sm-bp) {
+    padding-top: 2.4rem;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.doctor-qualification {
+  max-width: 85rem;
+  margin: 0 auto;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 2rem;
+  margin-bottom: 5.6rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+    margin-bottom: 6.4rem;
+  }
+}
+
+.doctor-reviewer {
+  border: 1px solid var(--color2);
+  max-width: 85rem;
+  margin: 0 auto;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  overflow: hidden;
+  margin-bottom: 8.4rem;
+  display: grid;
+  grid-template-columns: 23rem auto;
+  grid-template-rows: 35rem;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.doctor-reviewer__text {
+  padding: 2rem;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.doctor-reviewer__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.doctor-reviewer__person {
+  background-image: url("../images/sing.svg");
+  background-position: right bottom;
+  background-size: 5.6rem;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.doctor-reviewer__person-title {
+  font-weight: 700;
+}
+
+.doctor-qualification__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 2.4rem;
+  max-height: 20rem;
+  overflow: hidden;
+  @include breakpoint($sm-bp) {
+    margin-top: 1.2rem;
+  }
+}
+
+.doctor-qualification__list.active{
+    max-height: 100%;
+    transition: max-height 0.3s ease;
+}
+
+.doctor-reviewer__person-desc {
+  color: var(--grey);
+}
+
+
+.doctor-qualification__linc:hover {
+  cursor: pointer;
+  color: var(--color1);
+}
+
+.doctor-qualification__linc {
+  margin-top: 2.4rem;
+  margin-right: 0;
+  color: var(--grey);
+  position: relative;
+  display: inline-block;
+  left: 90%;
+  @include breakpoint($sm-bp) {
+    left: 70%;
+  }
+}
+
+.doctor-qualification__linc::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  height: 0.1rem;
+  bottom: -0.2rem;
+  width: 100%;
+  left: 0;
+  background: var(--grey);
+}
