@@ -3872,13 +3872,12 @@ button.swiper-pagination-bullet {
     overflow: hidden;
     display: grid;
     grid-template-columns: 37rem 51rem;
-    grid-template-rows: 55rem;
+    grid-template-rows: auto;
 }
 
 @media (max-width: 768px) {
     .success-modal {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
         margin: 1.5rem;
     }
 }
@@ -3890,7 +3889,7 @@ button.swiper-pagination-bullet {
 }
 
 .success-modal__content {
-    padding: 2.4rem 2.4rem 41.5rem 2rem;
+    padding: 2.4rem 2.4rem 4.1rem 2rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -3984,7 +3983,13 @@ button.swiper-pagination-bullet {
     flex-direction: column;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    gap: 8rem;
+    gap: 6rem;
+}
+
+@media (max-width: 768px) {
+    .success-modal__container {
+        gap: 8rem;
+    }
 }
 
 /*------header-----*/

@@ -18,10 +18,9 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 37rem 51rem;
-  grid-template-rows: 55rem;
+  grid-template-rows: auto;
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     margin: 1.5rem;
   }
 }
@@ -33,7 +32,7 @@
 }
 
 .success-modal__content {
-  padding: 2.4rem 2.4rem 41.5rem 2rem;
+  padding: 2.4rem 2.4rem 4.1rem 2rem;
   display: flex;
   flex-direction: column;
   @include breakpoint($sm-bp) {
@@ -96,5 +95,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 8rem;
+  gap: 6rem;
+  @include breakpoint($sm-bp) {
+    gap: 8rem;
+  }
 }
