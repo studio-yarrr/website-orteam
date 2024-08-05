@@ -194,7 +194,6 @@ a {
   }
 }
 
-.case-swiper,
 .doctor-certificate__swiper,
 .process-swiper,
 .video-swiper,
@@ -237,6 +236,12 @@ a {
   @include breakpoint($sm-bp) {
     width: 34rem;
   }
+}
+
+.case-swiper {
+  width: 114.3rem;
+  height: 60rem;
+  overflow: hidden;
 }
 
 .reviews__swiper {

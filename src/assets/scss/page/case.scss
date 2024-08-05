@@ -22,6 +22,11 @@
   }
 }
 
+.case__content {
+  display: flex;
+  flex-direction: column;
+}
+
 .case__container-list {
   display: flex;
   justify-content: space-between;
@@ -42,6 +47,7 @@
   margin: 5.6rem 0;
   @include breakpoint($sm-bp) {
     margin: 5.6rem 0 2.4rem 0;
+    order: 1;
   }
 }
 
@@ -52,13 +58,14 @@
   gap: 4rem;
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
+    order: 3;
   }
 }
 
-.case__img {
+.case__img-banner {
   border-radius: 1.2rem;
   overflow: hidden;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: none;
   }
 }
@@ -109,14 +116,6 @@
   margin: 0;
 }
 
-.case__item-slide {
-  display: grid;
-  grid-template-columns: 32rem 45rem 32rem;
-  grid-template-rows: repeat(2, 28.5rem);
-  gap: 2.4rem;
-
-}
-
 .case__slider {
   margin-top: 15.2rem;
   margin-bottom: 8.4rem;
@@ -124,51 +123,10 @@
   @include breakpoint($sm-bp) {
     margin-top: 2.4rem;
     margin-bottom: 5rem;
+    order: 2;
   }
 }
 
-.case__item-img {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  filter: grayscale(1);
-  position: relative;
-}
-
-.case__item-img .case__img,
-.case__item-img.case__img {
-  height: 23rem;
-}
-
-.case__img {
-  border-radius: 1.2rem;
-  overflow: hidden;
-  position: relative;
-}
-
-.case__item-img:nth-child(3) {
-  align-self: flex-end;
-}
-
-.case__item-img h3 {
-  @include breakpoint($sm-bp) {
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 2rem;
-    color: var(--white);
-    position: absolute;
-    left: 2%;
-    bottom: 2%;
-  }
-}
-
-.case__img h3 {
-  display: none;
-  @include breakpoint($sm-bp) {
-    display: block;
-  }
-}
 
 .case__record {
   margin-top: 10.4rem;
@@ -182,5 +140,81 @@
   bottom: -13%;
 }
 
+.case__item-slide {
+  display: flex;
+  gap: 2.4rem;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.case__img {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  width: 32rem;
+  height: 23rem;
+  transition: width 0.3s ease, height 0.3s ease;
+  filter: grayscale(1);
+}
+
+.case__item-slide {
+  width: 32rem;
+  box-sizing: border-box;
+
+}
+
+.case__item-slide:not(.swiper-slide-active) {
+  padding-top: 5.5rem;
+}
+
+.case__item-slide.swiper-slide-active {
+  width: 45rem;
+
+}
+.swiper-slide-active .case__img {
+  width: 45rem;
+  height: 38rem;
+  filter: grayscale(0);
+}
+
+.swiper-slide-active {
+  position: relative;
+}
+
+.swiper-slide-active::before {
+  content: 'До';
+  position: absolute;
+  top: 0;
+  left: -11%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  font-family: inherit;
+}
+
+.swiper-slide-active::after {
+  content: 'После';
+  position: absolute;
+  bottom: 0;
+  left: -18%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  font-family: inherit;
+}
+
+//.case__text-top,
+//.case__text-bottom {
+//  position: absolute;
+//}
+//
+//.case__text-top {
+//  top: 0;
+//  left: 23%;
+//}
+//
+//.case__text-bottom {
+//  bottom: 0;
+//  left: 19%;
+//}
 
 

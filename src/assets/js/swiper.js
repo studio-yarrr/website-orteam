@@ -293,34 +293,31 @@ const slider11 = new Swiper('.doctor-certificate__swiper', {
 const slider12 = new Swiper('.case-swiper', {
     spaceBetween: 20,
     speed: 800,
-    slidesPerView: 1,
-
+    slidesPerView: 'auto',
     navigation: {
         nextEl: '.case-button-next',
         prevEl: '.case-button-prev',
     },
-
     pagination: {
         el: '.case-pagination',
         clickable: true,
     },
-
     breakpoints: {
-
         320: {
             slidesPerView: 1,
         },
-
         768: {
-            slidesPerView: 1,
+            slidesPerView: 2,
         },
-
         1024: {
-            slidesPerView: 1,
+            slidesPerView:'auto',
         }
-
     },
-})
+    initialSlide: 1,
+
+    centeredSlides: true,
+});
+
 
 
 
