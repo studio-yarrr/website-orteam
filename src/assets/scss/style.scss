@@ -194,6 +194,7 @@ a {
   }
 }
 
+.case-swiper,
 .doctor-certificate__swiper,
 .process-swiper,
 .video-swiper,
@@ -334,6 +335,7 @@ a {
   cursor: pointer;
 }
 
+.case__buttons-container,
 .certificate__buttons,
 .process__buttons-container,
 .team__buttons-container,
@@ -361,8 +363,14 @@ a {
   top: 0;
 }
 
+.case__buttons-container,
 .reviews__buttons-container {
   bottom: 0;
+}
+
+.case__buttons-container {
+  right: 6%;
+  z-index: 22;
 }
 
 .accordion__title.active {
@@ -520,6 +528,7 @@ a {
 @import './page/doctors.scss';
 @import './page/doctor.scss';
 @import './page/portfolio.scss';
+@import './page/case.scss';
 
 /*------footer-----*/
 @import './blocks/footer.scss';

@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const portfolioItem = document.querySelectorAll('.portfolio__item');
   const portfolioButton = document.querySelector('.portfolio__button');
 
-  if(portfolioList || portfolioContent ) {
+  if(portfolioList ) {
       portfolioList.addEventListener('click', (event) => {
           const e = event.target;
           if(e.classList.contains('portfolio__item')) {
@@ -277,5 +277,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
       })
 
   }
+
+  const listParent = document.querySelector('.list-parent');
+  const items = document.querySelectorAll('.item');
+
+  if (listParent) {
+    listParent.addEventListener('click', (event) => {
+      const e = event.target;
+      if (e.classList.contains('item')) {
+        items.forEach(i => {
+          i.classList.remove('active');
+        });
+        e.classList.add('active');
+      }
+    });
+  }
+
+
 
 });
