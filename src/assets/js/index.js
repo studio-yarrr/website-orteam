@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     button.addEventListener('click', () => {
       menuWrapper.classList.remove('active');
       menuContent.classList.remove('active');
+      successModalWrapper.classList.remove('active')
     });
   });
 
@@ -221,27 +222,58 @@ document.addEventListener("DOMContentLoaded", function (event) {
    }
 
 
-    const portfolioList = document.querySelector('.portfolio__list');
-    const portfolioContent = document.querySelectorAll('.portfolio__content');
-    const portfolioItem = document.querySelectorAll('.portfolio__item');
-    const portfolioButton = document.querySelector('.portfolio__button');
+    // const portfolioList = document.querySelector('.portfolio__list');
+    // const portfolioContent = document.querySelectorAll('.portfolio__content');
+    // const portfolioItem = document.querySelectorAll('.portfolio__item');
+    // const portfolioButton = document.querySelector('.portfolio__button');
+    //
+    // if(portfolioList || portfolioContent ) {
+    //     portfolioList.addEventListener('click', (event) => {
+    //         const e = event.target;
+    //         if(e.classList.contains('portfolio__item')) {
+    //             portfolioItem.forEach( item => {
+    //                 item.classList.remove('active')
+    //             })
+    //             e.classList.add("active")
+    //
+    //             portfolioContent.forEach( item => {
+    //                 item.classList.remove('active')
+    //             })
+    //             const index = Array.from(portfolioItem).indexOf(e);
+    //             portfolioContent[index].classList.add('active');
+    //         }
+    //     })
+    //
+    // }
 
-    if(portfolioList || portfolioContent ) {
-        portfolioList.addEventListener('click', (event) => {
-            const e = event.target;
-            if(e.classList.contains('portfolio__item')) {
-                portfolioItem.forEach( item => {
-                    item.classList.remove('active')
-                })
-                e.classList.add("active")
+    const successModalWrapper = document.querySelector('.success-modal__wrapper');
 
-                portfolioContent.forEach( item => {
-                    item.classList.remove('active')
-                })
-                const index = Array.from(portfolioItem).indexOf(e);
-                portfolioContent[index].classList.add('active');
-            }
-        })
+    function showSuccesseModal () {
+    successModalWrapper.classList.add('active')
+  }
 
-    }
+  function handleForm(formInf) {
+    formInf.addEventListener('submit', function (event) {
+      const controls = this.querySelectorAll('.required__input');
+      let isValid = true;
+      controls.forEach(control => {
+        if (control.classList.contains('required') && !control.value) {
+          isValid = false;
+        }
+      });
+      event.preventDefault();
+
+      controls.forEach(control => {
+        control.value = '';
+      });
+      showSuccesseModal ();
+    })
+  }
+
+  const formSend = document.querySelector('.sendForm');
+
+  if (formSend) {
+    handleForm(formSend);
+  }
+
 });

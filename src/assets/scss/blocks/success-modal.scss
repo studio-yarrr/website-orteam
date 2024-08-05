@@ -1,0 +1,100 @@
+.success-modal__wrapper {
+  background-color: #0B384780;
+  position: fixed;
+  inset: 0;
+  z-index: 56;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.success-modal__wrapper.active {
+  display: flex;
+}
+
+.success-modal {
+  background-color: var(--white);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 37rem 51rem;
+  grid-template-rows: 55rem;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 1.5rem;
+  }
+}
+
+.success-modal-img {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.success-modal__content {
+  padding: 2.4rem 2.4rem 41.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($sm-bp) {
+    padding: 0.8rem 0.8rem 1.2rem 1.2rem;
+  }
+}
+
+.success-modal__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 80%;
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
+}
+
+.success-modal__content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-width: 80%;
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
+}
+
+.success-modal__button {
+  width: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 3.2rem;
+  @include breakpoint($sm-bp) {
+    width: 30rem;
+  }
+}
+
+.success-modal__close {
+  flex-shrink: 0;
+  margin-left: 95%;
+  width: 2rem;
+  height: 2rem;
+  @include breakpoint($sm-bp) {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.success-modal__close .close{
+  width: 2rem;
+  height: 2rem;
+  @include breakpoint($sm-bp) {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+.success-modal__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8rem;
+}

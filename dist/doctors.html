@@ -764,12 +764,12 @@
                 <div class="record__subtitle">
                     Оставьте контакты, и мы свяжемся с вами  в ближайшее время
                 </div>
-                <form class="form">
+                <form class="form sendForm">
                     <label class="input">
-                        <input type="text" name="name" placeholder="Имя*" required>
+                        <input type="text" name="name" placeholder="Имя*" required class="required__input">
                     </label>
                     <label class="input">
-                        <input type="tel" name="tel" placeholder="Телефон*" class="custom-input" required>
+                        <input type="tel" name="tel" placeholder="Телефон*" class="required__input custom-input" required>
                     </label>
                     <label class="input">
                         <select name="list">
@@ -1053,7 +1053,37 @@
   
   
   
-
+  <div class="success-modal__wrapper">
+      <div class="success-modal">
+          <div class="success-modal-img">
+              <img src="assets/images/successe-img.jpg" alt="image">
+          </div>
+          <div class="success-modal__content">
+              <div class="success-modal__close">
+                  <svg class="close">
+                      <use xlink:href="assets/images/sprite/close.svg#close"></use>
+                  </svg>
+              </div>
+              <div class="success-modal__container">
+                  <div class="success-modal__content-block">
+                      <h3>Благодарим за доверие, Orteam ждёт вас с нетерпением!</h3>
+                      <div class="success-modal__text">
+                          <p>Мы свяжемся с вами в течение 12 часов, указанным способом.</p>
+                          <p>Ответим на все вопросы и подберём удобное время для консультации.</p>
+                      </div>
+                  </div>
+                  <div class="success-modal__content-block">
+                      <p>Планируете ортодонтическое лечение?</p>
+                      <p>Не забудьте подписаться на нашу рассылку и узнать <b>всё самое важное о брекетах и элайнерах за 1 минуту в день.</b></p>
+                      <button class="button button__bg-dark success-modal__button">
+                          Подписаться на рассылку
+                          <img src="assets/images/teleg-color.svg" alt="icon" class="icon">
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
 
   <!-- lib JS -->
