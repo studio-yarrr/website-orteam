@@ -7801,19 +7801,26 @@ select {
 
 .portfolio__content {
     margin-top: 5.6rem;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
     display: none;
 }
 
+.portfolio__content__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
 @media (max-width: 768px) {
-    .portfolio__content {
+    .portfolio__content__top {
         grid-template-columns: 1fr;
     }
 }
 
 .portfolio__content.active {
-    display: grid;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .portfolio__item.active {
@@ -7856,6 +7863,98 @@ select {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.portfolio__hygiene {
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    padding: 2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2.4rem;
+    max-width: 72%;
+    margin-bottom: 5.6rem;
+}
+
+@media (max-width: 768px) {
+    .portfolio__hygiene {
+        display: none;
+    }
+}
+
+.portfolio__hygiene-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.portfolio__hygiene-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.portfolio__hygiene-list {
+    list-style: square inside;
+}
+
+.portfolio__hygiene-list li::marker {
+    color: var(--color2);
+}
+
+.portfolio__hygiene-case {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 10.4rem;
+}
+
+@media (max-width: 768px) {
+    .portfolio__hygiene-case {
+        grid-template-columns: 1fr;
+        margin-bottom: 7.2rem;
+    }
+}
+
+.portfolio__hygiene-item {
+    border-radius: 1.2rem;
+    padding: 2rem;
+    background-color: var(--white);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.portfolio__hygiene-title {
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .portfolio__hygiene-title {
+        -ms-flex-order: 3;
+        order: 3;
+    }
+}
+
+.portfolio__hygiene-img {
+    width: 100%;
+    height: 20rem;
+}
+
+@media (max-width: 768px) {
+    .portfolio__hygiene-img {
+        height: 13rem;
+    }
 }
 
 /*------footer-----*/

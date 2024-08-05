@@ -38,16 +38,21 @@
 
 .portfolio__content {
   margin-top: 5.6rem;
+  display: none;
+}
+
+.portfolio__content__top {
+  display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 2rem;
-  display: none;
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
   }
 }
 
 .portfolio__content.active {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio__item.active {
@@ -81,3 +86,75 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.portfolio__hygiene {
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-width: 72%;
+  margin-bottom: 5.6rem;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.portfolio__hygiene-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.portfolio__hygiene-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.portfolio__hygiene-list {
+  list-style: square inside;
+}
+
+.portfolio__hygiene-list li::marker {
+  color: var(--color2)
+}
+
+.portfolio__hygiene-case {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 10.4rem;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.portfolio__hygiene-item {
+  border-radius: 1.2rem;
+  padding: 2rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.portfolio__hygiene-title {
+  font-weight: 700;
+  @include breakpoint($sm-bp) {
+    order: 3;
+  }
+}
+
+.portfolio__hygiene-img {
+  width: 100%;
+  height: 20rem;
+  @include breakpoint($sm-bp) {
+    height: 13rem;
+  }
+}
+
+

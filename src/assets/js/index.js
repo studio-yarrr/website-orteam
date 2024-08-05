@@ -222,29 +222,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
    }
 
 
-    // const portfolioList = document.querySelector('.portfolio__list');
-    // const portfolioContent = document.querySelectorAll('.portfolio__content');
-    // const portfolioItem = document.querySelectorAll('.portfolio__item');
-    // const portfolioButton = document.querySelector('.portfolio__button');
-    //
-    // if(portfolioList || portfolioContent ) {
-    //     portfolioList.addEventListener('click', (event) => {
-    //         const e = event.target;
-    //         if(e.classList.contains('portfolio__item')) {
-    //             portfolioItem.forEach( item => {
-    //                 item.classList.remove('active')
-    //             })
-    //             e.classList.add("active")
-    //
-    //             portfolioContent.forEach( item => {
-    //                 item.classList.remove('active')
-    //             })
-    //             const index = Array.from(portfolioItem).indexOf(e);
-    //             portfolioContent[index].classList.add('active');
-    //         }
-    //     })
-    //
-    // }
 
     const successModalWrapper = document.querySelector('.success-modal__wrapper');
 
@@ -274,6 +251,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   if (formSend) {
     handleForm(formSend);
+  }
+
+
+  const portfolioList = document.querySelector('.portfolio__list');
+  const portfolioContent = document.querySelectorAll('.portfolio__content');
+  const portfolioItem = document.querySelectorAll('.portfolio__item');
+  const portfolioButton = document.querySelector('.portfolio__button');
+
+  if(portfolioList || portfolioContent ) {
+      portfolioList.addEventListener('click', (event) => {
+          const e = event.target;
+          if(e.classList.contains('portfolio__item')) {
+              portfolioItem.forEach( item => {
+                  item.classList.remove('active')
+              })
+              e.classList.add("active")
+
+              portfolioContent.forEach( item => {
+                  item.classList.remove('active')
+              })
+              const index = Array.from(portfolioItem).indexOf(e);
+              portfolioContent[index].classList.add('active');
+          }
+      })
+
   }
 
 });
