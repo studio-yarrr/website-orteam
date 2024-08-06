@@ -9,7 +9,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const menuWrapper = document.querySelector('.menu__wrapper');
   const menuContent = document.querySelector('.menu__content');
   const close = document.querySelectorAll('.close');
+  const recordWrapper = document.querySelectorAll('.record__wrapper');
+  const successModalWrapper = document.querySelector('.success-modal__wrapper');
 
+  function showSuccesseModal() {
+    successModalWrapper.classList.add('active');
+  }
   headerBurger.addEventListener("click", item => {
     menuWrapper.classList.add('active');
 
@@ -24,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
-
   function closeMenu() {
     menuContent.classList.remove('active');
 
@@ -33,16 +37,43 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }, 300);
   }
 
-
   close.forEach((button) => {
     button.addEventListener('click', () => {
-      menuContent.classList.remove('active');
+      closeAll();
+    });
+  });
 
-      setTimeout(() => {
-        menuWrapper.classList.remove('active');
+  function closeAll() {
+    menuContent.classList.remove('active');
 
-        successModalWrapper.classList.remove('active');
-      }, 300);
+    setTimeout(() => {
+      menuWrapper.classList.remove('active');
+      successModalWrapper.classList.remove('active');
+
+
+      recordWrapper.forEach(wrapper => {
+        wrapper.classList.remove('active');
+      });
+    }, 300);
+  }
+
+  const openModal = document.querySelectorAll('.openModal');
+
+  openModal.forEach(item => {
+    item.addEventListener('click', () => {
+      event.preventDefault();
+      document.querySelector('.record__wrapper').classList.add('active');
+    });
+  });
+
+
+  const closeRecord = document.querySelectorAll('.closeRecord');
+
+  closeRecord.forEach((button) => {
+    button.addEventListener('click', () => {
+      recordWrapper.forEach(wrapper => {
+        wrapper.classList.remove('active');
+      });
     });
   });
 
@@ -236,13 +267,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
            }
        });
    }
-
-
-  const successModalWrapper = document.querySelector('.success-modal__wrapper');
-
-  function showSuccesseModal() {
-    successModalWrapper.classList.add('active');
-  }
 
 
   function handleForm(formInf) {

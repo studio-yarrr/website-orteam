@@ -705,6 +705,31 @@ a {
     }
 }
 
+.record__wrapper {
+    background-color: rgba(11, 56, 71, 0.5019607843);
+    position: fixed;
+    inset: 0;
+    z-index: 56;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.record__wrapper.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.closeRecord {
+    margin-left: 95%;
+}
+
 :root {
     --f-spinner-width: 36px;
     --f-spinner-height: 36px;

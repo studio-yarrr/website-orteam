@@ -485,6 +485,28 @@ a {
   }
 }
 
+.record__wrapper {
+  background-color: #0B384780;
+  position: fixed;
+  inset: 0;
+  z-index: 56;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.closeRecord {
+  margin-left: 95%;
+}
+
 ::-webkit-scrollbar {
   // width: 0.8rem;
   // height: 0;
