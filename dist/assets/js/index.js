@@ -5,28 +5,44 @@ document.addEventListener("DOMContentLoaded", function (event) {
         hideScrollbar: false
     });
 
-
   const headerBurger = document.querySelector('.header__burger');
   const menuWrapper = document.querySelector('.menu__wrapper');
   const menuContent = document.querySelector('.menu__content');
-  const close = document.querySelectorAll('.close')
+  const close = document.querySelectorAll('.close');
+
   headerBurger.addEventListener("click", item => {
-    menuWrapper.classList.add('active')
-    menuContent.classList.add('active')
-  })
+    menuWrapper.classList.add('active');
+
+    setTimeout(() => {
+      menuContent.classList.add('active');
+    }, 50);
+  });
 
   menuWrapper.addEventListener('click', (event) => {
     if (event.target === menuWrapper) {
-      menuWrapper.classList.remove('active');
-      menuContent.classList.remove('active');
+      closeMenu();
     }
   });
 
+
+  function closeMenu() {
+    menuContent.classList.remove('active');
+
+    setTimeout(() => {
+      menuWrapper.classList.remove('active');
+    }, 300);
+  }
+
+
   close.forEach((button) => {
     button.addEventListener('click', () => {
-      menuWrapper.classList.remove('active');
       menuContent.classList.remove('active');
-      successModalWrapper.classList.remove('active')
+
+      setTimeout(() => {
+        menuWrapper.classList.remove('active');
+
+        successModalWrapper.classList.remove('active');
+      }, 300);
     });
   });
 

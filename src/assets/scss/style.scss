@@ -156,10 +156,9 @@ a {
 
 .swiper-container {
   @include breakpoint($sm-bp) {
-    width: 36rem;
+    width: 34rem;
     height: 17rem;
     overflow: hidden;
-    padding-left: 2rem;
   }
 }
 
