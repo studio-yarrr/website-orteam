@@ -82,7 +82,7 @@ img {
   max-width: 121.6rem;
   margin: 0 auto;
   @include breakpoint($cos_bp) {
-    max-width: 127rem;
+    max-width: 120rem;
   }
   @include breakpoint($hh) {
     max-width: 100rem;
