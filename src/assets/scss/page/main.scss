@@ -15,11 +15,13 @@
     padding: 2rem;
     position: relative;
     gap: 3rem;
+    margin-bottom: 7rem;
   }
   @include breakpoint($sm-bp) {
     padding:0;
     position: relative;
     gap: 7rem;
+    margin-bottom: 1.4rem;
   }
 }
 

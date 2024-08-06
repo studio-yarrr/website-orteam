@@ -85,7 +85,7 @@ img {
     max-width: 120rem;
   }
   @include breakpoint($hh) {
-    max-width: 100rem;
+    max-width: 90rem;
   }
 
   @include breakpoint($sm-bp) {
@@ -189,7 +189,7 @@ a {
     width: 120rem;
   }
   @include breakpoint($xl-bp) {
-    max-width: 80rem;
+    max-width: 36rem;
   }
   @include breakpoint($sm-bp) {
     position: relative;
@@ -457,7 +457,7 @@ a {
 
 .details-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
-    left: 22%;
+    left: 40%;
   }
 }
 
