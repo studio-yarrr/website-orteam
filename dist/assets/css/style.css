@@ -1,11 +1,9 @@
-@charset "UTF-8";
-
 @font-face {
     font-family: "Inter";
-  src: url("../fonts/Inter-Regular.eot");
-  src: local("Inter Regular"), local("Inter-Regular"), url("../fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    src: url("../fonts/Inter-Regular.eot");
+    src: local("Inter Regular"), local("Inter-Regular"), url("../fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -156,6 +154,18 @@ html {
     font-size: 0.5208333333vw;
 }
 
+@media (max-width: 1700px) {
+    html {
+        font-size: 0.5882352941vw;
+    }
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 0.7142857143vw;
+    }
+}
+
 @media (max-width: 1024px) {
     html {
         font-size: 0.9765625vw;
@@ -223,9 +233,15 @@ img {
     margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1700px) {
     .wrapper {
-        max-width: 90rem;
+        max-width: 127rem;
+    }
+}
+
+@media (max-width: 1025px) {
+    .wrapper {
+        max-width: 100rem;
     }
 }
 
@@ -321,6 +337,15 @@ a {
     margin: 0 auto;
 }
 
+@media (max-width: 1700px) {
+    .process__wrapper,
+  .details__swiper,
+  .list__swiper,
+  .team__wrapper {
+        width: 120rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .process__wrapper,
   .details__swiper,
@@ -362,6 +387,17 @@ a {
     width: 121.6rem;
     height: auto;
     overflow: hidden;
+}
+
+@media (max-width: 1700px) {
+    .doctor-certificate__swiper,
+  .process-swiper,
+  .video-swiper,
+  .articles-swiper,
+  .team__swiper,
+  .braces__swiper {
+        width: 120rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -408,7 +444,7 @@ a {
 .details__swiper,
 .process__swiper,
 .reviews__swiper {
-    width: 121.6rem;
+    width: 120rem;
     height: auto;
     overflow: hidden;
 }
@@ -3448,8 +3484,9 @@ button.swiper-pagination-bullet {
     border-radius: 1.2rem;
 }
 
-.header__burger:hover {
+.header__burger:hover > span {
     cursor: pointer;
+    background-color: var(--green);
 }
 
 .header__location {
@@ -4133,8 +4170,9 @@ button.swiper-pagination-bullet {
     border-radius: 1.2rem;
 }
 
-.header__burger:hover {
+.header__burger:hover > span {
     cursor: pointer;
+    background-color: var(--green);
 }
 
 .header__location {
@@ -8200,28 +8238,6 @@ select {
 
 .swiper-slide-active {
     position: relative;
-}
-
-.swiper-slide-active::before {
-    content: "До";
-    position: absolute;
-    top: 0;
-    left: -11%;
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 2rem;
-    font-family: inherit;
-}
-
-.swiper-slide-active::after {
-    content: "После";
-    position: absolute;
-    bottom: 0;
-    left: -18%;
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 2rem;
-    font-family: inherit;
 }
 
 /*------footer-----*/

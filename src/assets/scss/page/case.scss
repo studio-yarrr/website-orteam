@@ -180,27 +180,27 @@
   position: relative;
 }
 
-.swiper-slide-active::before {
-  content: 'До';
-  position: absolute;
-  top: 0;
-  left: -11%;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 2rem;
-  font-family: inherit;
-}
-
-.swiper-slide-active::after {
-  content: 'После';
-  position: absolute;
-  bottom: 0;
-  left: -18%;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 2rem;
-  font-family: inherit;
-}
+//.swiper-slide-active::before {
+//  content: 'До';
+//  position: absolute;
+//  top: 0;
+//  left: -11%;
+//  font-size: 1.6rem;
+//  font-weight: 700;
+//  line-height: 2rem;
+//  font-family: inherit;
+//}
+//
+//.swiper-slide-active::after {
+//  content: 'После';
+//  position: absolute;
+//  bottom: 0;
+//  left: -18%;
+//  font-size: 1.6rem;
+//  font-weight: 700;
+//  line-height: 2rem;
+//  font-family: inherit;
+//}
 
 //.case__text-top,
 //.case__text-bottom {

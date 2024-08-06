@@ -8,9 +8,18 @@ html {
   scroll-behavior: smooth;
   font-size: calc(100vw / 1920 * 10);
 
+  @include breakpoint($cos-bp) {
+    font-size: calc(100vw / 1700 * 10);
+  }
+
+  @include breakpoint($xxl-bp) {
+    font-size: calc(100vw / 1400 * 10);
+  }
+
   @include breakpoint($xl-bp) {
     font-size: calc(100vw / 1024 * 10);
   }
+
 
   @include breakpoint($sm-bp) {
     font-size: calc(100vw / 375 * 10);
@@ -72,9 +81,13 @@ img {
   width: 100%;
   max-width: 121.6rem;
   margin: 0 auto;
-  @include breakpoint($xl-bp) {
-    max-width: 90rem;
+  @include breakpoint($cos_bp) {
+    max-width: 127rem;
   }
+  @include breakpoint($hh) {
+    max-width: 100rem;
+  }
+
   @include breakpoint($sm-bp) {
     max-width: 32rem;
   }
@@ -172,6 +185,9 @@ a {
   width: 100%;
   max-width: 121.6rem;
   margin: 0 auto;
+  @include breakpoint($cos_bp) {
+    width: 120rem;
+  }
   @include breakpoint($xl-bp) {
     max-width: 80rem;
   }
@@ -203,6 +219,9 @@ a {
   width: 121.6rem;
   height: auto;
   overflow: hidden;
+  @include breakpoint($cos_bp) {
+    width: 120rem;
+  }
   @include breakpoint($xl-bp) {
     width: 95rem;
   }
@@ -227,7 +246,7 @@ a {
 .details__swiper,
 .process__swiper,
 .reviews__swiper {
-  width: 121.6rem;
+  width: 120rem;
   height: auto;
   overflow: hidden;
   @include breakpoint($xl-bp) {
@@ -510,7 +529,6 @@ a {
 
 
 /*--------- popup -------------*/
-@import './blocks/popup.scss';
 @import './blocks/header.scss';
 @import './blocks/animation.scss';
 @import './blocks/menu.scss';
