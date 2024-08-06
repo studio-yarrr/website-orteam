@@ -5,11 +5,15 @@
   z-index: 56;
   align-items: center;
   justify-content: center;
-  display: none;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .success-modal__wrapper.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .success-modal {
@@ -19,6 +23,7 @@
   display: grid;
   grid-template-columns: 37rem 51rem;
   grid-template-rows: auto;
+
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
     margin: 1.5rem;

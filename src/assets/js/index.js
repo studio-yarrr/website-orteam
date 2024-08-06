@@ -238,12 +238,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
    }
 
 
+  const successModalWrapper = document.querySelector('.success-modal__wrapper');
 
-    const successModalWrapper = document.querySelector('.success-modal__wrapper');
-
-    function showSuccesseModal () {
-    successModalWrapper.classList.add('active')
+  function showSuccesseModal() {
+    successModalWrapper.classList.add('active');
   }
+
 
   function handleForm(formInf) {
     formInf.addEventListener('submit', function (event) {

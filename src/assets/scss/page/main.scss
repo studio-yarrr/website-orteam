@@ -202,6 +202,14 @@
   }
 }
 
+a:hover .list__item {
+  background-color: var(--green);
+  color: var(--white);
+  @include breakpoint($xl-bp) {
+    padding: 1.2rem;
+  }
+}
+
 .list__item--darc {
   background-color: var(--color1);
   color: var(--white);

@@ -3912,12 +3912,16 @@ button.swiper-pagination-bullet {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    display: none;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .success-modal__wrapper.active {
-    display: -ms-flexbox;
-    display: flex;
+    opacity: 1;
+    visibility: visible;
 }
 
 .success-modal {
@@ -4543,6 +4547,17 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 1024px) {
     .list__item {
+        padding: 1.2rem;
+    }
+}
+
+a:hover .list__item {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+@media (max-width: 1024px) {
+    a:hover .list__item {
         padding: 1.2rem;
     }
 }
