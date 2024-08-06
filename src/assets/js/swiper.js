@@ -114,7 +114,7 @@ const slider4 = new Swiper('.process__swiper', {
         },
 
         768: {
-            slidesPerView: 2,
+            slidesPerView: 1.7,
         },
 
         1024: {

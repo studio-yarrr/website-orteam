@@ -160,9 +160,9 @@ html {
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
     html {
-        font-size: 0.7142857143vw;
+        font-size: 0.6666666667vw;
     }
 }
 
@@ -316,29 +316,44 @@ a {
 @media (max-width: 768px) {
     .list__swiper,
   .price__container {
-        width: 100vw;
         overflow: hidden;
     }
 }
 
 @media (max-width: 768px) {
     .price__container {
-        width: 32rem;
         padding-bottom: 3rem;
     }
 }
 
-.process__wrapper,
+.doctor-certificate__swiper,
+.process-swiper,
+.video-swiper,
+.articles-swiper,
+.team__swiper,
+.braces__swiper,
+.doc__swiper,
+.process__swiper,
+.reviews__swiper,
 .details__swiper,
 .list__swiper,
 .team__wrapper {
     width: 100%;
     max-width: 121.6rem;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 @media (max-width: 1700px) {
-    .process__wrapper,
+    .doctor-certificate__swiper,
+  .process-swiper,
+  .video-swiper,
+  .articles-swiper,
+  .team__swiper,
+  .braces__swiper,
+  .doc__swiper,
+  .process__swiper,
+  .reviews__swiper,
   .details__swiper,
   .list__swiper,
   .team__wrapper {
@@ -347,20 +362,52 @@ a {
 }
 
 @media (max-width: 1024px) {
-    .process__wrapper,
+    .doctor-certificate__swiper,
+  .process-swiper,
+  .video-swiper,
+  .articles-swiper,
+  .team__swiper,
+  .braces__swiper,
+  .doc__swiper,
+  .process__swiper,
+  .reviews__swiper,
   .details__swiper,
   .list__swiper,
   .team__wrapper {
-        max-width: 36rem;
+        max-width: 90rem;
     }
 }
 
 @media (max-width: 768px) {
-    .process__wrapper,
+    .doctor-certificate__swiper,
+  .process-swiper,
+  .video-swiper,
+  .articles-swiper,
+  .team__swiper,
+  .braces__swiper,
+  .doc__swiper,
+  .process__swiper,
+  .reviews__swiper,
   .details__swiper,
   .list__swiper,
   .team__wrapper {
         position: relative;
+        max-width: 34rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .price-swiper,
+  .list__container {
+        max-width: 90rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .price-swiper,
+  .list__container {
+        position: relative;
+        max-width: 34rem;
     }
 }
 
@@ -375,50 +422,6 @@ a {
 @media (max-width: 768px) {
     .list-pagination {
         position: absolute;
-    }
-}
-
-.doctor-certificate__swiper,
-.process-swiper,
-.video-swiper,
-.articles-swiper,
-.team__swiper,
-.braces__swiper {
-    width: 121.6rem;
-    height: auto;
-    overflow: hidden;
-}
-
-@media (max-width: 1700px) {
-    .doctor-certificate__swiper,
-  .process-swiper,
-  .video-swiper,
-  .articles-swiper,
-  .team__swiper,
-  .braces__swiper {
-        width: 120rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    .doctor-certificate__swiper,
-  .process-swiper,
-  .video-swiper,
-  .articles-swiper,
-  .team__swiper,
-  .braces__swiper {
-        width: 95rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .doctor-certificate__swiper,
-  .process-swiper,
-  .video-swiper,
-  .articles-swiper,
-  .team__swiper,
-  .braces__swiper {
-        width: 34rem;
     }
 }
 
@@ -437,33 +440,6 @@ a {
         height: 55rem;
         position: relative;
         padding-bottom: 3rem;
-    }
-}
-
-.doc__swiper,
-.details__swiper,
-.process__swiper,
-.reviews__swiper {
-    width: 120rem;
-    height: auto;
-    overflow: hidden;
-}
-
-@media (max-width: 1024px) {
-    .doc__swiper,
-  .details__swiper,
-  .process__swiper,
-  .reviews__swiper {
-        width: 90rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .doc__swiper,
-  .details__swiper,
-  .process__swiper,
-  .reviews__swiper {
-        width: 34rem;
     }
 }
 
@@ -4423,13 +4399,13 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 1024px) {
     .list__container {
-        grid-template-columns: repeat(3, 26rem);
         gap: 0.8rem;
     }
 }
 
 @media (max-width: 768px) {
     .list__container {
+        grid-template-columns: repeat(3, 26rem);
         display: -ms-flexbox;
         display: flex;
     }
@@ -4663,6 +4639,13 @@ button.swiper-pagination-bullet {
     border-left: 1px solid var(--color2);
     border-top-left-radius: 1.2rem;
     border-bottom-left-radius: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    .content__list-container {
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
 }
 
 @media (max-width: 768px) {
@@ -5991,7 +5974,7 @@ sup {
 
 @media (max-width: 768px) {
     .price {
-        padding: 0 2rem 6.4rem 2rem;
+        padding: 0;
         background-color: var(--bg-main);
     }
 }

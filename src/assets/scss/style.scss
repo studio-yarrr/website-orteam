@@ -13,7 +13,7 @@ html {
   }
 
   @include breakpoint($xxl-bp) {
-    font-size: calc(100vw / 1400 * 10);
+    font-size: calc(100vw / 1500 * 10);
   }
 
   @include breakpoint($xl-bp) {
@@ -166,33 +166,53 @@ a {
 .list__swiper,
 .price__container {
   @include breakpoint($sm-bp) {
-    width: 100vw;
     overflow: hidden;
   }
 }
 
 .price__container {
   @include breakpoint($sm-bp) {
-    width: 32rem;
+    //width: 32rem;
     padding-bottom: 3rem;
   }
 }
 
-.process__wrapper,
+.doctor-certificate__swiper,
+.process-swiper,
+.video-swiper,
+.articles-swiper,
+.team__swiper,
+.braces__swiper,
+.doc__swiper,
+.process__swiper,
+.reviews__swiper,
 .details__swiper,
 .list__swiper,
 .team__wrapper {
   width: 100%;
   max-width: 121.6rem;
   margin: 0 auto;
+  overflow: hidden;
   @include breakpoint($cos_bp) {
     width: 120rem;
   }
   @include breakpoint($xl-bp) {
-    max-width: 36rem;
+    max-width: 90rem;
   }
   @include breakpoint($sm-bp) {
     position: relative;
+    max-width: 34rem;
+  }
+}
+
+.price-swiper,
+.list__container {
+  @include breakpoint($xl-bp) {
+    max-width: 90rem;
+  }
+  @include breakpoint($sm-bp) {
+    position: relative;
+    max-width: 34rem;
   }
 }
 
@@ -210,26 +230,6 @@ a {
   }
 }
 
-.doctor-certificate__swiper,
-.process-swiper,
-.video-swiper,
-.articles-swiper,
-.team__swiper,
-.braces__swiper {
-  width: 121.6rem;
-  height: auto;
-  overflow: hidden;
-  @include breakpoint($cos_bp) {
-    width: 120rem;
-  }
-  @include breakpoint($xl-bp) {
-    width: 95rem;
-  }
-  @include breakpoint($sm-bp) {
-    width: 34rem;
-  }
-}
-
 .price-swiper {
   height: 55rem;
   @include breakpoint($xl-bp) {
@@ -242,20 +242,6 @@ a {
   }
 }
 
-.doc__swiper,
-.details__swiper,
-.process__swiper,
-.reviews__swiper {
-  width: 120rem;
-  height: auto;
-  overflow: hidden;
-  @include breakpoint($xl-bp) {
-    width: 90rem;
-  }
-  @include breakpoint($sm-bp) {
-    width: 34rem;
-  }
-}
 
 .case-swiper {
   width: 114.3rem;
