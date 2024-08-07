@@ -1142,14 +1142,6 @@ a.order4 .list__item {
   }
 }
 
-.reviews__item {
-  display: flex;
-  flex-direction: column;
-  gap: 5.6rem;
-  @include breakpoint($sm-bp) {
-    gap: 2.4rem;
-  }
-}
 
 .reviews__item-top,
 .reviews__item-bottom {
@@ -1253,6 +1245,25 @@ a.order4 .list__item {
 .reviews-button-prev,
 .reviews-button-next {
   bottom: 0;
+}
+
+.reviews__platform {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 5.6rem;
+  @include breakpoint($xl-bp) {
+    overflow: auto;
+  }
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+    grid-template-columns: repeat(4, 30rem);
+    gap: 1.3rem;
+  }
+
+  &::-webkit-scrollbar {
+    display: none
+  }
 }
 
 .braces,

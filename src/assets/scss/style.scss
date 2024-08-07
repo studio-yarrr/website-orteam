@@ -94,6 +94,22 @@ img {
   }
 }
 
+.wrapper__platform {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  @include breakpoint($cos_bp) {
+    max-width: 120rem;
+  }
+  @include breakpoint($hh) {
+    max-width: 90rem;
+  }
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+    padding-left: 1.5rem;
+  }
+}
+
 
 
 h1 {
@@ -195,7 +211,7 @@ a:hover {
 .braces__swiper,
 .doc__swiper,
 .process__swiper,
-.reviews__swiper,
+//.reviews__swiper,
 .details__swiper,
 .list__swiper,
 .team__wrapper {
@@ -212,6 +228,24 @@ a:hover {
   @include breakpoint($sm-bp) {
     position: relative;
     max-width: 34rem;
+  }
+}
+
+.reviews__swiper {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  overflow: hidden;
+  @include breakpoint($cos_bp) {
+    width: 120rem;
+  }
+  @include breakpoint($xl-bp) {
+    max-width: 90rem;
+  }
+  @include breakpoint($sm-bp) {
+    position: relative;
+    width: calc(100vw - 1.5rem);
+    padding-left: 1.5rem;
   }
 }
 
@@ -259,11 +293,6 @@ a:hover {
   overflow: hidden;
 }
 
-.reviews__swiper {
-  @include breakpoint($sm-bp) {
-    width: 34rem;
-  }
-}
 
 .swiper-button-prev:after,
 .swiper-button-next:after,
