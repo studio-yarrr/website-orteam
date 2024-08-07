@@ -5879,8 +5879,12 @@ a.order4 .list__item {
 
 .reviews__item-text {
     margin: 1.6rem 0;
-    max-height: 11em;
+    max-height: 12em;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
