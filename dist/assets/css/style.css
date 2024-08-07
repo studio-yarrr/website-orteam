@@ -5096,6 +5096,12 @@ sup {
     font-weight: 700;
 }
 
+@media (max-width: 1024px) {
+    .team__item-title {
+        text-align: center;
+    }
+}
+
 .team__linc-container {
     display: -ms-flexbox;
     display: flex;

@@ -598,7 +598,9 @@ sup {
 
 .team__item-title {
   font-weight: 700;
-
+  @include breakpoint($xl-bp) {
+   text-align: center;
+  }
 }
 
 .team__linc-container {
