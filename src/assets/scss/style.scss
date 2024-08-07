@@ -123,6 +123,7 @@ h2 {
 }
 
 h3 {
+  font-family: "Cygre-Bold", sans-serif;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.1rem;
@@ -140,6 +141,10 @@ a {
   text-decoration: none;
   color: inherit;
   outline: none;
+}
+
+a:hover {
+  color: var(--color2);
 }
 
 .text {
@@ -160,7 +165,7 @@ a {
 .swiper-container {
   @include breakpoint($sm-bp) {
     width: 34rem;
-    height: 17rem;
+    height: 15rem;
     overflow: hidden;
   }
 }

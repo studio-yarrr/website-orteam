@@ -280,6 +280,7 @@ h2 {
 }
 
 h3 {
+    font-family: "Cygre-Bold", sans-serif;
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;
@@ -290,6 +291,10 @@ a {
     text-decoration: none;
     color: inherit;
     outline: none;
+}
+
+a:hover {
+    color: var(--color2);
 }
 
 .text {
@@ -309,7 +314,7 @@ a {
 @media (max-width: 768px) {
     .swiper-container {
         width: 34rem;
-        height: 17rem;
+        height: 15rem;
         overflow: hidden;
     }
 }
@@ -4340,7 +4345,7 @@ button.swiper-pagination-bullet {
     .banner {
         padding: 0;
         position: relative;
-        gap: 7rem;
+        gap: 3rem;
         margin-bottom: 1.4rem;
     }
 }
@@ -4351,6 +4356,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 1024px) {
     .banner__inf h1 {
+        text-align: left;
         position: absolute;
         top: 2%;
         left: 4%;
@@ -4409,7 +4415,7 @@ button.swiper-pagination-bullet {
 @media (max-width: 768px) {
     .banner__linc {
         padding: 1.2rem;
-        width: 100%;
+        max-width: 100%;
         -ms-flex-pack: justify;
         justify-content: space-between;
     }
@@ -4432,7 +4438,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 768px) {
     .banner__inf {
-        margin-top: 23rem;
+        margin-top: 20rem;
     }
 }
 
@@ -4544,9 +4550,14 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 768px) {
     .list__container {
-        grid-template-columns: repeat(3, 26rem);
         display: -ms-flexbox;
         display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .list__item-img {
+        width: 10rem;
     }
 }
 
@@ -4607,8 +4618,8 @@ a:hover .list__item {
 
 @media (max-width: 1024px) {
     .list__item-title {
-        font-size: 2rem;
-        line-height: 2.6rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
     }
 }
 
@@ -4623,6 +4634,8 @@ a:hover .list__item {
 
 .list__item-bottom p {
     max-width: 70%;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
 }
 
 .list__item-bottom div {
@@ -5215,6 +5228,7 @@ sup {
 .surgery__img,
 .standards__item-img {
     height: 40rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -5244,6 +5258,8 @@ sup {
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-align: end;
+    align-items: flex-end;
 }
 
 .standards__item-bottom p {

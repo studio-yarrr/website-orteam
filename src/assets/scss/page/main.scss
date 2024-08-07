@@ -20,7 +20,7 @@
   @include breakpoint($sm-bp) {
     padding:0;
     position: relative;
-    gap: 7rem;
+    gap: 3rem;
     margin-bottom: 1.4rem;
   }
 }
@@ -28,6 +28,7 @@
 .banner__inf h1 {
   text-align: center;
   @include breakpoint($xl-bp) {
+   text-align: left;
    position: absolute;
     top: 2%;
     left: 4%;
@@ -71,7 +72,7 @@
   max-width: 30.3rem;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
-    width: 100%;
+    max-width: 100%;
     justify-content: space-between;
   }
 }
@@ -87,7 +88,7 @@
   flex-direction: column;
   align-items: center;
   @include breakpoint($sm-bp) {
-    margin-top: 23rem;
+    margin-top: 20rem;
   }
 
 }
@@ -175,8 +176,14 @@
     gap: 0.8rem;
   }
   @include breakpoint($sm-bp) {
-    grid-template-columns: repeat(3, 26rem);
+    //grid-template-columns: repeat(3, 26rem);
     display: flex;
+  }
+}
+
+.list__item-img {
+  @include breakpoint($sm-bp) {
+    width: 10rem;
   }
 }
 
@@ -222,8 +229,8 @@ a:hover .list__item {
   font-size: 2.4rem;
   line-height: 3.1rem;
   @include breakpoint($xl-bp) {
-    font-size: 2rem;
-    line-height: 2.6rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
   }
 }
 
@@ -235,6 +242,8 @@ a:hover .list__item {
 
 .list__item-bottom p {
   max-width: 70%;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
 
 .list__item-bottom div {
@@ -701,6 +710,7 @@ sup {
 .surgery__img,
 .standards__item-img {
   height: 40rem;
+  margin-bottom: 1rem;
   @include breakpoint($xl-bp) {
     height: 27rem;
   }
@@ -724,6 +734,7 @@ sup {
 .standards__item-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .standards__item-bottom p {
