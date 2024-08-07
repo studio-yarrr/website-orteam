@@ -92,7 +92,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
 
         closeAll();
-        showSuccesseModal();
+        setTimeout(() => {
+          showSuccesseModal()
+        }, 300);
+
       } else {
         console.log('Форма содержит ошибки.');
       }
