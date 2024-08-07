@@ -38,7 +38,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 14rem;
+  gap: 15rem;
   @include breakpoint($xl-bp) {
     padding: 2rem;
     gap: 3rem;
@@ -68,6 +68,7 @@
   display: flex;
   gap: 1.6rem;
   border: 1px solid transparent;
+  max-width: 30.3rem;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
     width: 100%;
@@ -353,39 +354,52 @@ a:hover .list__item {
 .content__left {
   display: flex;
   border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--color2);
   @include breakpoint($sm-bp) {
     flex-direction: column;
     gap: 2.4rem;
+    border: 0;
+    overflow: visible;
   }
+}
+.content__br {
+  @include breakpoint($sm-bp) {
+    border-top: 1px solid var(--color2);
+    border-right: 1px solid var(--color2);
+    border-left: 1px solid var(--color2);
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+  }
+
 }
 
 .content__list-container {
   background-color: var(--bg-main);
-  padding: 2.4rem;
-  border-top: 1px solid var(--color2);
-  border-bottom: 1px solid var(--color2);
-  border-left: 1px solid var(--color2);
-  border-top-left-radius: 1.2rem;
-  border-bottom-left-radius: 1.2rem;
+  padding: 2.2rem 2.4rem 2.4rem 2.4rem;
+  //border-top: 1px solid var(--color2);
+  //border-bottom: 1px solid var(--color2);
+  //border-left: 1px solid var(--color2);
+  //border-top-left-radius: 1.2rem;
+  //border-bottom-left-radius: 1.2rem;
+  width: 42.7rem;
   @include breakpoint($xl-bp) {
     flex-grow: 1;
+    width: 30rem;
   }
   @include breakpoint($sm-bp) {
     padding: 1.2rem 3.2rem;
     border-radius: 1.2rem;
     background-color: var(--white);
     border: 1px solid var(--color2);
+    width: 100%;
   }
-}
-
-.content__left {
-  border-radius: 1.2rem;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 2rem;
   font-size: 2.4rem;
   line-height: 2.8rem;
   white-space: nowrap;
@@ -412,6 +426,10 @@ sup {
   width: 35rem;
   height: 55rem;
   flex-shrink: 0;
+  @include breakpoint($xl-bp) {
+    width: 44rem;
+    height: 30rem;
+  }
   @include breakpoint($sm-bp) {
     width: 32rem;
     height: 30rem;
@@ -433,6 +451,9 @@ sup {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include breakpoint($xl-bp) {
+    gap: 2rem;
+  }
   @include breakpoint($sm-bp) {
     background-color: var(--white);
     gap: 4.2rem;
@@ -442,6 +463,7 @@ sup {
     border-left: 1px solid var(--color2);
     border-right: 1px solid var(--color2);
     border-bottom: 1px solid var(--color2);
+    margin-top: -3%;
   }
 }
 
@@ -459,18 +481,23 @@ sup {
 }
 
 .content__right-bottom {
-  font-weight: 800;
-  font-size: 3.2rem;
-  line-height: 3.8rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
   @include breakpoint($sm-bp) {
-    font-size: 1.6rem;
-    line-height: 2rem;
     gap: 2.4rem;
-    font-weight: 700;
+
   }
+}
+
+.content__right-bottom h2 {
+  @include breakpoint($sm-bp) {
+    font-family: "Cygre-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+
 }
 
 .team {
