@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
   function showSuccesseModal() {
     successModalWrapper.classList.add('active');
   }
-  headerBurger.addEventListener("click", item => {
+
+  headerBurger.addEventListener("click", () => {
     menuWrapper.classList.add('active');
 
     setTimeout(() => {
@@ -38,19 +39,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   close.forEach((button) => {
-    button.addEventListener('click', () => {
-      closeAll();
-    });
+    button.addEventListener('click', closeAll);
   });
 
   function closeAll() {
     menuContent.classList.remove('active');
+    successModalWrapper.classList.remove('active');
 
     setTimeout(() => {
       menuWrapper.classList.remove('active');
-      successModalWrapper.classList.remove('active');
-
-
       recordWrapper.forEach(wrapper => {
         wrapper.classList.remove('active');
       });
@@ -60,12 +57,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const openModal = document.querySelectorAll('.openModal');
 
   openModal.forEach(item => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (event) => {
       event.preventDefault();
+
       document.querySelector('.record__wrapper').classList.add('active');
     });
   });
-
 
   const closeRecord = document.querySelectorAll('.closeRecord');
 
@@ -76,6 +73,40 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     });
   });
+
+  function handleForm(formInf) {
+    formInf.addEventListener('submit', function (event) {
+      const controls = this.querySelectorAll('.required__input');
+      let isValid = true;
+
+      controls.forEach(control => {
+        if (control.classList.contains('required') && !control.value) {
+          isValid = false;
+        }
+      });
+
+      if (isValid) {
+        event.preventDefault();
+        controls.forEach(control => {
+          control.value = '';
+        });
+
+        closeAll();
+        showSuccesseModal();
+      } else {
+        console.log('Форма содержит ошибки.');
+      }
+    });
+  }
+
+
+  const formSend = document.querySelectorAll('.sendForm');
+
+  if (formSend) {
+    formSend.forEach(item => {
+      handleForm(item);
+    });
+  }
 
 
   function addMask() {
@@ -267,31 +298,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
            }
        });
    }
-
-
-  function handleForm(formInf) {
-    formInf.addEventListener('submit', function (event) {
-      const controls = this.querySelectorAll('.required__input');
-      let isValid = true;
-      controls.forEach(control => {
-        if (control.classList.contains('required') && !control.value) {
-          isValid = false;
-        }
-      });
-      event.preventDefault();
-
-      controls.forEach(control => {
-        control.value = '';
-      });
-      showSuccesseModal ();
-    })
-  }
-
-  const formSend = document.querySelector('.sendForm');
-
-  if (formSend) {
-    handleForm(formSend);
-  }
 
 
   const portfolioList = document.querySelector('.portfolio__list');
