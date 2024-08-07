@@ -3847,6 +3847,7 @@ button.swiper-pagination-bullet {
     background-color: var(--color2);
     color: var(--color1);
     text-align: center;
+    font-family: "Cygre-Bold", sans-serif;
     font-weight: 700;
 }
 
@@ -3867,9 +3868,15 @@ button.swiper-pagination-bullet {
     background-color: var(--white);
     text-align: center;
     font-weight: 700;
-    padding: 2rem 4.8rem;
+    padding: 2rem 7rem;
     border-radius: 1.2rem;
     border: 1px solid var(--color2);
+}
+
+@media (max-width: 1024px) {
+    .button--light {
+        padding: 2rem 5rem;
+    }
 }
 
 .button--light:hover {
@@ -5482,9 +5489,22 @@ a.order4 .list__item {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .details__img {
+        height: 12rem;
+    }
+}
+
 .details__img img {
     border-bottom-left-radius: 1.2rem;
     border-bottom-right-radius: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+    .details__button {
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
 }
 
 .details__button:hover {
@@ -5970,7 +5990,7 @@ a.order4 .list__item {
 }
 
 .braces__text-subslider {
-    max-width: 45%;
+    max-width: 40%;
     margin-top: 2.4rem;
 }
 
@@ -6013,36 +6033,36 @@ a.order4 .list__item {
     }
 }
 
-.surgery__container,
-.analytics__container {
+.surgery__container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 5.6rem;
-}
-
-@media (max-width: 768px) {
-    .surgery__container,
-  .analytics__container {
-        margin-top: 2.4rem;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        gap: 2.4rem;
-    }
-}
-
-.analytics__container {
-    gap: 2rem;
-}
-
-.surgery__container {
     gap: 2rem;
 }
 
 @media (max-width: 768px) {
     .surgery__container {
+        margin-top: 2.4rem;
+        -ms-flex-direction: column;
+        flex-direction: column;
         gap: 0;
+    }
+}
+
+.analytics__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 5.6rem;
+    gap: 2rem;
+    justify-items: center;
+}
+
+@media (max-width: 1024px) {
+    .analytics__container {
+        gap: 2rem;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -6080,6 +6100,11 @@ a.order4 .list__item {
     gap: 1.2rem;
 }
 
+a.analytics__button {
+    font-family: "Cygre-Regular", sans-serif;
+    font-weight: 400;
+}
+
 .analytics__button {
     display: -ms-flexbox;
     display: flex;
@@ -6093,7 +6118,6 @@ a.order4 .list__item {
 @media (max-width: 768px) {
     .analytics__button {
         width: 100%;
-        font-weight: 400;
         margin-top: 3rem;
     }
 }
@@ -6113,12 +6137,19 @@ a.order4 .list__item {
     align-items: flex-start;
 }
 
+@media (max-width: 1024px) {
+    .surgery__item {
+        height: 60rem;
+    }
+}
+
 @media (max-width: 768px) {
     .surgery__item {
         padding: 1.2rem;
         height: auto;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
+        border: 1px solid var(--color2);
     }
 }
 
@@ -6153,6 +6184,12 @@ a.order4 .list__item {
     margin-bottom: 2.4rem;
 }
 
+@media (max-width: 1024px) {
+    .surgery__img {
+        height: 40rem;
+    }
+}
+
 @media (max-width: 768px) {
     .surgery__img {
         margin-bottom: 1.4rem;
@@ -6160,15 +6197,9 @@ a.order4 .list__item {
 }
 
 .surgery__img-container a {
-    margin: 0 4.6rem;
+    margin: 0 4rem;
     position: absolute;
     bottom: -3%;
-}
-
-@media (max-width: 768px) {
-    .surgery__img-container a {
-        margin: 0 4.6rem;
-    }
 }
 
 .surgery__img-container .standards__img-subtitle {
@@ -6631,7 +6662,7 @@ a.order4 .list__item {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin: 10rem 0;
+    margin: 10rem auto;
 }
 
 @media (max-width: 768px) {

@@ -4,6 +4,7 @@
   background-color: var(--color2);
   color: var(--color1);
   text-align: center;
+  font-family: "Cygre-Bold", sans-serif;
   font-weight: 700;
   @include breakpoint($sm-bp) {
     padding: 1.6rem  4.8rem;
@@ -21,9 +22,12 @@
   background-color: var(--white);
   text-align: center;
   font-weight: 700;
-  padding: 2rem  4.8rem;
+  padding: 2rem  7rem;
   border-radius: 1.2rem;
   border: 1px solid var(--color2);
+  @include breakpoint($xl-bp) {
+    padding: 2rem  5rem;
+  }
 }
 
 .button--light:hover {
