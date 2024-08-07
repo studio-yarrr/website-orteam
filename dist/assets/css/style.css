@@ -211,7 +211,7 @@ body {
     font-weight: 400;
     background-color: var(--bg-main);
     font-size: 1.6rem;
-    line-height: 2rem;
+    line-height: 2.1rem;
 }
 
 select {
@@ -252,6 +252,7 @@ img {
 }
 
 h1 {
+    font-family: "Cygre-ExtraBold", sans-serif;
     font-weight: 800;
     font-size: 4rem;
     line-height: 4.8rem;
@@ -3361,7 +3362,7 @@ button.swiper-pagination-bullet {
 /*--------- components -------------*/
 /*--------- popup -------------*/
 .header {
-    padding: 2.4rem;
+    padding: 2.4rem 1rem 2.4rem 2.4rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -3527,7 +3528,7 @@ button.swiper-pagination-bullet {
 .header__bottom-list {
     display: -ms-flexbox;
     display: flex;
-    gap: 4rem;
+    gap: 4.5rem;
     -ms-flex-align: center;
     align-items: center;
 }
@@ -4077,7 +4078,7 @@ button.swiper-pagination-bullet {
 
 /*------header-----*/
 .header {
-    padding: 2.4rem;
+    padding: 2.4rem 1rem 2.4rem 2.4rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -4243,7 +4244,7 @@ button.swiper-pagination-bullet {
 .header__bottom-list {
     display: -ms-flexbox;
     display: flex;
-    gap: 4rem;
+    gap: 4.5rem;
     -ms-flex-align: center;
     align-items: center;
 }
@@ -4341,6 +4342,10 @@ button.swiper-pagination-bullet {
         gap: 7rem;
         margin-bottom: 1.4rem;
     }
+}
+
+.banner__inf h1 {
+    text-align: center;
 }
 
 @media (max-width: 1024px) {

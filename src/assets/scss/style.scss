@@ -55,12 +55,13 @@ html {
 }
 
 body {
+
   font-family: "Cygre", sans-serif;
   color: var(--color1);
   font-weight: 400;
   background-color: var(--bg-main);
   font-size: 1.6rem;
-  line-height: 2rem;
+  line-height: 2.1rem;
 
 }
 
@@ -96,6 +97,7 @@ img {
 
 
 h1 {
+  font-family: "Cygre-ExtraBold", sans-serif;
   font-weight: 800;
   font-size: 4rem;
   line-height: 4.8rem;

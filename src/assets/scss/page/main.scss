@@ -26,6 +26,7 @@
 }
 
 .banner__inf h1 {
+  text-align: center;
   @include breakpoint($xl-bp) {
    position: absolute;
     top: 2%;

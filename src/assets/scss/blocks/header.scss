@@ -1,5 +1,5 @@
 .header {
-  padding: 2.4rem;
+  padding: 2.4rem 1rem 2.4rem 2.4rem;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -139,7 +139,7 @@
 .footer__bottom-list,
 .header__bottom-list {
   display: flex;
-  gap: 4rem;
+  gap: 4.5rem;
   align-items: center;
 }
 
