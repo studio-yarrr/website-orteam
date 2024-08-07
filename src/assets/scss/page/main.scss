@@ -512,7 +512,7 @@ sup {
 .team {
   margin-bottom: 8.4rem;
   @include breakpoint($sm-bp) {
-    margin-bottom: 6.4rem;
+    margin-bottom: 4.2rem;
     font-size: 1.2rem;
   }
 }
@@ -676,12 +676,13 @@ sup {
   grid-template-rows: repeat(2, 25.2rem);
   @include breakpoint($xl-bp) {
     margin-top: 2.4rem;
-    gap: 0;
+    gap: 1rem;
   }
   @include breakpoint($sm-bp) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 18rem 18rem 18rem 18rem 25rem;
     height: 70rem;
+    gap: 0;
   }
 }
 
@@ -773,7 +774,7 @@ sup {
     order: 2;
     color: var(--white);
     background: #405F64;
-    margin-top: -40%;
+    margin-top: -33%;
   }
 }
 
@@ -782,14 +783,14 @@ sup {
     order: 3;
     background-color: var(--white);
     color: var(--color1);
-    margin-top: -80%;
+    margin-top: -68%;
   }
 }
 
 .order4 {
   @include breakpoint($sm-bp) {
     order: 4;
-    margin-top: -120%;
+    margin-top: -100%;
     height: 15rem;
   }
 }
@@ -798,18 +799,18 @@ sup {
   @include breakpoint($sm-bp) {
     order: 5;
     border-top: none;
-    margin-top: -130%;
+    margin-top: -95%;
     height: 36rem;
   }
 }
 
 a.order4 .list__item {
+  border: 1px solid transparent;
   @include breakpoint($sm-bp) {
-    border-top:1 px solid var(--color2);
-    border-left:1 px solid var(--color2);
-    border-right:1 px solid var(--color2);
+    border: 1px solid var(--color2);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    height: 20rem;
   }
 }
 
@@ -817,6 +818,7 @@ a.order4 .list__item {
   margin-bottom: 8.4rem;
   @include breakpoint($sm-bp) {
     margin-bottom: 6.4rem;
+    margin-top: 12rem;
   }
 }
 

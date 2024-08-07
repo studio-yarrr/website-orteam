@@ -131,7 +131,10 @@ h3 {
 
   }
 
-  @include breakpoint($sm-bp) {}
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
 }
 
 
@@ -441,8 +444,7 @@ a:hover {
   }
 }
 
-.video-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
-.team-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+.video-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
     bottom: -2%;
   }
@@ -454,7 +456,7 @@ a:hover {
   }
 }
 
-
+.team-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
 .details-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
 .articles-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
 .braces-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
