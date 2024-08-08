@@ -6251,6 +6251,7 @@ a.analytics__button {
 @media (max-width: 768px) {
     .surgery__img {
         margin-bottom: 1.4rem;
+        height: 30rem;
     }
 }
 
