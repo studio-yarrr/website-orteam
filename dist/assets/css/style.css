@@ -7251,6 +7251,12 @@ a.analytics__button {
     margin-bottom: 10rem;
 }
 
+@media (max-width: 1024px) {
+    .guarantee__wrapper {
+        padding: 4.4rem 0;
+    }
+}
+
 @media (max-width: 768px) {
     .guarantee__wrapper {
         padding: 1.2rem;
@@ -7263,9 +7269,8 @@ a.analytics__button {
     margin-bottom: 2.4rem;
 }
 
-.guarantee p {
+.guarantee__top div {
     text-align: center;
-    font-weight: 700;
 }
 
 .guarantee p:nth-child(1) {
@@ -7275,6 +7280,16 @@ a.analytics__button {
 .guarantee__top {
     max-width: 80rem;
     margin: 0 auto;
+}
+
+.guarantee-text {
+    text-indent: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .guarantee-text {
+        text-indent: 2.5rem;
+    }
 }
 
 .guarantee__content {
@@ -7305,6 +7320,12 @@ a.analytics__button {
 
 @media (max-width: 1024px) {
     .guarantee__content {
+        grid-template-columns: 60rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .guarantee__content {
         grid-template-columns: 30rem;
     }
 }
@@ -7328,6 +7349,8 @@ a.analytics__button {
         gap: 1.2rem;
         -ms-flex-align: start;
         align-items: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
     }
 }
 
@@ -7341,8 +7364,6 @@ a.analytics__button {
 
 @media (max-width: 1024px) {
     .guarantee__item-num {
-        padding: 0 1.2rem;
-        gap: 1.2rem;
         color: var(--color2);
         font-family: "Cygre-Bold", sans-serif;
         font-weight: 700;
@@ -7364,7 +7385,7 @@ a.analytics__button {
 
 @media (max-width: 768px) {
     .guarantee__item-list {
-        margin-top: 1.6rem;
+        gap: 0.2rem;
     }
 }
 
