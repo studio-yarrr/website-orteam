@@ -1071,6 +1071,7 @@ a.order4 .list__item {
   padding: 2rem;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
+    margin: 1rem;
     width: 100%;
   }
 }

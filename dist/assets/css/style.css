@@ -1,9 +1,11 @@
+@charset "UTF-8";
+
 @font-face {
     font-family: "Inter";
-    src: url("../fonts/Inter-Regular.eot");
-    src: local("Inter Regular"), local("Inter-Regular"), url("../fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  src: url("../fonts/Inter-Regular.eot");
+  src: local("Inter Regular"), local("Inter-Regular"), url("../fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -5740,6 +5742,7 @@ a.order4 .list__item {
 @media (max-width: 768px) {
     .record {
         padding: 1.2rem;
+        margin: 1rem;
         width: 100%;
     }
 }
@@ -8592,6 +8595,36 @@ select {
 
 .swiper-slide-active {
     position: relative;
+}
+
+.case__item-slide.swiper-slide-active::before {
+    content: "До";
+    position: absolute;
+    top: 0;
+    left: -11%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2rem;
+    font-family: inherit;
+}
+
+.case__item-slide.swiper-slide-active::after {
+    content: "После";
+    position: absolute;
+    bottom: 0;
+    left: -18%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2rem;
+    font-family: inherit;
+}
+
+@media (max-width: 1024px) {
+    .case__content h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 3.1rem;
+    }
 }
 
 /*------footer-----*/
