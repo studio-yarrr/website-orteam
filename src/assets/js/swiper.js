@@ -293,7 +293,6 @@ const slider11 = new Swiper('.doctor-certificate__swiper', {
 const slider12 = new Swiper('.case-swiper', {
     spaceBetween: 20,
     speed: 800,
-    slidesPerView: 'auto',
     navigation: {
         nextEl: '.case-button-next',
         prevEl: '.case-button-prev',
@@ -310,12 +309,11 @@ const slider12 = new Swiper('.case-swiper', {
             slidesPerView: 2,
         },
         1024: {
-            slidesPerView:'auto',
+            slidesPerView: 3, // Автоматический расчет слайдов
         }
     },
     initialSlide: 1,
-
-    centeredSlides: true,
+    centeredSlides: true, // Активный слайд по центру
 });
 
 

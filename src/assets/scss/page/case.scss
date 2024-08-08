@@ -150,7 +150,6 @@
 .case__img {
   border-radius: 1.2rem;
   overflow: hidden;
-  width: 32rem;
   height: 23rem;
   transition: width 0.3s ease, height 0.3s ease;
   filter: grayscale(1);
@@ -171,13 +170,17 @@
 
 }
 .swiper-slide-active .case__img {
-  width: 45rem;
   height: 38rem;
   filter: grayscale(0);
 }
 
 .swiper-slide-active {
   position: relative;
+}
+
+
+.case__item-slide.swiper-slide-active {
+  max-width: 45rem;
 }
 
 .case__item-slide.swiper-slide-active::before {
@@ -226,3 +229,7 @@
 //}
 
 
+
+.swiper-slide.case__item-slide {
+  flex-shrink: 0;
+}
