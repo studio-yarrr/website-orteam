@@ -309,9 +309,37 @@ const slider12 = new Swiper('.case-swiper', {
             slidesPerView: 2,
         },
         1024: {
-            slidesPerView: 3, // Автоматический расчет слайдов
+            slidesPerView: 3,
         }
     },
+    centeredSlides: true,
+    roundLengths: true,
     initialSlide: 1,
-    centeredSlides: true, // Активный слайд по центру
 });
+
+const slider13 = new Swiper('.about__swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 2.45,
+
+    navigation: {
+        nextEl: '.about-button-next',
+        prevEl: '.about-button-prev',
+    },
+
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.15,
+        },
+
+        768: {
+            slidesPerView: 2.5,
+        },
+
+        1024: {
+            slidesPerView: 2.45,
+        }
+
+    },
+})

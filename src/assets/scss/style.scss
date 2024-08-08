@@ -291,6 +291,13 @@ a:hover {
   overflow: hidden;
 }
 
+.about__swiper {
+  width: 70rem;
+  height: 42.3rem;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+}
+
 
 .swiper-button-prev:after,
 .swiper-button-next:after,
@@ -382,6 +389,7 @@ a:hover {
   cursor: pointer;
 }
 
+.about__buttons,
 .case__buttons-container,
 .certificate__buttons,
 .process__buttons-container,
@@ -398,7 +406,6 @@ a:hover {
   @include breakpoint($sm-bp) {
     display: none;
   }
-
 }
 
 .certificate__buttons,
@@ -408,6 +415,10 @@ a:hover {
 .articles__buttons,
 .braces__buttons {
   top: 0;
+}
+
+.about__buttons {
+  top: -4%;
 }
 
 .case__buttons-container,
@@ -596,6 +607,7 @@ a:hover {
 @import './page/doctor.scss';
 @import './page/portfolio.scss';
 @import './page/case.scss';
+@import './page/about.scss';
 
 /*------footer-----*/
 @import './blocks/footer.scss';

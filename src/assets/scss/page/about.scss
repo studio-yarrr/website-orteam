@@ -1,0 +1,195 @@
+.about__title h1 {
+  margin-top: 8.4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 4rem;
+  }
+}
+
+.about{
+  margin-bottom: 10.4rem;
+  @include breakpoint($xl-bp) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.about__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 5.6rem;
+}
+
+.about__title-logo {
+  width: 67rem;
+  height: 18rem;
+  @include breakpoint($xl-bp) {
+    width: 32rem;
+    height: 8.8rem;
+  }
+}
+
+.about__person {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 23rem 77rem;
+  margin: 10.4rem auto;
+  justify-content: center;
+  width: max-content;
+  @include breakpoint($xl-bp) {
+    margin: 4rem auto;
+    grid-template-columns: 32rem;
+  }
+}
+
+.about__person-text {
+  padding: 5.4rem 2rem;
+  background-color: var(--white);
+  background-image: url("../images/sing.svg");
+  background-repeat: no-repeat;
+  background-size: 5.6rem;
+  background-position: 2% top;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  @include breakpoint($xl-bp) {
+    padding: 1.2rem;
+  }
+}
+
+.treatment {
+  background-image: url("../images/sing.svg");
+  background-repeat: no-repeat;
+  background-size: 5.6rem;
+  background-position: 95% 87%;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 50rem auto;
+  gap: 2rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about__nav {
+  height: min-content;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.about__text,
+.about__nav {
+  border-radius: 1.2rem;
+  padding: 2.4rem;
+  background-color: var(--white);
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.concept-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.concept-item {
+  border-radius: 1.2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @include breakpoint($xl-bp) {
+    padding: 1.2rem;
+    gap: 1.2rem;
+  }
+}
+
+.concept-item__title {
+  font-weight: 700;
+}
+
+.concept__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.department {
+  margin-top: 2.3rem;
+  margin-bottom: 5.6rem;
+}
+
+.concept__text-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: max-content;
+  align-self: flex-end;
+}
+
+.concept__text-subtitle {
+  font-weight: 700;
+}
+
+.concept__text-subtext {
+  color: var(--grey);
+}
+
+.treatment {
+  margin-top: 6rem;
+  margin-bottom: 8.6rem;
+}
+
+.about__slider {
+  position: relative;
+  padding-top: 3rem;
+  margin-top: 6rem;
+}
+
+.about__slide {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  position: relative;
+  max-height: 43rem;
+}
+
+.about__slide div img {
+  border-top-right-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+  height: 27rem;
+}
+
+.about__slide-title {
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.about__slide-desc {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.6rem;
+  align-items: center;
+}
+
+.about__slide-button {
+  padding: 0.8rem 2rem;
+  position: absolute;
+  bottom: -4%;
+}
+
+.about__slide-desc .team__item-subtitle {
+  text-align: center;
+}

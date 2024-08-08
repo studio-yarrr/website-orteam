@@ -183,6 +183,10 @@
   max-width: 45rem;
 }
 
+.case__item-slide.swiper-slide {
+  transition: transform 0.5s ease;
+}
+
 .case__item-slide.swiper-slide-active::before {
   content: 'До';
   position: absolute;
@@ -233,3 +237,19 @@
 .swiper-slide.case__item-slide {
   flex-shrink: 0;
 }
+
+//.swiper-3d .swiper-wrapper {
+//  -webkit-transform-style: preserve-3d;
+//  transform-style: preserve-3d;
+//}
+//.swiper-3d {
+//   -webkit-perspective: 1200px;
+//    perspective: 1200px;
+// }
+//.case-swiper {
+//  transform-style: preserve-3d;
+//}
+//.swiper-3d .swiper-wrapper {
+//  -webkit-transform-style: preserve-3d;
+//  transform-style: preserve-3d;
+//}
