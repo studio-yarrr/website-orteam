@@ -343,5 +343,3 @@ const slider13 = new Swiper('.about__swiper', {
 
     },
 })
-
-

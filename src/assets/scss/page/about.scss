@@ -1,11 +1,11 @@
 .about__title h1 {
   margin-top: 8.4rem;
   @include breakpoint($xl-bp) {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 }
 
-.about{
+.about {
   margin-bottom: 10.4rem;
   @include breakpoint($xl-bp) {
     margin-bottom: 7.2rem;
@@ -19,6 +19,9 @@
   justify-content: center;
   padding: 0;
   gap: 5.6rem;
+  @include breakpoint($xl-bp) {
+    gap: 2.4rem;
+  }
 }
 
 .about__title-logo {
@@ -39,6 +42,9 @@
   justify-content: center;
   width: max-content;
   @include breakpoint($xl-bp) {
+    grid-template-columns: 30rem 59rem;
+  }
+  @include breakpoint($sm-bp) {
     margin: 4rem auto;
     grid-template-columns: 32rem;
   }
@@ -54,8 +60,16 @@
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-  @include breakpoint($xl-bp) {
+  @include breakpoint($sm-bp) {
+    order: 1;
+    background-position: 98% top;
     padding: 1.2rem;
+  }
+}
+
+.about__order-mob {
+  @include breakpoint($sm-bp) {
+    order: 2;
   }
 }
 
@@ -64,6 +78,13 @@
   background-repeat: no-repeat;
   background-size: 5.6rem;
   background-position: 95% 87%;
+  margin-top: 6rem;
+  margin-bottom: 8.6rem;
+  @include breakpoint($sm-bp) {
+    background-position: 92% 87%;
+    margin-top: 4rem;
+    margin-bottom: 7.2rem;
+  }
 }
 
 .about__content {
@@ -73,18 +94,30 @@
   @include breakpoint($xl-bp) {
     grid-template-columns: 1fr;
   }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 32rem;
+  }
 }
 
 .about__nav {
   height: min-content;
   position: sticky;
   top: 1.5rem;
+  padding: 2.4rem;
+  @include breakpoint($xl-bp) {
+    position: static;
+  }
+  @include breakpoint($sm-bp) {
+    position: static;
+    border: 0.1rem solid var(--color2);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
 }
 
 .about__text,
 .about__nav {
   border-radius: 1.2rem;
-  padding: 2.4rem;
   background-color: var(--white);
 }
 
@@ -92,6 +125,18 @@
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  padding: 2.4rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+    gap: 1.2rem;
+  }
+}
+
+.about__text h2 {
+  @include breakpoint($sm-bp) {
+   font-size: 2rem;
+    line-height: 2.6rem;
+  }
 }
 
 .concept-items {
@@ -100,6 +145,9 @@
   gap: 2rem;
   @include breakpoint($xl-bp) {
     grid-template-columns: 1fr;
+  }
+  @include breakpoint($sm-bp) {
+    margin-top: 1.2rem;
   }
 }
 
@@ -117,6 +165,7 @@
 
 .concept-item__title {
   font-weight: 700;
+  font-family: "Cygre-Bold", sans-serif;
 }
 
 .concept__desc {
@@ -128,6 +177,10 @@
 .department {
   margin-top: 2.3rem;
   margin-bottom: 5.6rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+  }
 }
 
 .concept__text-bottom {
@@ -136,25 +189,29 @@
   gap: 0.8rem;
   width: max-content;
   align-self: flex-end;
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+    width: auto;
+  }
 }
 
 .concept__text-subtitle {
   font-weight: 700;
+  font-family: "Cygre-Bold", sans-serif;
 }
 
 .concept__text-subtext {
   color: var(--grey);
 }
 
-.treatment {
-  margin-top: 6rem;
-  margin-bottom: 8.6rem;
-}
-
 .about__slider {
   position: relative;
   padding-top: 3rem;
   margin-top: 6rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+    padding-top: 0;
+  }
 }
 
 .about__slide {
@@ -188,8 +245,36 @@
   padding: 0.8rem 2rem;
   position: absolute;
   bottom: -4%;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
 }
 
 .about__slide-desc .team__item-subtitle {
   text-align: center;
 }
+
+.about__bg-green {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+#department {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+#about-team {
+  @include breakpoint($sm-bp) {
+    margin-top: 4rem;
+  }
+}
+
+.about__text .analytics__button {
+  @include breakpoint($sm-bp) {
+    margin-top: 1.2rem;
+  }
+}
+
+
