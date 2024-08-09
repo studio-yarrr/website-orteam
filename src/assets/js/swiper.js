@@ -348,10 +348,17 @@ const slider14 = new Swiper('.cost-swiper', {
     spaceBetween: 20,
     speed: 800,
     slidesPerView: 1,
-
+    loop: true,
+    autoplay: {
+        delay: 8000,
+    },
     navigation: {
         nextEl: '.cost-button-next',
         prevEl: '.cost-button-prev',
+    },
+    pagination: {
+        el: '.cost-pagination',
+        clickable: true,
     },
 
 })

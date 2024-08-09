@@ -3,6 +3,13 @@
   grid-template-columns: 69rem 49rem;
   grid-template-rows: 50rem;
   gap: 2rem;
+  margin-bottom: 4.8rem;
+}
+
+.cost__slider {
+  padding-bottom: 5.6rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .cost-slide__img,
@@ -13,14 +20,14 @@
 
 .cost-slide__text {
   padding: 2rem;
-  height: 31rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-self: end;
+  gap: 5.1rem;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
-    height: 35rem;
+
   }
 }
 
@@ -44,4 +51,125 @@
   @include breakpoint($sm-bp) {
     margin-top: 1.2rem;
   }
+}
+
+.cost-bg-white {
+  background-color: var(--white);
+  color: var(--color1);
+}
+
+.cost-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: square inside;
+  margin-bottom: 2.5rem;
+  margin-top: 1.2rem;
+  & li::marker {
+    color: var(--color2)
+  }
+
+  &  li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 2rem;
+    text-indent: -2rem;
+  }
+}
+
+.mb71 {
+  margin-bottom: 7.1rem;
+}
+
+.cost__button {
+  max-width: 33rem;
+  align-self: center;
+  &:hover {
+    background-color: var(--grey);
+  }
+}
+
+.cost__nav {
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 2.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4.8rem;
+  margin-bottom: 8.4rem;
+  width: fit-content;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+    border: 0.1rem solid var(--color2);
+    margin-top: 5.4rem;
+    margin-bottom: 5.6rem;
+  }
+}
+
+.cost h2 {
+  text-align: center;
+  margin-bottom: 5.6rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.cost__payment {
+  display: grid;
+  grid-template-columns: 69rem 49rem;
+  gap: 2rem;
+  align-items: end;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cost__left,
+.cost__right {
+  border-radius: 1.2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
+}
+
+.cost__container {
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 2rem;
+  width: 90rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
+}
+
+.cost__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cost__line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cost__underlining {
+  border-bottom: 1px solid var(--grey);
+  width: 51rem;
+}
+
+.cost__line div:nth-child(3) {
+  white-space: nowrap;
+  align-self: flex-end;
+  font-weight: 700;
+  position: relative;
 }

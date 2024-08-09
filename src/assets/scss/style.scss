@@ -399,6 +399,7 @@ a:hover {
 
 .about__buttons,
 .case__buttons-container,
+.cost__buttons-container,
 .certificate__buttons,
 .process__buttons-container,
 .team__buttons-container,
@@ -429,6 +430,7 @@ a:hover {
   top: -5%;
 }
 
+.cost__buttons-container,
 .case__buttons-container,
 .reviews__buttons-container {
   bottom: 0;
@@ -469,6 +471,12 @@ a:hover {
   }
 }
 
+.pagination.cost-pagination {
+  display: flex;
+  position: absolute;
+  transform: translateX(50%);
+}
+
 .pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
     position: absolute;
@@ -476,6 +484,9 @@ a:hover {
     bottom: 10%;
     width: 50%;
   }
+}
+.pagination.cost-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--color2);
 }
 
 .list-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -502,6 +513,7 @@ a:hover {
   }
 }
 
+.cost-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
 .team-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
 .details-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
 .articles-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,

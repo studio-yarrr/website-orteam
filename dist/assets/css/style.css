@@ -632,6 +632,7 @@ a:hover {
 
 .about__buttons,
 .case__buttons-container,
+.cost__buttons-container,
 .certificate__buttons,
 .process__buttons-container,
 .team__buttons-container,
@@ -651,6 +652,7 @@ a:hover {
 @media (max-width: 768px) {
     .about__buttons,
   .case__buttons-container,
+  .cost__buttons-container,
   .certificate__buttons,
   .process__buttons-container,
   .team__buttons-container,
@@ -675,6 +677,7 @@ a:hover {
     top: -5%;
 }
 
+.cost__buttons-container,
 .case__buttons-container,
 .reviews__buttons-container {
     bottom: 0;
@@ -720,6 +723,14 @@ a:hover {
     }
 }
 
+.pagination.cost-pagination {
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
 @media (max-width: 768px) {
     .pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
         position: absolute;
@@ -727,6 +738,10 @@ a:hover {
         bottom: 10%;
         width: 50%;
     }
+}
+
+.pagination.cost-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: var(--color2);
 }
 
 @media (max-width: 768px) {
@@ -754,7 +769,8 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .team-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+    .cost-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
+  .team-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
   .details-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
   .articles-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
   .braces-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -9040,6 +9056,13 @@ select {
     grid-template-columns: 69rem 49rem;
     grid-template-rows: 50rem;
     gap: 2rem;
+    margin-bottom: 4.8rem;
+}
+
+.cost__slider {
+    padding-bottom: 5.6rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .cost-slide__img,
@@ -9050,7 +9073,6 @@ select {
 
 .cost-slide__text {
     padding: 2rem;
-    height: 31rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -9059,12 +9081,12 @@ select {
     justify-content: space-between;
     -ms-flex-item-align: end;
     align-self: end;
+    gap: 5.1rem;
 }
 
 @media (max-width: 768px) {
     .cost-slide__text {
         padding: 1.2rem;
-        height: 35rem;
     }
 }
 
@@ -9090,6 +9112,156 @@ select {
     .mt12 {
         margin-top: 1.2rem;
     }
+}
+
+.cost-bg-white {
+    background-color: var(--white);
+    color: var(--color1);
+}
+
+.cost-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.6rem;
+    list-style: square inside;
+    margin-bottom: 2.5rem;
+    margin-top: 1.2rem;
+}
+
+.cost-list li::marker {
+    color: var(--color2);
+}
+
+.cost-list li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 2rem;
+    text-indent: -2rem;
+}
+
+.mb71 {
+    margin-bottom: 7.1rem;
+}
+
+.cost__button {
+    max-width: 33rem;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.cost__button:hover {
+    background-color: var(--grey);
+}
+
+.cost__nav {
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    padding: 2.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4.8rem;
+    margin-bottom: 8.4rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+@media (max-width: 768px) {
+    .cost__nav {
+        padding: 1.2rem;
+        border: 0.1rem solid var(--color2);
+        margin-top: 5.4rem;
+        margin-bottom: 5.6rem;
+    }
+}
+
+.cost h2 {
+    text-align: center;
+    margin-bottom: 5.6rem;
+}
+
+@media (max-width: 768px) {
+    .cost h2 {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.cost__payment {
+    display: grid;
+    grid-template-columns: 69rem 49rem;
+    gap: 2rem;
+    -ms-flex-align: end;
+    align-items: end;
+}
+
+@media (max-width: 768px) {
+    .cost__payment {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cost__left,
+.cost__right {
+    border-radius: 1.2rem;
+    padding: 2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .cost__left,
+  .cost__right {
+        padding: 1.2rem;
+    }
+}
+
+.cost__container {
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    padding: 2rem;
+    width: 90rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .cost__container {
+        padding: 1.2rem;
+    }
+}
+
+.cost__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cost__line {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.cost__underlining {
+    border-bottom: 1px solid var(--grey);
+    width: 51rem;
+}
+
+.cost__line div:nth-child(3) {
+    white-space: nowrap;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    font-weight: 700;
+    position: relative;
 }
 
 /*------footer-----*/
