@@ -201,6 +201,7 @@ a:hover {
   }
 }
 
+.cost-swiper,
 .doctor-certificate__swiper,
 .process-swiper,
 .video-swiper,
@@ -615,6 +616,7 @@ a:hover {
 @import './page/portfolio.scss';
 @import './page/case.scss';
 @import './page/about.scss';
+@import './page/cost.scss';
 
 /*------footer-----*/
 @import './blocks/footer.scss';

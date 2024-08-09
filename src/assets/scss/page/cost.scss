@@ -1,0 +1,47 @@
+.cost-slide {
+  display: grid;
+  grid-template-columns: 69rem 49rem;
+  grid-template-rows: 50rem;
+  gap: 2rem;
+}
+
+.cost-slide__img,
+.cost-slide__text {
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.cost-slide__text {
+  padding: 2rem;
+  height: 31rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: end;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+    height: 35rem;
+  }
+}
+
+.cost-slide__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.cost-bg {
+  background-color: var(--color1);
+  color: var(--white);
+}
+
+.cost-bg-green {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.mt12 {
+  @include breakpoint($sm-bp) {
+    margin-top: 1.2rem;
+  }
+}

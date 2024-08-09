@@ -343,3 +343,15 @@ const slider13 = new Swiper('.about__swiper', {
 
     },
 })
+
+const slider14 = new Swiper('.cost-swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 1,
+
+    navigation: {
+        nextEl: '.cost-button-next',
+        prevEl: '.cost-button-prev',
+    },
+
+})

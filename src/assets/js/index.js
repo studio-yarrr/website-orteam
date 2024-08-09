@@ -342,6 +342,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  const nav = document.querySelector('.about__nav');
+  const treatmentBlock = document.getElementById('treatment');
+
+  window.addEventListener('scroll', () => {
+    if (window.innerWidth > 1024) {
+      if (window.scrollY >= treatmentBlock.offsetTop) {
+        nav.style.position = 'static';
+      } else {
+        nav.style.position = 'sticky';
+      }
+    } else {
+      nav.style.position = 'static';
+    }
+  });
+
+
 
 
 });

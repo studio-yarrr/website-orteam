@@ -259,12 +259,6 @@
   color: var(--white);
 }
 
-#department {
-  @include breakpoint($sm-bp) {
-    display: none;
-  }
-}
-
 #about-team {
   @include breakpoint($sm-bp) {
     margin-top: 4rem;

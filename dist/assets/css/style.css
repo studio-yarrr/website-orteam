@@ -367,6 +367,7 @@ a:hover {
     }
 }
 
+.cost-swiper,
 .doctor-certificate__swiper,
 .process-swiper,
 .video-swiper,
@@ -385,7 +386,8 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .doctor-certificate__swiper,
+    .cost-swiper,
+  .doctor-certificate__swiper,
   .process-swiper,
   .video-swiper,
   .articles-swiper,
@@ -401,7 +403,8 @@ a:hover {
 }
 
 @media (max-width: 1024px) {
-    .doctor-certificate__swiper,
+    .cost-swiper,
+  .doctor-certificate__swiper,
   .process-swiper,
   .video-swiper,
   .articles-swiper,
@@ -417,7 +420,8 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .doctor-certificate__swiper,
+    .cost-swiper,
+  .doctor-certificate__swiper,
   .process-swiper,
   .video-swiper,
   .articles-swiper,
@@ -9020,12 +9024,6 @@ select {
 }
 
 @media (max-width: 768px) {
-    #department {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
     #about-team {
         margin-top: 4rem;
     }
@@ -9033,6 +9031,63 @@ select {
 
 @media (max-width: 768px) {
     .about__text .analytics__button {
+        margin-top: 1.2rem;
+    }
+}
+
+.cost-slide {
+    display: grid;
+    grid-template-columns: 69rem 49rem;
+    grid-template-rows: 50rem;
+    gap: 2rem;
+}
+
+.cost-slide__img,
+.cost-slide__text {
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.cost-slide__text {
+    padding: 2rem;
+    height: 31rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-item-align: end;
+    align-self: end;
+}
+
+@media (max-width: 768px) {
+    .cost-slide__text {
+        padding: 1.2rem;
+        height: 35rem;
+    }
+}
+
+.cost-slide__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.cost-bg {
+    background-color: var(--color1);
+    color: var(--white);
+}
+
+.cost-bg-green {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .mt12 {
         margin-top: 1.2rem;
     }
 }
