@@ -9576,6 +9576,143 @@ select {
     }
 }
 
+.answer h1 {
+    text-align: center;
+    margin: 8.4rem auto 4rem;
+}
+
+@media (max-width: 768px) {
+    .answer h1 {
+        margin: 5.6rem auto 6.3rem;
+    }
+}
+
+.answer__container {
+    padding-top: 5.6rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 5.6rem;
+}
+
+@media (max-width: 768px) {
+    .answer__container {
+        padding-top: 4rem;
+    }
+}
+
+.answer__title h3 {
+    max-width: 70%;
+}
+
+.answer__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+    width: 85rem;
+    background: var(--white);
+    border-radius: 1.2rem;
+    border: 0.1rem solid var(--color1);
+}
+
+@media (max-width: 768px) {
+    .answer__item {
+        padding: 1.2rem;
+        width: 100%;
+    }
+}
+
+.answer__title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .answer__title {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
+
+.answer__icon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.views__container {
+    display: -ms-flexbox;
+    display: flex;
+    color: var(--grey);
+    gap: 0.5rem;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+div .view-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.answer__inf {
+    color: var(--grey);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .answer__inf {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+.answer__person {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2.4rem;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.answer__person-name {
+    font-weight: 700;
+}
+
+.answer__person-name span {
+    color: var(--color2);
+}
+
+.answer__person-profession {
+    color: var(--grey);
+}
+
+.answer__person-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
 /*------footer-----*/
 .footer {
     background-color: var(--white);
