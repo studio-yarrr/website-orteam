@@ -142,7 +142,7 @@
   grid-template-columns: 69rem 49rem;
   gap: 2rem;
   align-items: end;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     grid-template-columns: 1fr;
   }
 }

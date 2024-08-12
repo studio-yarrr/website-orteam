@@ -9249,7 +9249,7 @@ select {
     align-items: end;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .cost__payment {
         grid-template-columns: 1fr;
     }
