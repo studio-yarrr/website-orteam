@@ -146,15 +146,14 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 2rem;
-  @include breakpoint($sm-bp) {
-    padding: 1.2rem;
-  }
-}
-
-.cost__container {
+  margin-bottom: 8.4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+    margin-bottom: 5.6rem;
+  }
 }
 
 .cost__line {
@@ -163,13 +162,96 @@
 }
 
 .cost__underlining {
-  border-bottom: 1px solid var(--grey);
+  border-bottom: 1px solid rgba(142, 142, 142, 0.5);
   width: 51rem;
+  max-width: 57rem;
 }
 
-.cost__line div:nth-child(3) {
-  white-space: nowrap;
-  align-self: flex-end;
+.cost__line-right {
+  display: flex;
+  gap: 3rem;
+  width: 72%;
+  justify-content: space-between;
   font-weight: 700;
-  position: relative;
+  white-space: nowrap;
+  align-items: flex-end;
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.cost__underlining2 {
+  width: 42rem;
+}
+
+.cost__line-right2 {
+  width: 58%;
+  @include breakpoint($sm-bp) {
+    width: 100%;
+  }
+}
+
+.cost__prise {
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 2rem;
+  margin-bottom: 5.6rem;
+  width: 90rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+    margin-bottom:2.4rem;
+  }
+}
+
+.cost__accordion-item {
+  display: grid;
+  grid-template-columns: 42rem 30rem 7rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.cost__accordion-item div:nth-child(3) {
+  text-align: end;
+  font-weight: 700;
+}
+
+.cost__underline {
+  border-bottom: 1px solid rgba(142, 142, 142, 0.5);
+}
+
+.cost-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.2rem;
+  background-color: #DDDFE4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cost-icon span {
+  height: 0.3rem;
+  width: 1.5rem;
+  background-color: var(--color2);
+}
+
+.cost__item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.cost__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }

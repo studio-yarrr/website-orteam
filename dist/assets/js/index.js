@@ -194,12 +194,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             item.classList.add('active');
             activeContent.classList.add('active');
             activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
-            svg.forEach(element => element.classList.remove('active'));
-            svg.forEach((element, index) => {
-                if (index === Array.from(contents).indexOf(activeContent)) {
-                    element.classList.add('active');
-                }
-            });
+
 
         }
     }));

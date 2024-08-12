@@ -575,6 +575,10 @@ a:hover {
   margin-left: 95%;
 }
 
+.accordion__title:hover {
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   // width: 0.8rem;
   // height: 0;
