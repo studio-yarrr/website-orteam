@@ -48,6 +48,16 @@ html {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Cygre-Regular';
+  src: url('../fonts/cygre-regular.eot'); /* IE 9 Compatibility Mode */
+  src: url('../fonts/cygre-regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+  url('../fonts/cygre-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/cygre-regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+  url('../fonts/cygre-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/cygre-regular.svg#cygre-regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -474,7 +484,7 @@ a:hover {
 .pagination.cost-pagination {
   display: flex;
   position: absolute;
-  transform: translateX(50%);
+  transform: translate(50%, -160%);
 }
 
 .pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {

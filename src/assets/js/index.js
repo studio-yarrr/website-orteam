@@ -174,7 +174,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const titles = document.querySelectorAll('.accordion__title');
     const contents = document.querySelectorAll('.accordion-content');
     const svg = document.querySelectorAll('.questions__item .questions__svg svg');
-
+    const costIcon = document.querySelectorAll('.cost-icon');
+    if (titles.length > 0 && contents.length > 0) {
+        titles[0].classList.add('active');
+        contents[0].classList.add('active');
+        contents[0].style.maxHeight = contents[0].scrollHeight + 'px';
+        if (svg.length > 0) svg[0].classList.add('active');
+        if (costIcon.length > 0) costIcon[0].classList.add('active');
+    }
     titles.forEach(item => item.addEventListener('click', () => {
         const activeContent = document.querySelector('#' + item.dataset.tab);
 
@@ -183,6 +190,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             item.classList.remove('active');
             activeContent.style.maxHeight = 0;
             svg.forEach(element => element.classList.remove('active'));
+            costIcon.forEach(element => element.classList.remove('active'));
         } else {
             contents.forEach(element => {
                 element.classList.remove('active');
@@ -194,7 +202,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
             item.classList.add('active');
             activeContent.classList.add('active');
             activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
-
+            svg.forEach(element => element.classList.remove('active'));
+            svg.forEach((element, index) => {
+                if (index === Array.from(contents).indexOf(activeContent)) {
+                    element.classList.add('active');
+                }
+            });
+            costIcon.forEach(element => element.classList.remove('active'))
+            costIcon.forEach((element, index) => {
+                if (index === Array.from(contents).indexOf(activeContent)) {
+                    element.classList.add('active');
+                }
+            })
 
         }
     }));
