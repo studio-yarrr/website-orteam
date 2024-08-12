@@ -439,7 +439,7 @@ a:hover {
   .list__swiper,
   .team__wrapper {
         position: relative;
-        max-width: 34rem;
+        max-width: 32rem;
     }
 }
 
@@ -9074,6 +9074,21 @@ select {
     gap: 2rem;
 }
 
+@media (max-width: 1024px) {
+    .cost-slide {
+        grid-template-columns: 46rem 40rem;
+        grid-template-rows: 40rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cost-slide {
+        grid-template-columns: 1fr;
+        grid-template-rows: 25rem auto;
+        gap: 0;
+    }
+}
+
 .cost__slider {
     padding-bottom: 5.6rem;
     position: relative;
@@ -9102,6 +9117,8 @@ select {
 @media (max-width: 768px) {
     .cost-slide__text {
         padding: 1.2rem;
+        -ms-flex-item-align: start;
+        align-self: start;
     }
 }
 
@@ -9111,6 +9128,12 @@ select {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1.6rem;
+}
+
+@media (max-width: 768px) {
+    .cost-slide__content {
+        gap: 1rem;
+    }
 }
 
 .cost-bg {
@@ -9145,6 +9168,14 @@ select {
     margin-top: 1.2rem;
 }
 
+@media (max-width: 768px) {
+    .cost-list {
+        gap: 1rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+
 .cost-list li::marker {
     color: var(--color2);
 }
@@ -9166,6 +9197,13 @@ select {
     align-self: center;
 }
 
+@media (max-width: 768px) {
+    .cost__button {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
 .cost__button:hover {
     background-color: var(--grey);
 }
@@ -9185,7 +9223,7 @@ select {
 
 @media (max-width: 768px) {
     .cost__nav {
-        padding: 1.2rem;
+        padding: 1.2rem 1.2rem 1.2rem 3rem;
         border: 0.1rem solid var(--color2);
         margin-top: 5.4rem;
         margin-bottom: 5.6rem;
@@ -9232,6 +9270,14 @@ select {
     .cost__left,
   .cost__right {
         padding: 1.2rem;
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cost__right {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
 }
 
@@ -9255,6 +9301,8 @@ select {
     .cost__container {
         padding: 1.2rem;
         margin-bottom: 5.6rem;
+        gap: 1.2rem;
+        width: 100%;
     }
 }
 
@@ -9265,10 +9313,24 @@ select {
     justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+    .cost__line {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
 .cost__underlining {
     border-bottom: 1px solid rgba(142, 142, 142, 0.5);
     width: 51rem;
     max-width: 57rem;
+}
+
+@media (max-width: 768px) {
+    .cost__underlining {
+        width: 100%;
+    }
 }
 
 .cost__line-right {
@@ -9289,6 +9351,7 @@ select {
         -ms-flex-direction: column;
         flex-direction: column;
         width: 100%;
+        gap: 1rem;
     }
 }
 
@@ -9325,6 +9388,7 @@ select {
     .cost__prise {
         padding: 1.2rem;
         margin-bottom: 2.4rem;
+        width: 100%;
     }
 }
 
@@ -9335,6 +9399,33 @@ select {
     justify-content: space-between;
     -ms-flex-align: end;
     align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+    .cost__accordion-item {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .cost__accordion-item div:nth-child(1) {
+        -ms-flex-order: 1;
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .cost__accordion-item div:nth-child(2) {
+        -ms-flex-order: 3;
+        order: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .cost__accordion-item div:nth-child(3) {
+        -ms-flex-order: 2;
+        order: 2;
+    }
 }
 
 .cost__accordion-item div:nth-child(3) {
@@ -9403,6 +9494,12 @@ select {
     margin-bottom: 1.6rem;
 }
 
+@media (max-width: 768px) {
+    .cost__item-title {
+        margin-bottom: 1.2rem;
+    }
+}
+
 .cost__list {
     display: -ms-flexbox;
     display: flex;
@@ -9410,6 +9507,13 @@ select {
     flex-direction: column;
     gap: 1.6rem;
     margin-top: 1.6rem;
+}
+
+@media (max-width: 768px) {
+    .cost__list {
+        gap: 1.2rem;
+        margin-top: 1.2rem;
+    }
 }
 
 .cost-content__subtext {
@@ -9432,7 +9536,7 @@ select {
 @media (max-width: 768px) {
     .cost__button-download {
         margin: 2.4rem auto 5.6rem;
-        background-color: var(--color1);
+        background-color: var(--color2);
     }
 }
 
@@ -9452,11 +9556,24 @@ select {
     .cost__sum {
         margin: 2.4rem auto 5.6rem;
         background-color: transparent;
+        padding: 0;
     }
 }
 
 .cost__sum h2 {
     text-align: left;
+}
+
+@media (max-width: 768px) {
+    .cost__sum h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cost__nav .content__list {
+        white-space: normal;
+    }
 }
 
 /*------footer-----*/

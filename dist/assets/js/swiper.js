@@ -349,9 +349,9 @@ const slider14 = new Swiper('.cost-swiper', {
     speed: 800,
     slidesPerView: 1,
     loop: true,
-    autoplay: {
-        delay: 8000,
-    },
+    // autoplay: {
+    //     delay: 8000,
+    // },
     navigation: {
         nextEl: '.cost-button-next',
         prevEl: '.cost-button-prev',
