@@ -21,7 +21,7 @@
   @include breakpoint($sm-bp) {
     max-width: 100%;
   }
-
+}
 .answer__item {
   display: flex;
   flex-direction: column;
