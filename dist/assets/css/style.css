@@ -9606,6 +9606,12 @@ select {
     max-width: 70%;
 }
 
+@media (max-width: 768px) {
+    .answer__title h3 {
+        max-width: 100%;
+    }
+}
+
 .answer__item {
     display: -ms-flexbox;
     display: flex;
