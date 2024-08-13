@@ -5909,6 +5909,9 @@ a.order4 .list__item {
 .reviews__item-bottom {
     -ms-flex-direction: column;
     flex-direction: column;
+    height: 40rem;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 @media (max-width: 768px) {

@@ -1163,6 +1163,8 @@ a.order4 .list__item {
 
 .reviews__item-bottom {
   flex-direction: column;
+  height: 40rem;
+  justify-content: space-between;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
     height: 39rem;
