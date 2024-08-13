@@ -1217,14 +1217,7 @@ a.order4 .list__item {
 
 .reviews__item-text {
   margin: 1.6rem 0;
-  max-height: 12em;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 11;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
   @include breakpoint($sm-bp) {
-    max-height: 20em;
     margin: 1.3rem 0;
   }
 }
@@ -1791,7 +1784,7 @@ a.analytics__button {
   height: 31rem;
   align-self: stretch;
   @include breakpoint($sm-bp) {
-    height: 20rem;
+    height: 18rem;
     width: 100%;
   }
 }
@@ -1810,7 +1803,7 @@ a.analytics__button {
   display: flex;
   margin-top: 3.7rem;
   @include breakpoint($sm-bp) {
-    margin-top: 3.3rem;
+    margin-top: 1.3rem;
   }
 }
 
@@ -1825,10 +1818,18 @@ a.analytics__button {
   }
 }
 
-.articles__text {
-  max-height: 5em;
-  overflow: hidden;
-}
+//.articles__text {
+//  max-height: 5em;
+//  overflow: hidden;
+//}
+
+//.articles__text {
+//  display: -webkit-box;
+//  -webkit-line-clamp: 4;
+//  -webkit-box-orient: vertical;
+//  overflow: hidden;
+//}
+
 
 .video-item__title {
   font-weight: 700;

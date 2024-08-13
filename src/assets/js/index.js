@@ -371,7 +371,41 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
+  let ps = document.querySelectorAll('.point');
+  ps.forEach(function(p) {
+    let maxLength;
 
+    if (window.matchMedia('(min-width: 1020px)').matches) {
+      maxLength = 125;
+    } else if (window.matchMedia('(min-width: 400px)').matches) {
+      maxLength = 140;
+    } else {
+      maxLength = 200;
+    }
+
+    p.dataset.originalText = p.innerText;
+    if (p.innerText.length > maxLength) {
+      p.innerText = p.innerText.slice(0, maxLength) + '...';
+    }
+  });
+
+  let ps2 = document.querySelectorAll('.point2');
+  ps2.forEach(function(p) {
+    let maxLength;
+
+    if (window.matchMedia('(min-width: 1020px)').matches) {
+      maxLength = 260;
+    } else if (window.matchMedia('(min-width: 400px)').matches) {
+      maxLength = 140;
+    } else {
+      maxLength = 200;
+    }
+
+    p.dataset.originalText = p.innerText;
+    if (p.innerText.length > maxLength) {
+      p.innerText = p.innerText.slice(0, maxLength) + '...';
+    }
+  });
 
 
 });

@@ -1,0 +1,19 @@
+.entry__top {
+  display: grid;
+  grid-template-columns: 50rem 70rem;
+  gap: 2rem;
+}
+
+.entry__top-img {
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.entry__top-text {
+  padding: 1.6rem;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  @include breakpoint($xl-bp) {
+    padding: 1.2rem;
+  }
+}
