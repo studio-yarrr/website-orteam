@@ -9865,6 +9865,35 @@ div .view-icon {
     list-style: disc inside;
 }
 
+.entry__img-container {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.entry__img {
+    width: 29rem;
+    height: 23rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.entry__images {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry__images p {
+    color: var(--grey);
+}
+
+.entry__subtitle {
+    font-weight: 700;
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+}
+
 /*------footer-----*/
 .footer {
     background-color: var(--white);
