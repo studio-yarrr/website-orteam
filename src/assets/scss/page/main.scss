@@ -1788,6 +1788,8 @@ a.analytics__button {
 }
 
 .articles-img {
+  height: 31rem;
+  align-self: stretch;
   @include breakpoint($sm-bp) {
     height: 20rem;
     width: 100%;

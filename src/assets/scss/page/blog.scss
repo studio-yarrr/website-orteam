@@ -1,0 +1,23 @@
+.blog h1 {
+  margin: 8.4rem auto;
+  text-align: center;
+  @include breakpoint($sm-bp) {
+    margin: 5.6rem auto;
+  }
+}
+
+.blog__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 6.4rem;
+  margin-bottom: 10.4rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint($sm-bp) {
+    margin-bottom: 7.2rem;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+}
