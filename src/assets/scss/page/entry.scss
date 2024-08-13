@@ -1,12 +1,17 @@
 .entry__top {
   display: grid;
-  grid-template-columns: 50rem 70rem;
+  grid-template-columns: 49rem 69rem;
   gap: 2rem;
+  align-items: end;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .entry__top-img {
   border-radius: 1.2rem;
   overflow: hidden;
+  align-self: stretch;
 }
 
 .entry__top-text {
@@ -16,4 +21,62 @@
   @include breakpoint($xl-bp) {
     padding: 1.2rem;
   }
+}
+
+.entry__item-stars {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.entry__item-stars span {
+  display: block;
+  background: url(../images/star.svg) center / contain no-repeat;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.entry__top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.entry__top-level {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center
+}
+
+.entry_inf {
+  display: flex;
+  gap: 2.4rem;
+  color: var(--grey);
+}
+
+.entry__text-container {
+  margin-top: 5.3rem;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 5.6rem 18.3rem;
+  margin-bottom: 10.4rem;
+  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($sm-bp) {
+    margin-top: 2rem;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.entry__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.entry__list {
+  list-style: disc inside;
+
 }
