@@ -67,6 +67,7 @@
   @include breakpoint($sm-bp) {
     margin-top: 2rem;
     margin-bottom: 7.2rem;
+    padding: 1.2rem;
   }
 }
 
@@ -74,7 +75,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  margin-top: 2.4rem;
+  padding-top: 2.4rem;
+  @include breakpoint($sm-bp) {
+    padding-top: 0;
+  }
 }
 
 .entry__list {
@@ -85,6 +89,9 @@
   display: flex;
   gap: 2rem;
   margin-bottom: 2rem;
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+  }
 }
 
 .entry__img {
@@ -92,6 +99,9 @@
   height: 23rem;
   border-radius: 1.2rem;
   overflow: hidden;
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+  }
 }
 
 .entry__images {
@@ -115,7 +125,10 @@
   display: grid;
   grid-template-columns: 32rem 35rem;
   gap: 2rem;
-  align-items: end
+  align-items: end;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .color {
@@ -164,11 +177,15 @@
   width: 85rem;
   height: 61rem;
   @include breakpoint($sm-bp) {
-    width: 32rem;
-    height: 10rem;
+    width: 30rem;
+    height: 26rem;
   }
 }
 
 .entry__image-banner figcaption {
   color: var(--grey);
+}
+
+.entry__image-banner picture img {
+  object-fit: contain;
 }
