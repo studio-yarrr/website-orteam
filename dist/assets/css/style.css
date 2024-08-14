@@ -733,17 +733,12 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    -webkit-transform: translate(50%, -160%);
-    transform: translate(50%, -160%);
-}
-
-@media (max-width: 768px) {
-    .pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-        position: absolute;
-        left: 45%;
-        bottom: 10%;
-        width: 50%;
-    }
+    left: 17%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 4rem;
 }
 
 .pagination.cost-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -751,7 +746,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .list-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    .pagination.cost-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal .list-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
         bottom: 5%;
     }
 }
@@ -9074,14 +9069,14 @@ select {
 @media (max-width: 1024px) {
     .cost-slide {
         grid-template-columns: 46rem 40rem;
-        grid-template-rows: 40rem;
+        grid-template-rows: 56rem;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .cost-slide {
         grid-template-columns: 1fr;
-        grid-template-rows: 25rem auto;
+        grid-template-rows: 25rem 48rem;
         gap: 0;
     }
 }
@@ -9089,7 +9084,6 @@ select {
 .cost__slider {
     padding-bottom: 5.6rem;
     position: relative;
-    overflow: hidden;
 }
 
 .cost-slide__img,
@@ -9114,8 +9108,7 @@ select {
 @media (max-width: 768px) {
     .cost-slide__text {
         padding: 1.2rem;
-        -ms-flex-item-align: start;
-        align-self: start;
+        height: 100%;
     }
 }
 
@@ -9222,7 +9215,7 @@ select {
     .cost__nav {
         padding: 1.2rem 1.2rem 1.2rem 3rem;
         border: 0.1rem solid var(--color2);
-        margin-top: 5.4rem;
+        margin-top: 1.4rem;
         margin-bottom: 5.6rem;
     }
 }
@@ -9345,8 +9338,8 @@ select {
 
 @media (max-width: 768px) {
     .cost__line-right {
-        -ms-flex-direction: column;
-        flex-direction: column;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
         width: 100%;
         gap: 1rem;
     }

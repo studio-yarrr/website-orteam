@@ -484,20 +484,22 @@ a:hover {
 .pagination.cost-pagination {
   display: flex;
   position: absolute;
-  transform: translate(50%, -160%);
+  left: 17%;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
 }
 
-.pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-  @include breakpoint($sm-bp) {
-    position: absolute;
-    left: 45%;
-    bottom: 10%;
-    width: 50%;
-  }
-}
+//.pagination.swiper-pagination-clickable .swiper-pagination-bullets.swiper-pagination-horizontal {
+//  @include breakpoint($sm-bp) {
+//    left: 17%;
+//  }
+//}
 .pagination.cost-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: var(--color2);
 }
+
+.pagination.cost-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
 
 .list-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
