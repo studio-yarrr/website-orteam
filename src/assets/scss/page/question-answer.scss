@@ -107,5 +107,162 @@ div .view-icon {
 
 .answer__filter {
   display: flex;
-  gap: 4remF;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.heading {
+  position: relative;
+  padding: 0.8rem 1.6rem 1.1rem 1.6rem;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 14.5rem;
+
+}
+
+.heading-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.heading__container {
+  background-color: var(--white);
+  border-radius: 1.2rem;
+  padding: 1.6rem;
+  width: 32rem;
+  position: absolute;
+  top: 130%;
+  left: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  z-index: 4;
+}
+
+.heading__item {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.checkbox-custom__time,
+.checkbox-custom {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-custom-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0.1rem solid var(--grey);
+  border-radius: 0.4rem;
+}
+
+.checkbox-custom-label__time::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0.1rem solid var(--grey);
+  border-radius: 100%;
+}
+
+.checkbox-custom-label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  padding-top: 0.4rem;
+}
+
+.checkbox-custom-label__time {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url('../images/chek.svg');
+  background-size: cover;
+}
+
+.checkbox-custom__time:checked + .checkbox-custom-label__time::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url('../images/chekbox.svg');
+  background-size: cover;
+}
+
+.heading__bottom {
+  padding-top: 1.2rem;
+  display: flex;
+  gap: 3rem;
+
+  & div:nth-child(1) {
+    color: var(--grey);
+  }
+}
+
+#headingHead,
+#headingDoctor {
+  display: none;
+  &.active {
+    display: flex;
+  }
+}
+
+.heading.active .heading-icon {
+  transform: rotate(180deg);
+}
+
+.heading__time {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: flex-start
+}
+
+.checkbox-custom-label .icon {
+  border-radius: 0.4rem;
+}
+
+.position {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.position::before {
+  top: 23%;
+}
+
+.heading__person span:first-child {
+  font-weight: 700;
+}
+
+.heading__person span:last-child {
+  color: var(--grey);
 }

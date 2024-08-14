@@ -407,5 +407,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
+  const headContainer = document.getElementById('headContainer');
+  const headingHead = document.getElementById('headingHead');
+  const heading = document.querySelector('.heading');
 
+  headContainer.addEventListener('click', () => {
+    headingHead.classList.toggle('active');
+    heading.classList.toggle('active');
+  })
 });

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-  <symbol id="iconHooks" viewBox="0 0 80 60">
-    <g>
-      <path d="M25 10L30 0H20C8.95 0 0 13.95 0 25V60H35V25H15C15 10 25 10 25 10ZM60 25C60 10 70 10 70 10L75 0H65C53.95 0 45 13.95 45 25V60H80V25H60Z" fill="#4FA1FF"/>
-    </g>
-  </symbol>
-</svg>
