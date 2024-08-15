@@ -9108,7 +9108,8 @@ select {
 @media (max-width: 768px) {
     .cost-slide__text {
         padding: 1.2rem;
-        height: 100%;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
     }
 }
 

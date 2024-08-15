@@ -349,6 +349,7 @@ const slider14 = new Swiper('.cost-swiper', {
     speed: 800,
     slidesPerView: 1,
     loop: true,
+    autoHeight: true,
     navigation: {
         nextEl: '.cost-button-next',
         prevEl: '.cost-button-prev',
@@ -357,5 +358,4 @@ const slider14 = new Swiper('.cost-swiper', {
         el: '.cost-pagination',
         clickable: true,
     },
-
 })
