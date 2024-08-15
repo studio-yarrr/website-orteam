@@ -79,6 +79,7 @@
     --color2: #FCA311;
     --color1: #0B3847;
     --grey: #8E8E8E;
+    --grey-secondary: rgba(215, 212, 212);
     --green: #405F64;
     --bg-grey: #DDDFE4;
 }
@@ -9745,7 +9746,7 @@ div .view-icon {
 }
 
 .heading__container {
-    background-color: var(--white);
+    background-color: var(--grey-secondary);
     border-radius: 1.2rem;
     padding: 1.6rem;
     width: 32rem;
@@ -9854,7 +9855,7 @@ div .view-icon {
     display: flex;
 }
 
-.heading.active .heading-icon {
+.heading-icon.active {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }

@@ -25,6 +25,7 @@
     max-width: 100%;
   }
 }
+
 .answer__item {
   display: flex;
   flex-direction: column;
@@ -133,7 +134,7 @@ div .view-icon {
 }
 
 .heading__container {
-  background-color: var(--white);
+  background-color: var(--grey-secondary);
   border-radius: 1.2rem;
   padding: 1.6rem;
   width: 32rem;
@@ -235,7 +236,7 @@ div .view-icon {
   }
 }
 
-.heading.active .heading-icon {
+.heading-icon.active {
   transform: rotate(180deg);
 }
 

@@ -407,12 +407,31 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
-  const headContainer = document.getElementById('headContainer');
-  const headingHead = document.getElementById('headingHead');
-  const heading = document.querySelector('.heading');
+    function setupToggle(containerId, headingId, iconClass, otherContainerId, otherHeadingId, otherIconClass) {
+        const container = document.getElementById(containerId);
+        const heading = document.getElementById(headingId);
+        const icon = container.querySelector(iconClass);
 
-  headContainer.addEventListener('click', () => {
-    headingHead.classList.toggle('active');
-    heading.classList.toggle('active');
-  })
+        const otherContainer = document.getElementById(otherContainerId);
+        const otherHeading = document.getElementById(otherHeadingId);
+        const otherIcon = otherContainer.querySelector(otherIconClass);
+
+        container.addEventListener('click', () => {
+
+            if (otherHeading.classList.contains('active')) {
+                otherHeading.classList.remove('active');
+                otherIcon.classList.remove('active');
+            }
+            heading.classList.toggle('active');
+            icon.classList.toggle('active');
+        });
+
+        icon.addEventListener('click', (event) => {
+            event.stopPropagation();
+            icon.classList.toggle('active');
+        });
+    }
+
+    setupToggle('headContainer', 'headingHead', '.heading-icon', 'doctorContainer', 'headingDoctor', '.heading-icon');
+    setupToggle('doctorContainer', 'headingDoctor', '.heading-icon', 'headContainer', 'headingHead', '.heading-icon')
 });
