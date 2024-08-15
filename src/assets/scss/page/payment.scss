@@ -9,7 +9,10 @@
 .payment__top {
   display: grid;
   grid-template-columns: auto 60rem;
-  gap: 2rem;
+  gap: 3rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: auto 40rem;
+  }
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
   }
@@ -18,7 +21,7 @@
 .payment__img {
   border-radius: 1.2rem;
   overflow: hidden;
-  @include breakpoint($xl-bp) {
+  @include breakpoint($sm-bp) {
     display: none;
   }
 }
@@ -48,6 +51,9 @@
   grid-template-rows:  27rem 34rem;
   gap: 2rem;
   @include breakpoint($xl-bp) {
+    grid-template-rows:  auto;
+  }
+  @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
     margin-bottom: 7.2rem;
     grid-template-rows:  27rem 29rem 27rem 50rem;

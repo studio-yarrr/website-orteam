@@ -5776,6 +5776,9 @@ a.order4 .list__item {
 }
 
 .record-content {
+    max-width: 128.6rem;
+    margin-left: calc((100% - 121.6rem) / 2);
+    margin-right: auto;
     background-image: url("../images/bg.svg");
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -5783,11 +5786,29 @@ a.order4 .list__item {
     margin-bottom: 8.7rem;
 }
 
+@media (max-width: 1700px) {
+    .record-content {
+        max-width: 126rem;
+        margin-left: calc((100% - 120rem) / 2);
+        background-size: 65rem;
+    }
+}
+
+@media (max-width: 1025px) {
+    .record-content {
+        max-width: 93rem;
+        margin-left: calc((100% - 90rem) / 2);
+        background-size: 39rem;
+    }
+}
+
 @media (max-width: 768px) {
     .record-content {
+        max-width: 32rem;
         margin-bottom: 6.7rem;
         background-image: none;
         height: 52rem;
+        margin-left: auto;
     }
 }
 
@@ -7282,7 +7303,13 @@ a.analytics__button {
 .payment__top {
     display: grid;
     grid-template-columns: auto 60rem;
-    gap: 2rem;
+    gap: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .payment__top {
+        grid-template-columns: auto 40rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -7296,7 +7323,7 @@ a.analytics__button {
     overflow: hidden;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .payment__img {
         display: none;
     }
@@ -7335,6 +7362,12 @@ a.analytics__button {
 }
 
 @media (max-width: 1024px) {
+    .payment__text-container {
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 768px) {
     .payment__text-container {
         grid-template-columns: 1fr;
         margin-bottom: 7.2rem;
