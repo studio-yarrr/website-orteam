@@ -404,9 +404,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
           if (window.matchMedia('(min-width: 1020px)').matches) {
               maxLength = 260;
           } else if (window.matchMedia('(min-width: 400px)').matches) {
-              maxLength = 140;
+              maxLength = 240;
           } else {
-              maxLength = 200;
+              maxLength = 280;
           }
 
           p.dataset.originalText = p.innerText;

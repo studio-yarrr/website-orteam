@@ -1166,6 +1166,7 @@ a.order4 .list__item {
   height: 40rem;
   justify-content: space-between;
   @include breakpoint($sm-bp) {
+    justify-content: flex-start;
     padding: 1.2rem;
     height: 39rem;
   }
@@ -1219,9 +1220,6 @@ a.order4 .list__item {
 
 .reviews__item-text {
   margin: 1.6rem 0;
-  @include breakpoint($sm-bp) {
-    margin: 1.3rem 0;
-  }
 }
 
 .reviews__linc {
@@ -1257,8 +1255,8 @@ a.order4 .list__item {
     overflow: auto;
   }
   @include breakpoint($sm-bp) {
-    margin-top: 2.4rem;
-    grid-template-columns: repeat(4, 30rem);
+    //margin-top: 2.4rem;
+    grid-template-columns: repeat(4, 29rem);
     gap: 1.3rem;
   }
 

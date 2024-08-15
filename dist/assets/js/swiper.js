@@ -142,7 +142,7 @@ const slider5 = new Swiper('.reviews__swiper', {
     breakpoints: {
 
         320: {
-            slidesPerView: 1.15,
+            slidesPerView: 1.20,
         },
 
         768: {

@@ -220,7 +220,6 @@ a:hover {
 .braces__swiper,
 .doc__swiper,
 .process__swiper,
-//.reviews__swiper,
 .details__swiper,
 .list__swiper,
 .team__wrapper {
@@ -240,7 +239,7 @@ a:hover {
   }
 }
 
-.reviews__swiper {
+.reviews__slider {
   width: 100%;
   max-width: 121.6rem;
   margin: 0 auto;
@@ -255,6 +254,7 @@ a:hover {
     position: relative;
     width: calc(100vw - 1.5rem);
     padding-left: 1.5rem;
+    max-width: 35rem;
   }
 }
 
@@ -478,6 +478,9 @@ a:hover {
   display: none;
   @include breakpoint($sm-bp) {
     display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 4rem;
   }
 }
 

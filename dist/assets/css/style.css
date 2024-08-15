@@ -444,7 +444,7 @@ a:hover {
     }
 }
 
-.reviews__swiper {
+.reviews__slider {
     width: 100%;
     max-width: 121.6rem;
     margin: 0 auto;
@@ -452,22 +452,23 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .reviews__swiper {
+    .reviews__slider {
         width: 120rem;
     }
 }
 
 @media (max-width: 1024px) {
-    .reviews__swiper {
+    .reviews__slider {
         max-width: 90rem;
     }
 }
 
 @media (max-width: 768px) {
-    .reviews__swiper {
+    .reviews__slider {
         position: relative;
         width: calc(100vw - 1.5rem);
         padding-left: 1.5rem;
+        max-width: 35rem;
     }
 }
 
@@ -727,6 +728,11 @@ a:hover {
     .pagination {
         display: -ms-flexbox;
         display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: end;
+        align-items: end;
+        height: 4rem;
     }
 }
 
@@ -5912,6 +5918,8 @@ a.order4 .list__item {
 
 @media (max-width: 768px) {
     .reviews__item-bottom {
+        -ms-flex-pack: start;
+        justify-content: flex-start;
         padding: 1.2rem;
         height: 39rem;
     }
@@ -5974,12 +5982,6 @@ a.order4 .list__item {
     margin: 1.6rem 0;
 }
 
-@media (max-width: 768px) {
-    .reviews__item-text {
-        margin: 1.3rem 0;
-    }
-}
-
 .reviews__linc {
     position: relative;
     -ms-flex-item-align: start;
@@ -6020,8 +6022,7 @@ a.order4 .list__item {
 
 @media (max-width: 768px) {
     .reviews__platform {
-        margin-top: 2.4rem;
-        grid-template-columns: repeat(4, 30rem);
+        grid-template-columns: repeat(4, 29rem);
         gap: 1.3rem;
     }
 }
@@ -7174,6 +7175,13 @@ a.analytics__button {
     }
 }
 
+@media (max-width: 768px) {
+    .reviews__text {
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}
+
 .reviews__text-title {
     font-size: 2.4rem;
     line-height: 3.1rem;
@@ -7218,9 +7226,11 @@ a.analytics__button {
     grid-template-columns: repeat(2, 1fr);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .reviews__heading {
         grid-template-columns: 1fr;
+        grid-template-rows: 14rem auto;
+        gap: 5.6rem;
     }
 }
 
@@ -7231,6 +7241,30 @@ a.analytics__button {
     background-size: 47rem;
     text-align: right;
     padding-top: 4.6rem;
+}
+
+@media (max-width: 1024px) {
+    .review__title {
+        background-size: 40rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .review__title {
+        background-size: 31rem;
+        -ms-flex-order: 1;
+        order: 1;
+        padding-top: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews__page .reviews__record {
+        margin-right: 2rem;
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
 }
 
 .payment__title-container {
