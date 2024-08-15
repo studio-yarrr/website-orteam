@@ -7137,7 +7137,7 @@ a.analytics__button {
 }
 
 .reviews__page {
-    padding: 10.4rem 0;
+    padding: 8rem 0 10.4rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -7146,13 +7146,17 @@ a.analytics__button {
 
 @media (max-width: 1024px) {
     .reviews__page {
-        padding: 5.6rem 0 7.2rem;
+        padding: 4rem 0 7.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .reviews__page {
+        padding: 2rem 0 7.2rem;
     }
 }
 
 .reviews__text {
-    width: 50%;
-    margin-left: auto;
     border-radius: 1.2rem;
     display: -ms-flexbox;
     display: flex;
@@ -7199,12 +7203,34 @@ a.analytics__button {
 
 .reviews__record {
     margin-top: 10.4rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 1024px) {
     .reviews__record {
         margin-top: 5rem;
     }
+}
+
+.reviews__heading {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .reviews__heading {
+        grid-template-columns: 1fr;
+    }
+}
+
+.review__title {
+    background-image: url("../images/logo-reviews.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 47rem;
+    text-align: right;
+    padding-top: 4.6rem;
 }
 
 .payment__title-container {
