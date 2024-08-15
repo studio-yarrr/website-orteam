@@ -1430,7 +1430,7 @@ a.analytics__button {
 .analytics__button {
   display: flex;
   justify-content: space-between;
-  width: 37rem;
+  width: 36rem;
   align-items: center;
   @include breakpoint($sm-bp) {
     width: 100%;

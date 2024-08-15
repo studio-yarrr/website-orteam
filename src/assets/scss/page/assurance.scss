@@ -1,14 +1,17 @@
 .assurance {
-  padding-top: 8.4rem;
+  padding-top: 6.4rem;
   padding-bottom: 10.4rem;
   display: flex;
   flex-direction: column;
   gap: 10.4rem;
   align-items: center;
   @include breakpoint($xl-bp) {
-    padding-top: 5.6rem;
+    padding-top: 3.2rem;
     padding-bottom: 7.2rem;
     gap: 7.2rem;
+  }
+  @include breakpoint($sm-bp) {
+    gap: 6.6rem;
   }
 }
 
@@ -35,7 +38,7 @@
 }
 
 .assurance__top-text {
-  width: 70%;
+  width: 63%;
   text-align: center;
   @include breakpoint($sm-bp) {
     width: 100%;
@@ -66,7 +69,7 @@
 .assurance__inf {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 49.2rem);
+  grid-template-rows: repeat(2, 52rem);
   gap: 2rem;
   @include breakpoint($xl-bp) {
     grid-template-columns: repeat(2, 1fr);
@@ -87,6 +90,12 @@
   justify-content: space-between;
   @include breakpoint($sm-bp) {
     gap: 2rem;
+  }
+}
+
+.assurance__inf-item a {
+  @include breakpoint($sm-bp) {
+    margin-top: 0;
   }
 }
 

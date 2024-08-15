@@ -85,8 +85,6 @@
   line-height: 16.8rem;
   color: var(--white);
     @include breakpoint($xl-bp) {
-    //padding: 0 1.2rem;
-    //gap: 1.2rem;
     color: var(--color2);
     font-family: "Cygre-Bold", sans-serif;
     font-weight: 700;
@@ -103,6 +101,13 @@
   list-style: square inside;
   @include breakpoint($sm-bp) {
     gap: 0.2rem;
+  }
+
+  & li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 2rem;
+    text-indent: -2rem;
   }
 }
 

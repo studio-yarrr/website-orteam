@@ -6247,7 +6247,7 @@ a.analytics__button {
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: 37rem;
+    width: 36rem;
     -ms-flex-align: center;
     align-items: center;
 }
@@ -7546,6 +7546,13 @@ a.analytics__button {
     }
 }
 
+.guarantee__item-list li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 2rem;
+    text-indent: -2rem;
+}
+
 .guarantee__item-list li::marker {
     color: var(--color2);
 }
@@ -7642,7 +7649,7 @@ a.analytics__button {
 }
 
 .assurance {
-    padding-top: 8.4rem;
+    padding-top: 6.4rem;
     padding-bottom: 10.4rem;
     display: -ms-flexbox;
     display: flex;
@@ -7655,9 +7662,15 @@ a.analytics__button {
 
 @media (max-width: 1024px) {
     .assurance {
-        padding-top: 5.6rem;
+        padding-top: 3.2rem;
         padding-bottom: 7.2rem;
         gap: 7.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .assurance {
+        gap: 6.6rem;
     }
 }
 
@@ -7689,7 +7702,7 @@ a.analytics__button {
 }
 
 .assurance__top-text {
-    width: 70%;
+    width: 63%;
     text-align: center;
 }
 
@@ -7726,7 +7739,7 @@ a.analytics__button {
 .assurance__inf {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 49.2rem);
+    grid-template-rows: repeat(2, 52rem);
     gap: 2rem;
 }
 
@@ -7759,6 +7772,12 @@ a.analytics__button {
 @media (max-width: 768px) {
     .assurance__inf-item {
         gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .assurance__inf-item a {
+        margin-top: 0;
     }
 }
 
