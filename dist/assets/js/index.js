@@ -407,6 +407,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
+
     function setupToggle(containerId, headingId, iconClass, otherContainerId, otherHeadingId, otherIconClass) {
         const container = document.getElementById(containerId);
         const heading = document.getElementById(headingId);
@@ -417,7 +418,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const otherIcon = otherContainer.querySelector(otherIconClass);
 
         container.addEventListener('click', () => {
-
             if (otherHeading.classList.contains('active')) {
                 otherHeading.classList.remove('active');
                 otherIcon.classList.remove('active');
@@ -428,10 +428,63 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         icon.addEventListener('click', (event) => {
             event.stopPropagation();
+            heading.classList.toggle('active');
             icon.classList.toggle('active');
         });
     }
 
     setupToggle('headContainer', 'headingHead', '.heading-icon', 'doctorContainer', 'headingDoctor', '.heading-icon');
-    setupToggle('doctorContainer', 'headingDoctor', '.heading-icon', 'headContainer', 'headingHead', '.heading-icon')
+    setupToggle('doctorContainer', 'headingDoctor', '.heading-icon', 'headContainer', 'headingHead', '.heading-icon');
+
+    const selectAllHeadCheckbox = document.getElementById('selectAllHead');
+    const headCheckboxes = document.querySelectorAll('#headingHead .checkbox-custom:not(#selectAllHead)');
+
+    selectAllHeadCheckbox.addEventListener('change', () => {
+        headCheckboxes.forEach(checkbox => {
+            checkbox.checked = selectAllHeadCheckbox.checked;
+        });
+    });
+
+    const selectAllDoctorCheckbox = document.getElementById('selectAllDoctor');
+    const doctorCheckboxes = document.querySelectorAll('#headingDoctor .checkbox-custom:not(#selectAllDoctor)');
+
+    selectAllDoctorCheckbox.addEventListener('change', () => {
+        doctorCheckboxes.forEach(checkbox => {
+            checkbox.checked = selectAllDoctorCheckbox.checked;
+        });
+    });
+
+
+    const newRadio = document.getElementById('new');
+    const oldRadio = document.getElementById('old');
+    const container = document.querySelector('.answer__container');
+
+    function parseDate(dateString) {
+        const [day, month, year] = dateString.split('.').map(Number);
+        return new Date(year, month - 1, day);
+    }
+
+    function sortItems(order) {
+        const items = Array.from(container.querySelectorAll('.answer__item'));
+        items.sort((a, b) => {
+            const dateA = parseDate(a.querySelector('.day').textContent);
+            const dateB = parseDate(b.querySelector('.day').textContent);
+            return order === 'new' ? dateB - dateA : dateA - dateB;
+        });
+        items.forEach(item => container.appendChild(item));
+    }
+
+    newRadio.addEventListener('change', () => {
+        if (newRadio.checked) {
+            sortItems('new');
+        }
+    });
+
+    oldRadio.addEventListener('change', () => {
+        if (oldRadio.checked) {
+            sortItems('old');
+        }
+    });
+
+    sortItems('new');
 });

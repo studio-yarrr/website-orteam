@@ -9814,7 +9814,7 @@ div .view-icon {
 .checkbox-custom:checked + .checkbox-custom-label::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 23%;
     left: 0;
     width: 2.4rem;
     height: 2.4rem;
