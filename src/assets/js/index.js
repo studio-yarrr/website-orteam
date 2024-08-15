@@ -359,53 +359,63 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const nav = document.querySelector('.about__nav');
   const treatmentBlock = document.getElementById('treatment');
 
-  window.addEventListener('scroll', () => {
-    if (window.innerWidth > 1024) {
-      if (window.scrollY >= treatmentBlock.offsetTop) {
-        nav.style.position = 'static';
-      } else {
-        nav.style.position = 'sticky';
-      }
-    } else {
-      nav.style.position = 'static';
-    }
-  });
+  if(nav) {
+      window.addEventListener('scroll', () => {
+          if (window.innerWidth > 1024) {
+              if (window.scrollY >= treatmentBlock.offsetTop) {
+                  nav.style.position = 'static';
+              } else {
+                  nav.style.position = 'sticky';
+              }
+          } else {
+              nav.style.position = 'static';
+          }
+      });
+  }
 
   let ps = document.querySelectorAll('.point');
-  ps.forEach(function(p) {
-    let maxLength;
 
-    if (window.matchMedia('(min-width: 1020px)').matches) {
-      maxLength = 125;
-    } else if (window.matchMedia('(min-width: 400px)').matches) {
-      maxLength = 140;
-    } else {
-      maxLength = 200;
-    }
+  if(ps) {
+      ps.forEach(function(p) {
+          let maxLength;
 
-    p.dataset.originalText = p.innerText;
-    if (p.innerText.length > maxLength) {
-      p.innerText = p.innerText.slice(0, maxLength) + '...';
-    }
-  });
+          if (window.matchMedia('(min-width: 1020px)').matches) {
+              maxLength = 125;
+          } else if (window.matchMedia('(min-width: 400px)').matches) {
+              maxLength = 140;
+          } else {
+              maxLength = 200;
+          }
+
+          p.dataset.originalText = p.innerText;
+          if (p.innerText.length > maxLength) {
+              p.innerText = p.innerText.slice(0, maxLength) + '...';
+          }
+      });
+
+  }
 
   let ps2 = document.querySelectorAll('.point2');
-  ps2.forEach(function(p) {
-    let maxLength;
 
-    if (window.matchMedia('(min-width: 1020px)').matches) {
-      maxLength = 260;
-    } else if (window.matchMedia('(min-width: 400px)').matches) {
-      maxLength = 140;
-    } else {
-      maxLength = 200;
-    }
+  if(ps2) {
+      ps2.forEach(function(p) {
+          let maxLength;
 
-    p.dataset.originalText = p.innerText;
-    if (p.innerText.length > maxLength) {
-      p.innerText = p.innerText.slice(0, maxLength) + '...';
-    }
-  });
+          if (window.matchMedia('(min-width: 1020px)').matches) {
+              maxLength = 260;
+          } else if (window.matchMedia('(min-width: 400px)').matches) {
+              maxLength = 140;
+          } else {
+              maxLength = 200;
+          }
+
+          p.dataset.originalText = p.innerText;
+          if (p.innerText.length > maxLength) {
+              p.innerText = p.innerText.slice(0, maxLength) + '...';
+          }
+      });
+  }
+
 
 
     function setupToggle(containerId, headingId, iconClass, otherContainerId, otherHeadingId, otherIconClass) {
@@ -487,4 +497,59 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
     sortItems('new');
+
+    const applyButton = document.querySelector('.applyFilters');
+    const doctorApplyButton = document.querySelector('.doctorApplyButton');
+    const checkboxes = document.querySelectorAll('.checkbox-custom');
+    const itemsAnswer = document.querySelectorAll('.answer__item');
+
+    if(applyButton) {
+        applyButton.addEventListener('click', () => {
+            const selectedCategories = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.id);
+
+            itemsAnswer.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                if (selectedCategories.includes(itemCategory)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    }
+
+
+    document.querySelector('button[type="reset"]').addEventListener('click', () => {
+        itemsAnswer.forEach(item => {
+            item.style.display = 'block';
+        });
+    });
+
+
+    if (doctorApplyButton) {
+        doctorApplyButton.addEventListener('click', () => {
+            const selectedDoctors = Array.from(doctorCheckboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.id);
+
+            itemsAnswer.forEach(item => {
+                const itemDoctor = item.querySelector('.answer__person-name span').textContent.trim();
+                const doctorNameMap = {
+                    doctor1: 'Юлия Пряженник',
+                    doctor2: 'Ксения Чорная',
+                    doctor3: 'Людмила Волянская',
+                    doctor4: 'Даниил Платонов',
+                    doctor5: 'Елизавета Танона'
+                };
+
+                if (selectedDoctors.some(doctorId => itemDoctor.includes(doctorNameMap[doctorId]))) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    }
 });
