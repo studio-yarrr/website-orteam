@@ -1,7 +1,84 @@
 <section class="blog">
     <div class="wrapper">
         <h1>Блог Orteam</h1>
-        <div></div>
+        <div class="answer__filter">
+            <div class="answer__filter-left">
+                <div class="blog__heading">
+                    <label for="base" class="checkbox-custom-label">База</label>
+                    <input id="base" class="checkbox-custom" name="base" type="checkbox">
+                </div>
+                <div class="blog__heading">
+                    <label for="minutiae" class="checkbox-custom-label">До мелочей</label>
+                    <input id="minutiae" class="checkbox-custom" name="minutiae" type="checkbox">
+                </div>
+            </div>
+            <div class="answer__filter-right">
+                <div class="heading" id="headContainer">
+                    Рубрика
+                    <div class="heading-icon">
+                        <img src="assets/images/menu-arrow.svg" alt="icon">
+                    </div>
+                    <form class="heading__container" id="headingHead">
+                        <div class="heading__item">
+                            <input id="selectAllHead" class="checkbox-custom" name="selectAll" type="checkbox">
+                            <label for="selectAllHead" class="checkbox-custom-label">Выбрать все</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="braces" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="braces" class="checkbox-custom-label">Брекеты</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="aligners" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="aligners" class="checkbox-custom-label">Элайнеры</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="type" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="type" class="checkbox-custom-label">Виды прикуса</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="advice" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="advice" class="checkbox-custom-label">Советы пациентам</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="orthognathia" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="orthognathia" class="checkbox-custom-label">Ортогнатия</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="abbr" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="abbr" class="checkbox-custom-label">ВНЧС</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="prosthetics" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="prosthetics" class="checkbox-custom-label">Имплантация и протезирование</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="treatment" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="treatment" class="checkbox-custom-label">Терапевтическое лечение</label>
+                        </div>
+                        <div class="heading__bottom">
+                            <button type="reset">Сбросить все</button>
+                            <button class="applyFilters border" type="button">Применить</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="sortContainer">
+                    <div class="icon" >
+                        <img src="assets/images/sort.svg" alt="icon">
+                    </div>
+                    <div class="heading__container heading__container--sort heading__time" id="headingSort">
+                        Сначала:
+                        <div class="heading__item">
+                            <input id="new" class="checkbox-custom__time" name="time" type="radio" value="new" checked>
+                            <label for="new" class="checkbox-custom-label__time">Новые</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="old" class="checkbox-custom__time" name="time" type="radio" value="old">
+                            <label for="old" class="checkbox-custom-label__time">Старые</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="blog__container">
             <a href="https://proxiclinic.ru/journal/chto-takoe-pravilnyj-prikus-vidy-i-kak-opredelit/" class="articles__item">
                 <div class="articles-img">

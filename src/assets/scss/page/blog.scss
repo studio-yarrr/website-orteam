@@ -1,8 +1,8 @@
 .blog h1 {
-  margin: 8.4rem auto;
+  margin: 6.4rem auto;
   text-align: center;
   @include breakpoint($sm-bp) {
-    margin: 5.6rem auto;
+    margin: 2rem auto;
   }
 }
 
@@ -11,6 +11,7 @@
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2rem;
   row-gap: 6.4rem;
+  margin-top: 5.6rem ;
   margin-bottom: 10.4rem;
   @include breakpoint($xl-bp) {
     grid-template-columns: repeat(2, 1fr);
@@ -21,3 +22,12 @@
     grid-template-columns: 1fr;
   }
 }
+
+.blog__heading {
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  max-width: 18rem;
+  min-width: 13rem;
+  padding: 1rem 1.2rem 0.8rem 1.6rem;
+}
+

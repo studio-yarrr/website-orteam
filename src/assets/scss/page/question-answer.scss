@@ -331,3 +331,8 @@ div .view-icon {
 .heading__person span:last-child {
   color: var(--grey);
 }
+
+.answer__filter-right {
+  display: flex;
+  gap: 4rem;
+}

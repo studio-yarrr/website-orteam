@@ -7819,12 +7819,12 @@ a.analytics__button {
 }
 
 .doctors {
-    padding: 8.4rem 0 10.4rem;
+    padding: 6.4rem 0 10.4rem;
 }
 
 @media (max-width: 1024px) {
     .doctors {
-        padding: 5.6rem 0 7.2rem;
+        padding: 2rem 0 7.2rem;
     }
 }
 
@@ -10103,14 +10103,20 @@ div .view-icon {
     color: var(--grey);
 }
 
+.answer__filter-right {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4rem;
+}
+
 .blog h1 {
-    margin: 8.4rem auto;
+    margin: 6.4rem auto;
     text-align: center;
 }
 
 @media (max-width: 768px) {
     .blog h1 {
-        margin: 5.6rem auto;
+        margin: 2rem auto;
     }
 }
 
@@ -10121,6 +10127,7 @@ div .view-icon {
     -moz-column-gap: 2rem;
     column-gap: 2rem;
     row-gap: 6.4rem;
+    margin-top: 5.6rem;
     margin-bottom: 10.4rem;
 }
 
@@ -10136,6 +10143,14 @@ div .view-icon {
         gap: 2rem;
         grid-template-columns: 1fr;
     }
+}
+
+.blog__heading {
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    max-width: 18rem;
+    min-width: 13rem;
+    padding: 1rem 1.2rem 0.8rem 1.6rem;
 }
 
 .entry__top {
