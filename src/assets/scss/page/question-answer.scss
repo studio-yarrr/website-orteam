@@ -1,8 +1,8 @@
 .answer h1 {
   text-align: center;
-  margin: 8.4rem auto 4rem;
+  margin: 6.4rem auto 5.6rem;
   @include breakpoint($sm-bp) {
-    margin: 4rem auto 6.3rem;
+    margin: 2rem auto 6.3rem;
   }
 }
 
@@ -108,8 +108,28 @@ div .view-icon {
 
 .answer__filter {
   display: flex;
+  justify-content: space-between;
+}
+
+.answer__wrapper {
+  max-width: 85rem;
+  margin-right: auto;
+  margin-left: auto;
+  @include breakpoint($hh) {
+    max-width: 90rem;
+  }
+  @include breakpoint($sm-bp) {
+    max-width: 32rem;
+  }
+}
+
+.answer__filter-left {
+  display: flex;
   gap: 4rem;
-  align-items: flex-start;
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .heading {
@@ -134,7 +154,7 @@ div .view-icon {
 }
 
 .heading__container {
-  background-color: var(--grey-secondary);
+  background-color: var(--white);
   border-radius: 1.2rem;
   padding: 1.6rem;
   width: 32rem;
@@ -170,6 +190,10 @@ div .view-icon {
   height: 2.4rem;
   border: 0.1rem solid var(--grey);
   border-radius: 0.4rem;
+  @include breakpoint($sm-bp) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 .checkbox-custom-label__time::before {
@@ -181,6 +205,10 @@ div .view-icon {
   height: 2.4rem;
   border: 0.1rem solid var(--grey);
   border-radius: 100%;
+  @include breakpoint($sm-bp) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 .checkbox-custom-label {
@@ -188,12 +216,18 @@ div .view-icon {
   padding-left: 35px;
   cursor: pointer;
   padding-top: 0.4rem;
+  @include breakpoint($sm-bp) {
+    padding-top: 0rem;
+  }
 }
 
 .checkbox-custom-label__time {
   position: relative;
   padding-left: 35px;
   cursor: pointer;
+  @include breakpoint($sm-bp) {
+    padding-left: 55px;
+  }
 }
 
 .checkbox-custom:checked + .checkbox-custom-label::before {
@@ -205,6 +239,11 @@ div .view-icon {
   height: 2.4rem;
   background-image: url('../images/chek.svg');
   background-size: cover;
+  @include breakpoint($sm-bp) {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 11%;
+  }
 }
 
 .checkbox-custom__time:checked + .checkbox-custom-label__time::before {
@@ -216,6 +255,11 @@ div .view-icon {
   height: 2.4rem;
   background-image: url('../images/chekbox.svg');
   background-size: cover;
+  @include breakpoint($sm-bp) {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 11%;
+  }
 }
 
 .heading__bottom {
@@ -228,11 +272,28 @@ div .view-icon {
   }
 }
 
+#headingSort,
 #headingHead,
 #headingDoctor {
   display: none;
   &.active {
     display: flex;
+  }
+}
+
+#sortContainer:hover {
+  cursor: pointer;
+}
+
+#sortContainer {
+  position: relative;
+}
+
+.heading__container.heading__container--sort {
+  width: 13.2rem;
+  left: -225%;
+  @include breakpoint($sm-bp) {
+    top: 55%;
   }
 }
 
@@ -254,6 +315,9 @@ div .view-icon {
 .position {
   display: flex;
   gap: 1.8rem;
+  @include breakpoint($sm-bp) {
+    gap: 0.8rem;
+  }
 }
 
 .position::before {

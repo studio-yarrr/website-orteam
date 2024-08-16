@@ -1,349 +1,357 @@
-<section class="answer wrapper">
-    <h1>Вопрос-ответ</h1>
-    <div class="answer__filter">
-        <div class="heading" id="headContainer">
-            Рубрика
-            <div class="heading-icon">
-                <img src="assets/images/menu-arrow.svg" alt="icon">
+<section>
+    <div class="answer answer__wrapper">
+        <h1>Вопрос-ответ</h1>
+        <div class="answer__filter">
+            <div class="answer__filter-left">
+                <div class="heading" id="headContainer">
+                    Рубрика
+                    <div class="heading-icon">
+                        <img src="assets/images/menu-arrow.svg" alt="icon">
+                    </div>
+                    <form class="heading__container" id="headingHead">
+                        <div class="heading__item">
+                            <input id="selectAllHead" class="checkbox-custom" name="selectAll" type="checkbox">
+                            <label for="selectAllHead" class="checkbox-custom-label">Выбрать все</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="braces" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="braces" class="checkbox-custom-label">Брекеты</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="aligners" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="aligners" class="checkbox-custom-label">Элайнеры</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="type" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="type" class="checkbox-custom-label">Виды прикуса</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="advice" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="advice" class="checkbox-custom-label">Советы пациентам</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="orthognathia" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="orthognathia" class="checkbox-custom-label">Ортогнатия</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="abbr" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="abbr" class="checkbox-custom-label">ВНЧС</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="prosthetics" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="prosthetics" class="checkbox-custom-label">Имплантация и протезирование</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="treatment" class="checkbox-custom" name="agree" type="checkbox">
+                            <label for="treatment" class="checkbox-custom-label">Терапевтическое лечение</label>
+                        </div>
+                        <div class="heading__bottom">
+                            <button type="reset">Сбросить все</button>
+                            <button class="applyFilters border" type="button">Применить</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="heading" id="doctorContainer">
+                    Врач
+                    <div class="heading-icon">
+                        <img src="assets/images/menu-arrow.svg" alt="icon">
+                    </div>
+                    <form class="heading__container" id="headingDoctor">
+                        <div class="heading__item">
+                            <input id="selectAllDoctor" class="checkbox-custom" name="selectAll" type="checkbox">
+                            <label for="selectAllDoctor" class="checkbox-custom-label">Выбрать все</label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="doctor1" class="checkbox-custom" name="doctor1" type="checkbox">
+                            <label for="doctor1" class="checkbox-custom-label position">
+                                <img src="assets/images/avatar/icon1.jpg" alt="avatar" class="icon">
+                                <div class="heading__person">
+                                    <span> Юлия Пряженник</span>
+                                    <span>Стоматолог-ортодонт</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="doctor2" class="checkbox-custom" name="doctor2" type="checkbox">
+                            <label for="doctor2" class="checkbox-custom-label position">
+                                <img src="assets/images/avatar/icon2.jpg" alt="avatar" class="icon">
+                                <div class="heading__person">
+                                    <span>Ксения Чорная</span>
+                                    <span>Стоматолог-ортодонт</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="doctor3" class="checkbox-custom" name="doctor3" type="checkbox">
+                            <label for="doctor3" class="checkbox-custom-label position">
+                                <img src="assets/images/avatar/icon3.jpg" alt="avatar" class="icon">
+                                <div class="heading__person">
+                                    <span>Людмила Волянская</span>
+                                    <span>Стоматолог-ортодонт</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="doctor4" class="checkbox-custom" name="doctor4" type="checkbox">
+                            <label for="doctor4" class="checkbox-custom-label position">
+                                <img src="assets/images/avatar/icon4.jpg" alt="avatar" class="icon">
+                                <div class="heading__person">
+                                    <span>Даниил Платонов</span>
+                                    <span>Стоматолог-ортодонт</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="heading__item">
+                            <input id="doctor5" class="checkbox-custom" name="doctor5" type="checkbox">
+                            <label for="doctor5" class="checkbox-custom-label position">
+                                <img src="assets/images/avatar/icon5.jpg" alt="avatar" class="icon">
+                                <div class="heading__person">
+                                    <span>Елизавета Танона</span>
+                                    <span>Стоматолог-ортодонт</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="heading__bottom">
+                            <button type="reset">Сбросить все</button>
+                            <button class="border doctorApplyButton" type="button">Применить</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <form class="heading__container" id="headingHead">
-                <div class="heading__item">
-                    <input id="selectAllHead" class="checkbox-custom" name="selectAll" type="checkbox">
-                    <label for="selectAllHead" class="checkbox-custom-label">Выбрать все</label>
+            <div id="sortContainer">
+                <div class="icon" >
+                    <img src="assets/images/sort.svg" alt="icon">
                 </div>
-                <div class="heading__item">
-                    <input id="braces" class="checkbox-custom" name="agree" type="checkbox">
-                    <label for="braces" class="checkbox-custom-label">Брекеты</label>
-                </div>
-                <div class="heading__item">
-                    <input id="aligners" class="checkbox-custom" name="agree" type="checkbox">
-                    <label for="aligners" class="checkbox-custom-label">Элайнеры</label>
-                </div>
-                <div class="heading__item">
-                    <input id="type" class="checkbox-custom" name="agree" type="checkbox">
-                    <label for="type" class="checkbox-custom-label">Виды прикуса</label>
-                </div>
-                <div class="heading__item">
-                    <input id="advice" class="checkbox-custom" name="agree" type="checkbox">
-                    <label for="advice" class="checkbox-custom-label">Советы пациентам</label>
-                </div>
-                <div class="heading__item">
-                    <input id="orthognathia" class="checkbox-custom" name="agree" type="checkbox">
-                    <label for="orthognathia" class="checkbox-custom-label">Ортогнатия</label>
-                </div>
-                <div class="heading__item">
-                    <input id="abbr" class="checkbox-custom" name="agree" type="checkbox">
-                    <label for="abbr" class="checkbox-custom-label">ВНЧС</label>
-                </div>
-                <div class="heading__item">
-                    <input id="prosthetics" class="checkbox-custom" name="agree" type="checkbox">
-                    <label for="prosthetics" class="checkbox-custom-label">Имплантация и протезирование</label>
-                </div>
-                <div class="heading__item">
-                    <input id="treatment" class="checkbox-custom" name="agree" type="checkbox">
-                    <label for="treatment" class="checkbox-custom-label">Терапевтическое лечение</label>
-                </div>
-                <div class="heading__bottom">
-                    <button type="reset">Сбросить все</button>
-                    <button class="applyFilters border" type="button">Применить</button>
-                </div>
-            </form>
-        </div>
-        <div class="heading" id="doctorContainer">
-            Врач
-            <div class="heading-icon">
-                <img src="assets/images/menu-arrow.svg" alt="icon">
-            </div>
-            <form class="heading__container" id="headingDoctor">
-                <div class="heading__item">
-                    <input id="selectAllDoctor" class="checkbox-custom" name="selectAll" type="checkbox">
-                    <label for="selectAllDoctor" class="checkbox-custom-label">Выбрать все</label>
-                </div>
-                <div class="heading__item">
-                    <input id="doctor1" class="checkbox-custom" name="doctor1" type="checkbox">
-                    <label for="doctor1" class="checkbox-custom-label position">
-                        <img src="assets/images/avatar/icon1.jpg" alt="avatar" class="icon">
-                        <div class="heading__person">
-                            <span> Юлия Пряженник</span>
-                            <span>Стоматолог-ортодонт</span>
-                        </div>
-                    </label>
-                </div>
-                <div class="heading__item">
-                    <input id="doctor2" class="checkbox-custom" name="doctor2" type="checkbox">
-                    <label for="doctor2" class="checkbox-custom-label position">
-                        <img src="assets/images/avatar/icon2.jpg" alt="avatar" class="icon">
-                        <div class="heading__person">
-                            <span>Ксения Чорная</span>
-                            <span>Стоматолог-ортодонт</span>
-                        </div>
-                    </label>
-                </div>
-                <div class="heading__item">
-                    <input id="doctor3" class="checkbox-custom" name="doctor3" type="checkbox">
-                    <label for="doctor3" class="checkbox-custom-label position">
-                        <img src="assets/images/avatar/icon3.jpg" alt="avatar" class="icon">
-                        <div class="heading__person">
-                            <span>Людмила Волянская</span>
-                            <span>Стоматолог-ортодонт</span>
-                        </div>
-                    </label>
-                </div>
-                <div class="heading__item">
-                    <input id="doctor4" class="checkbox-custom" name="doctor4" type="checkbox">
-                    <label for="doctor4" class="checkbox-custom-label position">
-                        <img src="assets/images/avatar/icon4.jpg" alt="avatar" class="icon">
-                        <div class="heading__person">
-                            <span>Даниил Платонов</span>
-                            <span>Стоматолог-ортодонт</span>
-                        </div>
-                    </label>
-                </div>
-                <div class="heading__item">
-                    <input id="doctor5" class="checkbox-custom" name="doctor5" type="checkbox">
-                    <label for="doctor5" class="checkbox-custom-label position">
-                        <img src="assets/images/avatar/icon5.jpg" alt="avatar" class="icon">
-                        <div class="heading__person">
-                            <span>Елизавета Танона</span>
-                            <span>Стоматолог-ортодонт</span>
-                        </div>
-                    </label>
-                </div>
-                <div class="heading__bottom">
-                    <button type="reset">Сбросить все</button>
-                    <button class="border doctorApplyButton" type="button">Применить</button>
-                </div>
-            </form>
-        </div>
-        <div class="heading heading__time">
-            Сначала:
-            <div class="heading__item">
-                <input id="new" class="checkbox-custom__time" name="time" type="radio" value="new" checked>
-                <label for="new" class="checkbox-custom-label__time">Новые</label>
-            </div>
-            <div class="heading__item">
-                <input id="old" class="checkbox-custom__time" name="time" type="radio" value="old">
-                <label for="old" class="checkbox-custom-label__time">Старые</label>
-            </div>
-        </div>
-
-    </div>
-    <div class="answer__container">
-        <div class="answer__item" data-category="braces">
-            <div class="answer__title">
-              <h3>Портится ли эмаль зубов от брекетов?</h3>
-                <div class="answer__inf">
-                    <div class="day">01.08.2024</div>
-                    <div class="views__container">
-                        <div>
-                            <svg class="view-icon">
-                                <use xlink:href="assets/images/sprite/view.svg#view"></use>
-                            </svg>
-                        </div>
-                       <div class="views"> 1 024</div>
+                <div class="heading__container heading__container--sort heading__time" id="headingSort">
+                    Сначала:
+                    <div class="heading__item">
+                        <input id="new" class="checkbox-custom__time" name="time" type="radio" value="new" checked>
+                        <label for="new" class="checkbox-custom-label__time">Новые</label>
+                    </div>
+                    <div class="heading__item">
+                        <input id="old" class="checkbox-custom__time" name="time" type="radio" value="old">
+                        <label for="old" class="checkbox-custom-label__time">Старые</label>
                     </div>
                 </div>
             </div>
-            <div class="answer__person">
-                <div class="answer__icon">
-                    <img src="assets/images/avatar/icon1.jpg" alt="avatar">
-                </div>
-                <div class="answer__person-inf">
-                    <div class="answer__person-name">Отвечает <br class="hide-desc"><span>Юлия Пряженник</span></div>
-                    <div class="answer__person-profession">Стоматолог-ортодонт</div>
-                </div>
-            </div>
-            <div class="answer__person-text">
-                <p>Нет, не портится. Брекет герметично приклеен к зубу композитом, под ним никогда не образуется кариес. Однако плохая гигиена полости рта во время ортодонтического лечения может привести к накоплению зубного налёта вокруг брекетов и, как следствие, возникновению кариеса.</p>
-                <p>Правильная индивидуальная гигиена полости рта, а также регулярная профессиональная гигиена помогают сохранить зубы в первозданном виде</p>
-            </div>
         </div>
-        <div class="answer__item" data-category="aligners">
-            <div class="answer__title">
-                <h3>Есть ли разница между керамическими и металлическими брекетами?         </h3>
-                <div class="answer__inf">
-                    <div class="day">24.07.2024</div>
-                    <div class="views__container">
-                        <div>
-                            <svg class="view-icon">
-                                <use xlink:href="assets/images/sprite/view.svg#view"></use>
-                            </svg>
+        <div class="answer__container">
+            <div class="answer__item" data-category="braces">
+                <div class="answer__title">
+                    <h3>Портится ли эмаль зубов от брекетов?</h3>
+                    <div class="answer__inf">
+                        <div class="day">01.08.2024</div>
+                        <div class="views__container">
+                            <div>
+                                <svg class="view-icon">
+                                    <use xlink:href="assets/images/sprite/view.svg#view"></use>
+                                </svg>
+                            </div>
+                            <div class="views"> 1 024</div>
                         </div>
-                        <div class="views"> 1 024</div>
                     </div>
                 </div>
-            </div>
-            <div class="answer__person">
-                <div class="answer__icon">
-                    <img src="assets/images/avatar/icon2.jpg" alt="avatar">
-                </div>
-                <div class="answer__person-inf">
-                    <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Ксения Чорная</span></div>
-                    <div class="answer__person-profession">Стоматолог-ортодонт</div>
-                </div>
-            </div>
-            <div class="answer__person-text">
-                <p>Да, отличия есть. Керамические брекеты приближены к цвету эмали, что делает их менее заметными и более эстетичными. Керамика в сравнении с металлом более хрупкая и чаще подвержена поломкам, что увеличивает срок лечения в некоторых случаях. Кроме того, она стоит дороже.
-                </p>
-                <p>Металлические брекеты более заметны, но при этом более надёжны, удобны в работе и экономичны. Кроме того, они меньше керамических за счёт более высокой прочности металла. Оба типа брекет-системы эффективны при выравнивании зубов и коррекции прикуса, выбор зависит от личных предпочтений пациента и изредка от конкретных показаний врача (в сложных клинических ситуациях иногда врач рекомендует металлическую брекет-систему).</p>
-            </div>
-        </div>
-        <div class="answer__item" data-category="type">
-            <div class="answer__title">
-                <h3>Чем отличаются лигатурные брекеты от самолигирующих? </h3>
-                <div class="answer__inf">
-                    <div class="day">10.07.2024</div>
-                    <div class="views__container">
-                        <div>
-                            <svg class="view-icon">
-                                <use xlink:href="assets/images/sprite/view.svg#view"></use>
-                            </svg>
-                        </div>
-                        <div class="views"> 1 024</div>
+                <div class="answer__person">
+                    <div class="answer__icon">
+                        <img src="assets/images/avatar/icon1.jpg" alt="avatar">
+                    </div>
+                    <div class="answer__person-inf">
+                        <div class="answer__person-name">Отвечает <br class="hide-desc"><span>Юлия Пряженник</span></div>
+                        <div class="answer__person-profession">Стоматолог-ортодонт</div>
                     </div>
                 </div>
-            </div>
-            <div class="answer__person">
-                <div class="answer__icon">
-                    <img src="assets/images/avatar/icon3.jpg" alt="avatar">
-                </div>
-                <div class="answer__person-inf">
-                    <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Людмила Волянская</span></div>
-                    <div class="answer__person-profession">Стоматолог-ортодонт</div>
+                <div class="answer__person-text">
+                    <p>Нет, не портится. Брекет герметично приклеен к зубу композитом, под ним никогда не образуется кариес. Однако плохая гигиена полости рта во время ортодонтического лечения может привести к накоплению зубного налёта вокруг брекетов и, как следствие, возникновению кариеса.</p>
+                    <p>Правильная индивидуальная гигиена полости рта, а также регулярная профессиональная гигиена помогают сохранить зубы в первозданном виде</p>
                 </div>
             </div>
-            <div class="answer__person-text">
-                <p>
-                    Своей конструкцией, которая влияет на характер перемещения зубов. В лигатурной системе дуга удерживается в брекете с помощью резинки, которая обхватывает брекет со всех сторон, прижимая дугу к пазу брекета. У самолигирующих брекетов встроена подвижная крышка, фиксирующая дугу. За счёт сложности конструкции себестоимость самолигирующих брекетов значительно выше.
-                </p>
-                <p>
-                    В чем отличие для врача? В лигатурных брекетах повышено трение между дугой и самим брекетом, что обуславливает несколько более медленное передвижение зубов. Кроме того, некоторые моменты самолигирующая система отрабатывает лучше, чем лигатурная (например, расширение зубного ряда).
-                </p>
-                <p>
-                    В чем отличие для пациента? Во‑первых, частота активаций лигатурных брекетов раз в 3–4 недели, а самолигирующих — 4–6 недель. Сниженная регулярность визитов экономит время и снижает стоимость лечения. Во‑вторых, на лигатурах быстрее скапливается зубной налёт, что затрудняет гигиену.
-                </p>
-                <p>
-                    Оба варианта брекет-систем, при правильном подходе, корректируют прикус вне зависимости от своей конструкции. Мы используем только самолигирующие брекеты, так как, с учётом рекомендуемой частоты визитов, стоимость всего лечения фактически одинакова
-                </p>
-            </div>
-        </div>
-        <div class="answer__item" data-category="advice">
-            <div class="answer__title">
-                <h3>Сколько длится ортодонтическое лечение на брекетах?</h3>
-                <div class="answer__inf">
-                    <div class="day">29.06.2024</div>
-                    <div class="views__container">
-                        <div>
-                            <svg class="view-icon">
-                                <use xlink:href="assets/images/sprite/view.svg#view"></use>
-                            </svg>
+            <div class="answer__item" data-category="aligners">
+                <div class="answer__title">
+                    <h3>Есть ли разница между керамическими и металлическими брекетами?         </h3>
+                    <div class="answer__inf">
+                        <div class="day">24.07.2024</div>
+                        <div class="views__container">
+                            <div>
+                                <svg class="view-icon">
+                                    <use xlink:href="assets/images/sprite/view.svg#view"></use>
+                                </svg>
+                            </div>
+                            <div class="views"> 1 024</div>
                         </div>
-                        <div class="views"> 1 024</div>
                     </div>
                 </div>
-            </div>
-            <div class="answer__person">
-                <div class="answer__icon">
-                    <img src="assets/images/avatar/icon4.jpg" alt="avatar">
-                </div>
-                <div class="answer__person-inf">
-                    <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Даниил Платонов</span></div>
-                    <div class="answer__person-profession">Стоматолог-ортодонт</div>
-                </div>
-            </div>
-            <div class="answer__person-text">
-                <p>
-                    Продолжительность лечения может варьироваться в зависимости от нескольких факторов, включая сложность случая и скорость движения зубов у конкретного пациента. Последнее в свою очередь обусловлено уровнем кальция в организме, плотностью кости, гормональным фоном, приёмом некоторых лекарственных препаратом на постоянной основе и многим другим.                 </p>
-                <p>В среднем, пациент лечится от 1,5 до 2,5 лет.</p>
-            </div>
-        </div>
-        <div class="answer__item" data-category="orthognathia">
-            <div class="answer__title">
-                <h3>Есть ли противопоказания для лечения на брекет-системе? </h3>
-                <div class="answer__inf">
-                    <div class="day">14.06.2024</div>
-                    <div class="views__container">
-                        <div>
-                            <svg class="view-icon">
-                                <use xlink:href="assets/images/sprite/view.svg#view"></use>
-                            </svg>
-                        </div>
-                        <div class="views"> 1 024</div>
+                <div class="answer__person">
+                    <div class="answer__icon">
+                        <img src="assets/images/avatar/icon2.jpg" alt="avatar">
+                    </div>
+                    <div class="answer__person-inf">
+                        <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Ксения Чорная</span></div>
+                        <div class="answer__person-profession">Стоматолог-ортодонт</div>
                     </div>
                 </div>
-            </div>
-            <div class="answer__person">
-                <div class="answer__icon">
-                    <img src="assets/images/avatar/icon5.jpg" alt="avatar">
-                </div>
-                <div class="answer__person-inf">
-                    <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Елизавета Танона</span></div>
-                    <div class="answer__person-profession">Стоматолог-ортодонт</div>
+                <div class="answer__person-text">
+                    <p>Да, отличия есть. Керамические брекеты приближены к цвету эмали, что делает их менее заметными и более эстетичными. Керамика в сравнении с металлом более хрупкая и чаще подвержена поломкам, что увеличивает срок лечения в некоторых случаях. Кроме того, она стоит дороже.
+                    </p>
+                    <p>Металлические брекеты более заметны, но при этом более надёжны, удобны в работе и экономичны. Кроме того, они меньше керамических за счёт более высокой прочности металла. Оба типа брекет-системы эффективны при выравнивании зубов и коррекции прикуса, выбор зависит от личных предпочтений пациента и изредка от конкретных показаний врача (в сложных клинических ситуациях иногда врач рекомендует металлическую брекет-систему).</p>
                 </div>
             </div>
-            <div class="answer__person-text">
-                <p>
-                    Единственное абсолютное противопоказание к ортодонтическому лечению — пародонтит в острой форме или запущенной стадии (т.е. воспаление и убыль костной ткани вокруг зубов). В такой ситуации давать какую‑либо нагрузку на зубы для передвижения чревато их потерей
-                </p>
-                <p>Плохая гигиена полости рта, кариес и его осложнения — являются относительными противопоказаниями, которые устраняются на этапе подготовки к ортодонтическому лечению.</p>
-            </div>
-        </div>
-        <div class="answer__item" data-category="abbr">
-            <div class="answer__title">
-                <h3>Можно ли проходить ортодонтическое лечение во время беременности?</h3>
-                <div class="answer__inf">
-                    <div class="day">7.06.2024</div>
-                    <div class="views__container">
-                        <div>
-                            <svg class="view-icon">
-                                <use xlink:href="assets/images/sprite/view.svg#view"></use>
-                            </svg>
+            <div class="answer__item" data-category="type">
+                <div class="answer__title">
+                    <h3>Чем отличаются лигатурные брекеты от самолигирующих? </h3>
+                    <div class="answer__inf">
+                        <div class="day">10.07.2024</div>
+                        <div class="views__container">
+                            <div>
+                                <svg class="view-icon">
+                                    <use xlink:href="assets/images/sprite/view.svg#view"></use>
+                                </svg>
+                            </div>
+                            <div class="views"> 1 024</div>
                         </div>
-                        <div class="views"> 1 024</div>
                     </div>
                 </div>
-            </div>
-            <div class="answer__person">
-                <div class="answer__icon">
-                    <img src="assets/images/avatar/icon1.jpg" alt="avatar">
-                </div>
-                <div class="answer__person-inf">
-                    <div class="answer__person-name">Отвечает <br class="hide-desc"><span>Юлия Пряженник</span></div>
-                    <div class="answer__person-profession">Стоматолог-ортодонт</div>
-                </div>
-            </div>
-            <div class="answer__person-text">
-                <p>Беременность и период лактации являются относительным противопоказаниям в связи с интенсивным расходом кальция в организме, что приводит к снижению плотности кости. Ортодонтическое лечение лучше провести либо до беременности, либо после периода грудного вскармливания. </p>
-                <p>Но, если вы забеременели в процессе лечения, ничего страшного не случится. Главное, по возможности, заранее предупредите лечащего врача о планировании беременности.</p>
-            </div>
-        </div>
-        <div class="answer__item" data-category="prosthetics">
-            <div class="answer__title">
-                <h3>Из каких металлов состоит брекет-система и бывает ли аллергия на брекеты?</h3>
-                <div class="answer__inf">
-                    <div class="day">30.05.2024</div>
-                    <div class="views__container">
-                        <div>
-                            <svg class="view-icon">
-                                <use xlink:href="assets/images/sprite/view.svg#view"></use>
-                            </svg>
-                        </div>
-                        <div class="views"> 1 024</div>
+                <div class="answer__person">
+                    <div class="answer__icon">
+                        <img src="assets/images/avatar/icon3.jpg" alt="avatar">
+                    </div>
+                    <div class="answer__person-inf">
+                        <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Людмила Волянская</span></div>
+                        <div class="answer__person-profession">Стоматолог-ортодонт</div>
                     </div>
                 </div>
-            </div>
-            <div class="answer__person">
-                <div class="answer__icon">
-                    <img src="assets/images/avatar/icon2.jpg" alt="avatar">
+                <div class="answer__person-text">
+                    <p>
+                        Своей конструкцией, которая влияет на характер перемещения зубов. В лигатурной системе дуга удерживается в брекете с помощью резинки, которая обхватывает брекет со всех сторон, прижимая дугу к пазу брекета. У самолигирующих брекетов встроена подвижная крышка, фиксирующая дугу. За счёт сложности конструкции себестоимость самолигирующих брекетов значительно выше.
+                    </p>
+                    <p>
+                        В чем отличие для врача? В лигатурных брекетах повышено трение между дугой и самим брекетом, что обуславливает несколько более медленное передвижение зубов. Кроме того, некоторые моменты самолигирующая система отрабатывает лучше, чем лигатурная (например, расширение зубного ряда).
+                    </p>
+                    <p>
+                        В чем отличие для пациента? Во‑первых, частота активаций лигатурных брекетов раз в 3–4 недели, а самолигирующих — 4–6 недель. Сниженная регулярность визитов экономит время и снижает стоимость лечения. Во‑вторых, на лигатурах быстрее скапливается зубной налёт, что затрудняет гигиену.
+                    </p>
+                    <p>
+                        Оба варианта брекет-систем, при правильном подходе, корректируют прикус вне зависимости от своей конструкции. Мы используем только самолигирующие брекеты, так как, с учётом рекомендуемой частоты визитов, стоимость всего лечения фактически одинакова
+                    </p>
                 </div>
-                <div class="answer__person-inf">
-                    <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Ксения Чорная</span></div>
-                    <div class="answer__person-profession">Стоматолог-ортодонт</div>
+            </div>
+            <div class="answer__item" data-category="advice">
+                <div class="answer__title">
+                    <h3>Сколько длится ортодонтическое лечение на брекетах?</h3>
+                    <div class="answer__inf">
+                        <div class="day">29.06.2024</div>
+                        <div class="views__container">
+                            <div>
+                                <svg class="view-icon">
+                                    <use xlink:href="assets/images/sprite/view.svg#view"></use>
+                                </svg>
+                            </div>
+                            <div class="views"> 1 024</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer__person">
+                    <div class="answer__icon">
+                        <img src="assets/images/avatar/icon4.jpg" alt="avatar">
+                    </div>
+                    <div class="answer__person-inf">
+                        <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Даниил Платонов</span></div>
+                        <div class="answer__person-profession">Стоматолог-ортодонт</div>
+                    </div>
+                </div>
+                <div class="answer__person-text">
+                    <p>
+                        Продолжительность лечения может варьироваться в зависимости от нескольких факторов, включая сложность случая и скорость движения зубов у конкретного пациента. Последнее в свою очередь обусловлено уровнем кальция в организме, плотностью кости, гормональным фоном, приёмом некоторых лекарственных препаратом на постоянной основе и многим другим.                 </p>
+                    <p>В среднем, пациент лечится от 1,5 до 2,5 лет.</p>
                 </div>
             </div>
-            <div class="answer__person-text">
-                <p>Брекеты производятся из медицинской стали, содержащей никель. Дуги никель-титановые и титан-молибденовые. Кожная аллергия на никель достаточно распространена, но, к счастью, аллергическая реакция слизистых на никель встречается очень редко</p>
-                <p>Если вы подозреваете у себя аллергические реакции на никель (например, не можете носить бижутерию), сообщите об этом врачу на консультации. При необходимости, мы можем провести аллергопробу, заранее зафиксировав небольшой элемент брекет-системы и отследив реакцию на него.</p>
+            <div class="answer__item" data-category="orthognathia">
+                <div class="answer__title">
+                    <h3>Есть ли противопоказания для лечения на брекет-системе? </h3>
+                    <div class="answer__inf">
+                        <div class="day">14.06.2024</div>
+                        <div class="views__container">
+                            <div>
+                                <svg class="view-icon">
+                                    <use xlink:href="assets/images/sprite/view.svg#view"></use>
+                                </svg>
+                            </div>
+                            <div class="views"> 1 024</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer__person">
+                    <div class="answer__icon">
+                        <img src="assets/images/avatar/icon5.jpg" alt="avatar">
+                    </div>
+                    <div class="answer__person-inf">
+                        <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Елизавета Танона</span></div>
+                        <div class="answer__person-profession">Стоматолог-ортодонт</div>
+                    </div>
+                </div>
+                <div class="answer__person-text">
+                    <p>
+                        Единственное абсолютное противопоказание к ортодонтическому лечению — пародонтит в острой форме или запущенной стадии (т.е. воспаление и убыль костной ткани вокруг зубов). В такой ситуации давать какую‑либо нагрузку на зубы для передвижения чревато их потерей
+                    </p>
+                    <p>Плохая гигиена полости рта, кариес и его осложнения — являются относительными противопоказаниями, которые устраняются на этапе подготовки к ортодонтическому лечению.</p>
+                </div>
+            </div>
+            <div class="answer__item" data-category="abbr">
+                <div class="answer__title">
+                    <h3>Можно ли проходить ортодонтическое лечение во время беременности?</h3>
+                    <div class="answer__inf">
+                        <div class="day">7.06.2024</div>
+                        <div class="views__container">
+                            <div>
+                                <svg class="view-icon">
+                                    <use xlink:href="assets/images/sprite/view.svg#view"></use>
+                                </svg>
+                            </div>
+                            <div class="views"> 1 024</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer__person">
+                    <div class="answer__icon">
+                        <img src="assets/images/avatar/icon1.jpg" alt="avatar">
+                    </div>
+                    <div class="answer__person-inf">
+                        <div class="answer__person-name">Отвечает <br class="hide-desc"><span>Юлия Пряженник</span></div>
+                        <div class="answer__person-profession">Стоматолог-ортодонт</div>
+                    </div>
+                </div>
+                <div class="answer__person-text">
+                    <p>Беременность и период лактации являются относительным противопоказаниям в связи с интенсивным расходом кальция в организме, что приводит к снижению плотности кости. Ортодонтическое лечение лучше провести либо до беременности, либо после периода грудного вскармливания. </p>
+                    <p>Но, если вы забеременели в процессе лечения, ничего страшного не случится. Главное, по возможности, заранее предупредите лечащего врача о планировании беременности.</p>
+                </div>
+            </div>
+            <div class="answer__item" data-category="prosthetics">
+                <div class="answer__title">
+                    <h3>Из каких металлов состоит брекет-система и бывает ли аллергия на брекеты?</h3>
+                    <div class="answer__inf">
+                        <div class="day">30.05.2024</div>
+                        <div class="views__container">
+                            <div>
+                                <svg class="view-icon">
+                                    <use xlink:href="assets/images/sprite/view.svg#view"></use>
+                                </svg>
+                            </div>
+                            <div class="views"> 1 024</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="answer__person">
+                    <div class="answer__icon">
+                        <img src="assets/images/avatar/icon2.jpg" alt="avatar">
+                    </div>
+                    <div class="answer__person-inf">
+                        <div class="answer__person-name">Отвечает<br class="hide-desc"> <span>Ксения Чорная</span></div>
+                        <div class="answer__person-profession">Стоматолог-ортодонт</div>
+                    </div>
+                </div>
+                <div class="answer__person-text">
+                    <p>Брекеты производятся из медицинской стали, содержащей никель. Дуги никель-титановые и титан-молибденовые. Кожная аллергия на никель достаточно распространена, но, к счастью, аллергическая реакция слизистых на никель встречается очень редко</p>
+                    <p>Если вы подозреваете у себя аллергические реакции на никель (например, не можете носить бижутерию), сообщите об этом врачу на консультации. При необходимости, мы можем провести аллергопробу, заранее зафиксировав небольшой элемент брекет-системы и отследив реакцию на него.</p>
+                </div>
             </div>
         </div>
     </div>

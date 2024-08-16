@@ -464,7 +464,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     });
 
+  const sortContainer = document.getElementById('sortContainer');
+  const headingSort = document.getElementById('headingSort');
 
+  if(sortContainer) {
+    sortContainer.addEventListener('click', () => {
+      headingSort.classList.toggle('active');
+    })
+  }
     const newRadio = document.getElementById('new');
     const oldRadio = document.getElementById('old');
     const container = document.querySelector('.answer__container');
