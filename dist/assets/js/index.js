@@ -418,29 +418,32 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+  const answer = document.querySelector('.answer');
+
+  if(answer) {
     function setupToggle(containerId, headingId, iconClass, otherContainerId, otherHeadingId, otherIconClass) {
-        const container = document.getElementById(containerId);
-        const heading = document.getElementById(headingId);
-        const icon = container.querySelector(iconClass);
+      const container = document.getElementById(containerId);
+      const heading = document.getElementById(headingId);
+      const icon = container.querySelector(iconClass);
 
-        const otherContainer = document.getElementById(otherContainerId);
-        const otherHeading = document.getElementById(otherHeadingId);
-        const otherIcon = otherContainer.querySelector(otherIconClass);
+      const otherContainer = document.getElementById(otherContainerId);
+      const otherHeading = document.getElementById(otherHeadingId);
+      const otherIcon = otherContainer.querySelector(otherIconClass);
 
-        container.addEventListener('click', () => {
-            if (otherHeading.classList.contains('active')) {
-                otherHeading.classList.remove('active');
-                otherIcon.classList.remove('active');
-            }
-            heading.classList.toggle('active');
-            icon.classList.toggle('active');
-        });
+      container.addEventListener('click', () => {
+        if (otherHeading.classList.contains('active')) {
+          otherHeading.classList.remove('active');
+          otherIcon.classList.remove('active');
+        }
+        heading.classList.toggle('active');
+        icon.classList.toggle('active');
+      });
 
-        icon.addEventListener('click', (event) => {
-            event.stopPropagation();
-            heading.classList.toggle('active');
-            icon.classList.toggle('active');
-        });
+      icon.addEventListener('click', (event) => {
+        event.stopPropagation();
+        heading.classList.toggle('active');
+        icon.classList.toggle('active');
+      });
     }
 
     setupToggle('headContainer', 'headingHead', '.heading-icon', 'doctorContainer', 'headingDoctor', '.heading-icon');
@@ -450,57 +453,57 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const headCheckboxes = document.querySelectorAll('#headingHead .checkbox-custom:not(#selectAllHead)');
 
     selectAllHeadCheckbox.addEventListener('change', () => {
-        headCheckboxes.forEach(checkbox => {
-            checkbox.checked = selectAllHeadCheckbox.checked;
-        });
+      headCheckboxes.forEach(checkbox => {
+        checkbox.checked = selectAllHeadCheckbox.checked;
+      });
     });
 
     const selectAllDoctorCheckbox = document.getElementById('selectAllDoctor');
     const doctorCheckboxes = document.querySelectorAll('#headingDoctor .checkbox-custom:not(#selectAllDoctor)');
 
     selectAllDoctorCheckbox.addEventListener('change', () => {
-        doctorCheckboxes.forEach(checkbox => {
-            checkbox.checked = selectAllDoctorCheckbox.checked;
-        });
+      doctorCheckboxes.forEach(checkbox => {
+        checkbox.checked = selectAllDoctorCheckbox.checked;
+      });
     });
 
-  const sortContainer = document.getElementById('sortContainer');
-  const headingSort = document.getElementById('headingSort');
+    const sortContainer = document.getElementById('sortContainer');
+    const headingSort = document.getElementById('headingSort');
 
-  if(sortContainer) {
-    sortContainer.addEventListener('click', () => {
-      headingSort.classList.toggle('active');
-    })
-  }
+    if(sortContainer) {
+      sortContainer.addEventListener('click', () => {
+        headingSort.classList.toggle('active');
+      })
+    }
     const newRadio = document.getElementById('new');
     const oldRadio = document.getElementById('old');
     const container = document.querySelector('.answer__container');
 
     function parseDate(dateString) {
-        const [day, month, year] = dateString.split('.').map(Number);
-        return new Date(year, month - 1, day);
+      const [day, month, year] = dateString.split('.').map(Number);
+      return new Date(year, month - 1, day);
     }
 
     function sortItems(order) {
-        const items = Array.from(container.querySelectorAll('.answer__item'));
-        items.sort((a, b) => {
-            const dateA = parseDate(a.querySelector('.day').textContent);
-            const dateB = parseDate(b.querySelector('.day').textContent);
-            return order === 'new' ? dateB - dateA : dateA - dateB;
-        });
-        items.forEach(item => container.appendChild(item));
+      const items = Array.from(container.querySelectorAll('.answer__item'));
+      items.sort((a, b) => {
+        const dateA = parseDate(a.querySelector('.day').textContent);
+        const dateB = parseDate(b.querySelector('.day').textContent);
+        return order === 'new' ? dateB - dateA : dateA - dateB;
+      });
+      items.forEach(item => container.appendChild(item));
     }
 
     newRadio.addEventListener('change', () => {
-        if (newRadio.checked) {
-            sortItems('new');
-        }
+      if (newRadio.checked) {
+        sortItems('new');
+      }
     });
 
     oldRadio.addEventListener('change', () => {
-        if (oldRadio.checked) {
-            sortItems('old');
-        }
+      if (oldRadio.checked) {
+        sortItems('old');
+      }
     });
 
     sortItems('new');
@@ -511,52 +514,69 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const itemsAnswer = document.querySelectorAll('.answer__item');
 
     if(applyButton) {
-        applyButton.addEventListener('click', () => {
-            const selectedCategories = Array.from(checkboxes)
-                .filter(checkbox => checkbox.checked)
-                .map(checkbox => checkbox.id);
+      applyButton.addEventListener('click', () => {
+        const selectedCategories = Array.from(checkboxes)
+          .filter(checkbox => checkbox.checked)
+          .map(checkbox => checkbox.id);
 
-            itemsAnswer.forEach(item => {
-                const itemCategory = item.getAttribute('data-category');
-                if (selectedCategories.includes(itemCategory)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+        itemsAnswer.forEach(item => {
+          const itemCategory = item.getAttribute('data-category');
+          if (selectedCategories.includes(itemCategory)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
         });
+      });
     }
 
 
     document.querySelector('button[type="reset"]').addEventListener('click', () => {
-        itemsAnswer.forEach(item => {
-            item.style.display = 'block';
-        });
+      itemsAnswer.forEach(item => {
+        item.style.display = 'block';
+      });
     });
 
 
     if (doctorApplyButton) {
-        doctorApplyButton.addEventListener('click', () => {
-            const selectedDoctors = Array.from(doctorCheckboxes)
-                .filter(checkbox => checkbox.checked)
-                .map(checkbox => checkbox.id);
+      doctorApplyButton.addEventListener('click', () => {
+        const selectedDoctors = Array.from(doctorCheckboxes)
+          .filter(checkbox => checkbox.checked)
+          .map(checkbox => checkbox.id);
 
-            itemsAnswer.forEach(item => {
-                const itemDoctor = item.querySelector('.answer__person-name span').textContent.trim();
-                const doctorNameMap = {
-                    doctor1: 'Юлия Пряженник',
-                    doctor2: 'Ксения Чорная',
-                    doctor3: 'Людмила Волянская',
-                    doctor4: 'Даниил Платонов',
-                    doctor5: 'Елизавета Танона'
-                };
+        itemsAnswer.forEach(item => {
+          const itemDoctor = item.querySelector('.answer__person-name span').textContent.trim();
+          const doctorNameMap = {
+            doctor1: 'Юлия Пряженник',
+            doctor2: 'Ксения Чорная',
+            doctor3: 'Людмила Волянская',
+            doctor4: 'Даниил Платонов',
+            doctor5: 'Елизавета Танона'
+          };
 
-                if (selectedDoctors.some(doctorId => itemDoctor.includes(doctorNameMap[doctorId]))) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+          if (selectedDoctors.some(doctorId => itemDoctor.includes(doctorNameMap[doctorId]))) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
         });
+      });
     }
+
+  }
+
+const blog = document.querySelector('.blog');
+
+  if(blog) {
+    const headContainer = document.getElementById('headContainerBlog');
+    const headingHead = document.getElementById('headingHeadBlog');
+    const icon = headContainer.querySelector('.heading-icon');
+
+    headContainer.addEventListener('click', () => {
+      headingHead.classList.toggle('active');
+      icon.classList.toggle('active');
+    });
+
+
+  }
 });

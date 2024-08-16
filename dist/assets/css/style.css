@@ -9982,7 +9982,7 @@ div .view-icon {
 .checkbox-custom:checked + .checkbox-custom-label::before {
     content: "";
     position: absolute;
-    top: 23%;
+    top: 3%;
     left: 0;
     width: 2.4rem;
     height: 2.4rem;
@@ -10028,12 +10028,14 @@ div .view-icon {
     color: var(--grey);
 }
 
+#headingHeadBlog,
 #headingSort,
 #headingHead,
 #headingDoctor {
     display: none;
 }
 
+#headingHeadBlog.active,
 #headingSort.active,
 #headingHead.active,
 #headingDoctor.active {
@@ -10148,9 +10150,20 @@ div .view-icon {
 .blog__heading {
     border-radius: 1.2rem;
     background-color: var(--white);
-    max-width: 18rem;
-    min-width: 13rem;
     padding: 1rem 1.2rem 0.8rem 1.6rem;
+    position: relative;
+}
+
+.blog__heading:nth-child(1) {
+    width: 13rem;
+}
+
+.blog__heading:nth-child(2) {
+    width: 18rem;
+}
+
+#headContainerBlog .heading__container {
+    left: -120%;
 }
 
 .entry__top {

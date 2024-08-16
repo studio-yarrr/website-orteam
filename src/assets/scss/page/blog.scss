@@ -26,8 +26,19 @@
 .blog__heading {
   border-radius: 1.2rem;
   background-color: var(--white);
-  max-width: 18rem;
-  min-width: 13rem;
   padding: 1rem 1.2rem 0.8rem 1.6rem;
+  position: relative;
+}
+
+.blog__heading:nth-child(1) {
+  width: 13rem;
+}
+
+.blog__heading:nth-child(2) {
+  width: 18rem;
+}
+
+#headContainerBlog .heading__container {
+  left: -120%
 }
 

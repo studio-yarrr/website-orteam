@@ -233,7 +233,7 @@ div .view-icon {
 .checkbox-custom:checked + .checkbox-custom-label::before {
   content: "";
   position: absolute;
-  top: 23%;
+  top: 3%;
   left: 0;
   width: 2.4rem;
   height: 2.4rem;
@@ -272,6 +272,7 @@ div .view-icon {
   }
 }
 
+#headingHeadBlog,
 #headingSort,
 #headingHead,
 #headingDoctor {
