@@ -25,10 +25,10 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url('../images/arrow-sprite.svg');
-  background-repeat: no-repeat;
-  background-size: 1.5rem;
-  background-position: right 2.2rem center;
+  //background-image: url('../images/arrow-sprite.svg');
+  //background-repeat: no-repeat;
+  //background-size: 1.5rem;
+  //background-position: right 2.2rem center;
 }
 
 .doctors__list li:hover {
@@ -126,4 +126,31 @@ select {
   @include breakpoint($sm-bp) {
     margin-top: 5.2rem;
   }
+}
+
+.select-container {
+  display: none;
+  @include breakpoint($sm-bp) {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.doctors__select {
+  width: 100%;
+  padding-right: 30px;
+}
+
+.heading-icon--top,
+.heading-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.heading-icon--top.active {
+  transform: rotate(180deg);
+  top: 20%;
 }

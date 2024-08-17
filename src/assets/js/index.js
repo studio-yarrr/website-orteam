@@ -5,167 +5,169 @@ document.addEventListener("DOMContentLoaded", function (event) {
         hideScrollbar: false
     });
 
-  const headerBurger = document.querySelector('.header__burger');
-  const menuWrapper = document.querySelector('.menu__wrapper');
-  const menuContent = document.querySelector('.menu__content');
-  const close = document.querySelectorAll('.close');
-  const recordWrapper = document.querySelectorAll('.record__wrapper');
-  const successModalWrapper = document.querySelector('.success-modal__wrapper');
+    const headerBurger = document.querySelector('.header__burger');
+    const menuWrapper = document.querySelector('.menu__wrapper');
+    const menuContent = document.querySelector('.menu__content');
+    const close = document.querySelectorAll('.close');
+    const recordWrapper = document.querySelectorAll('.record__wrapper');
+    const successModalWrapper = document.querySelector('.success-modal__wrapper');
 
-  function showSuccesseModal() {
-    successModalWrapper.classList.add('active');
-  }
-
-  headerBurger.addEventListener("click", () => {
-    menuWrapper.classList.add('active');
-
-    setTimeout(() => {
-      menuContent.classList.add('active');
-    }, 50);
-  });
-
-  menuWrapper.addEventListener('click', (event) => {
-    if (event.target === menuWrapper) {
-      closeMenu();
+    function showSuccesseModal() {
+        successModalWrapper.classList.add('active');
     }
-  });
 
-  function closeMenu() {
-    menuContent.classList.remove('active');
+    headerBurger.addEventListener("click", () => {
+        menuWrapper.classList.add('active');
 
-    setTimeout(() => {
-      menuWrapper.classList.remove('active');
-    }, 300);
-  }
-
-  close.forEach((button) => {
-    button.addEventListener('click', closeAll);
-  });
-
-  function closeAll() {
-    menuContent.classList.remove('active');
-    successModalWrapper.classList.remove('active');
-
-    setTimeout(() => {
-      menuWrapper.classList.remove('active');
-      recordWrapper.forEach(wrapper => {
-        wrapper.classList.remove('active');
-      });
-    }, 300);
-  }
-
-  const openModal = document.querySelectorAll('.openModal');
-
-  openModal.forEach(item => {
-    item.addEventListener('click', (event) => {
-      event.preventDefault();
-
-      document.querySelector('.record__wrapper').classList.add('active');
-    });
-  });
-
-  const closeRecord = document.querySelectorAll('.closeRecord');
-
-  closeRecord.forEach((button) => {
-    button.addEventListener('click', () => {
-      recordWrapper.forEach(wrapper => {
-        wrapper.classList.remove('active');
-      });
-    });
-  });
-
-  function handleForm(formInf) {
-    formInf.addEventListener('submit', function (event) {
-      const controls = this.querySelectorAll('.required__input');
-      let isValid = true;
-
-      controls.forEach(control => {
-        if (control.classList.contains('required') && !control.value) {
-          isValid = false;
-        }
-      });
-
-      if (isValid) {
-        event.preventDefault();
-        controls.forEach(control => {
-          control.value = '';
-        });
-
-        closeAll();
         setTimeout(() => {
-          showSuccesseModal()
-        }, 300);
-
-      } else {
-        console.log('Форма содержит ошибки.');
-      }
+            menuContent.classList.add('active');
+        }, 50);
     });
-  }
 
-
-  const formSend = document.querySelectorAll('.sendForm');
-
-  if (formSend) {
-    formSend.forEach(item => {
-      handleForm(item);
-    });
-  }
-
-
-  function addMask() {
-    [].forEach.call(
-        document.querySelectorAll('input.custom-input[type="tel"]'),
-        function (input) {
-          let keyCode;
-          function mask(event) {
-            event.keyCode && (keyCode = event.keyCode);
-            let pos = this.selectionStart;
-            if (pos < 3) event.preventDefault();
-            let matrix = "+7 (___) ___-____",
-                i = 0,
-                def = matrix.replace(/\D/g, ""),
-                val = this.value.replace(/\D/g, ""),
-                new_value = matrix.replace(/[_\d]/g, function (a) {
-                  return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-                });
-            i = new_value.indexOf("_");
-            if (i != -1) {
-              i < 5 && (i = 3);
-              new_value = new_value.slice(0, i);
-            }
-            let reg = matrix
-                .substr(0, this.value.length)
-                .replace(/_+/g, function (a) {
-                  return "\\d{1," + a.length + "}";
-                })
-                .replace(/[+()]/g, "\\$&");
-            reg = new RegExp("^" + reg + "$");
-            if (
-                !reg.test(this.value) ||
-                this.value.length < 5 ||
-                (keyCode > 47 && keyCode < 58)
-            )
-              this.value = new_value;
-            if (event.type == "blur" && this.value.length < 5) {
-              this.value = "";
-              this.classList.remove("havetext");
-            }
-          }
-
-          input.addEventListener("input", mask, false);
-          input.addEventListener("focus", mask, false);
-          input.addEventListener("blur", mask, false);
-          input.addEventListener("keydown", mask, false);
+    menuWrapper.addEventListener('click', (event) => {
+        if (event.target === menuWrapper) {
+            closeMenu();
         }
-    );
-  }
-  addMask();
+    });
+
+    function closeMenu() {
+        menuContent.classList.remove('active');
+
+        setTimeout(() => {
+            menuWrapper.classList.remove('active');
+        }, 300);
+    }
+
+    close.forEach((button) => {
+        button.addEventListener('click', closeAll);
+    });
+
+    function closeAll() {
+        menuContent.classList.remove('active');
+        successModalWrapper.classList.remove('active');
+
+        setTimeout(() => {
+            menuWrapper.classList.remove('active');
+            recordWrapper.forEach(wrapper => {
+                wrapper.classList.remove('active');
+            });
+        }, 300);
+    }
+
+    const openModal = document.querySelectorAll('.openModal');
+
+    openModal.forEach(item => {
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            document.querySelector('.record__wrapper').classList.add('active');
+        });
+    });
+
+    const closeRecord = document.querySelectorAll('.closeRecord');
+
+    closeRecord.forEach((button) => {
+        button.addEventListener('click', () => {
+            recordWrapper.forEach(wrapper => {
+                wrapper.classList.remove('active');
+            });
+        });
+    });
+
+    function handleForm(formInf) {
+        formInf.addEventListener('submit', function (event) {
+            const controls = this.querySelectorAll('.required__input');
+            let isValid = true;
+
+            controls.forEach(control => {
+                if (control.classList.contains('required') && !control.value) {
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                event.preventDefault();
+                controls.forEach(control => {
+                    control.value = '';
+                });
+
+                closeAll();
+                setTimeout(() => {
+                    showSuccesseModal()
+                }, 300);
+
+            } else {
+                console.log('Форма содержит ошибки.');
+            }
+        });
+    }
+
+
+    const formSend = document.querySelectorAll('.sendForm');
+
+    if (formSend) {
+        formSend.forEach(item => {
+            handleForm(item);
+        });
+    }
+
+
+    function addMask() {
+        [].forEach.call(
+            document.querySelectorAll('input.custom-input[type="tel"]'),
+            function (input) {
+                let keyCode;
+
+                function mask(event) {
+                    event.keyCode && (keyCode = event.keyCode);
+                    let pos = this.selectionStart;
+                    if (pos < 3) event.preventDefault();
+                    let matrix = "+7 (___) ___-____",
+                        i = 0,
+                        def = matrix.replace(/\D/g, ""),
+                        val = this.value.replace(/\D/g, ""),
+                        new_value = matrix.replace(/[_\d]/g, function (a) {
+                            return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+                        });
+                    i = new_value.indexOf("_");
+                    if (i != -1) {
+                        i < 5 && (i = 3);
+                        new_value = new_value.slice(0, i);
+                    }
+                    let reg = matrix
+                        .substr(0, this.value.length)
+                        .replace(/_+/g, function (a) {
+                            return "\\d{1," + a.length + "}";
+                        })
+                        .replace(/[+()]/g, "\\$&");
+                    reg = new RegExp("^" + reg + "$");
+                    if (
+                        !reg.test(this.value) ||
+                        this.value.length < 5 ||
+                        (keyCode > 47 && keyCode < 58)
+                    )
+                        this.value = new_value;
+                    if (event.type == "blur" && this.value.length < 5) {
+                        this.value = "";
+                        this.classList.remove("havetext");
+                    }
+                }
+
+                input.addEventListener("input", mask, false);
+                input.addEventListener("focus", mask, false);
+                input.addEventListener("blur", mask, false);
+                input.addEventListener("keydown", mask, false);
+            }
+        );
+    }
+
+    addMask();
 // copy text
 
     const reviewTexts = document.querySelectorAll('.reviews__item-text');
     const reviewPopups = document.querySelectorAll('.review-popup');
 
-    reviewPopups.forEach(function(popup, index) {
+    reviewPopups.forEach(function (popup, index) {
         popup.innerHTML = reviewTexts[index].innerHTML;
     });
 
@@ -227,8 +229,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
 
 
-        let myPlacemark = new ymaps.Placemark([60.012085, 30.328723], {
-        });
+        let myPlacemark = new ymaps.Placemark([60.012085, 30.328723], {});
         myMap.behaviors.disable('scrollZoom');
 
 
@@ -294,11 +295,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
-    if(listDoctors || selectDoctors) {
+    if (listDoctors || selectDoctors) {
         listDoctors.addEventListener('click', cardFilter);
         selectDoctors.addEventListener('change', cardFilter);
-    }
 
+        selectDoctors.addEventListener('focus', () => {
+            const icon = document.querySelector('.select-container .heading-icon--top');
+            if (icon) {
+                icon.classList.add('active');
+            }
+        });
+
+        selectDoctors.addEventListener('blur', () => {
+            const icon = document.querySelector('.select-container .heading-icon--top');
+            if (icon) {
+                icon.classList.remove('active');
+            }
+        });
+
+        selectDoctors.addEventListener('change', () => {
+            const icon = document.querySelector('.select-container .heading-icon--top');
+            if (icon) {
+                icon.classList.remove('active');
+            }
+        });
+
+        selectDoctors.addEventListener('mousedown', () => {
+            const icon = document.querySelector('.select-container .heading-icon--top');
+            if (icon) {
+                icon.classList.add('active');
+            }
+        });
+    }
 
 
     const onList = document.querySelector('.doctor-qualification__linc');
@@ -578,5 +606,38 @@ const blog = document.querySelector('.blog');
     });
 
 
+      const applyButton = document.querySelector('.applyFilters');
+      const checkboxes = document.querySelectorAll('.checkbox-custom');
+      const itemsAnswer = document.querySelectorAll('.articles__item');
+
+      if(applyButton) {
+          applyButton.addEventListener('click', () => {
+              const selectedCategories = Array.from(checkboxes)
+                  .filter(checkbox => checkbox.checked)
+                  .map(checkbox => checkbox.id);
+
+              itemsAnswer.forEach(item => {
+                  const itemCategory = item.getAttribute('data-category');
+                  if (selectedCategories.includes(itemCategory)) {
+                      item.style.display = 'flex';
+                  } else {
+                      item.style.display = 'none';
+                  }
+              });
+          });
+      }
+
+
+      document.querySelector('button[type="reset"]').addEventListener('click', () => {
+          itemsAnswer.forEach(item => {
+              item.style.display = 'flex';
+          });
+      });
+
+      document.getElementById('selectAllHead').addEventListener('change', function() {
+          const checkboxes = document.querySelectorAll('#headingHeadBlog .checkbox-custom');
+          checkboxes.forEach(checkbox => checkbox.checked = this.checked);
+      });
   }
+
 });

@@ -39,6 +39,35 @@
 }
 
 #headContainerBlog .heading__container {
-  left: -120%
+  left: -120%;
+  @include breakpoint($sm-bp) {
+    left: -2%;
+  }
 }
 
+.blog__filter {
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint($sm-bp) {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+}
+
+.blog__filter-left {
+  display: flex;
+  gap: 4rem;
+  @include breakpoint($sm-bp) {
+    gap: 2rem;
+  }
+}
+
+.blog__filter-right {
+  display: flex;
+  gap: 4rem;
+  @include breakpoint($sm-bp) {
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}

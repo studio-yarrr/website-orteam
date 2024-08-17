@@ -1,6 +1,6 @@
 <section class="doctors">
     <div class="wrapper">
-        <h1>Команда Orteam</h1>
+        <h1 class="element-animation-bottom">Команда Orteam</h1>
         <div class="doctors__container">
             <div>
                 <ul class="doctors__list" id="listDoctors">
@@ -10,7 +10,13 @@
                     <li class="doctors__item" id="therapists">Терапевты</li>
                     <li class="doctors__item" id="surgeons">Хирурги и имплантологи</li>
                 </ul>
-                <select class="doctors__select" id="selectDoctors"></select>
+                <div class="select-container">
+                    <select class="doctors__select" id="selectDoctors"></select>
+                    <div class="heading-icon--top">
+                        <img src="assets/images/menu-arrow.svg" alt="icon">
+                    </div>
+                </div>
+
             </div>
             <div class="doctors__content">
                 <div class="doctors__content-item" data-item="orthodontists">
@@ -401,245 +407,248 @@
             </div>
         </div>
     </div>
-    <div class="reviews__platform  wrapper__platform">
-        <a href="#" class="reviews__item-top">
-            <div class="reviews__item-icon">
-                <img src="assets/images/yandex.svg" alt="icon">
-            </div>
-            <div class="reviews__item-top--text">
-                <div class="reviews__item-top--title">
-                    <div>Яндекс.Карты</div>
-                    <div>5,0</div>
+    <div>
+        <h2 class="team__title element-animation-scale  wrapper">Отзывы</h2>
+        <div class="reviews__platform  wrapper__platform">
+            <a href="#" class="reviews__item-top">
+                <div class="reviews__item-icon">
+                    <img src="assets/images/yandex.svg" alt="icon">
                 </div>
-                <div class="reviews__item-stars">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <div class="reviews__data">231 оценка</div>
-            </div>
-        </a>
-        <a href="#" class="reviews__item-top">
-            <div class="reviews__item-icon">
-                <img src="assets/images/doc-icon.svg" alt="icon">
-            </div>
-            <div class="reviews__item-top--text">
-                <div class="reviews__item-top--title">
-                    <div>ПроДокторов</div>
-                    <div>4,8</div>
-                </div>
-                <div class="reviews__item-stars">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <div class="reviews__data">27 отзывов</div>
-            </div>
-        </a>
-        <a href="#" class="reviews__item-top">
-            <div class="reviews__item-icon">
-                <img src="assets/images/2gis.svg" alt="icon">
-            </div>
-            <div class="reviews__item-top--text">
-                <div class="reviews__item-top--title">
-                    <div>2ГИС</div>
-                    <div>4,8</div>
-                </div>
-                <div class="reviews__item-stars">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <div class="reviews__data">20 оценок</div>
-            </div>
-        </a>
-        <a href="#" class="reviews__item-top">
-            <div class="reviews__item-icon">
-                <img src="assets/images/maps.svg" alt="icon">
-            </div>
-            <div class="reviews__item-top--text">
-                <div class="reviews__item-top--title">
-                    <div>Google Maps</div>
-                    <div>5,0</div>
-                </div>
-                <div class="reviews__item-stars">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-                <div class="reviews__data">20 оценок</div>
-            </div>
-        </a>
-    </div>
-    <div class="reviews__slider">
-        <div class="reviews__swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide reviews__item">
-                    <div class="reviews__item-bottom">
-                        <div class="reviews__item-profile">
-                            <div class="reviews__item-avatar">
-                                <div class="icon">
-                                    <img src="assets/images/icon-girl.jpg" alt="icon">
-                                </div>
-                            </div>
-                            <div class="reviews__item-data">
-                                <div class="reviews__item-nick">
-                                    Виктория Т.</div>
-                                <div class="reviews__data">Август, 2023</div>
-                            </div>
-                        </div>
-                        <div class="reviews__item-stars">
-                            <span></span><span></span><span></span><span></span><span></span>
-                        </div>
-                        <div class="reviews__item-text point2">В этой клинике я проходила ортодонтическое лечение. Брекеты мне
-                            поставили 2 года назад и вот уже через пару дней поеду снимать. Я осталась в восторге! Прекрасное
-                            здание, внутри современный интерьер, полностью оборудованные кабинеты, даже одноразовые зубные щётки в
-                            туалетах. Встречалась с несколькими врачами на разных процедурах и ни один из них не вызвал у меня ни
-                            доли сомнения в их профессионализме. Все безумно вежливые, порядочные, но при этом открытые. Даже
-                            как-то грустно, что мое лечение подходит к концу. Как бы странно это ни звучало, но я буду скучать по
-                            этому месту ❤️
-
-                            Хочу выразить отдельную благодарность своему лечащему врачу Панкову Владиславу Евгеньевичу, этот
-                            человек изменил мою жизнь)
-                            <div id="review-popup" class="review-popup"></div>
-                        </div>
-                        <a href="#" data-fancybox data-src="#review-popup" class="reviews__linc">Читать полностью</a>
-
+                <div class="reviews__item-top--text">
+                    <div class="reviews__item-top--title">
+                        <div>Яндекс.Карты</div>
+                        <div>5,0</div>
                     </div>
-                </div>
-                <div class="swiper-slide reviews__item">
-                    <div class="reviews__item-bottom">
-                        <div class="reviews__item-profile">
-                            <div class="reviews__item-avatar">
-                                <div class="icon">
-                                    <img src="assets/images/icon-girl.jpg" alt="icon">
-                                </div>
-                            </div>
-                            <div class="reviews__item-data">
-                                <div class="reviews__item-nick">
-                                    Алёна Киреевская</div>
-                                <div class="reviews__data">Август, 2023</div>
-                            </div>
-                        </div>
-                        <div class="reviews__item-stars">
-                            <span></span><span></span><span></span><span></span><span></span>
-                        </div>
-                        <div class="reviews__item-text point2">В Proxima лечусь с самого открытия клиники, пришла сюда в
-                            след за свои
-                            Ортодонтом, Владиславом Евгеньевичем) прошла за это время здесь многое, лечение зуба, удаление зуба
-                            мудрости, постановка имплантов, коронок) вообщем испробовала на себе все блага клиники) Если
-                            возникали
-                            какие то проблемы, или меня что-то беспокоило, всегда была обратная связь, всегда находили окошко на
-                            прием) Все врачи и ассистенты, прекрасные специалисты. Девочки на ресепшен очень доброжелательны и
-                            приветливы и всегда помогут) Вообщем, если вы искали клинику где вам не навязывают лишнее и делают
-                            качественно, то вам к ребятам в PROXIMA) Спасибо большое, Вам)
-                            <div id="review-popup2" class="review-popup"></div>
-                        </div>
-                        <a href="#" data-fancybox data-src="#review-popup2" class="reviews__linc">Читать полностью</a>
+                    <div class="reviews__item-stars">
+                        <span></span><span></span><span></span><span></span><span></span>
                     </div>
+                    <div class="reviews__data">231 оценка</div>
                 </div>
-                <div class="swiper-slide reviews__item">
-                    <div class="reviews__item-bottom">
-                        <div class="reviews__item-profile">
-                            <div class="reviews__item-avatar">
-                                <div class="icon">
-                                    <img src="assets/images/icon-girl.jpg" alt="icon">
-                                </div>
-                            </div>
-                            <div class="reviews__item-data">
-                                <div class="reviews__item-nick">
-                                    Ольга Бреева</div>
-                                <div class="reviews__data">Июнь, 2023</div>
-                            </div>
-                        </div>
-                        <div class="reviews__item-stars">
-                            <span></span><span></span><span></span><span></span><span></span>
-                        </div>
-                        <div class="reviews__item-text point2">Долго искала ортодонта, была, наверное, клиниках в 5-6! Но,
-                            побывав у Владислава Евгеньевича, сразу определилась! Перешла за ним в проксима-клиник из другой! Мне
-                            очень нравится комплексный подход к лечению, все этапы можно пройти в одном месте. Ни разу не
-                            навязывали ничего лишнего (что меня отпугивало в нескольких других клиниках!). Рекомендовала
-                            Проксима-клинику уже нескольким знакомым.
-                            Совсем скоро будем снимать брекеты, результатом я уже довольна!)
-                            Спасибо большое!
-                            <div id="review-popup3" class="review-popup"></div>
-                        </div>
-                        <a href="#" data-fancybox data-src="#review-popup3" class="reviews__linc">Читать полностью</a>
+            </a>
+            <a href="#" class="reviews__item-top">
+                <div class="reviews__item-icon">
+                    <img src="assets/images/doc-icon.svg" alt="icon">
+                </div>
+                <div class="reviews__item-top--text">
+                    <div class="reviews__item-top--title">
+                        <div>ПроДокторов</div>
+                        <div>4,8</div>
                     </div>
-                </div>
-                <div class="swiper-slide reviews__item">
-                    <div class="reviews__item-bottom">
-                        <div class="reviews__item-profile">
-                            <div class="reviews__item-avatar">
-                                <div class="icon">
-                                    <img src="assets/images/icon-boy.jpg" alt="icon">
-                                </div>
-                            </div>
-                            <div class="reviews__item-data">
-                                <div class="reviews__item-nick">
-                                    SKoz</div>
-                                <div class="reviews__data">Март, 2023</div>
-                            </div>
-                        </div>
-                        <div class="reviews__item-stars">
-                            <span></span><span></span><span></span><span></span><span></span>
-                        </div>
-                        <div class="reviews__item-text point2">Изначально мы с супругом пришли по отзывам к Владиславу
-                            Евгениевичу. Потом мне стало сложно смотреть, какая становится красивая улыбка у супруга и я поставила
-                            себе брекеты тоже )))
-                            Ездили вместе, муж в основном на прием к Владиславу, а я паралельно к Юлии Максимовной.
-                            Юлия помимо того, что отличный врач, еще и невероятно милая и позитивная девушка, призодить к ней на
-                            прием было удовольствем!)
-
-                            Нам все понравилось, теперь оба ходим сверкаем идеальными улыбками 😁
-
-                            В клинике стильно, красиво. При этом вполне адекватные ценники. Всегда можно написать в Вотсапп,
-                            администраторы запишут/перенесут, либо же через них можно проконсультироваться с доктором. Очень
-                            удобно.
-                            По моим отзывам уже несколько знакомых пришли сюда и все отлично!
-                            Рекоммендую!
-                            <div id="review-popup4" class="review-popup"></div>
-                        </div>
-                        <a href="#" data-fancybox data-src="#review-popup4" class="reviews__linc">Читать полностью</a>
+                    <div class="reviews__item-stars">
+                        <span></span><span></span><span></span><span></span><span></span>
                     </div>
+                    <div class="reviews__data">27 отзывов</div>
                 </div>
-                <div class="swiper-slide reviews__item">
-                    <div class="reviews__item-bottom">
-                        <div class="reviews__item-profile">
-                            <div class="reviews__item-avatar">
-                                <div class="icon">
-                                    <img src="assets/images/icon-boy.jpg" alt="icon">
-                                </div>
-                            </div>
-                            <div class="reviews__item-data">
-                                <div class="reviews__item-nick">
-                                    SKoz</div>
-                                <div class="reviews__data">Март, 2023</div>
-                            </div>
-                        </div>
-                        <div class="reviews__item-stars">
-                            <span></span><span></span><span></span><span></span><span></span>
-                        </div>
-                        <div class="reviews__item-text point2">Изначально мы с супругом пришли по отзывам к Владиславу
-                            Евгениевичу. Потом мне стало сложно смотреть, какая становится красивая улыбка у супруга и я поставила
-                            себе брекеты тоже )))
-                            Ездили вместе, муж в основном на прием к Владиславу, а я паралельно к Юлии Максимовной.
-                            Юлия помимо того, что отличный врач, еще и невероятно милая и позитивная девушка, призодить к ней на
-                            прием было удовольствем!)
-
-                            Нам все понравилось, теперь оба ходим сверкаем идеальными улыбками 😁
-
-                            В клинике стильно, красиво. При этом вполне адекватные ценники. Всегда можно написать в Вотсапп,
-                            администраторы запишут/перенесут, либо же через них можно проконсультироваться с доктором. Очень
-                            удобно.
-                            По моим отзывам уже несколько знакомых пришли сюда и все отлично!
-                            Рекоммендую!
-                            <div id="review-popup5" class="review-popup"></div>
-                        </div>
-                        <a href="#" data-fancybox data-src="#review-popup5" class="reviews__linc">Читать полностью</a>
+            </a>
+            <a href="#" class="reviews__item-top">
+                <div class="reviews__item-icon">
+                    <img src="assets/images/2gis.svg" alt="icon">
+                </div>
+                <div class="reviews__item-top--text">
+                    <div class="reviews__item-top--title">
+                        <div>2ГИС</div>
+                        <div>4,8</div>
                     </div>
+                    <div class="reviews__item-stars">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="reviews__data">20 оценок</div>
                 </div>
-            </div>
+            </a>
+            <a href="#" class="reviews__item-top">
+                <div class="reviews__item-icon">
+                    <img src="assets/images/maps.svg" alt="icon">
+                </div>
+                <div class="reviews__item-top--text">
+                    <div class="reviews__item-top--title">
+                        <div>Google Maps</div>
+                        <div>5,0</div>
+                    </div>
+                    <div class="reviews__item-stars">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="reviews__data">20 оценок</div>
+                </div>
+            </a>
         </div>
-        <div class="pagination reviews-pagination"></div>
-        <div class="reviews__buttons-container">
-            <div class="reviews-button-prev">
-                <img src="assets/images/next.svg" alt="">
+        <div class="reviews__slider">
+            <div class="reviews__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide reviews__item">
+                        <div class="reviews__item-bottom">
+                            <div class="reviews__item-profile">
+                                <div class="reviews__item-avatar">
+                                    <div class="icon">
+                                        <img src="assets/images/icon-girl.jpg" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="reviews__item-data">
+                                    <div class="reviews__item-nick">
+                                        Виктория Т.</div>
+                                    <div class="reviews__data">Август, 2023</div>
+                                </div>
+                            </div>
+                            <div class="reviews__item-stars">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="reviews__item-text point2">В этой клинике я проходила ортодонтическое лечение. Брекеты мне
+                                поставили 2 года назад и вот уже через пару дней поеду снимать. Я осталась в восторге! Прекрасное
+                                здание, внутри современный интерьер, полностью оборудованные кабинеты, даже одноразовые зубные щётки в
+                                туалетах. Встречалась с несколькими врачами на разных процедурах и ни один из них не вызвал у меня ни
+                                доли сомнения в их профессионализме. Все безумно вежливые, порядочные, но при этом открытые. Даже
+                                как-то грустно, что мое лечение подходит к концу. Как бы странно это ни звучало, но я буду скучать по
+                                этому месту ❤️
+
+                                Хочу выразить отдельную благодарность своему лечащему врачу Панкову Владиславу Евгеньевичу, этот
+                                человек изменил мою жизнь)
+                                <div id="review-popup" class="review-popup"></div>
+                            </div>
+                            <a href="#" data-fancybox data-src="#review-popup" class="reviews__linc">Читать полностью</a>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide reviews__item">
+                        <div class="reviews__item-bottom">
+                            <div class="reviews__item-profile">
+                                <div class="reviews__item-avatar">
+                                    <div class="icon">
+                                        <img src="assets/images/icon-girl.jpg" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="reviews__item-data">
+                                    <div class="reviews__item-nick">
+                                        Алёна Киреевская</div>
+                                    <div class="reviews__data">Август, 2023</div>
+                                </div>
+                            </div>
+                            <div class="reviews__item-stars">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="reviews__item-text point2">В Proxima лечусь с самого открытия клиники, пришла сюда в
+                                след за свои
+                                Ортодонтом, Владиславом Евгеньевичем) прошла за это время здесь многое, лечение зуба, удаление зуба
+                                мудрости, постановка имплантов, коронок) вообщем испробовала на себе все блага клиники) Если
+                                возникали
+                                какие то проблемы, или меня что-то беспокоило, всегда была обратная связь, всегда находили окошко на
+                                прием) Все врачи и ассистенты, прекрасные специалисты. Девочки на ресепшен очень доброжелательны и
+                                приветливы и всегда помогут) Вообщем, если вы искали клинику где вам не навязывают лишнее и делают
+                                качественно, то вам к ребятам в PROXIMA) Спасибо большое, Вам)
+                                <div id="review-popup2" class="review-popup"></div>
+                            </div>
+                            <a href="#" data-fancybox data-src="#review-popup2" class="reviews__linc">Читать полностью</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide reviews__item">
+                        <div class="reviews__item-bottom">
+                            <div class="reviews__item-profile">
+                                <div class="reviews__item-avatar">
+                                    <div class="icon">
+                                        <img src="assets/images/icon-girl.jpg" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="reviews__item-data">
+                                    <div class="reviews__item-nick">
+                                        Ольга Бреева</div>
+                                    <div class="reviews__data">Июнь, 2023</div>
+                                </div>
+                            </div>
+                            <div class="reviews__item-stars">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="reviews__item-text point2">Долго искала ортодонта, была, наверное, клиниках в 5-6! Но,
+                                побывав у Владислава Евгеньевича, сразу определилась! Перешла за ним в проксима-клиник из другой! Мне
+                                очень нравится комплексный подход к лечению, все этапы можно пройти в одном месте. Ни разу не
+                                навязывали ничего лишнего (что меня отпугивало в нескольких других клиниках!). Рекомендовала
+                                Проксима-клинику уже нескольким знакомым.
+                                Совсем скоро будем снимать брекеты, результатом я уже довольна!)
+                                Спасибо большое!
+                                <div id="review-popup3" class="review-popup"></div>
+                            </div>
+                            <a href="#" data-fancybox data-src="#review-popup3" class="reviews__linc">Читать полностью</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide reviews__item">
+                        <div class="reviews__item-bottom">
+                            <div class="reviews__item-profile">
+                                <div class="reviews__item-avatar">
+                                    <div class="icon">
+                                        <img src="assets/images/icon-boy.jpg" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="reviews__item-data">
+                                    <div class="reviews__item-nick">
+                                        SKoz</div>
+                                    <div class="reviews__data">Март, 2023</div>
+                                </div>
+                            </div>
+                            <div class="reviews__item-stars">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="reviews__item-text point2">Изначально мы с супругом пришли по отзывам к Владиславу
+                                Евгениевичу. Потом мне стало сложно смотреть, какая становится красивая улыбка у супруга и я поставила
+                                себе брекеты тоже )))
+                                Ездили вместе, муж в основном на прием к Владиславу, а я паралельно к Юлии Максимовной.
+                                Юлия помимо того, что отличный врач, еще и невероятно милая и позитивная девушка, призодить к ней на
+                                прием было удовольствем!)
+
+                                Нам все понравилось, теперь оба ходим сверкаем идеальными улыбками 😁
+
+                                В клинике стильно, красиво. При этом вполне адекватные ценники. Всегда можно написать в Вотсапп,
+                                администраторы запишут/перенесут, либо же через них можно проконсультироваться с доктором. Очень
+                                удобно.
+                                По моим отзывам уже несколько знакомых пришли сюда и все отлично!
+                                Рекоммендую!
+                                <div id="review-popup4" class="review-popup"></div>
+                            </div>
+                            <a href="#" data-fancybox data-src="#review-popup4" class="reviews__linc">Читать полностью</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide reviews__item">
+                        <div class="reviews__item-bottom">
+                            <div class="reviews__item-profile">
+                                <div class="reviews__item-avatar">
+                                    <div class="icon">
+                                        <img src="assets/images/icon-boy.jpg" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="reviews__item-data">
+                                    <div class="reviews__item-nick">
+                                        SKoz</div>
+                                    <div class="reviews__data">Март, 2023</div>
+                                </div>
+                            </div>
+                            <div class="reviews__item-stars">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <div class="reviews__item-text point2">Изначально мы с супругом пришли по отзывам к Владиславу
+                                Евгениевичу. Потом мне стало сложно смотреть, какая становится красивая улыбка у супруга и я поставила
+                                себе брекеты тоже )))
+                                Ездили вместе, муж в основном на прием к Владиславу, а я паралельно к Юлии Максимовной.
+                                Юлия помимо того, что отличный врач, еще и невероятно милая и позитивная девушка, призодить к ней на
+                                прием было удовольствем!)
+
+                                Нам все понравилось, теперь оба ходим сверкаем идеальными улыбками 😁
+
+                                В клинике стильно, красиво. При этом вполне адекватные ценники. Всегда можно написать в Вотсапп,
+                                администраторы запишут/перенесут, либо же через них можно проконсультироваться с доктором. Очень
+                                удобно.
+                                По моим отзывам уже несколько знакомых пришли сюда и все отлично!
+                                Рекоммендую!
+                                <div id="review-popup5" class="review-popup"></div>
+                            </div>
+                            <a href="#" data-fancybox data-src="#review-popup5" class="reviews__linc">Читать полностью</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="reviews-button-next">
-                <img src="assets/images/next.svg" alt="">
+            <div class="pagination reviews-pagination"></div>
+            <div class="reviews__buttons-container">
+                <div class="reviews-button-prev">
+                    <img src="assets/images/next.svg" alt="">
+                </div>
+                <div class="reviews-button-next">
+                    <img src="assets/images/next.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
