@@ -439,7 +439,7 @@ a:hover {
   .list__swiper,
   .team__wrapper {
         position: relative;
-        max-width: 32rem;
+        max-width: 34rem;
     }
 }
 
@@ -729,8 +729,8 @@ a:hover {
         display: flex;
         -ms-flex-pack: center;
         justify-content: center;
-        -ms-flex-align: end;
-        align-items: end;
+        -ms-flex-align: center;
+        align-items: center;
         height: 4rem;
     }
 }

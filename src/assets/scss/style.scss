@@ -230,7 +230,7 @@ a:hover {
   }
   @include breakpoint($sm-bp) {
     position: relative;
-    max-width: 32rem;
+    max-width: 34rem;
   }
 }
 
@@ -474,7 +474,7 @@ a:hover {
   @include breakpoint($sm-bp) {
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     height: 4rem;
   }
 }
