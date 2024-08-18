@@ -123,7 +123,7 @@ h1 {
   font-size: 4rem;
   line-height: 4.8rem;
   @include breakpoint($xl-bp) {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     line-height: 2.8rem;
   }
 
@@ -216,8 +216,7 @@ a:hover {
 .doc__swiper,
 .process__swiper,
 .details__swiper,
-.list__swiper,
-.team__wrapper {
+.list__swiper {
   width: 100%;
   max-width: 121.6rem;
   margin: 0 auto;
@@ -231,6 +230,24 @@ a:hover {
   @include breakpoint($sm-bp) {
     position: relative;
     max-width: 34rem;
+  }
+}
+
+.team__wrapper {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  overflow: hidden;
+  @include breakpoint($cos_bp) {
+    width: 120rem;
+  }
+  @include breakpoint($xl-bp) {
+    max-width: 90rem;
+  }
+  @include breakpoint($sm-bp) {
+    position: relative;
+    width: calc(100vw - 1.5rem);
+    padding-left: 1.5rem;
   }
 }
 
@@ -249,7 +266,7 @@ a:hover {
     position: relative;
     width: calc(100vw - 1.5rem);
     padding-left: 1.5rem;
-    max-width: 35rem;
+    //max-width: 35rem;
   }
 }
 
@@ -265,12 +282,13 @@ a:hover {
 }
 
 .process__wrapper,
-.team__wrapper,
 .details__wrapper {
   @include breakpoint($sm-bp) {
     padding-left: 2rem;
   }
 }
+
+
 
 .list-pagination {
   @include breakpoint($sm-bp) {
@@ -476,6 +494,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     height: 4rem;
+    position: absolute;
   }
 }
 
