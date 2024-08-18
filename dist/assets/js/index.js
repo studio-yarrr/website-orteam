@@ -76,29 +76,49 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     function handleForm(formInf) {
         formInf.addEventListener('submit', function (event) {
+            event.preventDefault();
+
             const controls = this.querySelectorAll('.required__input');
             let isValid = true;
 
             controls.forEach(control => {
-                if (control.classList.contains('required') && !control.value) {
+                const errorForm = control.previousElementSibling;
+                if (!control.value) {
                     isValid = false;
+                    control.classList.add('invalid');
+                    errorForm.classList.add('active');
+                } else {
+                    control.classList.remove('invalid');
+                    errorForm.classList.remove('active');
                 }
             });
 
             if (isValid) {
-                event.preventDefault();
                 controls.forEach(control => {
                     control.value = '';
+                    control.classList.remove('invalid');
+                    const errorForm = control.previousElementSibling;
+                    errorForm.classList.remove('active');
                 });
 
                 closeAll();
                 setTimeout(() => {
-                    showSuccesseModal()
+                    showSuccesseModal();
                 }, 300);
-
             } else {
                 console.log('Форма содержит ошибки.');
             }
+        });
+
+        const controls = formInf.querySelectorAll('.required__input');
+        controls.forEach(control => {
+            control.addEventListener('input', function () {
+                const errorForm = control.previousElementSibling;
+                if (control.value) {
+                    control.classList.remove('invalid');
+                    errorForm.classList.remove('active');
+                }
+            });
         });
     }
 

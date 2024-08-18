@@ -615,8 +615,8 @@
         </div>
     </section>
     
-    <section class="process process__wrapper wrapper" id="process">
-        <h2 class="team__title">До и после</h2>
+    <section class="process process__wrapper" id="process">
+        <h2 class="team__title wrapper">До и после</h2>
         <div class="process__slider">
             <div class="process__swiper">
                 <div class="swiper-wrapper">
@@ -771,17 +771,17 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="process__buttons-container">
-                <div class="process-button-prev prev">
-                    <img src="assets/images/next.svg" alt="">
+                <div class="process__buttons-container">
+                    <div class="process-button-prev prev">
+                        <img src="assets/images/next.svg" alt="">
+                    </div>
+                    <div class="process-button-next next">
+                        <img src="assets/images/next.svg" alt="">
+                    </div>
                 </div>
-                <div class="process-button-next next">
-                    <img src="assets/images/next.svg" alt="">
-                </div>
             </div>
-            <div class="pagination process-pagination"></div>
     
+            <div class="pagination process-pagination"></div>
         </div>
     </section>
     
@@ -795,10 +795,12 @@
             </div>
             <form class="form sendForm">
                 <label class="input">
-                    <input type="text" name="name" placeholder="Имя*" required class="required__input">
+                    <span class="error-form">Введите имя</span>
+                    <input type="text" name="name" placeholder="Имя*" class="required__input">
                 </label>
                 <label class="input">
-                    <input type="tel" name="tel" placeholder="Телефон*" class="required__input custom-input" required>
+                    <span class="error-form">Введите телефон</span>
+                    <input type="tel" name="tel" placeholder="Телефон*" class="required__input custom-input">
                 </label>
                 <label class="input">
                     <select name="list">
@@ -1187,7 +1189,7 @@
         </div>
     </section>
     
-    <section class="price wrapper" id="price">
+    <section class="price price__wrapper" id="price">
         <h2 class="team__title element-animation-opacity">Стоимость лечения</h2>
         <div class="price__container">
             <div class="price-swiper">
@@ -1796,10 +1798,12 @@
             </div>
             <form class="form sendForm">
                 <label class="input">
-                    <input type="text" name="name" placeholder="Имя*" required class="required__input">
+                    <span class="error-form">Введите имя</span>
+                    <input type="text" name="name" placeholder="Имя*" class="required__input">
                 </label>
                 <label class="input">
-                    <input type="tel" name="tel" placeholder="Телефон*" class="required__input custom-input" required>
+                    <span class="error-form">Введите телефон</span>
+                    <input type="tel" name="tel" placeholder="Телефон*" class="required__input custom-input">
                 </label>
                 <label class="input">
                     <select name="list">
@@ -2128,10 +2132,12 @@
           </div>
           <form class="form sendForm">
               <label class="input">
-                  <input type="text" name="name" placeholder="Имя*" required class="required__input">
+                  <span class="error-form">Введите имя</span>
+                  <input type="text" name="name" placeholder="Имя*" class="required__input">
               </label>
               <label class="input">
-                  <input type="tel" name="tel" placeholder="Телефон*" class="required__input custom-input" required>
+                  <span class="error-form">Введите телефон</span>
+                  <input type="tel" name="tel" placeholder="Телефон*" class="required__input custom-input">
               </label>
               <label class="input">
                   <select name="list">

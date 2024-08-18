@@ -236,6 +236,55 @@ img {
     object-fit: cover;
 }
 
+.invalid {
+    border-bottom: 0.1rem solid red;
+}
+
+.invalid::-webkit-input-placeholder {
+    color: red;
+}
+
+.invalid:-ms-input-placeholder {
+    color: red;
+}
+
+.invalid::-ms-input-placeholder {
+    color: red;
+}
+
+.invalid::placeholder {
+    color: red;
+}
+
+.error-form {
+    background-image: url("../images/error.svg");
+    background-repeat: no-repeat;
+    width: 13rem;
+    height: 4rem;
+    color: var(--white);
+    position: absolute;
+    background-size: 13rem;
+    padding-top: 0.5rem;
+    left: 16%;
+    top: -160%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: none;
+}
+
+.error-form.active {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.input {
+    position: relative;
+}
+
+input {
+    width: 100%;
+}
+
 .wrapper {
     width: 100%;
     max-width: 121.6rem;
@@ -439,6 +488,9 @@ a:hover {
     }
 }
 
+.price__wrapper,
+.price__wrapper,
+.process__wrapper,
 .team__wrapper {
     width: 100%;
     max-width: 121.6rem;
@@ -447,19 +499,28 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .team__wrapper {
+    .price__wrapper,
+  .price__wrapper,
+  .process__wrapper,
+  .team__wrapper {
         width: 120rem;
     }
 }
 
 @media (max-width: 1024px) {
-    .team__wrapper {
+    .price__wrapper,
+  .price__wrapper,
+  .process__wrapper,
+  .team__wrapper {
         max-width: 90rem;
     }
 }
 
 @media (max-width: 768px) {
-    .team__wrapper {
+    .price__wrapper,
+  .price__wrapper,
+  .process__wrapper,
+  .team__wrapper {
         position: relative;
         width: calc(100vw - 1.5rem);
         padding-left: 1.5rem;
@@ -5664,11 +5725,11 @@ a.order4 .list__item {
 
 @media (max-width: 768px) {
     .process__slider {
-        height: 45rem;
+        height: 47rem;
         -ms-flex-align: start;
         align-items: flex-start;
         margin-top: 2rem;
-        padding-bottom: 3rem;
+        padding-bottom: 5rem;
         overflow: hidden;
     }
 }
@@ -5702,12 +5763,29 @@ a.order4 .list__item {
 .process__img {
     width: 21rem;
     height: 12.8rem;
+    position: relative;
 }
 
 @media (max-width: 768px) {
     .process__img {
         width: 25rem;
     }
+}
+
+.process__img:nth-child(1)::before {
+    content: "до";
+    position: absolute;
+    left: 4%;
+    bottom: 6%;
+    color: var(--white);
+}
+
+.process__img:nth-child(2)::before {
+    content: "после";
+    position: absolute;
+    left: 4%;
+    bottom: 6%;
+    color: var(--white);
 }
 
 .process__img img {
@@ -6089,9 +6167,15 @@ a.order4 .list__item {
 }
 
 @media (max-width: 768px) {
-    .calculator__container h2,
-  .braces h2,
+    .braces h2,
   .reviews h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator__container h2 {
+        max-width: 96%;
         text-align: center;
     }
 }
@@ -6173,14 +6257,15 @@ a.order4 .list__item {
   .articles__slider,
   .braces__slider {
         padding-top: 3.6rem;
-        padding-bottom: 3rem;
+        padding-bottom: 5rem;
     }
 }
 
 @media (max-width: 768px) {
-    .braces__slider {
+    .articles__slider,
+  .braces__slider {
         padding-top: 0;
-        padding-bottom: 3rem;
+        padding-bottom: 5rem;
     }
 }
 
@@ -6376,7 +6461,7 @@ a.analytics__button {
 
 @media (max-width: 768px) {
     .price {
-        padding: 0;
+        padding: 0 0 0 1.5rem;
         background-color: var(--bg-main);
     }
 }

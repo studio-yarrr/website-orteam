@@ -85,6 +85,40 @@ img {
   object-fit: cover;
 }
 
+.invalid {
+  border-bottom: 0.1rem solid red;
+}
+
+.invalid::placeholder {
+  color: red;
+}
+
+.error-form {
+  background-image: url("../images/error.svg");
+  background-repeat: no-repeat;
+  width: 13rem;
+  height: 4rem;
+  color: var(--white);
+  position: absolute;
+  background-size: 13rem;
+  padding-top: 0.5rem;
+  left: 16%;
+  top: -160%;
+  justify-content: center;
+  display: none;
+  &.active {
+    display: flex;
+  }
+}
+
+.input {
+  position: relative;
+}
+
+input {
+  width: 100%;
+}
+
 .wrapper {
   width: 100%;
   max-width: 121.6rem;
@@ -233,6 +267,9 @@ a:hover {
   }
 }
 
+.price__wrapper,
+.price__wrapper,
+.process__wrapper,
 .team__wrapper {
   width: 100%;
   max-width: 121.6rem;

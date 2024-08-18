@@ -946,10 +946,10 @@ a.order4 .list__item {
   align-items: center;
   justify-content: flex-end;
   @include breakpoint($sm-bp) {
-    height: 45rem;
+    height: 47rem;
     align-items: flex-start;
     margin-top: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
     overflow: hidden;
   }
 }
@@ -975,10 +975,28 @@ a.order4 .list__item {
 .process__img {
   width: 21rem;
   height: 12.8rem;
+  position: relative;
   @include breakpoint($sm-bp) {
     width: 25rem;
   }
 }
+
+.process__img:nth-child(1)::before {
+  content: 'до';
+  position: absolute;
+  left: 4%;
+  bottom: 6%;
+  color: var(--white);
+}
+
+.process__img:nth-child(2)::before {
+  content: 'после';
+  position: absolute;
+  left: 4%;
+  bottom: 6%;
+  color: var(--white);
+}
+
 
 .process__img img {
   border-radius: 1.2rem;
@@ -1290,10 +1308,16 @@ a.order4 .list__item {
   }
 }
 
-.calculator__container h2,
 .braces h2,
 .reviews h2 {
   @include breakpoint($sm-bp) {
+    text-align: center;
+  }
+}
+
+.calculator__container h2 {
+  @include breakpoint($sm-bp) {
+    max-width: 96%;
     text-align: center;
   }
 }
@@ -1356,14 +1380,15 @@ a.order4 .list__item {
   position: relative;
   @include breakpoint($sm-bp) {
     padding-top: 3.6rem;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
   }
 }
 
+.articles__slider,
 .braces__slider {
   @include breakpoint($sm-bp) {
     padding-top: 0;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -1511,8 +1536,7 @@ a.analytics__button {
   border-radius: 1.2rem;
   padding: 8.4rem 2rem 10.4rem 2rem;
   @include breakpoint($sm-bp) {
-    //padding: 0 2rem 6.4rem 2rem;
-    padding: 0;
+    padding: 0 0 0 1.5rem;
     background-color: var(--bg-main);
   }
 }
