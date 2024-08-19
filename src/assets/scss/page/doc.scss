@@ -30,12 +30,18 @@
   @include breakpoint($xl-bp) {
     margin-top: 2.4rem;
   }
+
+  & .pagination {
+    @include breakpoint($sm-bp) {
+      bottom: 22%;
+    }
+  }
 }
 
 .doc h1 {
-  margin-top: 8.4rem;
+  margin-top: 6.4rem;
   @include breakpoint($xl-bp) {
-    margin-top: 6.4rem;
+    margin-top: 4.4rem;
     font-size: 2.8rem;
     line-height: 3.3rem;
     text-align: center;

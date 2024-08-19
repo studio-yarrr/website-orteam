@@ -843,12 +843,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .doc-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: -12%;
-    }
-}
-
-@media (max-width: 768px) {
     .video-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
         bottom: -2%;
     }
@@ -7200,13 +7194,19 @@ a.analytics__button {
     }
 }
 
+@media (max-width: 768px) {
+    .doc__slider .pagination {
+        bottom: 22%;
+    }
+}
+
 .doc h1 {
-    margin-top: 8.4rem;
+    margin-top: 6.4rem;
 }
 
 @media (max-width: 1024px) {
     .doc h1 {
-        margin-top: 6.4rem;
+        margin-top: 4.4rem;
         font-size: 2.8rem;
         line-height: 3.3rem;
         text-align: center;
