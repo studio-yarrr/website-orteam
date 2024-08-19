@@ -279,10 +279,6 @@ img {
     opacity: 1;
 }
 
-.input {
-    position: relative;
-}
-
 input {
     width: 100%;
 }
@@ -6034,6 +6030,7 @@ a.order4 .list__item {
 
 .input {
     border-bottom: 1px solid var(--grey);
+    position: relative;
 }
 
 .italic {
@@ -8146,6 +8143,7 @@ select {
     padding-right: 30px;
 }
 
+.heading-icon--top-form,
 .heading-icon--top,
 .heading-icon {
     position: absolute;
@@ -8154,6 +8152,12 @@ select {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     pointer-events: none;
+}
+
+.heading-icon--top-form.active {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: -35%;
 }
 
 .heading-icon--top.active {

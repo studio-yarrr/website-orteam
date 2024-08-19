@@ -348,8 +348,42 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
+  const inputAction = document.querySelectorAll('.input__action');
 
-    const onList = document.querySelector('.doctor-qualification__linc');
+  if (inputAction) {
+    inputAction.forEach(item => {
+      item.addEventListener('focus', () => {
+        const icon = item.querySelector('\.heading-icon--top-form');
+        if (icon) {
+          icon.classList.add('active');
+        }
+      });
+
+      item.addEventListener('blur', () => {
+        const icon = item.querySelector('\.heading-icon--top-form');
+        if (icon) {
+          icon.classList.remove('active');
+        }
+      });
+
+      item.addEventListener('change', () => {
+        const icon = item.querySelector('\.heading-icon--top-form');
+        if (icon) {
+          icon.classList.remove('active');
+        }
+      });
+
+      item.addEventListener('mousedown', () => {
+        const icon = item.querySelector('\.heading-icon--top-form');
+        if (icon) {
+          icon.classList.add('active');
+        }
+      });
+    });
+  }
+
+
+  const onList = document.querySelector('.doctor-qualification__linc');
     const list = document.querySelector('.doctor-qualification__list');
 
    if(onList) {

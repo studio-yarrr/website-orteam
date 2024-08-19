@@ -141,6 +141,7 @@ select {
   padding-right: 30px;
 }
 
+.heading-icon--top-form,
 .heading-icon--top,
 .heading-icon {
   position: absolute;
@@ -148,6 +149,11 @@ select {
   right: 10px;
   transform: translateY(-50%);
   pointer-events: none;
+}
+
+.heading-icon--top-form.active {
+  transform: rotate(180deg);
+  top: -35%;
 }
 
 .heading-icon--top.active {
