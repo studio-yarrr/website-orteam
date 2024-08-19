@@ -509,6 +509,7 @@ a:hover {
     .cost-swiper {
         position: relative;
         max-width: 32rem;
+        height: 71rem;
     }
 }
 
@@ -9382,6 +9383,12 @@ select {
 .cost__slider {
     padding-bottom: 5.6rem;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    .cost__slider {
+        padding-bottom: 3.6rem;
+    }
 }
 
 .cost-slide__img,

@@ -282,6 +282,7 @@ a:hover {
   @include breakpoint($sm-bp) {
     position: relative;
     max-width: 32rem;
+    height: 71rem;
   }
 }
 

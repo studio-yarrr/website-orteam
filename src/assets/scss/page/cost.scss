@@ -17,6 +17,9 @@
 .cost__slider {
   padding-bottom: 5.6rem;
   position: relative;
+  @include breakpoint($sm-bp) {
+    padding-bottom: 3.6rem;
+  }
 }
 
 .cost-slide__img,
@@ -183,7 +186,6 @@
     flex-direction: column;
   }
 }
-
 
 .cost__container {
   border-radius: 1.2rem;
