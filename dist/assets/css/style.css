@@ -9408,6 +9408,7 @@ select {
         padding: 1.2rem;
         -ms-flex-item-align: start;
         align-self: flex-start;
+        gap: 3.1rem;
     }
 }
 
@@ -9455,6 +9456,7 @@ select {
     list-style: square inside;
     margin-bottom: 2.5rem;
     margin-top: 1.2rem;
+    max-width: 95%;
 }
 
 @media (max-width: 768px) {
@@ -9462,6 +9464,7 @@ select {
         gap: 1rem;
         margin-bottom: 1rem;
         margin-top: 1rem;
+        max-width: 94%;
     }
 }
 
