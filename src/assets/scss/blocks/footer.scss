@@ -117,6 +117,7 @@
 
 .footer__bottom-list {
   margin: 0 7rem;
+  gap: 2.4rem;
   @include breakpoint($xl-bp) {
     margin: 0;
     flex-wrap: wrap;
