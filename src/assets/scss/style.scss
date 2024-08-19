@@ -242,7 +242,6 @@ a:hover {
   }
 }
 
-.cost-swiper,
 .doctor-certificate__swiper,
 .process-swiper,
 .video-swiper,
@@ -266,6 +265,23 @@ a:hover {
   @include breakpoint($sm-bp) {
     position: relative;
     max-width: 34rem;
+  }
+}
+
+.cost-swiper {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  overflow: hidden;
+  @include breakpoint($cos_bp) {
+    width: 120rem;
+  }
+  @include breakpoint($xl-bp) {
+    max-width: 90rem;
+  }
+  @include breakpoint($sm-bp) {
+    position: relative;
+    max-width: 32rem;
   }
 }
 

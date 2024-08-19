@@ -424,7 +424,6 @@ a:hover {
     }
 }
 
-.cost-swiper,
 .doctor-certificate__swiper,
 .process-swiper,
 .video-swiper,
@@ -442,8 +441,7 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .cost-swiper,
-  .doctor-certificate__swiper,
+    .doctor-certificate__swiper,
   .process-swiper,
   .video-swiper,
   .articles-swiper,
@@ -458,8 +456,7 @@ a:hover {
 }
 
 @media (max-width: 1024px) {
-    .cost-swiper,
-  .doctor-certificate__swiper,
+    .doctor-certificate__swiper,
   .process-swiper,
   .video-swiper,
   .articles-swiper,
@@ -474,8 +471,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .cost-swiper,
-  .doctor-certificate__swiper,
+    .doctor-certificate__swiper,
   .process-swiper,
   .video-swiper,
   .articles-swiper,
@@ -487,6 +483,32 @@ a:hover {
   .list__swiper {
         position: relative;
         max-width: 34rem;
+    }
+}
+
+.cost-swiper {
+    width: 100%;
+    max-width: 121.6rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@media (max-width: 1700px) {
+    .cost-swiper {
+        width: 120rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cost-swiper {
+        max-width: 90rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cost-swiper {
+        position: relative;
+        max-width: 32rem;
     }
 }
 
