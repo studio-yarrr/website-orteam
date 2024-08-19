@@ -221,6 +221,9 @@
 
 .cost__underlining2 {
   width: 42rem;
+  @include breakpoint($sm-bp) {
+    width: 100%;
+  }
 }
 
 .cost__line-right2 {
@@ -250,7 +253,7 @@
 
 .cost__accordion-item {
   display: grid;
-  grid-template-columns: 42rem 30rem 8rem;
+  grid-template-columns: 42rem 30rem 10rem;
   justify-content: space-between;
   align-items: flex-end;
   @include breakpoint($sm-bp) {

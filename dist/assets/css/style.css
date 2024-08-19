@@ -9626,6 +9626,12 @@ select {
     width: 42rem;
 }
 
+@media (max-width: 768px) {
+    .cost__underlining2 {
+        width: 100%;
+    }
+}
+
 .cost__line-right2 {
     width: 58%;
 }
@@ -9661,7 +9667,7 @@ select {
 
 .cost__accordion-item {
     display: grid;
-    grid-template-columns: 42rem 30rem 8rem;
+    grid-template-columns: 42rem 30rem 10rem;
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-align: end;
