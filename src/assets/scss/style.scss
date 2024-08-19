@@ -570,7 +570,7 @@ a:hover {
 
 .details-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
-    left: 40%;
+    left: -3%;
   }
 }
 
