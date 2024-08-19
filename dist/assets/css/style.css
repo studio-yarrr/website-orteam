@@ -10642,7 +10642,7 @@ div .view-icon {
     background-color: var(--white);
     background-image: url(../images/bg-grey.svg);
     background-repeat: no-repeat;
-    background-position: 100% 100%;
+    background-position: 101% 101%;
     border-radius: 1.2rem;
     padding: 3.7rem 13.7rem 3.7rem;
     background-size: 76rem;
@@ -10654,6 +10654,14 @@ div .view-icon {
         padding: 1.2rem;
         background-size: 32rem;
         margin-bottom: 3.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.2rem 1.2rem 0 1.2rem;
+        background-size: 36.1rem;
+        background-position: 48% 100.2%;
     }
 }
 
