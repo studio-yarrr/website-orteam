@@ -349,7 +349,6 @@ const slider14 = new Swiper('.cost-swiper', {
     speed: 800,
     slidesPerView: 1,
     loop: true,
-    // autoHeight: true,
     navigation: {
         nextEl: '.cost-button-next',
         prevEl: '.cost-button-prev',
