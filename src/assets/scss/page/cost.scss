@@ -303,9 +303,7 @@
   position: relative;
   cursor: pointer;
   transition: border 0.3s;
-  &.active {
-    border: 1px solid var(--color2);
-  }
+  border: 1px solid var(--color2); /* Добавили изначальный минус */
 }
 
 .cost-icon span {
@@ -322,11 +320,11 @@
 .cost-icon .vertical {
   height: 1.5rem;
   width: 0.3rem;
-  transform: scaleY(0);
+  transform: scaleY(1);
 }
 
 .cost-icon.active .vertical {
-  transform: scaleY(1);
+  transform: scaleY(0);
 }
 
 .cost__item-title {
