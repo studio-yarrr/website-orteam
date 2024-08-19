@@ -7220,7 +7220,7 @@ a.analytics__button {
     gap: 2rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .doc__container {
         display: none;
     }
@@ -7230,7 +7230,7 @@ a.analytics__button {
     display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .doc__slider {
         display: -ms-flexbox;
         display: flex;

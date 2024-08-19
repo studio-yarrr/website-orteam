@@ -47,14 +47,14 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 24rem);
   gap: 2rem;
-  @include breakpoint($xl-bp) {
+  @include breakpoint($sm-bp) {
     display: none;
   }
 }
 
 .doc__slider {
   display: none;
-  @include breakpoint($xl-bp) {
+  @include breakpoint($sm-bp) {
     display: flex;
     padding-bottom: 3rem;
   }
