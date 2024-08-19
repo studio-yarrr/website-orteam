@@ -270,11 +270,13 @@ img {
     -ms-flex-pack: center;
     justify-content: center;
     display: none;
+    transition: opacity 0.3s ease;
 }
 
 .error-form.active {
     display: -ms-flexbox;
     display: flex;
+    opacity: 1;
 }
 
 .input {

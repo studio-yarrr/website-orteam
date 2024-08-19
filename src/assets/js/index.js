@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
 
-    const formSend = document.querySelectorAll('.sendForm');
+  const formSend = document.querySelectorAll('.sendForm');
 
     if (formSend) {
         formSend.forEach(item => {

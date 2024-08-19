@@ -106,8 +106,10 @@ img {
   top: -160%;
   justify-content: center;
   display: none;
+  transition: opacity 0.3s ease;
   &.active {
     display: flex;
+    opacity: 1;
   }
 }
 
