@@ -109,23 +109,61 @@
                <img src="assets/images/entry-img.jpg" alt="image">
            </div>
             <div class="entry__top-text">
-    <!--            <div class="entry__top-level">-->
-    <!--                <div class="entry_inf">-->
-    <!--                    <div class="day">01.08.2024</div>-->
-    <!--                    <div class="views__container">-->
-    <!--                        <div>-->
-    <!--                            <svg class="view-icon">-->
-    <!--                                <use xlink:href="assets/images/sprite/view.svg#view"></use>-->
-    <!--                            </svg>-->
-    <!--                        </div>-->
-    <!--                        <div class="views"> 1 024</div>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="entry__item-stars">-->
-    <!--                    <span></span><span></span><span></span><span></span><span></span>-->
-    <!--                </div>-->
-    <!--            </div>-->
+                <div class="entry__top-level">
+                    <div class="entry_inf">
+                        <div class="entry_inf-data">
+                            <div class="day">01.08.2024</div>
+                            <div class="view__inf">
+                                <div class="view__inf-item">
+                                    <div class="entry__bottom-level--text">
+                                        Обновили
+                                    </div>
+                                    <div class="view__text">
+                                        26.06.2024
+                                    </div>
+                                </div>
+                                <div class="view__inf-item">
+                                    <div class="entry__bottom-level--text">
+                                        Опубликовали
+                                    </div>
+                                    <div class="view__text">
+                                        20.06.2024
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="views__container">
+                            <div>
+                                <svg class="view-icon">
+                                    <use xlink:href="assets/images/sprite/view.svg#view"></use>
+                                </svg>
+                            </div>
+                            <div class="views"> 1 024</div>
+                        </div>
+                    </div>
+                    <div class="entry__item-stars">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
                 <h1>Что такое правильный прикус, виды неправильного и как определить</h1>
+                <div class="entry__bottom-level">
+                    <div class="entry__bottom-level--item">
+                        <div class="icon-small">
+                            <img src="assets/images/image.svg" alt="icon">
+                        </div>
+                        <div class="entry__bottom-level--text">
+                            144
+                        </div>
+                    </div>
+                    <div class="entry__bottom-level--item">
+                        <div class="icon-small">
+                            <img src="assets/images/send.svg" alt="icon">
+                        </div>
+                        <div class="entry__bottom-level--text">
+                            Поделиться
+                        </div>
+                    </div>
+                </div>
             </div>
     
         </div>
@@ -301,12 +339,15 @@
                     <label class="input">
                         <input type="tel" name="tel" placeholder="Телефон*" class="required__input custom-input" required="">
                     </label>
-                    <label class="input">
+                    <label class="input input__action">
                         <select name="list">
-                            <option value="1">Напишите мне в WhatsApp</option>
-                            <option value="2">Напишите мне в Telegram</option>
+                            <option value="1">Напишите мне в <span class="italic">WhatsApp</span></option>
+                            <option value="2">Напишите мне в <span class="italic">Telegram</span></option>
                             <option value="3">Перезвоните мне</option>
                         </select>
+                        <div class="heading-icon--top-form">
+                            <img src="assets/images/menu-arrow.svg" alt="icon">
+                        </div>
                     </label>
                     <button class="button" type="submit">Записаться</button>
                     <span>Нажимая на&nbsp;кнопку «Записаться», я&nbsp;принимаю условия пользовательского соглашения и&nbsp;даю&nbsp;согласие на&nbsp;обработку своих персональных данных.</span>

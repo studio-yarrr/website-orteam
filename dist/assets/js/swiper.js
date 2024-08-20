@@ -303,7 +303,7 @@ const slider12 = new Swiper('.case-swiper', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 1,
+            slidesPerView: 1.25,
         },
         768: {
             slidesPerView: 2,

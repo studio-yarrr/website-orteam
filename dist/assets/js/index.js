@@ -694,4 +694,13 @@ const blog = document.querySelector('.blog');
       });
   }
 
+  const day = document.querySelector('.day');
+
+  if(day) {
+    day.addEventListener('click', () => {
+      const viewItem = document.querySelector('.view__inf');
+      viewItem.classList.toggle('active')
+    })
+  }
+
 });

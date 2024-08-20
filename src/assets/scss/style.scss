@@ -393,9 +393,17 @@ a:hover {
 
 
 .case-swiper {
-  width: 114.3rem;
+  max-width: 114.3rem;
   height: 60rem;
   overflow: hidden;
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
+  @include breakpoint($sm-bp) {
+    position: relative;
+    max-width: 34rem;
+    height: 43rem;
+  }
 }
 
 .about__swiper {
@@ -693,6 +701,11 @@ a:hover {
   &:hover img {
     scale: 120%;
   }
+}
+
+.icon-small {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 ::-webkit-scrollbar {
