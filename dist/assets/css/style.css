@@ -3705,6 +3705,10 @@ button.swiper-pagination-bullet {
     color: var(--color1);
 }
 
+.border:hover a {
+    color: var(--color1);
+}
+
 .menu {
     display: -ms-flexbox;
     display: flex;
@@ -4425,6 +4429,10 @@ button.swiper-pagination-bullet {
 .border:hover {
     cursor: pointer;
     background-color: var(--color2);
+    color: var(--color1);
+}
+
+.border:hover a {
     color: var(--color1);
 }
 

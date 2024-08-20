@@ -52,6 +52,10 @@
   color: var(--color1);
 }
 
+.border:hover a {
+  color: var(--color1);
+}
+
 .menu {
   display: flex;
   gap: 4rem;
