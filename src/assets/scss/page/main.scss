@@ -386,12 +386,10 @@ a:hover .list__item {
 .content__list-container {
   background-color: var(--bg-main);
   padding: 2.2rem 2.4rem 2.4rem 2.4rem;
-  //border-top: 1px solid var(--color2);
-  //border-bottom: 1px solid var(--color2);
-  //border-left: 1px solid var(--color2);
-  //border-top-left-radius: 1.2rem;
-  //border-bottom-left-radius: 1.2rem;
   width: 42.7rem;
+  @include breakpoint($xxl_bp) {
+    width: 47.7rem;
+  }
   @include breakpoint($xl-bp) {
     flex-grow: 1;
     width: 30rem;
@@ -1082,6 +1080,11 @@ a.order4 .list__item {
     max-width: 126rem;
     margin-left: calc((100% - 120rem) / 2);
     background-size: 65rem;
+  }
+  @include breakpoint($xxl_bp) {
+    max-width: 134rem;
+    margin-left: calc((100% - 130rem) / 2);
+    background-size: 70rem;
   }
   @include breakpoint($hh) {
     max-width: 93rem;

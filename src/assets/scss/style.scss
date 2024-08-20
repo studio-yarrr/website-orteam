@@ -13,7 +13,7 @@ html {
   }
 
   @include breakpoint($xxl-bp) {
-    font-size: calc(100vw / 1500 * 10);
+    font-size: calc(100vw / 1440 * 10);
   }
 
   @include breakpoint($xl-bp) {
@@ -124,6 +124,11 @@ input {
   @include breakpoint($cos_bp) {
     max-width: 120rem;
   }
+
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
+
   @include breakpoint($hh) {
     max-width: 90rem;
   }
@@ -140,6 +145,11 @@ input {
   @include breakpoint($cos_bp) {
     max-width: 120rem;
   }
+
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
+
   @include breakpoint($hh) {
     max-width: 90rem;
   }
@@ -233,7 +243,6 @@ a:hover {
 
 .price__container {
   @include breakpoint($sm-bp) {
-    //width: 32rem;
     padding-bottom: 3rem;
   }
 }
@@ -253,7 +262,11 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
   @include breakpoint($cos_bp) {
-    width: 120rem;
+    max-width: 120rem;
+  }
+
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
   }
   @include breakpoint($xl-bp) {
     max-width: 90rem;
@@ -270,11 +283,17 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
   @include breakpoint($cos_bp) {
-    width: 120rem;
+    max-width: 120rem;
   }
+
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
+
   @include breakpoint($xl-bp) {
     max-width: 90rem;
   }
+
   @include breakpoint($sm-bp) {
     position: relative;
     max-width: 32rem;
@@ -291,11 +310,17 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
   @include breakpoint($cos_bp) {
-    width: 120rem;
+    max-width: 120rem;
   }
+
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
+
   @include breakpoint($xl-bp) {
     max-width: 90rem;
   }
+
   @include breakpoint($sm-bp) {
     position: relative;
     width: calc(100vw - 1.5rem);
@@ -309,11 +334,17 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
   @include breakpoint($cos_bp) {
-    width: 120rem;
+    max-width: 120rem;
   }
+
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
+
   @include breakpoint($xl-bp) {
     max-width: 90rem;
   }
+
   @include breakpoint($sm-bp) {
     position: relative;
     width: calc(100vw - 1.5rem);

@@ -163,9 +163,9 @@ html {
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1440px) {
     html {
-        font-size: 0.6666666667vw;
+        font-size: 0.6944444444vw;
     }
 }
 
@@ -295,6 +295,12 @@ input {
     }
 }
 
+@media (max-width: 1440px) {
+    .wrapper {
+        max-width: 130rem;
+    }
+}
+
 @media (max-width: 1025px) {
     .wrapper {
         max-width: 90rem;
@@ -316,6 +322,12 @@ input {
 @media (max-width: 1700px) {
     .wrapper__platform {
         max-width: 120rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .wrapper__platform {
+        max-width: 130rem;
     }
 }
 
@@ -447,7 +459,22 @@ a:hover {
   .process__swiper,
   .details__swiper,
   .list__swiper {
-        width: 120rem;
+        max-width: 120rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .doctor-certificate__swiper,
+  .process-swiper,
+  .video-swiper,
+  .articles-swiper,
+  .team__swiper,
+  .braces__swiper,
+  .doc__swiper,
+  .process__swiper,
+  .details__swiper,
+  .list__swiper {
+        max-width: 130rem;
     }
 }
 
@@ -491,7 +518,13 @@ a:hover {
 
 @media (max-width: 1700px) {
     .cost-swiper {
-        width: 120rem;
+        max-width: 120rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .cost-swiper {
+        max-width: 130rem;
     }
 }
 
@@ -524,7 +557,16 @@ a:hover {
   .price__wrapper,
   .process__wrapper,
   .team__wrapper {
-        width: 120rem;
+        max-width: 120rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .price__wrapper,
+  .price__wrapper,
+  .process__wrapper,
+  .team__wrapper {
+        max-width: 130rem;
     }
 }
 
@@ -557,7 +599,13 @@ a:hover {
 
 @media (max-width: 1700px) {
     .reviews__slider {
-        width: 120rem;
+        max-width: 120rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .reviews__slider {
+        max-width: 130rem;
     }
 }
 
@@ -3944,7 +3992,7 @@ button.swiper-pagination-bullet {
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1440px) {
     .menu__content {
         right: 8%;
     }
@@ -5046,6 +5094,12 @@ a:hover .list__item {
     width: 42.7rem;
 }
 
+@media (max-width: 1440px) {
+    .content__list-container {
+        width: 47.7rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .content__list-container {
         -ms-flex-positive: 1;
@@ -5923,6 +5977,14 @@ a.order4 .list__item {
         max-width: 126rem;
         margin-left: calc((100% - 120rem) / 2);
         background-size: 65rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .record-content {
+        max-width: 134rem;
+        margin-left: calc((100% - 130rem) / 2);
+        background-size: 70rem;
     }
 }
 
