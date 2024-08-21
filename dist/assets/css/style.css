@@ -10934,12 +10934,55 @@ div .view-icon {
 
 .aligners__banner {
     background-image: url("../images/aligners__bg.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 6rem 5.6rem 2.4rem;
+    border-radius: 1.2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.2rem;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 10.4rem;
 }
 
 @media (max-width: 1024px) {
     .aligners__banner {
         background-image: url("../images/aligners__bg--mob.png");
+        background-size: contain;
+        padding: 2rem;
+        position: relative;
+        gap: 0;
+        margin-bottom: 7rem;
     }
+}
+
+@media (max-width: 768px) {
+    .aligners__banner {
+        padding: 0;
+        position: relative;
+        gap: 3rem;
+        margin-bottom: 1.4rem;
+    }
+}
+
+.aligners__banner .banner__inf {
+    max-width: 65rem;
+}
+
+.aligners__arrow {
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.aligners__heading {
+    margin: 3.2rem auto 0;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-align: center;
 }
 
 /*------footer-----*/
