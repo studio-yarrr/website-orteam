@@ -708,6 +708,24 @@ a:hover {
   height: 2.4rem;
 }
 
+.aligners-swiper {
+  max-width: 57rem;
+  overflow: hidden;
+  @include breakpoint($xl-bp) {
+    max-width: 90rem;
+  }
+  @include breakpoint($sm-bp) {
+    max-width: 30rem;
+    height: 38rem;
+  }
+}
+
+.pagination.aligners-pagination {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+
 ::-webkit-scrollbar {
   // width: 0.8rem;
   // height: 0;

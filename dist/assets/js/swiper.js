@@ -358,3 +358,27 @@ const slider14 = new Swiper('.cost-swiper', {
         clickable: true,
     },
 })
+
+const slider15 = new Swiper('.aligners-swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: '.aligners-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.2,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+
+        1024: {
+            slidesPerView: 1,
+        }
+    },
+})

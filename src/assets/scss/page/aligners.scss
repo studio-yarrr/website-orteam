@@ -41,3 +41,90 @@
   text-align: center;
 }
 
+.aligners__about {
+  margin-top: 10.4rem;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 8.4rem 5.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 7.2rem;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+.aligners__about-bottom,
+.aligners__about-top {
+  display: grid;
+  grid-template-columns: 57rem 51rem;
+  gap: 2rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aligners__slider {
+  position: relative;
+  padding-bottom: 3rem;
+  @include breakpoint($xl-bp) {
+    order: 2;
+    padding-bottom: 4rem;
+  }
+}
+
+.aligners__slide {
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.aligners__text {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2.4rem;
+  }
+}
+
+.aligners__about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 3rem;
+  @include breakpoint($xl-bp) {
+    background-color: var(--white);
+    padding: 1.2rem;
+    order: 1;
+    border-radius: 1.2rem;
+  }
+
+  & h2 {
+    @include breakpoint($sm-bp) {
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+  }
+}
+
+.aligners__bottom-item {
+  border-radius: 1.2rem;
+  padding: 2rem;
+  color: var(--white);
+  background-color: var(--green);
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
+
+  & h2 {
+    @include breakpoint($sm-bp) {
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+  }
+}
+
+
