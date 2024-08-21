@@ -236,3 +236,51 @@
   }
 }
 
+.aligners__doctor {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 23rem 77rem;
+  margin-top: 5.6rem;
+  grid-template-rows: 25rem;
+  justify-content: center;
+  width: fit-content;
+  margin-bottom: 8.4rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 38rem 52rem;
+    grid-template-rows: 40rem;
+  }
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 44rem;
+    margin-bottom: 5.6rem;
+  }
+
+  & div:nth-child(1) {
+    @include breakpoint($sm-bp) {
+      order: 2;
+    }
+  }
+
+  & .aligners__doctor__text {
+    @include breakpoint($sm-bp) {
+      order: 1;
+    }
+  }
+
+}
+
+.aligners__doctor__text {
+  background-color: var(--white);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+}
+
