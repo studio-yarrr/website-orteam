@@ -284,3 +284,224 @@
   }
 }
 
+.aligners__plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 6.4rem;
+  }
+}
+
+.aligners__plan-heading {
+  margin-top: 2.4rem;
+  margin-bottom: 5.6rem;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.aligners__plan-container {
+  max-width: 100rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 38rem 62rem;
+  grid-template-rows: 39rem;
+  justify-content: center;
+  margin-top: 5.6rem;
+  width: fit-content;
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+    grid-template-columns: 1fr;
+  }
+
+  & div:nth-child(1) {
+    @include breakpoint($sm-bp) {
+      order: 2;
+    }
+  }
+}
+
+.aligners__plan-content {
+  padding: 3.8rem 2rem;
+  background-color: var(--white);
+  @include breakpoint($sm-bp) {
+    order: 1;
+  }
+}
+
+.aligners__params {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  color: var(--grey);
+  margin-bottom: 3.2rem;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.6rem;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  & div {
+    padding: 1.2rem 2.4rem;
+    background-color: var(--bg-grey);
+    position: relative;
+
+    &.active {
+      border-radius: 1.2rem;
+      background-color: var(--color2);
+      color: var(--color1);
+      width: 9.6rem;
+      text-align: center;
+    }
+
+    &.active.active::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--color2); /* Цвет фона для активного состояния */
+      z-index: -1;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.aligners__plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: square inside;
+
+  & li::marker {
+    color: var(--color2)
+  }
+
+  &  li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 2rem;
+    text-indent: -2rem;
+  }
+}
+
+.aligners-img {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.aligners__result {
+  font-weight: 700;
+}
+
+.aligners__plans {
+  display: none;
+  &.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+.price-aligners.price-swiper__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.aligners-num {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background-image: url("../images/bg/bg-aliners.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 57rem;
+  padding: 6.8rem 5.6rem 6.8rem 0;
+  margin-top: 5.6rem;
+}
+
+.aligners-num__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 36rem;
+  @include breakpoint($sm-bp) {
+    max-width: 32rem;
+  }
+}
+
+.aligners-num__container-item {
+  border-radius: 1.2rem;
+  background-color: var(--bg-grey);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+    background-color: var(--white);
+  }
+}
+
+.aligners-num__item {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+.aligners-num__item-num {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 5.4rem;
+  color: var(--white);
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--bg-grey);
+  }
+}
+
+.aligners__reason {
+  display: grid;
+  grid-template-columns: repeat(2,49rem);
+  grid-template-rows: 40rem;
+  gap: 2rem;
+  width: fit-content;
+  align-items: center;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.aligners__reason-left,
+.aligners__reason-right {
+  border-radius: 1.2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-top: 10.4rem;
+  margin-bottom: 8.4rem;
+  color: var(--white);
+}
+
+.aligners__reason-left {
+  background-color: var(--green);
+}
+
+.aligners__reason-right {
+  background-color: var(--color1);
+}

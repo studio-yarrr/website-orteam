@@ -703,4 +703,26 @@ const blog = document.querySelector('.blog');
     })
   }
 
+  const params = document.querySelector('.aligners__param');
+
+  if(params) {
+    const params = document.querySelectorAll('.aligners__param');
+    const planLists = document.querySelectorAll('.aligners__plans');
+    const images = document.querySelectorAll('.aligners-img');
+
+    params.forEach((param, index) => {
+      param.addEventListener('click', () => {
+
+        params.forEach(p => p.classList.remove('active'));
+        planLists.forEach(list => list.classList.remove('active'));
+        images.forEach(img => img.classList.remove('active'));
+
+
+        param.classList.add('active');
+        planLists[index].classList.add('active');
+        images[index].classList.add('active');
+      });
+    });
+  }
+
 });
