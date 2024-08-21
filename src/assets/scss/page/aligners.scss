@@ -127,4 +127,112 @@
   }
 }
 
+.aligners__details {
+  margin-top: 8.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5.7rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 6.4rem;
+    gap: 4rem;
+  }
+
+  & h2 {
+    text-align: center;
+  }
+}
+
+.aligners__details-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.aligners__details-heading {
+  padding: 1.6rem 2rem 2rem 2rem;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  font-weight: 800;
+  font-family: "Cygre-ExtraBold", sans-serif;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: "Cygre-Bold", sans-serif;
+  }
+}
+
+.aligners__details-containers {
+  display: grid;
+  grid-template-columns: 63rem 55rem;
+  gap: 2rem;
+  @include breakpoint($xxl_bp) {
+    grid-template-columns: 69rem 59rem;
+  }
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr;
+  }
+
+  & div {
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    padding: 2rem;
+  }
+
+  & .aligners__details-text:nth-child(1) {
+    background-size: 21rem;
+    background-position: 97% bottom;
+    background-image: url("../images/bg/plus-bg.svg");
+    background-repeat: no-repeat;
+    @include breakpoint($sm-bp) {
+      background-position: 120% -30%;
+      background-size: 18rem;
+    }
+  }
+
+  & .aligners__details-text:nth-child(2) {
+    background-size: 21rem;
+    background-position: 97% 70%;
+    background-image: url("../images/bg/minus-bg.svg");
+    background-repeat: no-repeat;
+    @include breakpoint($sm-bp) {
+      background-position: 120% 48%;
+      background-size: 18rem;
+    }
+  }
+}
+
+.aligners__details-text {
+  padding: 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
+}
+
+.aligners__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: square inside;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  @include breakpoint($sm-bp) {
+    gap: 1.2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  & li::marker {
+    color: var(--color2)
+  }
+
+  &  li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 4rem;
+    text-indent: -3rem;
+  }
+}
 
