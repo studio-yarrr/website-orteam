@@ -10932,6 +10932,16 @@ div .view-icon {
     color: var(--color1);
 }
 
+.aligners__banner {
+    background-image: url("../images/aligners__bg.jpg");
+}
+
+@media (max-width: 1024px) {
+    .aligners__banner {
+        background-image: url("../images/aligners__bg--mob.png");
+    }
+}
+
 /*------footer-----*/
 .footer {
     background-color: var(--white);

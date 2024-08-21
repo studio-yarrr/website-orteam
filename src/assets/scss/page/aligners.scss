@@ -1,0 +1,6 @@
+.aligners__banner {
+  background-image: url("../images/aligners__bg.jpg");
+  @include breakpoint($xl-bp) {
+    background-image: url("../images/aligners__bg--mob.png");
+  }
+}
