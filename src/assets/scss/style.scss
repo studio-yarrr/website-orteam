@@ -391,6 +391,12 @@ a:hover {
   }
 }
 
+.price-swiper.aligners__price {
+  @include breakpoint($xl-bp) {
+    height: 60rem;
+  }
+}
+
 
 .case-swiper {
   max-width: 114.3rem;

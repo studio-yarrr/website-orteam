@@ -674,6 +674,12 @@ a:hover {
     }
 }
 
+@media (max-width: 1024px) {
+    .price-swiper.aligners__price {
+        height: 60rem;
+    }
+}
+
 .case-swiper {
     max-width: 114.3rem;
     height: 60rem;
@@ -6639,7 +6645,7 @@ a.analytics__button {
 
 .price__item {
     border-radius: 1.2rem;
-    padding: 2rem;
+    padding: 2.2rem 2rem 2rem 2rem;
     background-color: #DDDFE4;
     display: -ms-flexbox;
     display: flex;
@@ -6690,13 +6696,15 @@ a.analytics__button {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1.6rem;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
 }
 
 .price__list-item {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -6741,7 +6749,7 @@ a.analytics__button {
     background-color: var(--color2);
     position: absolute;
     border-radius: 1.2rem;
-    top: -3%;
+    top: -4%;
     padding: 0.8rem 2rem;
     margin: 0 auto;
 }
@@ -11692,6 +11700,16 @@ div .view-icon {
     margin-top: 5.6rem;
 }
 
+@media (max-width: 768px) {
+    .aligners-num {
+        background-image: none;
+        display: block;
+        padding: 0;
+        margin-top: 5.6rem;
+        height: auto;
+    }
+}
+
 .aligners-num__container {
     display: -ms-flexbox;
     display: flex;
@@ -11739,14 +11757,14 @@ div .view-icon {
 .aligners-num__item-num {
     font-weight: 700;
     font-size: 3.2rem;
-    line-height: 5.4rem;
+    line-height: 3.4rem;
     color: var(--white);
 }
 
 @media (max-width: 768px) {
     .aligners-num__item-num {
-        font-size: 1.6rem;
-        line-height: 2rem;
+        font-size: 3.2rem;
+        line-height: 3rem;
         color: var(--bg-grey);
     }
 }
@@ -11761,6 +11779,12 @@ div .view-icon {
     width: fit-content;
     -ms-flex-align: center;
     align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .aligners__reason {
+        grid-template-columns: repeat(2, 42rem);
+    }
 }
 
 @media (max-width: 768px) {

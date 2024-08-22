@@ -534,6 +534,14 @@
   height: 57rem;
   padding: 6.8rem 5.6rem 6.8rem 0;
   margin-top: 5.6rem;
+  @include breakpoint($sm-bp) {
+    background-image: none;
+    display: block;
+    padding: 0;
+    margin-top: 5.6rem;
+    height: auto;
+  }
+
 }
 
 .aligners-num__container {
@@ -570,11 +578,11 @@
 .aligners-num__item-num {
   font-weight: 700;
   font-size: 3.2rem;
-  line-height: 5.4rem;
+  line-height: 3.4rem;
   color: var(--white);
   @include breakpoint($sm-bp) {
-    font-size: 1.6rem;
-    line-height: 2rem;
+    font-size: 3.2rem;
+    line-height: 3rem;
     color: var(--bg-grey);
   }
 }
@@ -586,6 +594,9 @@
   gap: 2rem;
   width: fit-content;
   align-items: center;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2,42rem);
+  }
   @include breakpoint($sm-bp) {
     display: none;
   }
