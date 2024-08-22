@@ -260,3 +260,16 @@
     text-align: center;
   }
 }
+
+.case2__inf-bottom {
+  border-radius: 1.2rem;
+  color: var(--white);
+  padding: 2rem;
+  @include breakpoint($xl-bp) {
+    padding: 1.2rem;
+  }
+}
+
+.case-popup {
+  display: none;
+}

@@ -9232,6 +9232,22 @@ select {
     }
 }
 
+.case2__inf-bottom {
+    border-radius: 1.2rem;
+    color: var(--white);
+    padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .case2__inf-bottom {
+        padding: 1.2rem;
+    }
+}
+
+.case-popup {
+    display: none;
+}
+
 .about__title h1 {
     margin-top: 8.4rem;
 }

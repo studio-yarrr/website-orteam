@@ -191,6 +191,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         popup.innerHTML = reviewTexts[index].innerHTML;
     });
 
+  const caseTextBlock = document.querySelector('.case2__inf-bottom');
+
+  const reviewPopup = document.getElementById('case-popup');
+
+  reviewPopup.textContent = caseTextBlock.textContent;
 
     //accordion
     const titles = document.querySelectorAll('.accordion__title');
