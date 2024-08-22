@@ -11404,11 +11404,11 @@ div .view-icon {
 @media (max-width: 1024px) {
     .aligners__doctor {
         grid-template-columns: 38rem 52rem;
-        grid-template-rows: 40rem;
+        grid-template-rows: 45rem;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .aligners__doctor {
         grid-template-columns: 1fr;
         grid-template-rows: 44rem;
@@ -11438,6 +11438,13 @@ div .view-icon {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 3.2rem;
+}
+
+@media (max-width: 1024px) {
+    .aligners__doctor__text {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 768px) {
@@ -11526,12 +11533,14 @@ div .view-icon {
     grid-template-columns: repeat(6, 1fr);
     color: var(--grey);
     margin-bottom: 3.2rem;
+    background-color: var(--bg-grey);
 }
 
 @media (max-width: 768px) {
     .aligners__params {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 1.6rem;
+        background-color: transparent;
         grid-template-rows: repeat(2, 1fr);
     }
 }
