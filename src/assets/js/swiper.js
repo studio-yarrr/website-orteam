@@ -364,7 +364,7 @@ const slider15 = new Swiper('.aligners-swiper', {
     spaceBetween: 20,
     speed: 800,
     slidesPerView: 1,
-    loop: false,
+    loop: true,
     pagination: {
         el: '.aligners-pagination',
         clickable: true,
