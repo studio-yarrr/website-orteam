@@ -61,11 +61,11 @@
   }
   @include breakpoint($xl-bp) {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
     order: 3;
-    grid-template-rows: auto;
   }
 }
 

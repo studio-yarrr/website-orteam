@@ -8983,6 +8983,7 @@ select {
 @media (max-width: 1024px) {
     .case__inf {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 }
 
@@ -8991,7 +8992,6 @@ select {
         grid-template-columns: 1fr;
         -ms-flex-order: 3;
         order: 3;
-        grid-template-rows: auto;
     }
 }
 
