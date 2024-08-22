@@ -359,28 +359,52 @@ const slider14 = new Swiper('.cost-swiper', {
     },
 })
 
+
 const slider15 = new Swiper('.aligners-swiper', {
     spaceBetween: 20,
     speed: 800,
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     pagination: {
         el: '.aligners-pagination',
         clickable: true,
     },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     breakpoints: {
-
         320: {
             slidesPerView: 1.2,
         },
         768: {
             slidesPerView: 2,
         },
-
         1024: {
             slidesPerView: 1,
         }
     },
-})
+});
 
+function updateSliderParams() {
+    const isLargeScreen = window.innerWidth >= 1280;
+
+    slider15.params.loop = isLargeScreen;
+    if (isLargeScreen) {
+        slider15.params.autoplay = {
+            delay: 3000,
+            disableOnInteraction: false,
+        };
+        slider15.autoplay.start();
+    } else {
+        slider15.params.autoplay = false;
+        slider15.autoplay.stop();
+    }
+
+    slider15.update();
+}
+
+updateSliderParams();
+
+window.addEventListener('resize', updateSliderParams);
 

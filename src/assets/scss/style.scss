@@ -16,6 +16,7 @@ html {
     font-size: calc(100vw / 1440 * 10);
   }
 
+
   @include breakpoint($xl-bp) {
     font-size: calc(100vw / 1024 * 10);
   }
@@ -304,6 +305,7 @@ a:hover {
 .price__wrapper,
 .price__wrapper,
 .process__wrapper,
+.aligners__wrapper,
 .team__wrapper {
   width: 100%;
   max-width: 121.6rem;
@@ -316,11 +318,9 @@ a:hover {
   @include breakpoint($xxl_bp) {
     max-width: 130rem;
   }
-
   @include breakpoint($xl-bp) {
     max-width: 90rem;
   }
-
   @include breakpoint($sm-bp) {
     position: relative;
     width: calc(100vw - 1.5rem);
@@ -715,7 +715,7 @@ a:hover {
     max-width: 90rem;
   }
   @include breakpoint($sm-bp) {
-    max-width: 30rem;
+    max-width: 35rem;
     height: 38rem;
   }
 }
@@ -724,6 +724,12 @@ a:hover {
   display: flex;
   position: absolute;
   justify-content: center;
+}
+
+.pagination.list-pagination {
+  @include breakpoint($sm-bp) {
+    align-items: flex-start;
+  }
 }
 
 ::-webkit-scrollbar {
