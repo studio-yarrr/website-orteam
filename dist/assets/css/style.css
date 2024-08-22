@@ -5335,7 +5335,7 @@ sup {
 
 @media (max-width: 768px) {
     .team {
-        margin-bottom: 4.2rem;
+        margin-bottom: 3rem;
         font-size: 1.2rem;
     }
 }
@@ -11154,6 +11154,11 @@ div .view-icon {
         -ms-flex-order: 2;
         order: 2;
         padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .aligners__slider {
         width: calc(100vw - 1.5rem);
         padding-left: 1.5rem;
     }

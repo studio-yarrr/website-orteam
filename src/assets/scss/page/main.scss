@@ -511,7 +511,7 @@ sup {
 .team {
   margin-bottom: 8.4rem;
   @include breakpoint($sm-bp) {
-    margin-bottom: 4.2rem;
+    margin-bottom: 3rem;
     font-size: 1.2rem;
   }
 }
