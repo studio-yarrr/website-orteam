@@ -366,6 +366,7 @@
   margin-bottom: 8.4rem;
   @include breakpoint($sm-bp) {
     margin-bottom: 6.4rem;
+    margin-top: 15rem;
   }
 }
 
@@ -604,4 +605,10 @@
     background-position: 120% 26%;
   }
 
+}
+
+.aligners-standards {
+  @include breakpoint($sm-bp) {
+    transform: translateY(140%);
+  }
 }

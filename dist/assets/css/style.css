@@ -11487,6 +11487,7 @@ div .view-icon {
 @media (max-width: 768px) {
     .aligners__plan {
         margin-bottom: 6.4rem;
+        margin-top: 15rem;
     }
 }
 
@@ -11782,6 +11783,13 @@ div .view-icon {
 @media (max-width: 768px) {
     .aligners__details-item:nth-child(3) .aligners__details-containers .aligners__details-text:nth-child(2) {
         background-position: 120% 26%;
+    }
+}
+
+@media (max-width: 768px) {
+    .aligners-standards {
+        -webkit-transform: translateY(140%);
+        transform: translateY(140%);
     }
 }
 
