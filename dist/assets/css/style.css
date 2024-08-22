@@ -8565,6 +8565,7 @@ select {
     .doctor-reviewer__desc {
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
+        max-width: 89%;
     }
 }
 
@@ -8584,6 +8585,7 @@ select {
     .doctor-reviewer__person {
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
+        background-image: none;
     }
 }
 
@@ -11446,6 +11448,10 @@ div .view-icon {
         justify-content: space-between;
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
+        background-image: url("../images/sing.svg");
+        background-position: 97% 0%;
+        background-size: 5.6rem;
+        background-repeat: no-repeat;
     }
 }
 
