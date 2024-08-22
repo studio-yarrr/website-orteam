@@ -654,3 +654,10 @@
     border-bottom-right-radius: 1.2rem;
   }
 }
+
+.mt84 {
+  margin-top: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 6.4rem;
+  }
+}

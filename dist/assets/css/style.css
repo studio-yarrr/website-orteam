@@ -11838,6 +11838,16 @@ div .view-icon {
     }
 }
 
+.mt84 {
+    margin-top: 8.4rem;
+}
+
+@media (max-width: 768px) {
+    .mt84 {
+        margin-top: 6.4rem;
+    }
+}
+
 /*------footer-----*/
 .footer {
     background-color: var(--white);
