@@ -202,6 +202,9 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  @include breakpoint($sm-bp) {
+    flex-direction: column-reverse;
+  }
 }
 
 .doctor-reviewer__person {
@@ -212,6 +215,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  @include breakpoint($sm-bp) {
+    flex-direction: column-reverse;
+  }
 }
 
 .doctor-reviewer__person-title {

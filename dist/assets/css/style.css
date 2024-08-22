@@ -4836,6 +4836,7 @@ button.swiper-pagination-bullet {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 4.2rem;
+    border: 1px solid #D6D9DF;
 }
 
 @media (max-width: 1024px) {
@@ -8560,6 +8561,13 @@ select {
     gap: 1.2rem;
 }
 
+@media (max-width: 768px) {
+    .doctor-reviewer__desc {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+}
+
 .doctor-reviewer__person {
     background-image: url("../images/sing.svg");
     background-position: right bottom;
@@ -8570,6 +8578,13 @@ select {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .doctor-reviewer__person {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
 }
 
 .doctor-reviewer__person-title {
