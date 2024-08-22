@@ -5561,7 +5561,6 @@ sup {
 }
 
 .standards__item {
-    grid-column: 3/span 2;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -5581,8 +5580,14 @@ sup {
 }
 
 .standards__item a {
-    margin: 0 4.6rem;
+    margin: 0 3.6rem;
     margin-bottom: -4%;
+}
+
+@media (max-width: 768px) {
+    .standards__item a {
+        margin: 0 2.6rem;
+    }
 }
 
 .surgery__img,
@@ -5592,6 +5597,13 @@ sup {
 }
 
 @media (max-width: 1024px) {
+    .surgery__img,
+  .standards__item-img {
+        height: 37rem;
+    }
+}
+
+@media (max-width: 768px) {
     .surgery__img,
   .standards__item-img {
         height: 27rem;
@@ -11500,6 +11512,12 @@ div .view-icon {
     width: fit-content;
 }
 
+@media (max-width: 1024px) {
+    .aligners__plan-container {
+        grid-template-columns: 33rem 56rem;
+    }
+}
+
 @media (max-width: 768px) {
     .aligners__plan-container {
         margin-top: 2.4rem;
@@ -11549,6 +11567,18 @@ div .view-icon {
     padding: 1.2rem 2.4rem;
     background-color: var(--bg-grey);
     position: relative;
+}
+
+@media (max-width: 1024px) {
+    .aligners__params div {
+        padding: 0.8rem 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .aligners__params div {
+        padding: 0.8rem 2rem;
+    }
 }
 
 .aligners__params div.active {

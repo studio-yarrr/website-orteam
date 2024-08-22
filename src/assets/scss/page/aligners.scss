@@ -386,6 +386,9 @@
   justify-content: center;
   margin-top: 5.6rem;
   width: fit-content;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 33rem 56rem;
+  }
   @include breakpoint($sm-bp) {
     margin-top: 2.4rem;
     grid-template-columns: 1fr;
@@ -425,6 +428,12 @@
     padding: 1.2rem 2.4rem;
     background-color: var(--bg-grey);
     position: relative;
+    @include breakpoint($xl-bp) {
+      padding: 0.8rem 1.8rem;
+    }
+    @include breakpoint($sm-bp) {
+      padding: 0.8rem 2rem;
+    }
 
     &.active {
       border-radius: 1.2rem;
