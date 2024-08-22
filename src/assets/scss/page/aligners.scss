@@ -370,6 +370,20 @@
   }
 }
 
+.aligners__plan h2:nth-child(1) {
+  @include breakpoint($sm-bp) {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+.aligners__plan h2.center {
+  @include breakpoint($sm-bp) {
+    text-align: center;
+  }
+}
+
+
 .aligners__plan-heading {
   margin-top: 2.4rem;
   margin-bottom: 5.6rem;
@@ -393,12 +407,7 @@
   @include breakpoint($sm-bp) {
     margin-top: 2.4rem;
     grid-template-columns: 1fr;
-  }
-
-  & div:nth-child(1) {
-    @include breakpoint($sm-bp) {
-      order: 2;
-    }
+    grid-template-rows: auto;
   }
 }
 
@@ -407,6 +416,7 @@
   background-color: var(--white);
   @include breakpoint($sm-bp) {
     order: 1;
+    padding: 2.4rem 1.2rem;
   }
 }
 
@@ -423,12 +433,13 @@
     row-gap: 1.6rem;
     background-color: transparent;
     grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 2.4rem;
+    width: fit-content;
   }
 
   & div {
     padding: 1.2rem 2.4rem;
     background-color: var(--bg-grey);
-    position: relative;
     @include breakpoint($xl-bp) {
       padding: 0.8rem 1.8rem;
     }
@@ -437,23 +448,27 @@
     }
 
     &.active {
-      border-radius: 1.2rem;
-      background-color: var(--color2);
+      position: relative;
       color: var(--color1);
       width: 9.6rem;
       text-align: center;
+      z-index: 1;
+      font-weight: 700;
     }
 
-    &.active.active::before {
+    &.active::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+      border-radius: 1.2rem;
       background-color: var(--color2);
+      color: var(--color1);
       z-index: -1;
     }
+
     &:hover {
       cursor: pointer;
     }
@@ -483,6 +498,9 @@
 
   &.active {
     display: block;
+    @include breakpoint($sm-bp) {
+      order: 2;
+    }
   }
 }
 
@@ -610,5 +628,29 @@
 .aligners-standards {
   @include breakpoint($sm-bp) {
     transform: translateY(140%);
+  }
+}
+
+.aligners__params div:nth-child(1) {
+  @include breakpoint($sm-bp) {
+    border-bottom-left-radius: 1.2rem;
+  }
+}
+
+.aligners__params div:nth-child(4) {
+  @include breakpoint($sm-bp) {
+    border-top-left-radius: 1.2rem;
+  }
+}
+
+.aligners__params div:nth-child(6) {
+  @include breakpoint($sm-bp) {
+    border-top-right-radius: 1.2rem;
+  }
+}
+
+.aligners__params div:nth-child(3) {
+  @include breakpoint($sm-bp) {
+    border-bottom-right-radius: 1.2rem;
   }
 }
