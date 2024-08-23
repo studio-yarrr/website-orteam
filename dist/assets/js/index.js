@@ -191,11 +191,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         popup.innerHTML = reviewTexts[index].innerHTML;
     });
 
-  const caseTextBlock = document.querySelector('.case2__inf-bottom');
-
-  const reviewPopup = document.getElementById('case-popup');
-
-  reviewPopup.textContent = caseTextBlock.textContent;
+  // const caseTextBlock = document.querySelector('.case2__inf-bottom');
+  //
+  // const reviewPopup = document.getElementById('case-popup');
+  //
+  // reviewPopup.textContent = caseTextBlock.textContent;
 
     //accordion
     const titles = document.querySelectorAll('.accordion__title');
@@ -358,28 +358,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
   if (inputAction) {
     inputAction.forEach(item => {
       item.addEventListener('focus', () => {
-        const icon = item.querySelector('\.heading-icon--top-form');
+        const icon = item.querySelector('.heading-icon--top-form');
         if (icon) {
           icon.classList.add('active');
         }
       });
 
       item.addEventListener('blur', () => {
-        const icon = item.querySelector('\.heading-icon--top-form');
+        const icon = item.querySelector('.heading-icon--top-form');
         if (icon) {
           icon.classList.remove('active');
         }
       });
 
       item.addEventListener('change', () => {
-        const icon = item.querySelector('\.heading-icon--top-form');
+        const icon = item.querySelector('.heading-icon--top-form');
         if (icon) {
           icon.classList.remove('active');
         }
       });
 
       item.addEventListener('mousedown', () => {
-        const icon = item.querySelector('\.heading-icon--top-form');
+        const icon = item.querySelector('.heading-icon--top-form');
         if (icon) {
           icon.classList.add('active');
         }
