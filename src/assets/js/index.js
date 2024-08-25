@@ -730,4 +730,16 @@ const blog = document.querySelector('.blog');
     });
   }
 
+  const openText = document.querySelectorAll('.openText');
+
+  if(openText) {
+    openText.forEach(elem => {
+      elem.addEventListener('click', (event)=> {
+        event.preventDefault();
+        const icon = document.querySelector('form span.icon-button__bg');
+        icon.classList.toggle('active')
+      })
+    })
+  }
+
 });

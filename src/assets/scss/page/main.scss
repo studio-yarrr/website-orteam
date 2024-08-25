@@ -1672,15 +1672,6 @@ a.analytics__button {
   }
 }
 
-.calculator__inf-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  @include breakpoint($sm-bp) {
-   gap: 1.2rem;
-  }
-}
-
 .calculator__right-top {
   border-radius: 1.2rem;
   padding: 2rem;

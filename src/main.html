@@ -1237,55 +1237,103 @@
             <div class="pagination price-pagination"></div>
         </div>
     </div>
+</section>
+
+<section class="wrapper">
     <div class="calculator__container" id="calculator">
         <h2 class="team__title element-animation-opacity">Калькулятор стоимости ортодонтиии</h2>
         <p class="calculator__subtitle">Здесь можно рассчитать стоимость лечения в Orteam, в зависимости от срока и тарифного плана.</p>
         <div class="calculator__inf">
-                <div>
-                    <img src="assets/images/culcul.jpg" alt="">
+            <div class="calculator">
+                <form class="form">
+                    <div>
+                        <div class="calculator__line calculator__line--placeholder">
+                            <div class="calculator__num">
+                                1
+                            </div>
+                            <select name="calculator" class="js-choice">
+                                <option value="" class="placeholder">Выберите тарифный план</option>
+                                <option value="2">All-in</option>
+                                <option value="3">Первый класс</option>
+                                <option value="4">Второй класс</option>
+                                <option value="5">Low cost</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="calculator__line">
+                            <div class="calculator__num">
+                                2
+                            </div>
+                            <select name="calculatorType" class="js-choice2">
+                                <option value="" class="placeholder">Выберите тип брекетов</option>
+                                <option value=""><em>Выберите тарифный план</em></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="calculator__line">
+                            <div class="calculator__num">
+                                3
+                            </div>
+                            <div>
+                                Срок лечения
+                            </div>
+                            <button class="icon-button openText">
+                                <span class="icon-button__bg">Зависит от сложности, тактики и квалификации врача. В среднем — 2 года. Срок фиксируем: не уложимся, долечим бесплатно!</span>
+                                <img src="assets/images/icon-button.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="total-output"></div>
+                </form>
+            </div>
+            <div class="calculator__price">
+                <h3>Итоговая стоимость лечения</h3>
+            </div>
+
+        </div>
+        <div class="calculator__inf-right">
+            <div class="calculator__right-top">
+                <div class="calculator__top-item">
+                    <div class="calculator__top-num">
+                        01
+                    </div>
+                    <div class="calculator__top-text">
+                        Одномоментная или поэтапная оплата
+                    </div>
                 </div>
-            <div class="calculator__inf-right">
-                <div class="calculator__right-top">
-                    <div class="calculator__top-item">
-                        <div class="calculator__top-num">
-                            01
-                        </div>
-                        <div class="calculator__top-text">
-                            Одномоментная или поэтапная оплата
-                        </div>
+                <div class="calculator__top-item">
+                    <div class="calculator__top-num">
+                        02
                     </div>
-                    <div class="calculator__top-item">
-                        <div class="calculator__top-num">
-                            02
-                        </div>
-                        <div class="calculator__top-text">
-                            Рассрочки без первого взноса от 7 банков
-                        </div>
-                    </div>
-                    <div class="calculator__top-item">
-                        <div class="calculator__top-num">
-                            03
-                        </div>
-                        <div class="calculator__top-text">
-                            Экономьте! Реферальная программа и специальные условия
-                        </div>
-                    </div>
-                    <div class="calculator__top-item">
-                        <div class="calculator__top-num">
-                            04
-                        </div>
-                        <div class="calculator__top-text">
-                            Поможем вернуть 13%
-                        </div>
+                    <div class="calculator__top-text">
+                        Рассрочки без первого взноса от 7 банков
                     </div>
                 </div>
-                <div class="calculator__right-bottom">
-                    <p>План лечения и квалификация врача существенно влияет на продолжительность и результаты лечения.
-                    </p>
-                    <p>Расчёт на сайте проведён с использованием актуальных цен и включает все основные этапы и манипуляции. Но является предварительным, так как окончательная стоимость зависит от длительности лечения, которая окончательно определяется после составления плана лечения в Orteam. </p>
-                    <p>
-                        Не является публичной офертой.</p>
+                <div class="calculator__top-item">
+                    <div class="calculator__top-num">
+                        03
+                    </div>
+                    <div class="calculator__top-text">
+                        Экономьте! Реферальная программа и специальные условия
+                    </div>
                 </div>
+                <div class="calculator__top-item">
+                    <div class="calculator__top-num">
+                        04
+                    </div>
+                    <div class="calculator__top-text">
+                        Поможем вернуть 13%
+                    </div>
+                </div>
+            </div>
+            <div class="calculator__right-bottom">
+                <p>План лечения и квалификация врача существенно влияет на продолжительность и результаты лечения.
+                </p>
+                <p>Расчёт на сайте проведён с использованием актуальных цен и включает все основные этапы и манипуляции. Но является предварительным, так как окончательная стоимость зависит от длительности лечения, которая окончательно определяется после составления плана лечения в Orteam. </p>
+                <p>
+                    Не является публичной офертой.</p>
             </div>
         </div>
     </div>
