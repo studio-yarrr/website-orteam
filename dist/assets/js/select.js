@@ -258,4 +258,47 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  calculatorReset.addEventListener('click', () => {
+
+    total = 0;
+    totalCost = 0;
+    totalCostMiniprop = 0;
+    isOperationSelected = false;
+    isTreatmentSelected = false;
+    selectedTariff = "";
+    selectedBracketType = "";
+
+
+    numElements.forEach(item => item.classList.remove('active'));
+
+
+    if (choices) {
+      choices.setChoiceByValue('');
+    }
+
+    if (choicesBrackets) {
+      choicesBrackets.setChoiceByValue('');
+    }
+
+    radioButtons.forEach(radio => {
+      radio.checked = false;
+    });
+    radioButtons2.forEach(radio => {
+      radio.checked = false;
+    });
+
+    yearsNums.forEach(num => num.classList.remove('active-text'));
+    miniprop.forEach(num => num.classList.remove('active-text'));
+
+
+    operationCheckbox.checked = false;
+    treatmentCheckbox.checked = false;
+
+
+    updateTotal();
+
+
+    checkActiveClasses();
+  });
+
 });
