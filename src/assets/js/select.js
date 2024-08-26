@@ -61,24 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (selectElement) {
     selectElement.addEventListener('change', () => {
-      total = 0;
-
       if (selectElement.value) {
         selectedTariff = selectElement.selectedOptions[0].text;
         console.log(selectedTariff);
 
         numElement.forEach((elem, index) => {
-          if (index === selectBrackets.selectedIndex) {
+          if (index === 0) {
             elem.classList.add('active');
-          } else {
-            elem.classList.remove('active');
           }
         });
 
         const defaultOption = { value: '', label: 'Выберите тип брекетов', selected: true };
 
         choicesBrackets.clearStore();
-
 
         if (bracketChoices[selectElement.value]) {
           choicesBrackets.setChoices([defaultOption, ...bracketChoices[selectElement.value]], 'value', 'label', false);
@@ -89,12 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   if (selectBrackets) {
     selectBrackets.addEventListener('change', () => {
       if (selectBrackets.value) {
-        numElement.forEach(elem => {
-          elem.classList.add('active');
+        numElement.forEach((elem, index) => {
+          if (index === 1) {
+            elem.classList.add('active');
+          }
         });
 
         total = prices[selectBrackets.value] || 0;
@@ -120,16 +116,146 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         console.log(selectedBracketType);
-        totalOutput.textContent = `Итого: ${total} руб.`;
-        console.log(`Выбран тариф: ${selectedTariff}, тип брекетов: ${selectedBracketType}, сумма: ${total} руб.`);
-      } else {
-        numElement.forEach(elem => {
-          elem.classList.remove('active');
-        });
-        totalOutput.textContent = `Итого: 0 руб.`;
+        updateTotal();
       }
     });
   }
+
+// radio
+  const radioButtons = document.querySelectorAll('.customClick');
+  const yearsNums = document.querySelectorAll('.years__num');
+  const costPerActivation = 3300;
+
+  let duration;
+  let totalCost = 0;
+
+  radioButtons.forEach((radio, index) => {
+    radio.addEventListener('change', () => {
+      yearsNums.forEach(num => num.classList.remove('active-text'));
+      if (radio.checked) {
+        duration = yearsNums[index].textContent;
+
+        yearsNums[index].classList.add('active-text');
+
+        numElement.forEach((elem, idx) => {
+          if (idx === 2) {
+            elem.classList.add('active');
+          }
+        });
+
+        const durationValue = parseFloat(radio.value);
+        console.log(durationValue);
+
+        let activations = 0;
+        if (durationValue === 1) {
+          activations = 24;
+        } else if (durationValue === 1.5) {
+          activations = 36;
+        } else if (durationValue === 2) {
+          activations = 48;
+        } else if (durationValue === 2.5) {
+          activations = 60;
+        }
+        totalCost = activations * costPerActivation;
+        console.log(totalCost);
+        updateTotal();
+      }
+    });
+  });
+
+// radio 2
+  const radioButtons2 = document.querySelectorAll('.customClick2');
+  const miniprop = document.querySelectorAll('.miniprop__num');
+  let minipropValue = 0;
+  const amountMiniprop = 9000;
+  let totalCostMiniprop = 0;
+
+  radioButtons2.forEach((item, index) => {
+    item.addEventListener('change', () => {
+      miniprop.forEach(num => num.classList.remove('active-text'));
+      if (item.checked) {
+        minipropValue = Number(miniprop[index].textContent);
+
+        console.log(minipropValue);
+        miniprop[index].classList.add('active-text');
+
+        totalCostMiniprop = minipropValue * amountMiniprop;
+        console.log(totalCostMiniprop);
+        updateTotal();
+      }
+
+      numElement.forEach((elem, idx) => {
+        if (idx === 3) {
+          elem.classList.add('active');
+        }
+      });
+    });
+  });
+
+// нижние чекбоксы
+  const operationCheckbox = document.getElementById('operation');
+  const treatmentCheckbox = document.getElementById('treatment');
+
+  let isOperationSelected = operationCheckbox.checked;
+  let isTreatmentSelected = treatmentCheckbox.checked;
+
+  operationCheckbox.addEventListener('change', () => {
+    isOperationSelected = operationCheckbox.checked;
+    updateTotal();
+  });
+
+  treatmentCheckbox.addEventListener('change', () => {
+    isTreatmentSelected = treatmentCheckbox.checked;
+    updateTotal();
+  });
+
+  function updateTotal() {
+    let finalTotal = total + totalCost + totalCostMiniprop;
+
+    if (isTreatmentSelected) {
+      finalTotal /= 2;
+    }
+
+    finalTotal += 18000;
+
+    totalOutput.textContent = `Итого: ${finalTotal} руб.`;
+  }
+
+  const buttonCalculator = document.querySelector('.calculator__button');
+  const numElements = document.querySelectorAll('.calculator__num');
+  const calculatorReset = document.querySelector('.calculator__reset');
+
+  buttonCalculator.setAttribute('disabled', 'true');
+
+  function checkActiveClasses() {
+    const allActive = Array.from(numElements).every(elem => elem.classList.contains('active'));
+    if (allActive) {
+      buttonCalculator.classList.remove('button__disabled');
+      buttonCalculator.classList.add('button');
+      buttonCalculator.removeAttribute('disabled');
+    } else {
+      buttonCalculator.classList.remove('button');
+      buttonCalculator.classList.add('button__disabled');
+      buttonCalculator.setAttribute('disabled', 'true');
+    }
+
+    const oneActive = Array.from(numElements).some(elem => elem.classList.contains('active'));
+    if (oneActive) {
+      calculatorReset.classList.add('active');
+    } else {
+      calculatorReset.classList.remove('active');
+    }
+  }
+
+
+  checkActiveClasses();
+
+
+  const observerCheck = new MutationObserver(checkActiveClasses);
+
+  numElements.forEach(elem => {
+    observerCheck.observe(elem, { attributes: true, attributeFilter: ['class'] });
+  });
 
 
 });

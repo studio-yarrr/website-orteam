@@ -1420,24 +1420,112 @@
                             </div>
                         </div>
                         <div>
-                            <div class="calculator__line">
-                                <div class="calculator__num">
-                                    3
+                            <div class="calculator__lines--radio">
+                                <div class="calculator__line1--radio">
+                                    <div class="calculator__num">
+                                        3
+                                    </div>
+                                    <div class="calculator__subtitle-line">
+                                        Срок лечения
+                                    </div>
+                                    <button class="icon-button openText">
+                                        <span class="icon-button__bg">Зависит от сложности, тактики и квалификации врача. В среднем — 2 года. Срок фиксируем: не уложимся, долечим бесплатно!</span>
+                                        <img src="assets/images/icon-button.svg" alt="">
+                                    </button>
                                 </div>
-                                <div>
-                                    Срок лечения
+                                <div class="calculator__line--radio">
+                                    <div class="calculator--radio">
+                                        <input id="1" class="checkbox-custom customClick" name="years" type="radio" value="1">
+                                        <label for="1" class="radio"></label>
+                                        <div class="years__num">1 год</div>
+                                    </div>
+                                    <div class="calculator--radio">
+                                        <input id="1.5" class="checkbox-custom customClick" name="years" type="radio" value="1.5">
+                                        <label for="1.5" class="radio"></label>
+                                        <div class="years__num">1,5года</div>
+                                    </div>
+                                    <div class="calculator--radio">
+                                        <input id="2" class="checkbox-custom customClick" name="years" type="radio" value="2">
+                                        <label for="2" class="radio"></label>
+                                        <div class="years__num">2года</div>
+                                    </div>
+                                    <div class="calculator--radio">
+                                        <input id="2.5" class="checkbox-custom customClick" name="years" type="radio" value="2.5">
+                                        <label for="2.5" class="radio"></label>
+                                        <div class="years__num">2,5года</div>
+                                    </div>
+                                    <div class="line"></div>
                                 </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="calculator__lines--radio">
+                                <div class="calculator__line1--radio">
+                                    <div class="calculator__num">
+                                        4
+                                    </div>
+                                    <div class="calculator__subtitle-line">
+                                        Количество минивинтов
+                                    </div>
+                                    <button class="icon-button openText">
+                                        <span class="icon-button__bg">Дополнительный опорный элемент в брекет-системе. Требуется в 40% случаев.</span>
+                                        <img src="assets/images/icon-button.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="calculator__line--radio">
+                                    <div class="calculator--radio">
+                                        <input id="miniprop0" class="checkbox-custom customClick2" name="miniprop" type="radio" value="1">
+                                        <label for="miniprop0" class="radio"></label>
+                                        <div class="miniprop__num">0</div>
+                                    </div>
+                                    <div class="calculator--radio">
+                                        <input id="miniprop1" class="checkbox-custom customClick2" name="miniprop" type="radio" value="1.5">
+    
+                                        <label for="miniprop1" class="radio"></label>
+                                        <div class="miniprop__num">1</div>
+                                    </div>
+                                    <div class="calculator--radio">
+                                        <input id="miniprop2" class="checkbox-custom customClick2" name="miniprop" type="radio" value="2">
+                                        <label for="miniprop2" class="radio"></label>
+                                        <div class="miniprop__num">2</div>
+                                    </div>
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator__line--bottom">
+                            <div class="calculator__line1--radio">
+                                <input id="operation" class="checkbox-custom" name="operatione" type="checkbox">
+                                <label for="operation" class="checkbox-custom-label calculator__subtitle-line">Требуется ортогнатическая операция</label>
                                 <button class="icon-button openText">
-                                    <span class="icon-button__bg">Зависит от сложности, тактики и квалификации врача. В среднем — 2 года. Срок фиксируем: не уложимся, долечим бесплатно!</span>
+                                    <span class="icon-button__bg">Проводится для коррекции скелетных аномалий при согласии пациента.</span>
+                                    <img src="assets/images/icon-button.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="calculator__line1--radio">
+                                <input id="treatment" class="checkbox-custom" name="treatment" type="checkbox">
+                                <label for="treatment" class="checkbox-custom-label calculator__subtitle-line">Лечение на одной челюсти</label>
+                                <button class="icon-button openText">
+                                    <span class="icon-button__bg">В 95% случаев лечение проводится на 2 челюстях. За исключением локальных перемещений отдельных зубов.</span>
                                     <img src="assets/images/icon-button.svg" alt="">
                                 </button>
                             </div>
                         </div>
+    
+                        <div class="calculator__buttons">
+                            <button class="button__disabled calculator__button" type="submit">Рассчитать стоимость</button>
+                            <button class="calculator__reset" type="reset">Сбросить все</button>
+                        </div>
+    
                         <div class="total-output"></div>
                     </form>
                 </div>
                 <div class="calculator__price">
                     <h3>Итоговая стоимость лечения</h3>
+                    <div>
+    
+                    </div>
+    
                 </div>
     
             </div>

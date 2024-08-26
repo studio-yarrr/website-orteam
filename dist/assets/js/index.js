@@ -730,16 +730,26 @@ const blog = document.querySelector('.blog');
     });
   }
 
-  const openText = document.querySelectorAll('.openText');
+    const openText = document.querySelectorAll('.openText');
+    const icons = document.querySelectorAll('form span.icon-button__bg');
 
-  if(openText) {
-    openText.forEach(elem => {
-      elem.addEventListener('click', (event)=> {
-        event.preventDefault();
-        const icon = document.querySelector('form span.icon-button__bg');
-        icon.classList.toggle('active')
-      })
-    })
-  }
+    if (openText) {
+        openText.forEach((elem, index) => {
+            elem.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (icons[index]) {
+                    icons[index].classList.toggle('active');
+                }
+            });
+        });
+    }
+
+    document.addEventListener('click', (event) => {
+        openText.forEach((elem, index) => {
+            if (!elem.contains(event.target) && !icons[index].contains(event.target)) {
+                icons[index].classList.remove('active');
+            }
+        });
+    });
 
 });
