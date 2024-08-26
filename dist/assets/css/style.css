@@ -4616,6 +4616,14 @@ form span.icon-button__bg.active {
     display: block;
 }
 
+form span.icon-button__bg.bg-icon__buttom {
+    background-image: url("../images/bg/bg-icon__buttom.png");
+    -webkit-transform: translate(-47%, 26%);
+    transform: translate(-47%, 26%);
+    background-size: 100% 100%;
+    padding-top: 3rem;
+}
+
 .calculator__line1--radio {
     display: grid;
     grid-template-columns: repeat(3, auto);
