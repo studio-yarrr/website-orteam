@@ -270,6 +270,10 @@
   }
 }
 
-.case-popup {
+#case-popup {
   display: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

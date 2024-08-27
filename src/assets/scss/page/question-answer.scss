@@ -275,6 +275,7 @@ div .view-icon {
   }
 }
 
+#blogSort,
 #headingHeadBlog,
 #headingSort,
 #headingHead,
@@ -285,12 +286,24 @@ div .view-icon {
   }
 }
 
+
+#sortContainerBlog:hover,
 #sortContainer:hover {
   cursor: pointer;
 }
 
+#sortContainerBlog,
 #sortContainer {
   position: relative;
+}
+
+#sortContainerBlog .heading__container.heading__container--sort {
+  width: 18rem;
+  left: -330%;
+  @include breakpoint($sm-bp) {
+    top: 121%;
+    left: -353%;
+  }
 }
 
 .heading__container.heading__container--sort {

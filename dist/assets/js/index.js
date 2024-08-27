@@ -190,12 +190,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
     reviewPopups.forEach(function (popup, index) {
         popup.innerHTML = reviewTexts[index].innerHTML;
     });
+  const caseTextBlock = document.querySelector('.case2__inf-bottom');
+    if(caseTextBlock) {
+      const casePopup = document.getElementById('case-popup');
+      casePopup.textContent = caseTextBlock.textContent;
+    }
 
-  // const caseTextBlock = document.querySelector('.case2__inf-bottom');
-  //
-  // const reviewPopup = document.getElementById('case-popup');
-  //
-  // reviewPopup.textContent = caseTextBlock.textContent;
+
 
     //accordion
     const titles = document.querySelectorAll('.accordion__title');
@@ -751,5 +752,17 @@ const blog = document.querySelector('.blog');
             }
         });
     });
+
+  const sortContainerBlog = document.getElementById('sortContainerBlog');
+
+  if (sortContainerBlog) {
+    sortContainerBlog.addEventListener('click', () => {
+      const blogSort = document.getElementById('blogSort');
+      if (blogSort) {
+        blogSort.classList.toggle('active');
+      }
+    });
+  }
+
 
 });
