@@ -210,13 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function updateTotal() {
-    let finalTotal = total + totalCost + totalCostMiniprop;
+    const actionsLigatures = 18000;
+    let finalTotal = total + totalCost + totalCostMiniprop + actionsLigatures;
 
     if (isTreatmentSelected) {
       finalTotal /= 2;
     }
-
-    finalTotal += 18000;
 
     totalOutput.textContent = `Итого: ${finalTotal} руб.`;
   }
