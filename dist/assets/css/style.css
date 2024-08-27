@@ -4445,12 +4445,29 @@ button.swiper-pagination-bullet {
     background-color: #fff;
 }
 
-.form {
+.calculator__price {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, display 0s 2s;
+}
+
+.calculator__price.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.calculator .form {
+    margin: 0;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 4rem;
+}
+
+.calculator .form .calculator__buttons button {
+    margin: 0;
 }
 
 .calculator__num {
@@ -4659,7 +4676,8 @@ form span.icon-button__bg.bg-icon__buttom {
     z-index: 1;
 }
 
-.calculator--radio {
+.calculator--radio,
+.calculator__miniprop--radio {
     display: -ms-flexbox;
     display: flex;
     gap: 0.8rem;
@@ -4704,6 +4722,7 @@ form span.icon-button__bg.bg-icon__buttom {
 
 .calculator__subtitle-line,
 .active-text {
+    font-family: "Cygre-Bold", sans-serif;
     font-weight: 700;
     color: var(--color1);
 }
@@ -4725,10 +4744,13 @@ form span.icon-button__bg.bg-icon__buttom {
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+.calculator__reset {
     color: var(--grey);
 }
 
-.calculator__buttons.active {
+.calculator__reset.active {
     color: var(--color1);
 }
 
@@ -4742,6 +4764,36 @@ form span.icon-button__bg.bg-icon__buttom {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1.6rem;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.calculator-item--line {
+    padding: 1.6rem 0 2.4rem;
+    border-bottom: 0.1rem dotted var(--grey);
+}
+
+.calculator__list-item {
+    padding: 1.6rem 0 2.4rem;
+    border-bottom: 0.1rem dotted var(--grey);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.calculator-item {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.calculator__sum {
+    margin-top: 3.2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 /*------header-----*/
@@ -4982,7 +5034,7 @@ form span.icon-button__bg.bg-icon__buttom {
 /*------pages------*/
 .banner {
     background-image: url("../images/banner.jpg");
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 6rem 5.6rem 2.4rem;
     border-radius: 1.2rem;
@@ -7101,6 +7153,8 @@ a.analytics__button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    -ms-flex-align: start;
+    align-items: start;
 }
 
 @media (max-width: 768px) {

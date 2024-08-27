@@ -1325,18 +1325,18 @@
                                 </button>
                             </div>
                             <div class="calculator__line--radio">
-                                <div class="calculator--radio">
+                                <div class="calculator__miniprop--radio">
                                     <input id="miniprop0" class="checkbox-custom customClick2" name="miniprop" type="radio" value="1">
                                     <label for="miniprop0" class="radio"></label>
                                     <div class="miniprop__num">0</div>
                                 </div>
-                                <div class="calculator--radio">
+                                <div class="calculator__miniprop--radio">
                                     <input id="miniprop1" class="checkbox-custom customClick2" name="miniprop" type="radio" value="1.5">
 
                                     <label for="miniprop1" class="radio"></label>
                                     <div class="miniprop__num">1</div>
                                 </div>
-                                <div class="calculator--radio">
+                                <div class="calculator__miniprop--radio">
                                     <input id="miniprop2" class="checkbox-custom customClick2" name="miniprop" type="radio" value="2">
                                     <label for="miniprop2" class="radio"></label>
                                     <div class="miniprop__num">2</div>
@@ -1365,19 +1365,55 @@
                     </div>
 
                     <div class="calculator__buttons">
-                        <button class="button__disabled calculator__button" type="submit">Рассчитать стоимость</button>
+                        <button class="button__disabled calculator__button moveCost" type="button">Рассчитать стоимость</button>
                         <button class="calculator__reset" type="reset">Сбросить все</button>
                     </div>
 
-                    <div class="total-output"></div>
                 </form>
             </div>
             <div class="calculator__price">
                 <h3>Итоговая стоимость лечения</h3>
                 <div class="calculator__price-list">
-                    <div class="calculator__price-list">
-                        pb
+                    <div class="calculator__list-item">
+                        <div class="calculator-item">
+                            <div class="calculator__subtitle-line">Тарифный план:</div>
+                            <div class="innerText"></div>
+                        </div>
+                        <div class="calculator__subtitle-line calculator__subtitle-line">x1</div>
                     </div>
+                    <div class="calculator__list-item">
+                        <div class="calculator-item">
+                            <div class="calculator__subtitle-line">Тип брекетов:</div>
+                            <div class="innerType"></div>
+                        </div>
+                        <div class="calculator__subtitle-line calculator__subtitle-line">x1</div>
+                    </div>
+                    <div class="calculator-item calculator-item--line">
+                        <div class="calculator__subtitle-line">Срок лечения:</div>
+                        <div class="innerYears"></div>
+                    </div>
+                    <div class="calculator__list-item">
+                        <div class="calculator-item">
+                            <div class="calculator__subtitle-line">Установка минивинтов</div>
+                        </div>
+                        <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerMiniprop"></span></div>
+                    </div>
+                    <div class="calculator__list-item">
+                        <div class="calculator-item">
+                            <div class="calculator__subtitle-line">Ортогнатическая операция</div>
+                        </div>
+                        <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerOperation">0</span></div>
+                    </div>
+                    <div class="calculator__list-item">
+                        <div class="calculator-item">
+                            <div class="calculator__subtitle-line">Лечение челюсти</div>
+                        </div>
+                        <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerTreatment">1</span></div>
+                    </div>
+                </div>
+                <div class="calculator__sum">
+                    <h3>Итого:</h3>
+                    <h3 class="total-output"></h3>
                 </div>
 
             </div>

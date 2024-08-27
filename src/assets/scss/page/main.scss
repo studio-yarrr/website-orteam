@@ -1,6 +1,6 @@
 .banner {
   background-image: url("../images/banner.jpg");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 6rem 5.6rem 2.4rem;
   border-radius: 1.2rem;
@@ -1667,6 +1667,7 @@ a.analytics__button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  align-items: start;
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
   }

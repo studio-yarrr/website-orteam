@@ -63,7 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
     selectElement.addEventListener('change', () => {
       if (selectElement.value) {
         selectedTariff = selectElement.selectedOptions[0].text;
-        console.log(selectedTariff);
+        let innerText = document.querySelector('.innerText');
+        innerText.textContent = selectedTariff;
 
         numElement.forEach((elem, index) => {
           if (index === 0) {
@@ -94,28 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         total = prices[selectBrackets.value] || 0;
-        const selectedBracket = choicesBrackets.itemList.element.innerText;
+        const selectedBracket = choicesBrackets.getValue(true);
 
         if (selectedBracket) {
-          const bracketTypeArray = bracketChoices[selectBrackets.value];
-          console.log('Массив типов: ', bracketTypeArray);
+          const bracketTypeArray = bracketChoices[selectElement.value];
 
           if (bracketTypeArray) {
-            const selectedItem = bracketTypeArray.find(item => item.value === selectedBracket.value);
-
+            const selectedItem = bracketTypeArray.find(item => item.value === selectBrackets.value);
             if (selectedItem) {
               selectedBracketType = selectedItem.label;
-            } else {
-              selectedBracketType = 'Неизвестный тип'; // Нет соответствия
-            }
-          } else {
-            selectedBracketType = 'Неизвестный тип'; // Массив типов не существует
-          }
-        } else {
-          selectedBracketType = 'Неизвестный тип'; // Если не выбрано
-        }
+              let innerType = document.querySelector('.innerType');
+              innerType.textContent = selectedBracketType;
 
-        console.log(selectedBracketType);
+            }
+          }
+        }
         updateTotal();
       }
     });
@@ -134,7 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
       yearsNums.forEach(num => num.classList.remove('active-text'));
       if (radio.checked) {
         duration = yearsNums[index].textContent;
-
+        let innerYears = document.querySelector('.innerYears');
+        innerYears.textContent = duration;
         yearsNums[index].classList.add('active-text');
 
         numElement.forEach((elem, idx) => {
@@ -157,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
           activations = 60;
         }
         totalCost = activations * costPerActivation;
-        console.log(totalCost);
+
         updateTotal();
       }
     });
@@ -175,12 +170,11 @@ document.addEventListener('DOMContentLoaded', () => {
       miniprop.forEach(num => num.classList.remove('active-text'));
       if (item.checked) {
         minipropValue = Number(miniprop[index].textContent);
-
-        console.log(minipropValue);
+        let innerMiniprop = document.querySelector('.innerMiniprop');
         miniprop[index].classList.add('active-text');
-
+        innerMiniprop.textContent = minipropValue
         totalCostMiniprop = minipropValue * amountMiniprop;
-        console.log(totalCostMiniprop);
+
         updateTotal();
       }
 
@@ -201,11 +195,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   operationCheckbox.addEventListener('change', () => {
     isOperationSelected = operationCheckbox.checked;
+    let innerOperation = document.querySelector('.innerOperation');
+
+    if(isOperationSelected) {
+      innerOperation.textContent = '1';
+    } else {
+      innerOperation.textContent = '0';
+    }
     updateTotal();
   });
 
   treatmentCheckbox.addEventListener('change', () => {
     isTreatmentSelected = treatmentCheckbox.checked;
+    if(isTreatmentSelected) {
+      let innerTreatment = document.querySelector('.innerTreatment');
+      innerTreatment.textContent = '0,5'
+    }
     updateTotal();
   });
 
@@ -217,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
       finalTotal /= 2;
     }
 
-    totalOutput.textContent = `Итого: ${finalTotal} руб.`;
+    totalOutput.textContent =  `${finalTotal} ₽`;
   }
 
   const buttonCalculator = document.querySelector('.calculator__button');
@@ -256,6 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observerCheck.observe(elem, { attributes: true, attributeFilter: ['class'] });
   });
 
+  const calculatorPrice = document.querySelector('.calculator__price');
 
   calculatorReset.addEventListener('click', () => {
 
@@ -266,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     isTreatmentSelected = false;
     selectedTariff = "";
     selectedBracketType = "";
+    totalOutput.textContent = ""
 
 
     numElements.forEach(item => item.classList.remove('active'));
@@ -293,11 +300,19 @@ document.addEventListener('DOMContentLoaded', () => {
     operationCheckbox.checked = false;
     treatmentCheckbox.checked = false;
 
+    calculatorPrice.classList.remove('active');
 
     updateTotal();
 
 
     checkActiveClasses();
   });
+
+  const moveCost = document.querySelector('.moveCost');
+
+  moveCost.addEventListener('click', (event)=> {
+    event.preventDefault();
+    calculatorPrice.classList.add('active')
+  })
 
 });
