@@ -4,6 +4,16 @@
   gap: 2.4rem;
   justify-content: center;
   align-items: center;
+
+  & p {
+    @include breakpoint($xxl-bp) {
+      width: 80%;
+      align-self: flex-start;
+    }
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
+  }
 }
 
 .payment__top {
@@ -50,6 +60,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows:  27rem 34rem;
   gap: 2rem;
+  text-wrap: balance;
   @include breakpoint($xl-bp) {
     grid-template-rows:  auto;
   }
@@ -69,6 +80,11 @@
   justify-content: space-between;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3.1rem;
   }
 }
 
