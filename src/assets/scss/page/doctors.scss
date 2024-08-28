@@ -58,6 +58,7 @@ select {
   gap: 2rem;
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
+    grid-auto-rows: 73rem;
   }
 }
 
@@ -106,6 +107,9 @@ select {
 .doctor__linc {
   text-align: center;
   font-weight: 700;
+  @include breakpoint($sm-bp) {
+    background-color: var(--color2);
+  }
 }
 
 .doctors__content-item {

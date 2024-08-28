@@ -6672,6 +6672,7 @@ a.order4 .list__item {
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    gap: 0.5rem;
 }
 
 .reviews__item-top--text {
@@ -8624,6 +8625,7 @@ select {
 @media (max-width: 768px) {
     .doctors__content {
         grid-template-columns: 1fr;
+        grid-auto-rows: 73rem;
     }
 }
 
@@ -8688,6 +8690,12 @@ select {
 .doctor__linc {
     text-align: center;
     font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .doctor__linc {
+        background-color: var(--color2);
+    }
 }
 
 .doctors__content-item {
