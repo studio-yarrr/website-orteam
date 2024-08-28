@@ -428,7 +428,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .price__container {
-        padding-bottom: 3rem;
+        padding-bottom: 4rem;
     }
 }
 
@@ -977,7 +977,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .price-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: -3%;
+        bottom: -9%;
     }
 }
 
@@ -3768,6 +3768,7 @@ button.swiper-pagination-bullet {
     border-radius: 1.2rem;
     border: 1px solid var(--color2);
     transition: background-color 0.3s, color 0.3s;
+    text-align: center;
 }
 
 .border a {
@@ -4864,6 +4865,7 @@ form span.icon-button__bg.bg-icon__buttom {
     border-radius: 1.2rem;
     border: 1px solid var(--color2);
     transition: background-color 0.3s, color 0.3s;
+    text-align: center;
 }
 
 .border a {
@@ -6751,6 +6753,12 @@ a.order4 .list__item {
 }
 
 @media (max-width: 768px) {
+    .braces {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
     .braces h2,
   .reviews h2 {
         text-align: center;
@@ -7006,7 +7014,7 @@ a.analytics__button {
         border-top-right-radius: 0;
         border-top-left-radius: 0;
         width: 100%;
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
     }
 }
 
@@ -7031,6 +7039,12 @@ a.analytics__button {
     margin: 0 4rem;
     position: absolute;
     bottom: -3%;
+}
+
+@media (max-width: 768px) {
+    .surgery__img-container a {
+        bottom: -4%;
+    }
 }
 
 .surgery__img-container .standards__img-subtitle {

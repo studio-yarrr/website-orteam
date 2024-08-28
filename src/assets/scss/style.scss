@@ -244,7 +244,7 @@ a:hover {
 
 .price__container {
   @include breakpoint($sm-bp) {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -656,7 +656,7 @@ a:hover {
 
 .price-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
-    bottom: -3%;
+    bottom: -9%;
   }
 }
 

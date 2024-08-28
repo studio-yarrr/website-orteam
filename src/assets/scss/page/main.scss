@@ -1340,6 +1340,12 @@ a.order4 .list__item {
   }
 }
 
+.braces {
+  @include breakpoint($sm-bp) {
+    margin-top: 3rem;
+  }
+}
+
 .braces h2,
 .reviews h2 {
   @include breakpoint($sm-bp) {
@@ -1536,7 +1542,7 @@ a.analytics__button {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     width: 100%;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -1556,6 +1562,7 @@ a.analytics__button {
   position: absolute;
   bottom: -3%;
   @include breakpoint($sm-bp) {
+    bottom: -4%;
   }
 }
 
@@ -1634,7 +1641,6 @@ a.analytics__button {
 .price__item-dark {
   background-color: var(--color1);
   color: #FEFEFE;
-;
 }
 
 .price__item-dark .price__title {
