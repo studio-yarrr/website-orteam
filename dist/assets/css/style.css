@@ -8324,6 +8324,10 @@ a.analytics__button {
     max-width: 50rem;
 }
 
+.guarantee__item.guarantee__line3 div div.guarantee__line1-subtitle {
+    margin-top: 0.8rem;
+}
+
 .assurance {
     padding-top: 6.4rem;
     padding-bottom: 10.4rem;
