@@ -5847,6 +5847,20 @@ sup {
     }
 }
 
+@media (max-width: 768px) {
+    .doctors-page.team__item-desc {
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        gap: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .doctors-page .doctor__linc {
+        margin-top: 2.4rem;
+    }
+}
+
 .team__item-title {
     font-weight: 700;
 }
@@ -8625,7 +8639,6 @@ select {
 @media (max-width: 768px) {
     .doctors__content {
         grid-template-columns: 1fr;
-        grid-auto-rows: 73rem;
     }
 }
 
@@ -8668,19 +8681,18 @@ select {
     }
 }
 
-@media (max-width: 1024px) {
-    .doctors__content-item .team__item-desc {
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-    }
-}
-
 .doctors__item-person {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .doctors__item-person {
+        gap: 1.5rem;
+    }
 }
 
 .doctors__item-person {
@@ -8698,7 +8710,7 @@ select {
     }
 }
 
-.doctors__content-item {
+.doctors-page__content-item {
     display: -ms-flexbox;
     display: flex;
     border-radius: 1.2rem;
@@ -8706,13 +8718,13 @@ select {
 }
 
 @media (max-width: 1024px) {
-    .doctors__content-item {
+    .doctors-page__content-item {
         -ms-flex-direction: column;
         flex-direction: column;
     }
 }
 
-.doctors__content-item:first-child {
+.doctors-page__content-item:first-child {
     border: 1px solid var(--color2);
 }
 

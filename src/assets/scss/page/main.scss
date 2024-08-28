@@ -606,6 +606,19 @@ sup {
   }
 }
 
+.doctors-page.team__item-desc {
+  @include breakpoint($sm-bp) {
+    justify-content: flex-start;
+    gap: 2.4rem;
+  }
+}
+
+.doctors-page .doctor__linc {
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+  }
+}
+
 .team__item-title {
   font-weight: 700;
   @include breakpoint($xl-bp) {
