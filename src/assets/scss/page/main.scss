@@ -533,6 +533,7 @@ sup {
   @include breakpoint($sm-bp) {
     font-size: 2.8rem;
     line-height: 3.3rem;
+    text-align: center;
   }
 }
 
@@ -609,6 +610,8 @@ sup {
   font-weight: 700;
   @include breakpoint($xl-bp) {
    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
   }
 }
 
@@ -647,6 +650,8 @@ sup {
   color: var(--grey);
   @include breakpoint($xl-bp) {
     text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
   }
 }
 

@@ -5744,6 +5744,7 @@ sup {
     .team__title {
         font-size: 2.8rem;
         line-height: 3.3rem;
+        text-align: center;
     }
 }
 
@@ -5851,6 +5852,8 @@ sup {
 @media (max-width: 1024px) {
     .team__item-title {
         text-align: center;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
     }
 }
 
@@ -5901,6 +5904,8 @@ sup {
 @media (max-width: 1024px) {
     .team__item-subtitle {
         text-align: center;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
     }
 }
 
