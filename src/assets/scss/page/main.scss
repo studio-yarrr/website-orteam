@@ -254,8 +254,6 @@ a:hover .list__item {
 
 .list__item-bottom p {
   max-width: 70%;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
 }
 
 .list__item-bottom div {
@@ -670,6 +668,13 @@ sup {
   bottom: -0.6rem;
 }
 
+a:hover .team__linc-text::before {
+  background-color: var(--color2);
+}
+.process__item-linc:hover .process__linc-text:after {
+  background-color: var(--color2);
+}
+
 .price h2,
 .surgery h2,
 .standards h2,
@@ -901,7 +906,7 @@ a.order4 .list__item {
   height: 0.1rem;
   width: 100%;
   background-color: var(--white);
-  bottom: -2rem;
+  bottom: -0.5rem;
   left: 0;
   @include breakpoint($sm-bp) {
     bottom: -1rem;
@@ -1577,8 +1582,8 @@ a.analytics__button {
 }
 
 .price__item.border:hover {
-  cursor: none;
-  background-color: var(--white);
+  cursor: auto;
+  background-color: #DDDFE4;
 }
 
 .price__title {
@@ -1776,11 +1781,11 @@ a.analytics__button {
 
 .questions__svg svg {
   stroke: var(--color2);
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.2rem;
+  height: 2.2rem;
   @include breakpoint($sm-bp) {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 1.2rem;
+    height: 1.2rem;
   }
 }
 
@@ -1794,6 +1799,10 @@ a.analytics__button {
 
 .questions__item:hover {
   cursor: pointer;
+}
+
+.questions__item:not(:last-child) {
+  border-bottom: 0.1rem solid #4A6169;
 }
 
 .video {
@@ -1873,17 +1882,13 @@ a.analytics__button {
   }
 }
 
-//.articles__text {
-//  max-height: 5em;
-//  overflow: hidden;
-//}
+a.articles__item .articles__text {
+  color: var(--color1);
+}
+a.articles__item:hover div.articles-text .articles__item-title {
+  color: var(--color1);
+}
 
-//.articles__text {
-//  display: -webkit-box;
-//  -webkit-line-clamp: 4;
-//  -webkit-box-orient: vertical;
-//  overflow: hidden;
-//}
 
 
 .video-item__title {
