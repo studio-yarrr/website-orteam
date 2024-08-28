@@ -12472,16 +12472,28 @@ div .view-icon {
 }
 
 .footer__bottom-list {
-    margin: 0 7rem;
-    gap: 2.4rem;
+    margin-left: 11rem;
+    gap: 4rem;
+}
+
+@media (max-width: 1440px) {
+    .footer__bottom-list {
+        margin-left: 12rem;
+    }
 }
 
 @media (max-width: 1024px) {
     .footer__bottom-list {
-        margin: 0;
+        margin: 0 2rem;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         gap: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__bottom-list {
+        margin: 0;
     }
 }
 

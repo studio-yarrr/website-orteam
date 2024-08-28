@@ -116,12 +116,18 @@
 }
 
 .footer__bottom-list {
-  margin: 0 7rem;
-  gap: 2.4rem;
+  margin-left: 11rem;
+  gap: 4rem;
+  @include breakpoint($xxl-bp) {
+    margin-left: 12rem;
+  }
   @include breakpoint($xl-bp) {
-    margin: 0;
+    margin: 0 2rem;
     flex-wrap: wrap;
     gap: 2.4rem;
+  }
+  @include breakpoint($sm-bp) {
+    margin: 0;
   }
 }
 
