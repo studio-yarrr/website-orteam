@@ -731,7 +731,7 @@ a:hover .team__linc-text::before {
   margin: 0 3.6rem;
   margin-bottom: -4%;
   @include breakpoint($sm-bp) {
-    margin: 0 2.6rem;
+    margin: 2rem 2.6rem;
   }
 }
 
@@ -828,7 +828,7 @@ a:hover .team__linc-text::before {
     order: 5;
     border-top: none;
     margin-top: -95%;
-    height: 36rem;
+    height: 37.5rem;
   }
 }
 
@@ -846,7 +846,7 @@ a.order4 .list__item {
   margin-bottom: 8.4rem;
   @include breakpoint($sm-bp) {
     margin-bottom: 6.4rem;
-    margin-top: 12rem;
+    margin-top: 17rem;
   }
 }
 

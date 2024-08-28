@@ -5999,7 +5999,7 @@ a:hover .team__linc-text::before {
 
 @media (max-width: 768px) {
     .standards__item a {
-        margin: 0 2.6rem;
+        margin: 2rem 2.6rem;
     }
 }
 
@@ -6116,7 +6116,7 @@ a:hover .team__linc-text::before {
         order: 5;
         border-top: none;
         margin-top: -95%;
-        height: 36rem;
+        height: 37.5rem;
     }
 }
 
@@ -6140,7 +6140,7 @@ a.order4 .list__item {
 @media (max-width: 768px) {
     .details {
         margin-bottom: 6.4rem;
-        margin-top: 12rem;
+        margin-top: 17rem;
     }
 }
 
