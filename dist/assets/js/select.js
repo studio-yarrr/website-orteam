@@ -242,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
      function checkActiveClasses() {
        const activeElements = Array.from(numElements).filter(elem => elem.classList.contains('active'));
        const allActive = activeElements.length >= 4;
+
        buttonCalculators.forEach(button => {
          if (allActive) {
            button.classList.remove('button__disabled');

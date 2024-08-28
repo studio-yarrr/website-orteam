@@ -537,6 +537,15 @@ a:hover {
   }
 }
 
+.cost__buttons-container {
+  @include breakpoint($xxl_bp) {
+    right: 7%;
+  }
+  @include breakpoint($xl-bp) {
+    right: 1%;
+  }
+}
+
 .certificate__buttons,
 .process__buttons-container,
 .team__buttons-container,
