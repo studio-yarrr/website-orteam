@@ -5046,7 +5046,7 @@ form span.icon-button__bg.bg-icon__buttom {
 /*------pages------*/
 .banner {
     background-image: url("../images/banner.jpg");
-    background-size: cover;
+    background-size: inherit;
     background-repeat: no-repeat;
     padding: 6rem 5.6rem 2.4rem;
     border-radius: 1.2rem;
@@ -5058,12 +5058,17 @@ form span.icon-button__bg.bg-icon__buttom {
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 10.4rem;
+    background-position: center;
+}
+
+@media (max-width: 1440px) {
+    .banner {
+        background-size: cover;
+    }
 }
 
 @media (max-width: 1024px) {
     .banner {
-        background-image: url("../images/banner-mob.png");
-        background-size: contain;
         padding: 2rem;
         position: relative;
         gap: 0;
@@ -5073,10 +5078,12 @@ form span.icon-button__bg.bg-icon__buttom {
 
 @media (max-width: 768px) {
     .banner {
+        background-image: url("../images/banner-mob.png");
         padding: 0;
-        position: relative;
         gap: 3rem;
         margin-bottom: 1.4rem;
+        background-size: contain;
+        background-position: top;
     }
 }
 
@@ -5118,6 +5125,12 @@ form span.icon-button__bg.bg-icon__buttom {
         gap: 1rem;
         -ms-flex-align: start;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner-icon__next-bottom {
+        display: none;
     }
 }
 
@@ -5230,6 +5243,7 @@ form span.icon-button__bg.bg-icon__buttom {
     .banner__item {
         gap: 2rem;
         background-color: var(--white);
+        border: none;
     }
 }
 
