@@ -7521,6 +7521,12 @@ a.articles__item:hover div.articles-text .articles__item-title {
     height: 2em;
 }
 
+@media (max-width: 768px) {
+    .video-text__slider div {
+        height: 3em;
+    }
+}
+
 .record__container {
     display: -ms-flexbox;
     display: flex;
