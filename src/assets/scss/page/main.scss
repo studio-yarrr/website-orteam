@@ -405,7 +405,7 @@ a:hover .list__item {
     width: 30rem;
   }
   @include breakpoint($sm-bp) {
-    padding: 1.2rem 3.2rem;
+    padding: 1.2rem 3.2rem 1.2rem 1.2rem;
     border-radius: 1.2rem;
     background-color: var(--white);
     border: 1px solid var(--color2);
@@ -424,7 +424,7 @@ a:hover .list__item {
     font-size: 1.6rem;
     line-height: 2rem;
     gap: 1.2rem;
-    list-style: block;
+    list-style: inside block;
   }
 }
 
@@ -513,6 +513,7 @@ sup {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 2.1rem;
+    text-wrap: balance;
   }
 
 }

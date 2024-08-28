@@ -54,6 +54,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }, 300);
     }
 
+  const successModal = document.querySelector('.success-modal');
+
+  successModalWrapper.addEventListener('click', function(event) {
+    if (!successModal.contains(event.target)) {
+      closeAll();
+    }
+  });
+
     const openModal = document.querySelectorAll('.openModal');
 
     openModal.forEach(item => {
@@ -195,8 +203,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
       const casePopup = document.getElementById('case-popup');
       casePopup.textContent = caseTextBlock.textContent;
     }
-
-
 
     //accordion
     const titles = document.querySelectorAll('.accordion__title');

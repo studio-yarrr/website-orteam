@@ -179,6 +179,10 @@
   width: 100%;
 }
 
+.linc:hover::before {
+  background: var(--color2);
+}
+
 .footer__linc-personal {
   display: flex;
   flex-direction: column;
