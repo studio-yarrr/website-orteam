@@ -58,6 +58,7 @@
 .reviews__heading {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 23.5rem;
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
     grid-template-rows: 14rem auto;

@@ -1422,13 +1422,19 @@ a.order4 .list__item {
   }
 }
 
-.articles__slider,
-.braces__slider {
+.articles__slider {
   @include breakpoint($sm-bp) {
-    padding-top: 0;
-    padding-bottom: 5rem;
+    margin-top: 1rem;
   }
 }
+
+//.articles__slider,
+//.braces__slider {
+//  @include breakpoint($sm-bp) {
+//    padding-top: 0;
+//    padding-bottom: 5rem;
+//  }
+//}
 
 .surgery {
   margin-bottom: 10.4rem;

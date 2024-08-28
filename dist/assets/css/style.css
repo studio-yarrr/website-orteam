@@ -6854,10 +6854,8 @@ a.order4 .list__item {
 }
 
 @media (max-width: 768px) {
-    .articles__slider,
-  .braces__slider {
-        padding-top: 0;
-        padding-bottom: 5rem;
+    .articles__slider {
+        margin-top: 1rem;
     }
 }
 
@@ -7959,6 +7957,7 @@ a.articles__item:hover div.articles-text .articles__item-title {
 .reviews__heading {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 23.5rem;
 }
 
 @media (max-width: 768px) {
@@ -12488,6 +12487,12 @@ div .view-icon {
     .footer__contact {
         -ms-flex-direction: column;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer__contact .border {
+        background-color: var(--color2);
     }
 }
 

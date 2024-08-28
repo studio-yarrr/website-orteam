@@ -100,6 +100,12 @@
   }
 }
 
+.footer__contact .border {
+  @include breakpoint($xl-bp) {
+    background-color: var(--color2);
+  }
+}
+
 .footer__item-title:first-child {
   padding-bottom: 0.8rem;
 }
