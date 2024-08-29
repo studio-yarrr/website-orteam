@@ -9725,10 +9725,12 @@ select {
     }
 }
 
+.review-popup1,
 #case-popup {
     display: none;
 }
 
+.review-popup1:hover,
 #case-popup:hover {
     cursor: pointer;
 }

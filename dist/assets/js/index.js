@@ -5,6 +5,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
         hideScrollbar: false
     });
 
+    // copy text
+
+    const reviewTexts = document.querySelectorAll('.reviews__item-text1');
+
+    const reviewPopups = document.querySelectorAll('.review-popup1');
+
+    reviewPopups.forEach(function(popup, index) {
+        popup.innerHTML = reviewTexts[index].innerHTML;
+    });
+
+    const caseTextBlock = document.querySelector('.case2__inf-bottom');
+    if(caseTextBlock) {
+        const casePopup = document.getElementById('case-popup');
+        casePopup.textContent = caseTextBlock.textContent;
+    }
+
     const headerBurger = document.querySelector('.header__burger');
     const menuWrapper = document.querySelector('.menu__wrapper');
     const menuContent = document.querySelector('.menu__content');
@@ -190,23 +206,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     addMask();
-// copy text
 
-    const reviewTexts = document.querySelectorAll('.reviews__item-text');
-
-
-    if(reviewTexts) {
-        const reviewPopups = document.querySelectorAll('.review-popup');
-        reviewPopups.forEach(function (popup, index) {
-            popup.innerHTML = reviewTexts[index].innerHTML;
-        });
-    }
-
-  const caseTextBlock = document.querySelector('.case2__inf-bottom');
-    if(caseTextBlock) {
-      const casePopup = document.getElementById('case-popup');
-      casePopup.textContent = caseTextBlock.textContent;
-    }
 
     //accordion
     const titles = document.querySelectorAll('.accordion__title');
