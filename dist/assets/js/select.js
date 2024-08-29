@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
        });
 
        choicesBrackets.setChoices([
-         {value: '', label: 'Выберите тип брекетов', selected: true},
+         {value: '', label: '<span class="block-desc">2.</span> Выберите тип брекетов', selected: true},
          {value: 'tariff', label: 'Выберите тарифный план', disabled: true}
        ], 'value', 'label', false);
      }

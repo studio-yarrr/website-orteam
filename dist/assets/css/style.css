@@ -4458,6 +4458,13 @@ button.swiper-pagination-bullet {
     background-color: #fff;
 }
 
+@media (max-width: 768px) {
+    .calculator,
+  .calculator__price {
+        padding: 1.2rem;
+    }
+}
+
 .calculator__price {
     display: none;
     -ms-flex-direction: column;
@@ -4489,8 +4496,48 @@ button.swiper-pagination-bullet {
     gap: 4rem;
 }
 
-.calculator .form .calculator__buttons button {
+@media (max-width: 768px) {
+    .calculator .form {
+        gap: 2.4rem;
+    }
+}
+
+.calculator .form .calculator__buttons {
     margin: 0;
+}
+
+.calculator .form .calculator__buttons .button__disabled {
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .calculator .form .calculator__buttons .button__disabled {
+        margin-top: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator .form .calculator__buttons .button {
+        margin-top: 1.6rem;
+    }
+}
+
+.block-desc {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .block-desc {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    form span.block-desc {
+        font-weight: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
 }
 
 .calculator__num {
@@ -4506,6 +4553,12 @@ button.swiper-pagination-bullet {
     justify-content: center;
     border: 0.1rem solid var(--color1);
     background: var(--bg-grey);
+}
+
+@media (max-width: 768px) {
+    .calculator__num {
+        display: none;
+    }
 }
 
 .calculator__num.active {
@@ -4590,6 +4643,15 @@ button.swiper-pagination-bullet {
     transition: font-weight 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .choices__item.choices__item--selectable {
+        display: -ms-flexbox;
+        display: flex;
+        gap: 0.2rem;
+        font-weight: 700;
+    }
+}
+
 .choices__item.choices__item--selectable:hover {
     font-weight: 700;
     font-family: "Cygre-Bold", sans-serif;
@@ -4638,6 +4700,13 @@ button.swiper-pagination-bullet {
     width: 2.4rem;
     height: 2.4rem;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    .icon-button {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
 }
 
 .icon-button:hover {
@@ -4728,12 +4797,30 @@ form span.icon-button__bg.bg-icon__level {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .calculator__line1--radio {
+        -ms-flex-align: start;
+        align-items: flex-start;
+        gap: 0;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+
 .calculator__lines--radio {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1.6rem;
+}
+
+@media (max-width: 768px) {
+    .calculator__lines--radio {
+        gap: 2rem;
+    }
 }
 
 .calculator__line--radio {
@@ -4804,6 +4891,14 @@ form span.icon-button__bg.bg-icon__level {
     color: var(--color1);
 }
 
+@media (max-width: 768px) {
+    .calculator__subtitle-line {
+        display: -ms-flexbox;
+        display: flex;
+        gap: 0.2rem;
+    }
+}
+
 .calculator__line--bottom {
     display: -ms-flexbox;
     display: flex;
@@ -4816,11 +4911,25 @@ form span.icon-button__bg.bg-icon__level {
     grid-template-rows: 2.4rem;
 }
 
+@media (max-width: 768px) {
+    .calculator__line--bottom .calculator__line1--radio {
+        grid-template-rows: auto;
+    }
+}
+
 .calculator__buttons {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .calculator__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 .calculator__reset {
@@ -4831,8 +4940,30 @@ form span.icon-button__bg.bg-icon__level {
     color: var(--color1);
 }
 
+@media (max-width: 768px) {
+    .calculator__reset {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+    }
+}
+
 .calculator__price h3 {
     margin-bottom: 2.4rem;
+}
+
+@media (max-width: 768px) {
+    .calculator__price h3 {
+        font-size: 2.4rem;
+        line-height: 3.1rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator__sum h3 {
+        margin-bottom: 0;
+    }
 }
 
 .calculator__price-list {
@@ -4843,6 +4974,12 @@ form span.icon-button__bg.bg-icon__level {
     gap: 1.6rem;
     -ms-flex-pack: start;
     justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .calculator__price-list {
+        gap: 0;
+    }
 }
 
 .calculator-item--line {
@@ -4859,10 +4996,31 @@ form span.icon-button__bg.bg-icon__level {
     justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+    .calculator__list-item {
+        padding: 1.6rem 0 1.2rem;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
 .calculator-item {
     display: -ms-flexbox;
     display: flex;
     gap: 1.6rem;
+}
+
+@media (max-width: 768px) {
+    .calculator-item {
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator-item .calculator__subtitle-line {
+        white-space: nowrap;
+    }
 }
 
 .calculator__sum {
@@ -4873,14 +5031,47 @@ form span.icon-button__bg.bg-icon__level {
     justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+    .calculator__sum {
+        margin-top: 2rem;
+    }
+}
+
 button.calculator__price-button {
     padding: 1.6rem 4.8rem 2rem 4.8rem;
     -ms-flex-item-align: center;
     align-self: center;
 }
 
+@media (max-width: 768px) {
+    button.calculator__price-button {
+        display: none;
+    }
+}
+
 .color-grey {
     color: var(--grey);
+}
+
+@media (max-width: 768px) {
+    .calculator__subtitle-line.checkbox-custom-label:before {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator__line1--radio .checkbox-custom:checked + .calculator__subtitle-line.checkbox-custom-label:before {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator__subtitle-line.checkbox-custom-label {
+        padding-left: 3.5rem;
+        max-width: 87%;
+    }
 }
 
 /*------header-----*/

@@ -790,7 +790,7 @@ const blog = document.querySelector('.blog');
     const icons = document.querySelectorAll('form span.icon-button__bg');
 
     function handleResize() {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 769) {
             openText.forEach((elem, index) => {
                 elem.addEventListener('click', handleClick);
             });
@@ -831,6 +831,5 @@ const blog = document.querySelector('.blog');
       }
     });
   }
-
 
 });
