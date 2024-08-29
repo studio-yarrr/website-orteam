@@ -1428,7 +1428,7 @@ a.order4 .list__item {
 .video__slider,
 .articles__slider,
 .braces__slider {
-  padding-top: 5.6rem;
+  padding-top: 3.6rem;
   position: relative;
   @include breakpoint($sm-bp) {
     padding-top: 3.6rem;
@@ -1900,6 +1900,15 @@ a.analytics__button {
   margin-top: 3.7rem;
   @include breakpoint($sm-bp) {
     margin-top: 1.3rem;
+  }
+}
+
+.articles {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 

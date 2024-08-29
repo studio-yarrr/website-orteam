@@ -193,11 +193,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // copy text
 
     const reviewTexts = document.querySelectorAll('.reviews__item-text');
-    const reviewPopups = document.querySelectorAll('.review-popup');
 
-    reviewPopups.forEach(function (popup, index) {
-        popup.innerHTML = reviewTexts[index].innerHTML;
-    });
+
+    if(reviewTexts) {
+        const reviewPopups = document.querySelectorAll('.review-popup');
+        reviewPopups.forEach(function (popup, index) {
+            popup.innerHTML = reviewTexts[index].innerHTML;
+        });
+    }
+
   const caseTextBlock = document.querySelector('.case2__inf-bottom');
     if(caseTextBlock) {
       const casePopup = document.getElementById('case-popup');

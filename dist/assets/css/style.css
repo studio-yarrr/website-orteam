@@ -6855,7 +6855,7 @@ a.order4 .list__item {
 .video__slider,
 .articles__slider,
 .braces__slider {
-    padding-top: 5.6rem;
+    padding-top: 3.6rem;
     position: relative;
 }
 
@@ -7462,6 +7462,18 @@ a.analytics__button {
 @media (max-width: 768px) {
     .articles__item-linc {
         margin-top: 1.3rem;
+    }
+}
+
+.articles {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .articles {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
