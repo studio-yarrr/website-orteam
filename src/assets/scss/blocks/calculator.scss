@@ -111,11 +111,14 @@
   border-radius: 0.6rem;
   background-color: var(--bg-grey);
   margin-top: -2%;
+  z-index: 3;
+
 }
 
 .choices__list--dropdown .choices__list {
   padding-left: 1.1rem;
   padding-top: 1rem;
+
 }
 
 .choices__item.choices__item--selectable {
@@ -135,6 +138,7 @@
   background-color: transparent;
   color: var(--color1);
 }
+
 
 .choices__list--dropdown .choices__item[data-value=""] {
   display: none;
