@@ -9725,11 +9725,19 @@ select {
     }
 }
 
+.review-popup5,
+.review-popup4,
+.review-popup3,
+.review-popup2,
 .review-popup1,
 #case-popup {
     display: none;
 }
 
+.review-popup5:hover,
+.review-popup4:hover,
+.review-popup3:hover,
+.review-popup2:hover,
 .review-popup1:hover,
 #case-popup:hover {
     cursor: pointer;

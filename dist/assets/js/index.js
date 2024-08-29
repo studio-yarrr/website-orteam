@@ -9,11 +9,56 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     const reviewTexts = document.querySelectorAll('.reviews__item-text1');
 
-    const reviewPopups = document.querySelectorAll('.review-popup1');
+    if(reviewTexts) {
+        const reviewPopups = document.querySelectorAll('.review-popup1');
 
-    reviewPopups.forEach(function(popup, index) {
-        popup.innerHTML = reviewTexts[index].innerHTML;
-    });
+        reviewPopups.forEach(function(popup, index) {
+            popup.innerHTML = reviewTexts[index].innerHTML;
+        });
+    }
+
+    const reviewTexts2 = document.querySelectorAll('.reviews__item-text2');
+
+    if(reviewTexts2) {
+        const reviewPopups2 = document.querySelectorAll('.review-popup2');
+
+        reviewPopups2.forEach(function(popup, index) {
+            popup.innerHTML = reviewTexts2[index].innerHTML;
+        });
+    }
+
+    const reviewTexts3 = document.querySelectorAll('.reviews__item-text3');
+
+
+    if(reviewTexts3) {
+        const reviewPopups3 = document.querySelectorAll('.review-popup3');
+
+        reviewPopups3.forEach(function(popup, index) {
+            popup.innerHTML = reviewTexts3[index].innerHTML;
+        });
+    }
+
+    const reviewTexts4 = document.querySelectorAll('.reviews__item-text4');
+
+
+    if(reviewTexts4) {
+        const reviewPopups4 = document.querySelectorAll('.review-popup4');
+
+        reviewPopups4.forEach(function(popup, index) {
+            popup.innerHTML = reviewTexts4[index].innerHTML;
+        });
+    }
+    const reviewTexts5 = document.querySelectorAll('.reviews__item-text5');
+
+
+    if(reviewTexts4) {
+        const reviewPopups5 = document.querySelectorAll('.review-popup5');
+
+        reviewPopups5.forEach(function(popup, index) {
+            popup.innerHTML = reviewTexts5[index].innerHTML;
+        });
+    }
+
 
     const caseTextBlock = document.querySelector('.case2__inf-bottom');
     if(caseTextBlock) {
