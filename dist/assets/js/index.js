@@ -789,16 +789,29 @@ const blog = document.querySelector('.blog');
     const openText = document.querySelectorAll('.openText');
     const icons = document.querySelectorAll('form span.icon-button__bg');
 
-    if (openText) {
-        openText.forEach((elem, index) => {
-            elem.addEventListener('click', (event) => {
-                event.preventDefault();
-                if (icons[index]) {
-                    icons[index].classList.toggle('active');
-                }
+    function handleResize() {
+        if (window.innerWidth <= 768) {
+            openText.forEach((elem, index) => {
+                elem.addEventListener('click', handleClick);
             });
-        });
+        } else {
+            openText.forEach((elem, index) => {
+                elem.removeEventListener('click', handleClick);
+            });
+        }
     }
+
+    function handleClick(event) {
+        event.preventDefault();
+        const index = Array.from(openText).indexOf(event.currentTarget);
+        if (icons[index]) {
+            icons[index].classList.toggle('active');
+        }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
 
     document.addEventListener('click', (event) => {
         openText.forEach((elem, index) => {

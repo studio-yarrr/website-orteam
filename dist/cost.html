@@ -933,10 +933,10 @@
                                         <div class="calculator__subtitle-line">
                                             Срок лечения
                                         </div>
-                                        <button class="icon-button openText">
+                                        <div class="icon-button openText">
                                             <span class="icon-button__bg">Зависит от сложности, тактики и квалификации врача. В среднем — 2 года. Срок фиксируем: не уложимся, долечим бесплатно!</span>
                                             <img src="assets/images/icon-button.svg" alt="">
-                                        </button>
+                                        </div>
                                     </div>
                                     <div class="calculator__line--radio">
                                         <div class="calculator--radio">
@@ -947,17 +947,17 @@
                                         <div class="calculator--radio">
                                             <input id="1.5" class="checkbox-custom customClick" name="years" type="radio" value="1.5">
                                             <label for="1.5" class="radio"></label>
-                                            <div class="years__num">1,5года</div>
+                                            <div class="years__num">1,5 года</div>
                                         </div>
                                         <div class="calculator--radio">
                                             <input id="2" class="checkbox-custom customClick" name="years" type="radio" value="2">
                                             <label for="2" class="radio"></label>
-                                            <div class="years__num">2года</div>
+                                            <div class="years__num">2 года</div>
                                         </div>
                                         <div class="calculator--radio">
                                             <input id="2.5" class="checkbox-custom customClick" name="years" type="radio" value="2.5">
                                             <label for="2.5" class="radio"></label>
-                                            <div class="years__num">2,5года</div>
+                                            <div class="years__num">2,5 года</div>
                                         </div>
                                         <div class="line"></div>
                                     </div>
@@ -972,10 +972,10 @@
                                         <div class="calculator__subtitle-line">
                                             Количество минивинтов
                                         </div>
-                                        <button class="icon-button openText">
-                                            <span class="icon-button__bg">Дополнительный опорный элемент в брекет-системе. Требуется в 40% случаев.</span>
+                                        <div class="icon-button openText">
+                                            <span class="icon-button__bg bg-icon__middle">Дополнительный опорный элемент в брекет-системе. Требуется в 40% случаев.</span>
                                             <img src="assets/images/icon-button.svg" alt="">
-                                        </button>
+                                        </div>
                                     </div>
                                     <div class="calculator__line--radio">
                                         <div class="calculator__miniprop--radio">
@@ -1002,18 +1002,18 @@
                                 <div class="calculator__line1--radio">
                                     <input id="operation" class="checkbox-custom" name="operatione" type="checkbox">
                                     <label for="operation" class="checkbox-custom-label calculator__subtitle-line">Требуется ортогнатическая операция</label>
-                                    <button class="icon-button openText">
-                                        <span class="icon-button__bg">Проводится для коррекции скелетных аномалий при согласии пациента.</span>
+                                    <div class="icon-button openText">
+                                        <span class="icon-button__bg bg-icon__level">Проводится для коррекции скелетных аномалий при согласии пациента.</span>
                                         <img src="assets/images/icon-button.svg" alt="">
-                                    </button>
+                                    </div>
                                 </div>
                                 <div class="calculator__line1--radio">
                                     <input id="treatment" class="checkbox-custom" name="treatment" type="checkbox">
                                     <label for="treatment" class="checkbox-custom-label calculator__subtitle-line">Лечение на одной челюсти</label>
-                                    <button class="icon-button openText">
+                                    <div class="icon-button openText">
                                         <span class="icon-button__bg bg-icon__buttom">В 95% случаев лечение проводится на 2 челюстях. За исключением локальных перемещений отдельных зубов.</span>
                                         <img src="assets/images/icon-button.svg" alt="">
-                                    </button>
+                                    </div>
                                 </div>
                             </div>
             
@@ -1025,49 +1025,52 @@
                         </form>
                     </div>
                     <div class="calculator__price">
-                        <h3>Итоговая стоимость лечения</h3>
-                        <div class="calculator__price-list">
-                            <div class="calculator__list-item">
-                                <div class="calculator-item">
-                                    <div class="calculator__subtitle-line">Тарифный план:</div>
-                                    <div class="innerText"></div>
+                        <div>
+                            <h3>Итоговая стоимость лечения</h3>
+                            <div class="calculator__price-list">
+                                <div class="calculator__list-item">
+                                    <div class="calculator-item">
+                                        <div class="calculator__subtitle-line">Тарифный план:</div>
+                                        <div class="innerText"></div>
+                                    </div>
+                                    <div class="calculator__subtitle-line calculator__subtitle-line">x1</div>
                                 </div>
-                                <div class="calculator__subtitle-line calculator__subtitle-line">x1</div>
-                            </div>
-                            <div class="calculator__list-item">
-                                <div class="calculator-item">
-                                    <div class="calculator__subtitle-line">Тип брекетов:</div>
-                                    <div class="innerType"></div>
+                                <div class="calculator__list-item">
+                                    <div class="calculator-item">
+                                        <div class="calculator__subtitle-line">Тип брекетов:</div>
+                                        <div class="innerType"></div>
+                                    </div>
+                                    <div class="calculator__subtitle-line calculator__subtitle-line">x1</div>
                                 </div>
-                                <div class="calculator__subtitle-line calculator__subtitle-line">x1</div>
-                            </div>
-                            <div class="calculator-item calculator-item--line">
-                                <div class="calculator__subtitle-line">Срок лечения:</div>
-                                <div class="innerYears"></div>
-                            </div>
-                            <div class="calculator__list-item">
-                                <div class="calculator-item">
-                                    <div class="calculator__subtitle-line">Установка минивинтов</div>
+                                <div class="calculator-item calculator-item--line">
+                                    <div class="calculator__subtitle-line">Срок лечения:</div>
+                                    <div class="innerYears"></div>
                                 </div>
-                                <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerMiniprop"></span></div>
-                            </div>
-                            <div class="calculator__list-item">
-                                <div class="calculator-item">
-                                    <div class="calculator__subtitle-line">Ортогнатическая операция</div>
+                                <div class="calculator__list-item">
+                                    <div class="calculator-item">
+                                        <div class="calculator__subtitle-line">Установка минивинтов</div>
+                                    </div>
+                                    <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerMiniprop"></span></div>
                                 </div>
-                                <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerOperation">0</span></div>
-                            </div>
-                            <div class="calculator__list-item">
-                                <div class="calculator-item">
-                                    <div class="calculator__subtitle-line">Лечение челюсти</div>
+                                <div class="calculator__list-item">
+                                    <div class="calculator-item">
+                                        <div class="calculator__subtitle-line">Ортогнатическая операция</div>
+                                    </div>
+                                    <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerOperation">0</span></div>
                                 </div>
-                                <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerTreatment">1</span></div>
+                                <div class="calculator__list-item">
+                                    <div class="calculator-item">
+                                        <div class="calculator__subtitle-line">Лечение челюсти</div>
+                                    </div>
+                                    <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerTreatment">1</span></div>
+                                </div>
+                            </div>
+                            <div class="calculator__sum">
+                                <h3>Итого:</h3>
+                                <h3 class="total-output"></h3>
                             </div>
                         </div>
-                        <div class="calculator__sum">
-                            <h3>Итого:</h3>
-                            <h3 class="total-output"></h3>
-                        </div>
+                        <button class="button calculator__price-button openModal" type="button">Записаться на  бесплатную консультацию</button>
             
                     </div>
             

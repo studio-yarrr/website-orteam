@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
        choices = new Choices(selectElement, {
          itemSelectText: "",
          searchEnabled: false,
+         shouldSort: false
        });
      }
 
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
        choicesBrackets.setChoices([
          {value: '', label: 'Выберите тип брекетов', selected: true},
-         {value: 'tariff', label: 'Выберите тарифный план', selected: false}
+         {value: 'tariff', label: 'Выберите тарифный план', disabled: true}
        ], 'value', 'label', false);
      }
 
@@ -132,12 +133,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
      radioButtons.forEach((radio, index) => {
        radio.addEventListener('change', () => {
-         yearsNums.forEach(num => num.classList.remove('active-text'));
          if (radio.checked) {
+           yearsNums.forEach((num, idx) => {
+             if (idx === index) {
+               num.classList.add('active-text');
+               num.classList.remove('color-grey');
+             } else {
+               num.classList.remove('active-text');
+               num.classList.add('color-grey');
+             }
+           });
+
            duration = yearsNums[index].textContent;
            let innerYears = document.querySelector('.innerYears');
            innerYears.textContent = duration;
-           yearsNums[index].classList.add('active-text');
 
            numElement.forEach((elem, idx) => {
              if (idx === 2) {
@@ -173,8 +182,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
      radioButtons2.forEach((item, index) => {
        item.addEventListener('change', () => {
-         miniprop.forEach(num => num.classList.remove('active-text'));
          if (item.checked) {
+           miniprop.forEach((num, inx) => {
+             if(inx === index) {
+               num.classList.add('active-text');
+               num.classList.remove('color-grey');
+             } else {
+               num.classList.remove('active-text');
+               num.classList.add('color-grey');
+             }
+           });
+
            minipropValue = Number(miniprop[index].textContent);
            let innerMiniprop = document.querySelector('.innerMiniprop');
            miniprop[index].classList.add('active-text');
