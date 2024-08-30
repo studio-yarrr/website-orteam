@@ -139,9 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
        });
      }
 
-
-
-
 // radio
      const radioButtons = document.querySelectorAll('.customClick');
      const yearsNums = document.querySelectorAll('.years__num');
@@ -328,12 +325,23 @@ document.addEventListener('DOMContentLoaded', () => {
          }
 
          if (choicesBrackets) {
-           choicesBrackets.setChoiceByValue('');
+           choicesBrackets.destroy();
+
+           choicesBrackets = new Choices(selectBrackets, {
+             itemSelectText: "",
+             searchEnabled: false,
+           });
+
+           choicesBrackets.setChoices([
+             { value: '', label: '<span class="block-desc">2.</span> Выберите тип брекетов', selected: true },
+             { value: 'tariff', label: 'Выберите тарифный план', disabled: true }
+           ], 'value', 'label', false);
          }
 
          radioButtons.forEach(radio => {
            radio.checked = false;
          });
+
          radioButtons2.forEach(radio => {
            radio.checked = false;
          });
@@ -353,7 +361,6 @@ document.addEventListener('DOMContentLoaded', () => {
          choicesInner.forEach(elem => elem.classList.remove('border-choices'));
 
          updateTotal();
-
          checkActiveClasses();
        });
      });

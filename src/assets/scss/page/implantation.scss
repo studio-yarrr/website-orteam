@@ -1,0 +1,49 @@
+
+
+
+
+.implantation-cost__container {
+  margin-top: 5.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 2.4rem;
+  }
+}
+
+.implantation-cost__img {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.implantation-cost__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.implantation-cost__right div {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  background-color: var(--white);
+  padding: 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
+}
+
+.implantation-cost__right-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.implantation-cost__right-list {
+  display: grid;
+  grid-template-columns: 18.5rem 26.4rem 10.4rem;
+  row-gap: 2rem;
+}

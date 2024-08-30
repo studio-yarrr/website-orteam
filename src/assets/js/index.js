@@ -48,14 +48,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
             popup.innerHTML = reviewTexts4[index].innerHTML;
         });
     }
+
+
     const reviewTexts5 = document.querySelectorAll('.reviews__item-text5');
 
 
-    if(reviewTexts4) {
+    if(reviewTexts5) {
         const reviewPopups5 = document.querySelectorAll('.review-popup5');
 
         reviewPopups5.forEach(function(popup, index) {
             popup.innerHTML = reviewTexts5[index].innerHTML;
+        });
+    }
+
+    const reviewTexts6 = document.querySelectorAll('.reviews__item-text6');
+
+
+    if(reviewTexts6) {
+        const reviewPopups6 = document.querySelectorAll('.review-popup6');
+
+        reviewPopups6.forEach(function(popup, index) {
+            popup.innerHTML = reviewTexts6[index].innerHTML;
         });
     }
 
