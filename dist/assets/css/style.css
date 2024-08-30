@@ -4744,6 +4744,15 @@ form span.icon-button__bg.active {
     display: block;
 }
 
+@media (max-width: 768px) {
+    form span.icon-button__bg {
+        width: 25.8rem;
+        height: 12.9rem;
+        -webkit-transform: translate(-106%, -80%);
+        transform: translate(-106%, -80%);
+    }
+}
+
 form span.icon-button__bg.bg-icon__middle {
     position: absolute;
     font-size: 1.6rem;
@@ -4756,6 +4765,13 @@ form span.icon-button__bg.bg-icon__middle {
 
 form span.icon-button__bg.bg-icon__middle.active {
     display: block;
+}
+
+@media (max-width: 768px) {
+    form span.icon-button__bg.bg-icon__middle {
+        -webkit-transform: translate(-106%, -70%);
+        transform: translate(-106%, -70%);
+    }
 }
 
 form span.icon-button__bg.bg-icon__buttom {
@@ -4772,6 +4788,15 @@ form span.icon-button__bg.bg-icon__buttom.active {
     display: block;
 }
 
+@media (max-width: 768px) {
+    form span.icon-button__bg.bg-icon__buttom {
+        -webkit-transform: translate(-106%, -79%);
+        transform: translate(-106%, -79%);
+        width: 25.8rem;
+        height: 12.9rem;
+    }
+}
+
 form span.icon-button__bg.bg-icon__level {
     color: var(--white);
     padding: 1.2rem;
@@ -4780,6 +4805,13 @@ form span.icon-button__bg.bg-icon__level {
     line-height: 2rem;
     width: 25.8rem;
     height: 8.7rem;
+}
+
+@media (max-width: 768px) {
+    form span.icon-button__bg.bg-icon__level {
+        -webkit-transform: translate(-106%, -70%);
+        transform: translate(-106%, -70%);
+    }
 }
 
 .calculator__line1--radio {

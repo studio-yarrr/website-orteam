@@ -242,6 +242,11 @@ form span.icon-button__bg {
   &.active {
     display: block;
   }
+  @include breakpoint($sm-bp) {
+    width: 25.8rem;
+    height: 12.9rem;
+    transform: translate(-106%, -80%);
+  }
 }
 
 form span.icon-button__bg.bg-icon__middle {
@@ -255,6 +260,10 @@ form span.icon-button__bg.bg-icon__middle {
   &.active {
     display: block;
   }
+  @include breakpoint($sm-bp) {
+    transform: translate(-106%, -70%);
+  }
+
 }
 
 form span.icon-button__bg.bg-icon__buttom {
@@ -268,6 +277,11 @@ form span.icon-button__bg.bg-icon__buttom {
   &.active {
     display: block;
   }
+  @include breakpoint($sm-bp) {
+    transform: translate(-106%, -79%);
+    width: 25.8rem;
+    height: 12.9rem;
+  }
 }
 
 form span.icon-button__bg.bg-icon__level {
@@ -278,6 +292,9 @@ form span.icon-button__bg.bg-icon__level {
   line-height: 2rem;
   width: 25.8rem;
   height: 8.7rem;
+  @include breakpoint($sm-bp) {
+    transform: translate(-106%, -70%);
+  }
 }
 
 .calculator__line1--radio {

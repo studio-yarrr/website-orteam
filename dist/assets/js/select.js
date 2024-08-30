@@ -1,11 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
  const calculator = document.querySelector(".calculator")
 
+
    if (calculator) {
      const selectElement = document.querySelector('.js-choice');
      const selectBrackets = document.querySelector('.js-choice2');
      const numElement = document.querySelectorAll('.calculator__num');
      const totalOutput = document.querySelector('.total-output');
+     const firstOption = selectElement.querySelector('option');
+
+     firstOption.innerHTML = `<span class="block-desc">1.</span> ${firstOption.textContent}`;
+
+     const bracketOptions = selectBrackets.querySelectorAll('option');
+
+     bracketOptions.forEach((option, index) => {
+       if (index === 0) {
+         option.innerHTML = `<span class="block-desc">2.</span> ${option.textContent}`;
+       }
+     });
 
      let choices, choicesBrackets;
 
