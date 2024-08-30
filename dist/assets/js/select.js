@@ -68,7 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
          if (selectElement.value) {
            selectedTariff = selectElement.selectedOptions[0].text;
            let innerText = document.querySelector('.innerText');
+           let choicesInner = selectElement.closest('.choices');
            innerText.textContent = selectedTariff;
+           choicesInner.classList.add('border-choices');
 
            numElement.forEach((elem, index) => {
              if (index === 0) {
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
              }
            });
 
-           const defaultOption = {value: '', label: 'Выберите тип брекетов', selected: true};
+           const defaultOption = { value: '', label: 'Выберите тип брекетов', selected: true };
 
            choicesBrackets.clearStore();
 
@@ -96,6 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
      if (selectBrackets) {
        selectBrackets.addEventListener('change', () => {
          if (selectBrackets.value) {
+           let choicesInner = selectBrackets.closest('.choices');
+           choicesInner.classList.add('border-choices');
+
            numElement.forEach((elem, index) => {
              if (index === 1) {
                elem.classList.add('active');
@@ -114,7 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
                  selectedBracketType = selectedItem.label;
                  let innerType = document.querySelector('.innerType');
                  innerType.textContent = selectedBracketType;
-
                }
              }
            }
@@ -122,6 +126,9 @@ document.addEventListener('DOMContentLoaded', () => {
          }
        });
      }
+
+
+
 
 // radio
      const radioButtons = document.querySelectorAll('.customClick');
@@ -327,6 +334,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
          calculatorPrices.forEach(price => price.classList.remove('active'));
 
+         const buttonMob = document.querySelectorAll('.button__mob');
+         buttonMob.forEach(button => button.classList.remove('active'));
+
+         const choicesInner = document.querySelectorAll('.choices');
+         choicesInner.forEach(elem => elem.classList.remove('border-choices'));
+
          updateTotal();
 
          checkActiveClasses();
@@ -337,6 +350,8 @@ document.addEventListener('DOMContentLoaded', () => {
        elem.addEventListener('click', (event) => {
          event.preventDefault();
          calculatorPrices.forEach(price => price.classList.add('active'));
+         const buttonMob = document.querySelectorAll('.button__mob');
+         buttonMob.forEach(button => button.classList.add('active'));
        });
      });
    }

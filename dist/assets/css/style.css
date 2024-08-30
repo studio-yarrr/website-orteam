@@ -4895,7 +4895,7 @@ form span.icon-button__bg.bg-icon__level {
     .calculator__subtitle-line {
         display: -ms-flexbox;
         display: flex;
-        gap: 0.2rem;
+        gap: 0.3rem;
     }
 }
 
@@ -5049,14 +5049,34 @@ button.calculator__price-button {
     }
 }
 
+button.calculator__price-button.button__mob {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    button.calculator__price-button.button__mob.active {
+        display: block;
+        padding: 2rem 4.2rem;
+        margin-top: 0.4rem;
+    }
+}
+
 .color-grey {
     color: var(--grey);
+}
+
+@media (max-width: 768px) {
+    .border-choices {
+        border: 0.15rem solid var(--color1);
+        border-radius: 0.6rem;
+    }
 }
 
 @media (max-width: 768px) {
     .calculator__subtitle-line.checkbox-custom-label:before {
         width: 2.4rem;
         height: 2.4rem;
+        top: 18%;
     }
 }
 
@@ -5064,6 +5084,7 @@ button.calculator__price-button {
     .calculator__line1--radio .checkbox-custom:checked + .calculator__subtitle-line.checkbox-custom-label:before {
         width: 2.4rem;
         height: 2.4rem;
+        top: 18%;
     }
 }
 
@@ -5071,6 +5092,12 @@ button.calculator__price-button {
     .calculator__subtitle-line.checkbox-custom-label {
         padding-left: 3.5rem;
         max-width: 87%;
+    }
+}
+
+@media (max-width: 768px) {
+    #treatment ~ .checkbox-custom-label {
+        padding-top: 3.5%;
     }
 }
 
