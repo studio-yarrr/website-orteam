@@ -788,40 +788,43 @@ const blog = document.querySelector('.blog');
 
     const openText = document.querySelectorAll('.openText');
     const icons = document.querySelectorAll('form span.icon-button__bg');
+    const calculator = document.querySelector('.calculator');
 
-    function handleResize() {
-        if (window.innerWidth <= 769) {
-            openText.forEach((elem, index) => {
-                elem.addEventListener('click', handleClick);
-            });
-        } else {
-            openText.forEach((elem, index) => {
-                elem.removeEventListener('click', handleClick);
-            });
-        }
-    }
+    openText.forEach((elem, index) => {
+        elem.addEventListener('click', (event) => {
+            if (window.innerWidth <= 768) {
+                event.stopPropagation();
 
-    function handleClick(event) {
-        event.preventDefault();
-        const index = Array.from(openText).indexOf(event.currentTarget);
-        if (icons[index]) {
-            icons[index].classList.toggle('active');
-        }
-    }
+                icons.forEach(icon => icon.classList.remove('active'));
 
-    window.addEventListener('resize', handleResize);
-    handleResize();
+                if (icons[index]) {
+                    icons[index].classList.add('active');
+                }
 
-
-    document.addEventListener('click', (event) => {
-        openText.forEach((elem, index) => {
-            if (!elem.contains(event.target) && !icons[index].contains(event.target)) {
-                icons[index].classList.remove('active');
+                calculator.classList.add('active');
             }
         });
     });
 
-  const sortContainerBlog = document.getElementById('sortContainerBlog');
+    document.addEventListener('click', (event) => {
+        if (window.innerWidth <= 768) {
+            let clickedInside = false;
+
+            openText.forEach((elem, index) => {
+                if (elem.contains(event.target) || (icons[index] && icons[index].contains(event.target))) {
+                    clickedInside = true;
+                }
+            });
+
+            if (!clickedInside) {
+                icons.forEach(icon => icon.classList.remove('active'));
+                calculator.classList.remove('active');
+            }
+        }
+    });
+
+
+    const sortContainerBlog = document.getElementById('sortContainerBlog');
 
   if (sortContainerBlog) {
     sortContainerBlog.addEventListener('click', () => {
