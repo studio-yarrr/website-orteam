@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
          radioButtons.forEach(radio => {
            radio.checked = false;
          });
-         
+
          radioButtons2.forEach(radio => {
            radio.checked = false;
          });
