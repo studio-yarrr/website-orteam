@@ -12732,6 +12732,7 @@ div .view-icon {
     margin-top: 5.6rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 57rem;
     gap: 2rem;
 }
 
@@ -12760,7 +12761,8 @@ div .view-icon {
     gap: 2rem;
 }
 
-.implantation-cost__right div {
+.implantation-cost__right .implantation-cost__right-top,
+.implantation-cost__right .implantation-cost__right-list {
     border-radius: 1.2rem;
     overflow: hidden;
     background-color: var(--white);
@@ -12768,7 +12770,8 @@ div .view-icon {
 }
 
 @media (max-width: 768px) {
-    .implantation-cost__right div {
+    .implantation-cost__right .implantation-cost__right-top,
+  .implantation-cost__right .implantation-cost__right-list {
         padding: 1.2rem;
     }
 }
@@ -12778,13 +12781,26 @@ div .view-icon {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 0.58rem;
+}
+
+.implantation-cost__right-top p {
+    max-width: 95%;
 }
 
 .implantation-cost__right-list {
     display: grid;
     grid-template-columns: 18.5rem 26.4rem 10.4rem;
     row-gap: 2rem;
+    -ms-flex-align: end;
+    align-items: end;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.implantation-cost__item {
+    font-weight: 700;
+    text-align: end;
 }
 
 /*------footer-----*/

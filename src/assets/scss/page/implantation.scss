@@ -6,6 +6,7 @@
   margin-top: 5.6rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 57rem;
   gap: 2rem;
   @include breakpoint($sm-bp) {
     grid-template-columns: 2.4rem;
@@ -26,7 +27,8 @@
   gap: 2rem;
 }
 
-.implantation-cost__right div {
+.implantation-cost__right .implantation-cost__right-top,
+.implantation-cost__right .implantation-cost__right-list {
   border-radius: 1.2rem;
   overflow: hidden;
   background-color: var(--white);
@@ -39,11 +41,22 @@
 .implantation-cost__right-top {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.58rem;
+
+  & p {
+    max-width: 95%;
+  }
 }
 
 .implantation-cost__right-list {
   display: grid;
   grid-template-columns: 18.5rem 26.4rem 10.4rem;
   row-gap: 2rem;
+  align-items: end;
+  justify-content: space-between
+}
+
+.implantation-cost__item {
+  font-weight: 700;
+ text-align: end;
 }
