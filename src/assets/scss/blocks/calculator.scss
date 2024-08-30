@@ -226,62 +226,58 @@ form span.block-desc {
 }
 
 form span.icon-button__bg {
-  background-image: url("../images/bg/bg-icon.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: var(--color1);
+  border-radius: 1.2rem;
+  padding: 1.2rem ;
   color: var(--white);
-  padding: 1.2rem;
   position: absolute;
   font-size: 1.6rem;
   line-height: 2rem;
-  width: 34rem;
-  height: 12rem;
-  transform: translate(-46%, -104%);
+  width: 35rem;
+  height: 10.8rem;
   display: none;
   text-align: left;
   z-index: 3;
+  transform: translate(-55%, -118%);
   &.active {
     display: block;
   }
 }
 
 form span.icon-button__bg.bg-icon__middle {
-  background-image: url("../images/bg/bg-icon.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: var(--white);
-  padding: 1.2rem;
+
   position: absolute;
   font-size: 1.6rem;
   line-height: 2rem;
-  width: 25rem;
-  height: 10rem;
+  width: 25.8rem;
+  height: 8.7rem;
+  transform: translate(-41.5%, -121%);
   &.active {
     display: block;
   }
 }
 
 form span.icon-button__bg.bg-icon__buttom {
-  background-image: url("../images/bg/bg-icon__buttom.png");
-  transform: translate(-47%, 26%);
-  background-size: 100% 100%;
-  padding-top: 3rem ;
-  width: 36rem;
-  height: 10rem;
+
+  position: absolute;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  width: 37.4rem;
+  height: 8.7rem;
+  transform: translate(-26.5%, 50%);
+  &.active {
+    display: block;
+  }
 }
 
 form span.icon-button__bg.bg-icon__level {
-  background-image: url("../images/bg/bg-icon__level.png");
-  transform: translate(-60%, -103%);
-  background-repeat: no-repeat;
-  background-size: contain;
   color: var(--white);
   padding: 1.2rem;
   position: absolute;
   font-size: 1.6rem;
   line-height: 2rem;
-  width: 25rem;
-  height: 10rem;
+  width: 25.8rem;
+  height: 8.7rem;
 }
 
 .calculator__line1--radio {
