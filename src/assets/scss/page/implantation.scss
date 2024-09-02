@@ -407,3 +407,59 @@
 .aligners__plan-content.implantation__plan-content {
   padding: 2rem;
 }
+
+.implantation-pay h2 {
+  margin-bottom: 2.4rem;
+  @include breakpoint($sm-bp) {
+    text-align: center;
+  }
+}
+
+.implantation-pay__subtitle {
+  max-width: 45%;
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
+}
+
+.implantation-pay__container {
+  display: grid;
+  grid-template-columns: repeat(2,39.2rem);
+  gap: 2rem;
+  grid-template-rows: 23.3rem;
+  margin-top: 5.6rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 2.4rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,14rem);
+  }
+}
+
+.implantation-pay__item {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1.2rem;
+  color: var(--white);
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
+}
+
+.implantation-pay__item:nth-child(1) {
+  background-color: var(--green);
+}
+
+.implantation-pay__item:nth-child(2) {
+  background-color: var(--color1);
+}
+
+.implantation-pay__item-title {
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
