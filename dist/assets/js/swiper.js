@@ -433,3 +433,26 @@ const slider16 = new Swiper('.implantation-banner__slider', {
         }
     },
 })
+
+const slider17 = new Swiper('.implantation-num__slider', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 2,
+    loop: true,
+    pagination: {
+        el: '.implantation__num-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.35,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 2,
+        }
+    },
+})
