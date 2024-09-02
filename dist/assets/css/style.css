@@ -12728,6 +12728,186 @@ div .view-icon {
     }
 }
 
+.implantation__wrapper {
+    width: 100%;
+    max-width: 121.6rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 1700px) {
+    .implantation__wrapper {
+        max-width: 120rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .implantation__wrapper {
+        max-width: 130rem;
+    }
+}
+
+@media (max-width: 1025px) {
+    .implantation__wrapper {
+        max-width: 90rem;
+    }
+}
+
+.implantation-banner {
+    background-image: url("../images/implantation/imp-bg.png");
+    background-repeat: no-repeat;
+    border-radius: 1.2rem;
+    padding: 3rem 0 6.9rem 4.1rem;
+    background-size: inherit;
+}
+
+@media (max-width: 1440px) {
+    .implantation-banner {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1024px) {
+    .implantation-banner {
+        background-size: contain;
+    }
+}
+
+@media (max-width: 768px) {
+    .implantation-banner {
+        background-image: url("../images/implantation/imp-bg__mob.png");
+        padding: 0;
+        max-width: 32rem;
+        margin: 0 auto;
+        background-size: contain;
+        background-position: top;
+    }
+}
+
+.implantation-banner__inf {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    max-width: 80rem;
+    gap: 4rem;
+}
+
+@media (max-width: 768px) {
+    .implantation-banner__inf {
+        gap: 2.4rem;
+    }
+}
+
+.implantation-banner__slider {
+    max-width: 80rem;
+    height: 12.6rem;
+}
+
+@media (max-width: 768px) {
+    .implantation-banner__slider {
+        max-width: 34rem;
+        position: relative;
+        width: calc(100vw - 1.5rem);
+        height: 11.2rem;
+        overflow: hidden;
+    }
+}
+
+.implantation-banner__slide {
+    background: rgba(221, 223, 228, 0.4);
+    border: 0.1rem solid #D6D9DF;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .implantation-banner__slide {
+        background: var(--white);
+        border: none;
+    }
+}
+
+.implantation-banner__title {
+    font-family: "Cygre-ExtraBold", sans-serif;
+    font-weight: 800;
+    font-size: 3.8rem;
+    line-height: 4.5rem;
+    text-indent: 3.2rem;
+    text-align: center;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .implantation-banner__title {
+        text-indent: 0;
+        text-align: left;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 1.2rem;
+    }
+}
+
+.implantation-banner__title h1 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+@media (max-width: 768px) {
+    .implantation-banner__title h1 {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .implantation-banner__title div {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        max-width: 80%;
+    }
+}
+
+.implantation-banner__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2.4rem;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+}
+
+@media (max-width: 768px) {
+    .implantation-banner__list {
+        border-radius: 1.2rem;
+        padding: 1.2rem;
+        background-color: var(--white);
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        gap: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .implantation-banner__list div:first-child {
+        font-weight: 700;
+        font-family: "Cygre-Bold", sans-serif;
+    }
+}
+
 .implantation-cost__container {
     margin-top: 5.6rem;
     display: grid;
@@ -12740,6 +12920,34 @@ div .view-icon {
     .implantation-cost__container {
         grid-template-columns: 2.4rem;
     }
+}
+
+.implantation__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.6rem;
+    list-style: square inside;
+    max-width: 32rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .implantation__list {
+        gap: 0.8rem;
+    }
+}
+
+.implantation__list li::marker {
+    color: var(--color2);
+}
+
+.implantation__list li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 2rem;
+    text-indent: -2rem;
 }
 
 .implantation-cost__img {
@@ -12801,6 +13009,16 @@ div .view-icon {
 .implantation-cost__item {
     font-weight: 700;
     text-align: end;
+}
+
+.implantation-banner__slide-title {
+    font-weight: 700;
+    font-family: "Cygre-Bold", sans-serif;
+}
+
+.implantation-banner__inf button {
+    -ms-flex-item-align: center;
+    align-self: center;
 }
 
 /*------footer-----*/

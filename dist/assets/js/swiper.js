@@ -410,3 +410,26 @@ const alignersSwiper = document.querySelector('.aligners-swiper');
         window.addEventListener('resize', updateSliderParams);
 
     }
+
+const slider16 = new Swiper('.implantation-banner__slider', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView: 3,
+    loop: true,
+    pagination: {
+        el: '.implantation-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.35,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        1024: {
+            slidesPerView: 3,
+        }
+    },
+})

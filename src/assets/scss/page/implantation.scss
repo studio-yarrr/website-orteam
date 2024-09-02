@@ -1,6 +1,139 @@
+.implantation__wrapper {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  @include breakpoint($cos_bp) {
+    max-width: 120rem;
+  }
 
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
 
+  @include breakpoint($hh) {
+    max-width: 90rem;
+  }
+}
 
+.implantation-banner {
+  background-image: url("../images/implantation/imp-bg.png");
+  background-repeat: no-repeat;
+  border-radius: 1.2rem;
+  padding: 3rem 0 6.9rem 4.1rem;
+  background-size: inherit;
+  @include breakpoint($xxl-bp) {
+    background-size: cover;
+  }
+  @include breakpoint($xl-bp) {
+    background-size: contain;
+  }
+  @include breakpoint($sm-bp) {
+    background-image: url("../images/implantation/imp-bg__mob.png");
+    padding: 0;
+    max-width: 32rem;
+    margin: 0 auto;
+    background-size: contain;
+    background-position: top;
+  }
+}
+
+.implantation-banner__inf {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 80rem;
+  gap: 4rem;
+  @include breakpoint($sm-bp) {
+    gap: 2.4rem;
+  }
+}
+
+.implantation-banner__slider {
+  max-width: 80rem;
+  height: 12.6rem;
+  @include breakpoint($sm-bp) {
+    max-width: 34rem;
+    position: relative;
+    width: calc(100vw - 1.5rem);
+    height: 11.2rem;
+    overflow: hidden;
+  }
+}
+
+.implantation-banner__slide {
+  background: #DDDFE466;
+  border: 0.1rem solid #D6D9DF;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include breakpoint($sm-bp) {
+    background: var(--white);
+    border: none;
+  }
+}
+
+.implantation-banner__title {
+  font-family: "Cygre-ExtraBold", sans-serif;
+  font-weight: 800;
+  font-size: 3.8rem;
+  line-height: 4.5rem;
+  text-indent: 3.2rem;
+  text-align: center;
+  margin-left: 0;
+  margin-right: auto;
+  @include breakpoint($sm-bp) {
+    text-indent: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem;
+  }
+
+  & h1 {
+    font-size: inherit;
+    font-weight: inherit;
+    @include breakpoint($sm-bp) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  div {
+    @include breakpoint($sm-bp) {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      max-width: 80%;
+    }
+  }
+
+}
+
+.implantation-banner__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  @include breakpoint($sm-bp) {
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    background-color: var(--white);
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    gap: 1.6rem;
+  }
+
+  & div:first-child {
+    @include breakpoint($sm-bp) {
+      font-weight: 700;
+      font-family: "Cygre-Bold", sans-serif;
+    }
+  }
+}
 
 .implantation-cost__container {
   margin-top: 5.6rem;
@@ -10,6 +143,29 @@
   gap: 2rem;
   @include breakpoint($sm-bp) {
     grid-template-columns: 2.4rem;
+  }
+}
+
+.implantation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: square inside;
+  max-width: 32rem;
+  width: 100%;
+  @include breakpoint($sm-bp) {
+    gap: 0.8rem;
+  }
+
+  & li::marker {
+    color: var(--color2)
+  }
+
+  &  li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 2rem;
+    text-indent: -2rem;
   }
 }
 
@@ -58,5 +214,14 @@
 
 .implantation-cost__item {
   font-weight: 700;
- text-align: end;
+  text-align: end;
+}
+
+.implantation-banner__slide-title {
+  font-weight: 700;
+  font-family: "Cygre-Bold", sans-serif;
+}
+
+.implantation-banner__inf button {
+  align-self: center;
 }
