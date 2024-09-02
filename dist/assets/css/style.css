@@ -12929,13 +12929,13 @@ div .view-icon {
     flex-direction: column;
     gap: 1.6rem;
     list-style: square inside;
-    max-width: 32rem;
     width: 100%;
 }
 
 @media (max-width: 768px) {
     .implantation__list {
         gap: 0.8rem;
+        max-width: 32rem;
     }
 }
 
