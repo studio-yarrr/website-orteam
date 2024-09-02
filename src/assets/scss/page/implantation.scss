@@ -278,8 +278,10 @@
 
 .implantation-num {
   margin-top: 8.4rem;
+  margin-bottom: 8.4rem;
   @include breakpoint($sm-bp) {
     margin-top: 6.4rem;
+    margin-bottom: 7.2rem;
   }
 }
 
@@ -388,4 +390,20 @@
     position: relative;
     padding-left: 1.5rem;
   }
+}
+
+.aligners__plan-container.implantation__plan-container {
+  grid-template-rows: 23.3rem;
+}
+
+.aligners__params.implantation__params {
+  margin-bottom: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.aligners__plan-content.implantation__plan-content {
+  padding: 2rem;
 }
