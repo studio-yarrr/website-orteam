@@ -13031,6 +13031,42 @@ div .view-icon {
     max-width: 73%;
 }
 
+.implantation__about h2,
+.implantation__about-subtitle {
+    max-width: 60%;
+}
+
+@media (max-width: 768px) {
+    .implantation__about h2,
+  .implantation__about-subtitle {
+        max-width: 100%;
+        padding-left: 1.5rem;
+    }
+}
+
+.implantation-details__item {
+    padding: 1.6rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-radius: 1.2rem;
+    height: 25rem;
+    background-color: var(--color1);
+    color: var(--white);
+}
+
+.implantation-details__item.details__item--dark {
+    background-color: var(--green);
+}
+
+.implantation-details__item.details__item--light {
+    background-color: var(--white);
+    color: var(--color1);
+}
+
 /*------footer-----*/
 .footer {
     background-color: var(--white);
