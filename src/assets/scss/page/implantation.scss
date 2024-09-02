@@ -408,6 +408,13 @@
   padding: 2rem;
 }
 
+.implantation-pay {
+  margin-bottom: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 6.4rem;
+  }
+}
+
 .implantation-pay h2 {
   margin-bottom: 2.4rem;
   @include breakpoint($sm-bp) {
@@ -462,4 +469,40 @@
     font-size: 2rem;
     line-height: 2.6rem;
   }
+}
+
+#implantation_team {
+  margin-top: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 6.4rem;
+  }
+}
+
+.implantation__reason {
+  display: grid;
+  grid-template-columns: repeat(2, 49.5rem);
+  grid-template-rows: 33.7rem;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 17.9rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.implantation__reason-right,
+.implantation__reason-left {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  border-radius: 1.2rem;
+  padding: 2rem;
+}
+
+.implantation__reason-right {
+  background-color: var(--green);
+}
+
+.implantation__reason-left {
+  background-color: var(--color1);
 }

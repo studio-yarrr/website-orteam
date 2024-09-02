@@ -13245,6 +13245,16 @@ div .view-icon {
     padding: 2rem;
 }
 
+.implantation-pay {
+    margin-bottom: 8.4rem;
+}
+
+@media (max-width: 768px) {
+    .implantation-pay {
+        margin-bottom: 6.4rem;
+    }
+}
+
 .implantation-pay h2 {
     margin-bottom: 2.4rem;
 }
@@ -13317,6 +13327,51 @@ div .view-icon {
         font-size: 2rem;
         line-height: 2.6rem;
     }
+}
+
+#implantation_team {
+    margin-top: 8.4rem;
+}
+
+@media (max-width: 768px) {
+    #implantation_team {
+        margin-top: 6.4rem;
+    }
+}
+
+.implantation__reason {
+    display: grid;
+    grid-template-columns: repeat(2, 49.5rem);
+    grid-template-rows: 33.7rem;
+    gap: 2rem;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 17.9rem;
+}
+
+@media (max-width: 768px) {
+    .implantation__reason {
+        margin-bottom: 7.2rem;
+    }
+}
+
+.implantation__reason-right,
+.implantation__reason-left {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: var(--white);
+    border-radius: 1.2rem;
+    padding: 2rem;
+}
+
+.implantation__reason-right {
+    background-color: var(--green);
+}
+
+.implantation__reason-left {
+    background-color: var(--color1);
 }
 
 /*------footer-----*/
