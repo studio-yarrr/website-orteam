@@ -21,6 +21,7 @@
   border-radius: 1.2rem;
   padding: 3rem 0 6.9rem 4.1rem;
   background-size: inherit;
+  margin-bottom: 10.4rem;
   @include breakpoint($xxl-bp) {
     background-size: cover;
   }
@@ -34,6 +35,7 @@
     margin: 0 auto;
     background-size: contain;
     background-position: top;
+    margin-bottom: 7.2rem;
   }
 }
 
@@ -225,3 +227,9 @@
 .implantation-banner__inf button {
   align-self: center;
 }
+
+.list__item-bottom p.implantation-card__text,
+.implantation-card__text {
+  max-width: 73%;
+}
+

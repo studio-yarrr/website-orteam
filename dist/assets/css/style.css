@@ -5651,6 +5651,7 @@ button.calculator__price-button.button__mob {
 }
 
 .list__item {
+    font-size: 1.5rem;
     border-radius: 1.2rem;
     padding: 1.6rem;
     overflow: hidden;
@@ -5689,7 +5690,7 @@ a:hover .list__item {
 .list__item-title {
     font-weight: 700;
     font-size: 2.4rem;
-    line-height: 3.1rem;
+    line-height: 3rem;
 }
 
 @media (max-width: 1024px) {
@@ -5728,13 +5729,13 @@ a:hover .list__item {
 }
 
 .card--bg4 {
-    background-image: url("../images/card--bg4.jpg");
+    background-image: url("../images/bg/card-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .card--bg5 {
-    background-image: url("../images/card--bg5.jpg");
+    background-image: url("../images/bg/card-bg3.png");
     background-size: cover;
     background-repeat: no-repeat;
     -ms-flex-pack: center;
@@ -5742,7 +5743,7 @@ a:hover .list__item {
 }
 
 .card--bg6 {
-    background-image: url("../images/card--bg6.jpg");
+    background-image: url("../images/bg/card-bg2.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -5812,13 +5813,15 @@ a:hover .list__item {
 
 .card--bg3 .list__item-title {
     text-align: center;
+    max-width: 95%;
 }
 
 .card--bg3 img {
     position: absolute;
-    bottom: -7%;
+    bottom: -11%;
     height: 9rem;
-    left: -3%;
+    left: 5%;
+    max-width: 35rem;
 }
 
 @media (max-width: 1024px) {
@@ -12758,6 +12761,7 @@ div .view-icon {
     border-radius: 1.2rem;
     padding: 3rem 0 6.9rem 4.1rem;
     background-size: inherit;
+    margin-bottom: 10.4rem;
 }
 
 @media (max-width: 1440px) {
@@ -12780,6 +12784,7 @@ div .view-icon {
         margin: 0 auto;
         background-size: contain;
         background-position: top;
+        margin-bottom: 7.2rem;
     }
 }
 
@@ -13019,6 +13024,11 @@ div .view-icon {
 .implantation-banner__inf button {
     -ms-flex-item-align: center;
     align-self: center;
+}
+
+.list__item-bottom p.implantation-card__text,
+.implantation-card__text {
+    max-width: 73%;
 }
 
 /*------footer-----*/
