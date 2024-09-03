@@ -269,7 +269,7 @@
     @include breakpoint($sm-bp) {
       order: 1;
       grid-column: span 2;
-      max-width: 75%;
+      max-width: 70%;
     }
   }
 
@@ -653,8 +653,13 @@
   gap: 2rem;
   justify-content: center;
   margin-bottom: 17.9rem;
+
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @include breakpoint($sm-bp) {
     margin-bottom: 7.2rem;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -665,6 +670,15 @@
   color: var(--white);
   border-radius: 1.2rem;
   padding: 2rem;
+}
+
+.implantation__reason-right h2,
+.implantation__reason-left h2 {
+  margin-bottom: 3.2rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 }
 
 .implantation__reason-right {

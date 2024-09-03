@@ -13186,7 +13186,7 @@ div .view-icon {
         -ms-flex-order: 1;
         order: 1;
         grid-column: span 2;
-        max-width: 75%;
+        max-width: 70%;
     }
 }
 
@@ -13658,9 +13658,16 @@ div .view-icon {
     margin-bottom: 17.9rem;
 }
 
+@media (max-width: 1024px) {
+    .implantation__reason {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .implantation__reason {
         margin-bottom: 7.2rem;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -13673,6 +13680,19 @@ div .view-icon {
     color: var(--white);
     border-radius: 1.2rem;
     padding: 2rem;
+}
+
+.implantation__reason-right h2,
+.implantation__reason-left h2 {
+    margin-bottom: 3.2rem;
+}
+
+@media (max-width: 768px) {
+    .implantation__reason-right h2,
+  .implantation__reason-left h2 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
 }
 
 .implantation__reason-right {
