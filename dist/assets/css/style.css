@@ -5634,6 +5634,8 @@ button.calculator__price-button.button__mob {
 @media (max-width: 768px) {
     .list__item-img {
         width: 10rem;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
     }
 }
 
@@ -5734,6 +5736,13 @@ a:hover .list__item {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+    .card--bg4 {
+        background-image: url("../images/bg/card-bg__mob.png");
+        background-position: center center;
+    }
+}
+
 .card--bg5 {
     background-image: url("../images/bg/card-bg3.png");
     background-size: cover;
@@ -5746,6 +5755,12 @@ a:hover .list__item {
     background-image: url("../images/bg/card-bg2.png");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+    .card--bg6 {
+        background-position: center center;
+    }
 }
 
 .card--bg5 .list__item-desc p {
@@ -5776,6 +5791,12 @@ a:hover .list__item {
     }
 }
 
+@media (max-width: 768px) {
+    .card--bg4 .list__item-desc {
+        gap: 5.6rem;
+    }
+}
+
 .card--bg7,
 .card--bg2 {
     display: -ms-flexbox;
@@ -5802,9 +5823,67 @@ a:hover .list__item {
     align-self: center;
 }
 
+@media (max-width: 768px) {
+    .card--bg2 .list__item-desc {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 1.2rem;
+        -ms-flex-item-align: normal;
+        align-self: normal;
+    }
+}
+
+@media (max-width: 768px) {
+    .list__item-desct {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .list__item-bottom p.list__item-mob {
+        font-size: 1.4rem;
+        max-width: 100%;
+    }
+}
+
+.list__item-mob {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .list__item-mob {
+        display: block;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card--bg2 {
+        position: relative;
+    }
+}
+
 .card--bg2 .list__item-title {
     width: -webkit-min-content;
     width: min-content;
+}
+
+@media (max-width: 768px) {
+    .card--bg2 .list__item-title {
+        width: 88%;
+    }
+}
+
+.card--bg2 .list__item-mob {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .card--bg2 .list__item-mob {
+        display: block;
+        position: absolute;
+        bottom: 9%;
+        right: 6%;
+    }
 }
 
 .card--bg3 {
@@ -5814,6 +5893,32 @@ a:hover .list__item {
 .card--bg3 .list__item-title {
     text-align: center;
     max-width: 95%;
+}
+
+@media (max-width: 768px) {
+    .list__item-desc.g3 {
+        gap: 3.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .list__item-desc.g3 p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .list__item-desc.g2 {
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        padding-left: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .list__item-desc.g2 .list__item-desc {
+        gap: 2.6rem;
+    }
 }
 
 .card--bg3 img {
@@ -5826,7 +5931,11 @@ a:hover .list__item {
 
 @media (max-width: 1024px) {
     .card--bg3 img {
-        height: 5rem;
+        height: 6rem;
+        -o-object-fit: contain;
+        object-fit: contain;
+        max-width: 20rem;
+        bottom: -9%;
     }
 }
 
@@ -12759,7 +12868,7 @@ div .view-icon {
     background-image: url("../images/implantation/imp-bg.png");
     background-repeat: no-repeat;
     border-radius: 1.2rem;
-    padding: 3rem 0 6.9rem 4.1rem;
+    padding: 3rem 4.1rem 6.9rem 4.1rem;
     background-size: inherit;
     margin-bottom: 10.4rem;
 }
@@ -12799,7 +12908,7 @@ div .view-icon {
     gap: 4rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .implantation-banner__inf {
         gap: 2.4rem;
     }
@@ -12816,7 +12925,6 @@ div .view-icon {
         position: relative;
         width: calc(100vw - 1.5rem);
         height: 11.2rem;
-        overflow: hidden;
     }
 }
 
@@ -12861,6 +12969,8 @@ div .view-icon {
         flex-direction: column;
         gap: 1.2rem;
         padding: 1.2rem;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
     }
 }
 
@@ -12895,7 +13005,7 @@ div .view-icon {
     line-height: 2.8rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .implantation-banner__list {
         border-radius: 1.2rem;
         padding: 1.2rem;
@@ -12923,7 +13033,9 @@ div .view-icon {
 
 @media (max-width: 768px) {
     .implantation-cost__container {
-        grid-template-columns: 2.4rem;
+        margin-top: 2.4rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 }
 
@@ -12940,19 +13052,36 @@ div .view-icon {
 @media (max-width: 768px) {
     .implantation__list {
         gap: 0.8rem;
-        max-width: 32rem;
     }
+}
+
+.implantation__list li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 0;
+    text-indent: 0;
+    white-space: nowrap;
 }
 
 .implantation__list li::marker {
     color: var(--color2);
 }
 
-.implantation__list li {
-    display: list-item;
-    list-style-position: inside;
-    padding-left: 2rem;
-    text-indent: -2rem;
+.implantation__list li span {
+    position: relative;
+    left: -1rem;
+}
+
+.implantation-banner__slider-container {
+    position: relative;
+    height: 14rem;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .pagination.implantation-pagination {
+        bottom: -33%;
+    }
 }
 
 .implantation-cost__img {
@@ -12960,7 +13089,7 @@ div .view-icon {
     overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .implantation-cost__img {
         display: none;
     }
@@ -12989,6 +13118,20 @@ div .view-icon {
     }
 }
 
+.implantation-cost__right .implantation-cost__right-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .implantation_cost h2 {
+        text-align: center;
+    }
+}
+
 .implantation-cost__right-top {
     display: -ms-flexbox;
     display: flex;
@@ -13001,7 +13144,7 @@ div .view-icon {
     max-width: 95%;
 }
 
-.implantation-cost__right-list {
+.implantation-cost__right-item {
     display: grid;
     grid-template-columns: 18.5rem 26.4rem 10.4rem;
     row-gap: 2rem;
@@ -13009,6 +13152,42 @@ div .view-icon {
     align-items: end;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .implantation-cost__right-item {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0.8rem;
+    }
+}
+
+.implantation-cost__right-item div.line {
+    background-color: rgb(142, 142, 142);
+}
+
+@media (max-width: 768px) {
+    .implantation-cost__right-item div.line {
+        -ms-flex-order: 3;
+        order: 3;
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .implantation-cost__right-item div.implantation-cost__item {
+        -ms-flex-order: 2;
+        order: 2;
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .implantation-cost__right-item div:nth-child(1) {
+        -ms-flex-order: 1;
+        order: 1;
+        grid-column: span 2;
+        max-width: 75%;
+    }
 }
 
 .implantation-cost__item {
@@ -13026,9 +13205,33 @@ div .view-icon {
     align-self: center;
 }
 
+@media (max-width: 1024px) {
+    .implantation-banner__inf button {
+        margin-top: 9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .implantation-banner__inf button {
+        margin-top: 0;
+    }
+}
+
 .list__item-bottom p.implantation-card__text,
 .implantation-card__text {
     max-width: 73%;
+}
+
+@media (max-width: 768px) {
+    .implantation-card__text {
+        max-width: 92%;
+    }
+}
+
+@media (max-width: 768px) {
+    .list__item-desc.mb {
+        margin-top: -9%;
+    }
 }
 
 .implantation-num h2,
@@ -13040,24 +13243,36 @@ div .view-icon {
     .implantation-num h2,
   .implantation__about h2 {
         max-width: 100%;
-        padding-left: 1.5rem;
-    }
-}
-
-.implantation__about-subtitle {
-    max-width: 50%;
-}
-
-@media (max-width: 768px) {
-    .implantation__about-subtitle {
-        max-width: 100%;
-        padding-left: 1.5rem;
+        text-align: center;
     }
 }
 
 .implantation__about-subtitle {
     font-size: 2.4rem;
     line-height: 2.8rem;
+    max-width: 50%;
+}
+
+@media (max-width: 768px) {
+    .implantation__about-subtitle {
+        max-width: 100%;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+}
+
+.implantation__item-title {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+}
+
+@media (max-width: 768px) {
+    .implantation__item-title {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
 }
 
 .implantation-details__item {
@@ -13090,7 +13305,7 @@ div .view-icon {
 
 @media (max-width: 768px) {
     .implantation-num {
-        margin-top: 6.4rem;
+        margin-top: 3.4rem;
         margin-bottom: 7.2rem;
     }
 }
@@ -13098,6 +13313,18 @@ div .view-icon {
 .implantation__about h2,
 .implantation-num h2 {
     margin-bottom: 2.4rem;
+}
+
+.implantation-num h2 {
+    margin-bottom: 2.4rem;
+}
+
+@media (max-width: 768px) {
+    .implantation-num h2 {
+        max-width: 87%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .implantation-num__inf {
@@ -13108,11 +13335,17 @@ div .view-icon {
     margin-top: 5.6rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .implantation-num__inf {
         margin-top: 2.4rem;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .implantation-num__inf {
+        gap: 0;
     }
 }
 
@@ -13142,9 +13375,15 @@ div .view-icon {
     align-self: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .implantation-num__list .button {
         margin-top: 2.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .implantation-num__list div h3 {
+        text-align: center;
     }
 }
 
@@ -13176,10 +13415,21 @@ div .view-icon {
     gap: 2rem;
 }
 
+@media (max-width: 1024px) {
+    .implantation-num__item-container {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 768px) {
     .implantation-num__item-container {
         display: -ms-flexbox;
         display: flex;
+        -ms-flex-pack: start;
+        justify-content: start;
     }
 }
 
@@ -13217,17 +13467,52 @@ div .view-icon {
 }
 
 @media (max-width: 768px) {
+    .implantation-num__item-subtitle {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 768px) {
     .implantation-num__slider {
         max-width: 36rem;
-        height: 22rem;
-        overflow: hidden;
         position: relative;
         padding-left: 1.5rem;
     }
 }
 
+@media (max-width: 768px) {
+    .implantation-num__inf-left {
+        overflow: hidden;
+        height: 30rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagination.implantation__num-pagination {
+        bottom: -15%;
+    }
+}
+
+@media (max-width: 768px) {
+    .aligners__plan.implantation__plan {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .aligners__plan.implantation__plan .aligners__plan-heading, .aligners__plan.implantation__plan h2 {
+        text-align: center;
+    }
+}
+
 .aligners__plan-container.implantation__plan-container {
     grid-template-rows: 23.3rem;
+}
+
+@media (max-width: 768px) {
+    .aligners__plan-container.implantation__plan-container {
+        grid-template-rows: 30.3rem;
+    }
 }
 
 .aligners__params.implantation__params {
@@ -13241,8 +13526,31 @@ div .view-icon {
     }
 }
 
+.aligners__params.implantation__params div.active {
+    width: 11.6rem;
+}
+
+@media (max-width: 768px) {
+    .aligners__params.implantation__params div.active {
+        width: 9.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .aligners__params.implantation__params div:nth-child(5) {
+        border-top-right-radius: 1.2rem;
+        border-bottom-right-radius: 1.2rem;
+    }
+}
+
 .aligners__plan-content.implantation__plan-content {
     padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .process__slider.implantation__slider {
+        height: 53rem;
+    }
 }
 
 .implantation-pay {
@@ -13272,6 +13580,7 @@ div .view-icon {
 @media (max-width: 768px) {
     .implantation-pay__subtitle {
         max-width: 100%;
+        text-align: center;
     }
 }
 

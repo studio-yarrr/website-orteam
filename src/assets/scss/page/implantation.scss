@@ -19,7 +19,7 @@
   background-image: url("../images/implantation/imp-bg.png");
   background-repeat: no-repeat;
   border-radius: 1.2rem;
-  padding: 3rem 0 6.9rem 4.1rem;
+  padding: 3rem 4.1rem 6.9rem 4.1rem;
   background-size: inherit;
   margin-bottom: 10.4rem;
   @include breakpoint($xxl-bp) {
@@ -45,7 +45,7 @@
   align-items: flex-start;
   max-width: 80rem;
   gap: 4rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     gap: 2.4rem;
   }
 }
@@ -58,7 +58,6 @@
     position: relative;
     width: calc(100vw - 1.5rem);
     height: 11.2rem;
-    overflow: hidden;
   }
 }
 
@@ -92,6 +91,8 @@
     flex-direction: column;
     gap: 1.2rem;
     padding: 1.2rem;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
   }
 
   & h1 {
@@ -120,7 +121,7 @@
   gap: 2.4rem;
   font-size: 2.4rem;
   line-height: 2.8rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     border-radius: 1.2rem;
     padding: 1.2rem;
     background-color: var(--white);
@@ -144,7 +145,9 @@
   grid-template-rows: 57rem;
   gap: 2rem;
   @include breakpoint($sm-bp) {
-    grid-template-columns: 2.4rem;
+    margin-top: 2.4rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
 
@@ -156,25 +159,43 @@
   width: 100%;
   @include breakpoint($sm-bp) {
     gap: 0.8rem;
-    max-width: 32rem;
+    //max-width: 32rem;
+  }
+
+  & li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 0;
+    text-indent: 0;
+    white-space: nowrap;
   }
 
   & li::marker {
-    color: var(--color2)
+    color: var(--color2);
   }
 
-  &  li {
-    display: list-item;
-    list-style-position: inside;
-    padding-left: 2rem;
-    text-indent: -2rem;
+  & li span {
+    position: relative;
+    left: -1rem;
+  }
+}
+
+.implantation-banner__slider-container {
+  position: relative;
+  height: 14rem;
+  overflow: hidden;
+}
+
+.pagination.implantation-pagination {
+  @include breakpoint($sm-bp) {
+    bottom: -33%;
   }
 }
 
 .implantation-cost__img {
   border-radius: 1.2rem;
   overflow: hidden;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: none;
   }
 }
@@ -196,6 +217,18 @@
   }
 }
 
+.implantation-cost__right .implantation-cost__right-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.implantation_cost h2 {
+  @include breakpoint($sm-bp) {
+    text-align: center;
+  }
+}
+
 .implantation-cost__right-top {
   display: flex;
   flex-direction: column;
@@ -206,12 +239,40 @@
   }
 }
 
-.implantation-cost__right-list {
+.implantation-cost__right-item {
   display: grid;
   grid-template-columns: 18.5rem 26.4rem 10.4rem;
   row-gap: 2rem;
   align-items: end;
-  justify-content: space-between
+  justify-content: space-between;
+  @include breakpoint($sm-bp) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.8rem;
+  }
+
+  & div.line {
+    background-color: rgba(142, 142, 142, 1);
+    @include breakpoint($sm-bp) {
+      order: 3;
+      grid-column: span 2;
+    }
+  }
+
+  & div.implantation-cost__item {
+    @include breakpoint($sm-bp) {
+      order: 2;
+      grid-column: span 2;
+    }
+  }
+
+  & div:nth-child(1) {
+    @include breakpoint($sm-bp) {
+      order: 1;
+      grid-column: span 2;
+      max-width: 75%;
+    }
+  }
+
 }
 
 .implantation-cost__item {
@@ -226,11 +287,29 @@
 
 .implantation-banner__inf button {
   align-self: center;
+  @include breakpoint($xl-bp) {
+    margin-top: 9rem;
+  }
+  @include breakpoint($sm-bp) {
+    margin-top: 0;
+  }
 }
 
 .list__item-bottom p.implantation-card__text,
 .implantation-card__text {
   max-width: 73%;
+}
+
+.implantation-card__text {
+  @include breakpoint($sm-bp) {
+    max-width: 92%;
+  }
+}
+
+.list__item-desc.mb {
+  @include breakpoint($sm-bp) {
+    margin-top: -9%;
+  }
 }
 
 
@@ -239,22 +318,33 @@
   max-width: 55%;
   @include breakpoint($sm-bp) {
     max-width: 100%;
-    padding-left: 1.5rem;
-  }
-}
-
-.implantation__about-subtitle {
-  max-width: 50%;
-  @include breakpoint($sm-bp) {
-    max-width: 100%;
-    padding-left: 1.5rem;
+    text-align: center;
   }
 }
 
 .implantation__about-subtitle {
   font-size: 2.4rem;
   line-height: 2.8rem;
+  max-width: 50%;
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
 }
+
+.implantation__item-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+
+
 
 .implantation-details__item {
   padding: 1.6rem;
@@ -280,7 +370,7 @@
   margin-top: 8.4rem;
   margin-bottom: 8.4rem;
   @include breakpoint($sm-bp) {
-    margin-top: 6.4rem;
+    margin-top: 3.4rem;
     margin-bottom: 7.2rem;
   }
 }
@@ -290,16 +380,29 @@
   margin-bottom: 2.4rem;
 }
 
+.implantation-num h2 {
+  margin-bottom: 2.4rem;
+  @include breakpoint($sm-bp) {
+    max-width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .implantation-num__inf {
   display: grid;
   grid-template-columns: 54.2rem 54.2rem;
   grid-template-rows: 49.1rem;
   gap: 7.2rem;
   margin-top: 5.6rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     margin-top: 2.4rem;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+  }
+
+  @include breakpoint($sm-bp) {
+    gap: 0;
   }
 }
 
@@ -319,8 +422,14 @@
 
   & .button {
     align-self: center;
-    @include breakpoint($sm-bp) {
+    @include breakpoint($xl-bp) {
       margin-top: 2.3rem;
+    }
+  }
+
+  & div h3 {
+    @include breakpoint($sm-bp) {
+      text-align: center;
     }
   }
 }
@@ -332,7 +441,7 @@
   list-style: square inside;
   margin-top: 2rem;
   & li::marker {
-    color: var(--color2)
+    color: var(--color2);
   }
 
   &  li {
@@ -348,8 +457,14 @@
   grid-template-columns: repeat(2, 26.2rem);
   grid-template-rows: repeat(2, 23.5rem);
   gap: 2rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+  }
   @include breakpoint($sm-bp) {
     display: flex;
+    justify-content: start;
   }
 }
 
@@ -380,20 +495,52 @@
   font-size: 2.4rem;
   line-height: 2.8rem;
   text-align: center;
+  @include breakpoint($sm-bp) {
+    font-size: 2.3rem;
+  }
 }
 
 .implantation-num__slider {
   @include breakpoint($sm-bp) {
     max-width: 36rem;
-    height: 22rem;
-    overflow: hidden;
+    //height: 22rem;
+    //overflow: hidden;
     position: relative;
     padding-left: 1.5rem;
   }
 }
 
+.implantation-num__inf-left {
+  @include breakpoint($sm-bp) {
+    overflow: hidden;
+    height: 30rem;
+  }
+}
+
+.pagination.implantation__num-pagination {
+  @include breakpoint($sm-bp) {
+    bottom: -15%;
+  }
+}
+
+.aligners__plan.implantation__plan {
+  @include breakpoint($sm-bp) {
+    margin-top: 0;
+  }
+
+  & .aligners__plan-heading,
+  & h2 {
+    @include breakpoint($sm-bp) {
+      text-align: center;
+    }
+  }
+}
+
 .aligners__plan-container.implantation__plan-container {
   grid-template-rows: 23.3rem;
+  @include breakpoint($sm-bp) {
+    grid-template-rows: 30.3rem;
+  }
 }
 
 .aligners__params.implantation__params {
@@ -404,8 +551,28 @@
   }
 }
 
+.aligners__params.implantation__params div.active {
+  width: 11.6rem;
+  @include breakpoint($sm-bp) {
+    width: 9.6rem;
+  }
+}
+
+.aligners__params.implantation__params div:nth-child(5) {
+  @include breakpoint($sm-bp) {
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+  }
+}
+
 .aligners__plan-content.implantation__plan-content {
   padding: 2rem;
+}
+
+.process__slider.implantation__slider {
+  @include breakpoint($sm-bp) {
+    height: 53rem;
+  }
 }
 
 .implantation-pay {
@@ -426,6 +593,7 @@
   max-width: 45%;
   @include breakpoint($sm-bp) {
     max-width: 100%;
+    text-align: center;
   }
 }
 

@@ -423,7 +423,7 @@ const slider16 = new Swiper('.implantation-banner__slider', {
     breakpoints: {
 
         320: {
-            slidesPerView: 1.35,
+            slidesPerView: 1.45,
         },
         768: {
             slidesPerView: 3,

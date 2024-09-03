@@ -196,6 +196,7 @@
 .list__item-img {
   @include breakpoint($sm-bp) {
     width: 10rem;
+    flex-shrink: 0;
   }
 }
 
@@ -274,6 +275,10 @@ a:hover .list__item {
   background-image: url("../images/bg/card-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+  @include breakpoint($sm-bp) {
+    background-image: url("../images/bg/card-bg__mob.png");
+    background-position: center center;
+  }
 }
 
 .card--bg5 {
@@ -287,6 +292,9 @@ a:hover .list__item {
   background-image: url("../images/bg/card-bg2.png");
   background-size: cover;
   background-repeat: no-repeat;
+  @include breakpoint($xl-bp) {
+    background-position: center center;
+  }
 }
 
 .card--bg5 .list__item-desc p {
@@ -302,10 +310,16 @@ a:hover .list__item {
   }
 }
 
-.card--bg1 .list__item-desc{
+.card--bg1 .list__item-desc {
   margin-left: 30%;
   @include breakpoint($xl-bp) {
     margin-left: 20%;
+  }
+}
+
+.card--bg4 .list__item-desc {
+  @include breakpoint($sm-bp) {
+    gap: 5.6rem;
   }
 }
 
@@ -325,12 +339,55 @@ a:hover .list__item {
 
 .card--bg2 .list__item-desc {
   align-self: center;
+  @include breakpoint($sm-bp) {
+    justify-content: space-between;
+    padding: 1.2rem;
+    align-self: normal;
+  }
+}
+
+.list__item-desct {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.list__item-bottom p.list__item-mob {
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+    max-width: 100%;
+  }
+}
+
+.list__item-mob {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: block;
+  }
+}
+
+.card--bg2 {
+  @include breakpoint($xl-bp) {
+    position: relative;
+  }
 }
 
 .card--bg2 .list__item-title {
   width: min-content;
+  @include breakpoint($sm-bp) {
+    width: 88%;
+  }
 }
 
+.card--bg2 .list__item-mob {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: block;
+    position: absolute;
+    bottom: 9%;
+    right: 6%;
+  }
+}
 
 .card--bg3 {
   position: relative;
@@ -341,6 +398,31 @@ a:hover .list__item {
   max-width: 95%;
 }
 
+.list__item-desc.g3 {
+  @include breakpoint($sm-bp) {
+    gap: 3.6rem;
+  }
+
+  & p {
+    @include breakpoint($sm-bp) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.list__item-desc.g2 {
+  @include breakpoint($sm-bp) {
+    justify-content: space-evenly;
+    padding-left: 1.2rem;
+  }
+
+  & .list__item-desc {
+    @include breakpoint($sm-bp) {
+      gap: 2.6rem;
+    }
+  }
+}
+
 .card--bg3 img {
   position: absolute;
   bottom: -11%;
@@ -348,7 +430,10 @@ a:hover .list__item {
   left: 5%;
   max-width: 35rem;
   @include breakpoint($xl-bp) {
-    height: 5rem;
+    height: 6rem;
+    object-fit: contain;
+    max-width: 20rem;
+    bottom: -9%;
   }
 }
 
@@ -393,7 +478,6 @@ a:hover .list__item {
     border-top-left-radius: 1.2rem;
     border-top-right-radius: 1.2rem;
   }
-
 }
 
 .content__list-container {
