@@ -1,188 +1,123 @@
-<div class="calculator__container" id="calculator">
+<div class="calculator__container" id="calculator-implantation">
   <h2 class="team__title element-animation-opacity">Калькулятор стоимости имплантации</h2>
   <p class="calculator__subtitle">Данный калькулятор предназначен для сравнения полной стоимости восполнения зуба, если вы уже были на консультациях.
     <br><br>Если ещё не были, записывайтесь на бесплатную консультацию на которой мы составим полный план лечения и подберём для вас оптимальную имплантационную платформу.</p>
-  <div class="calculator__inf">
-    <div class="calculator">
+  <div class="calculator__inf-implantation">
+    <div class="calculator-implantation">
       <form class="form">
         <div>
-          <div class="calculator__line calculator__line--placeholder">
+          <div class="calculator__line calculator__line-implantation calculator__line--placeholder">
             <div class="calculator__num">
               1
             </div>
-            <select name="calculator" class="js-choice">
-              <option value="" class="placeholder">Выберите тарифный план</option>
-              <option value="2">All-in</option>
-              <option value="3">Первый класс</option>
-              <option value="4">Второй класс</option>
-              <option value="5">Low cost</option>
+            <select name="calculator-implantation__type" class="js-choice__implantation1">
+              <option value="" class="placeholder">Выберите тип импланта</option>
+              <option value="neodent">Neodent Швейцария-Бразилия</option>
+              <option value="inno">Inno Юж.Корея</option>
+              <option value="straumann">Straumann Швейцария</option>
             </select>
+            <div class="icon-button openText">
+              <span class="icon-button__bg icon1">Мы используем только качественные и проверенные имплантационные системы.</span>
+              <img src="assets/images/icon-button.svg" alt="">
+            </div>
           </div>
         </div>
         <div>
-          <div class="calculator__line">
+          <div class="calculator__line calculator__line-implantation calculator__line--placeholder">
             <div class="calculator__num">
               2
             </div>
-            <select name="calculatorType" class="js-choice2">
-              <option value="" class="placeholder"><span class="block-desc">2.</span>Выберите тип брекетов</option>
-              <option value=""><em>Выберите тарифный план</em></option>
+            <select name="calculator-implantation__plastic" class="js-choice__implantation2">
+              <option value="" class="placeholder">Костная пластика</option>
+              <option value="neither">не требуется</option>
+              <option value="close">закрытый синус-лифитинг</option>
+              <option value="open">открытый синус лифтинг</option>
             </select>
-          </div>
-        </div>
-        <div>
-          <div class="calculator__lines--radio">
-            <div class="calculator__line1--radio">
-              <div class="calculator__num">
-                3
-              </div>
-              <div class="calculator__subtitle-line">
-                <span class="block-desc">3.</span> Срок лечения
-              </div>
-              <div class="icon-button openText">
-                <span class="icon-button__bg">Зависит от сложности, тактики и квалификации врача. В среднем — 2 года. Срок фиксируем: не уложимся, долечим бесплатно!</span>
-                <img src="assets/images/icon-button.svg" alt="">
-              </div>
-            </div>
-            <div class="calculator__line--radio">
-              <div class="calculator--radio">
-                <input id="1" class="checkbox-custom customClick" name="years" type="radio" value="1">
-                <label for="1" class="radio"></label>
-                <div class="years__num">1 год</div>
-              </div>
-              <div class="calculator--radio">
-                <input id="1.5" class="checkbox-custom customClick" name="years" type="radio" value="1.5">
-                <label for="1.5" class="radio"></label>
-                <div class="years__num">1,5 года</div>
-              </div>
-              <div class="calculator--radio">
-                <input id="2" class="checkbox-custom customClick" name="years" type="radio" value="2">
-                <label for="2" class="radio"></label>
-                <div class="years__num">2 года</div>
-              </div>
-              <div class="calculator--radio">
-                <input id="2.5" class="checkbox-custom customClick" name="years" type="radio" value="2.5">
-                <label for="2.5" class="radio"></label>
-                <div class="years__num">2,5 года</div>
-              </div>
-              <div class="line"></div>
+            <div class="icon-button openText">
+              <span class="icon-button__bg icon2 openText">Необходима при недостатке объёма кости для установки имплантата. Если она вам потребуется, предупредим на консультации.</span>
+              <img src="assets/images/icon-button.svg" alt="">
             </div>
           </div>
         </div>
         <div>
-          <div class="calculator__lines--radio">
-            <div class="calculator__line1--radio">
-              <div class="calculator__num">
-                4
-              </div>
-              <div class="calculator__subtitle-line">
-                <span class="block-desc">4.</span> Количество минивинтов
-              </div>
-              <div class="icon-button openText">
-                <span class="icon-button__bg bg-icon__middle">Дополнительный опорный элемент в брекет-системе. Требуется в 40% случаев.</span>
-                <img src="assets/images/icon-button.svg" alt="">
-              </div>
+          <div class="calculator__line calculator__line-implantation calculator__line--placeholder">
+            <div class="calculator__num">
+              3
             </div>
-            <div class="calculator__line--radio">
-              <div class="calculator__miniprop--radio">
-                <input id="miniprop0" class="checkbox-custom customClick2" name="miniprop" type="radio" value="1">
-                <label for="miniprop0" class="radio"></label>
-                <div class="miniprop__num">0</div>
-              </div>
-              <div class="calculator__miniprop--radio">
-                <input id="miniprop1" class="checkbox-custom customClick2" name="miniprop" type="radio" value="1.5">
-
-                <label for="miniprop1" class="radio"></label>
-                <div class="miniprop__num">1</div>
-              </div>
-              <div class="calculator__miniprop--radio">
-                <input id="miniprop2" class="checkbox-custom customClick2" name="miniprop" type="radio" value="2">
-                <label for="miniprop2" class="radio"></label>
-                <div class="miniprop__num">2</div>
-              </div>
-              <div class="line"></div>
+            <select name="calculator-crown" class="js-choice__implantation3">
+              <option value="" class="placeholder">Постоянная коронка</option>
+              <option value="zirconium">Диоксид циркония, включая абатмент</option>
+            </select>
+            <div class="icon-button openText">
+              <span class="icon-button__bg  icon3 openText">Коронки из диоксида циркония самые прочные, эстетичные и единственные, к которым прирастает десна, как к настоящему зубу.</span>
+              <img src="assets/images/icon-button.svg" alt="">
             </div>
           </div>
         </div>
         <div class="calculator__line--bottom">
           <div class="calculator__line1--radio">
-            <input id="operation" class="checkbox-custom" name="operatione" type="checkbox">
-            <label for="operation" class="checkbox-custom-label calculator__subtitle-line">Требуется ортогнатическая операция</label>
+            <input id="plasticCheckbox" class="checkbox-custom" name="plastic" type="checkbox">
+            <label for="plasticCheckbox" class="checkbox-custom-label calculator__subtitle-line">Мягкотканная пластика</label>
             <div class="icon-button openText">
-              <span class="icon-button__bg bg-icon__level">Проводится для коррекции скелетных аномалий при согласии пациента.</span>
+              <span class="icon-button__bg icon4">Может потребоваться при недостаточной толщине десны в области имплантации. От прилегания десны зависит срок службы имплантата.</span>
               <img src="assets/images/icon-button.svg" alt="">
             </div>
           </div>
           <div class="calculator__line1--radio">
-            <input id="treatment" class="checkbox-custom" name="treatment" type="checkbox">
-            <label for="treatment" class="checkbox-custom-label calculator__subtitle-line">Лечение на одной челюсти</label>
+            <input id="temporaryCheckbox" class="checkbox-custom" name="treatment" type="checkbox">
+            <label for="temporaryCheckbox" class="checkbox-custom-label calculator__subtitle-line">Временная коронка</label>
             <div class="icon-button openText">
-              <span class="icon-button__bg bg-icon__buttom openText">В 95% случаев лечение проводится на 2 челюстях. За исключением локальных перемещений отдельных зубов.</span>
+              <span class="icon-button__bg icon5">Устанавливается на срок от 1 месяца до 2 лет. Необходима для правильного формирования десны в области имплантата и на время ортодонтического лечения.</span>
               <img src="assets/images/icon-button.svg" alt="">
             </div>
           </div>
         </div>
 
         <div class="calculator__buttons">
-          <button class="button__disabled calculator__button moveCost" type="button">Рассчитать стоимость</button>
+          <button class="button__disabled calculator-implantation__button moveCostImplantation" type="button">Рассчитать стоимость</button>
           <button class="calculator__reset" type="reset">Сбросить все</button>
         </div>
 
       </form>
     </div>
-    <div class="calculator__price">
+    <div class="calculator-implantation__price">
       <div>
         <h3>Итоговая стоимость лечения</h3>
         <div class="calculator__price-list">
           <div class="calculator__list-item">
             <div class="calculator-item">
-              <div class="calculator__subtitle-line">Тарифный план:</div>
-              <div class="innerText"></div>
+              <div class="calculator__subtitle-line">Тип импланта:</div>
+              <div class="innerTextType"></div>
             </div>
             <div class="calculator__subtitle-line calculator__subtitle-line">x1</div>
           </div>
           <div class="calculator__list-item">
             <div class="calculator-item">
-              <div class="calculator__subtitle-line">Тип брекетов:</div>
-              <div class="innerType"></div>
+              <div class="calculator__subtitle-line">Костная пластика:</div>
+              <div class="innerPlastic"></div>
             </div>
             <div class="calculator__subtitle-line calculator__subtitle-line">x1</div>
           </div>
-          <div class="calculator-item calculator-item--line">
-            <div class="calculator__subtitle-line">Срок лечения:</div>
-            <div class="innerYears"></div>
-          </div>
           <div class="calculator__list-item">
             <div class="calculator-item">
-              <div class="calculator__subtitle-line">Установка минивинтов</div>
+              <div class="calculator__subtitle-line">Постоянная коронка:</div>
+              <div class="innerCrown"></div>
             </div>
-            <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerMiniprop"></span></div>
+            <div class="calculator__subtitle-line calculator__subtitle-line">x1</div>
           </div>
-          <div class="calculator__list-item">
-            <div class="calculator-item">
-              <div class="calculator__subtitle-line">Ортогнатическая операция</div>
-            </div>
-            <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerOperation">0</span></div>
-          </div>
-          <div class="calculator__list-item">
-            <div class="calculator-item">
-              <div class="calculator__subtitle-line">Лечение челюсти</div>
-            </div>
-            <div class="calculator__subtitle-line calculator__subtitle-line">x<span class="innerTreatment">1</span></div>
-          </div>
+
         </div>
         <div class="calculator__sum">
           <h3>Итого:</h3>
-          <h3 class="total-output"></h3>
+          <h3 class="total-implantation"></h3>
         </div>
       </div>
       <button class="button calculator__price-button openModal" type="button">Записаться на  бесплатную консультацию</button>
 
     </div>
     <button class="button calculator__price-button button__mob openModal" type="button">Записаться на консультацию</button>
-
   </div>
-  <div class="calculator__inf-right">
+  <div class="calculator__inf-right calculator-implantation__inf-right">
     <div class="calculator__right-top">
       <div class="calculator__top-item">
         <div class="calculator__top-num">

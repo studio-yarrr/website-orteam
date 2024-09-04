@@ -8,6 +8,8 @@
   }
 }
 
+
+.calculator-implantation,
 .calculator {
   position: relative;
 
@@ -28,9 +30,9 @@
   }
 }
 
+.calculator-implantation__price,
 .calculator__price {
   display: none;
-  //display: flex;
   flex-direction: column;
   justify-content: space-between;
   opacity: 0;

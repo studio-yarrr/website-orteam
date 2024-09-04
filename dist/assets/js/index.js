@@ -802,6 +802,7 @@ const blog = document.querySelector('.blog');
     const openText = document.querySelectorAll('.openText');
     const icons = document.querySelectorAll('form span.icon-button__bg');
     const calculator = document.querySelector('.calculator');
+    const calculatorImplantation = document.querySelector('.calculator-implantation');
 
     openText.forEach((elem, index) => {
         elem.addEventListener('click', (event) => {
@@ -815,6 +816,7 @@ const blog = document.querySelector('.blog');
                 }
 
                 calculator.classList.add('active');
+                calculatorImplantation.classList.add('active');
             }
         });
     });
@@ -832,6 +834,7 @@ const blog = document.querySelector('.blog');
             if (!clickedInside) {
                 icons.forEach(icon => icon.classList.remove('active'));
                 calculator.classList.remove('active');
+                calculatorImplantation.classList.remove('active');
             }
         }
     });
