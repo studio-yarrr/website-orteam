@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const calculatorImplantation = document.querySelector('.calculator-implantation');
 
-    if(calculatorImplantation) {
+    if (calculatorImplantation) {
         const selectElement1 = document.querySelector('.js-choice__implantation1');
         const selectElement2 = document.querySelector('.js-choice__implantation2');
         const selectElement3 = document.querySelector('.js-choice__implantation3');
         const numElement = document.querySelectorAll('.calculator__num');
+        const calculatorImplantationReset = document.querySelector('.calculator-implantation__reset');
 
         let priceImplantationType = 0;
         let priceImplantationPlastic = 0;
         let priceImplantationCrown = 0;
 
+        let choices1, choices2, choices3;
+
         if (selectElement1) {
-            const choices = new Choices(selectElement1, {
+            choices1 = new Choices(selectElement1, {
                 itemSelectText: "",
                 searchEnabled: false,
                 shouldSort: false
@@ -45,10 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             calculateTotalPrice();
+            checkActiveNumClasses();
         });
 
         if (selectElement2) {
-            choices = new Choices(selectElement2, {
+            choices2 = new Choices(selectElement2, {
                 itemSelectText: "",
                 searchEnabled: false,
                 shouldSort: false
@@ -74,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const innerPlastic = document.querySelector('.innerPlastic');
-            const innerCrown = document.querySelector('.innerTextType');
 
             innerPlastic.textContent = selectedText;
 
@@ -85,10 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             calculateTotalPrice();
+            checkActiveNumClasses();
         });
 
         if (selectElement3) {
-            choices = new Choices(selectElement3, {
+            choices3 = new Choices(selectElement3, {
                 itemSelectText: "",
                 searchEnabled: false,
                 shouldSort: false
@@ -118,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             calculateTotalPrice();
+            checkActiveNumClasses();
         });
 
         function calculateTotalPrice() {
@@ -133,65 +138,84 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const totalImplantation = document.querySelector('.total-implantation');
 
-            totalImplantation.textContent = totalPriceImplantation;
+            totalImplantation.textContent = `${totalPriceImplantation} ₽`;
         }
 
-        // checbox
+// checbox
 
         const plasticCheckbox = document.getElementById('plasticCheckbox');
         const temporaryCheckbox = document.getElementById('temporaryCheckbox');
 
         plasticCheckbox.addEventListener('change', () => {
             calculateTotalPrice();
+            checkActiveNumClasses();
         });
 
         temporaryCheckbox.addEventListener('change', () => {
             calculateTotalPrice();
-        })
-    }
-
-    const numElements = document.querySelectorAll('.calculator__num');
-    const calculatorImplantationButton =document.querySelectorAll('.calculator-implantation__button')
-    function checkActiveNumClasses() {
-        const activeElements = Array.from(numElements).filter(elem => elem.classList.contains('active'));
-        const allActiveNum = activeElements.length >= 3;
-        calculatorImplantationButton.forEach(button => {
-            if (allActiveNum) {
-                button.classList.remove('button__disabled');
-                button.classList.add('button');
-                button.removeAttribute('disabled');
-            } else {
-                button.classList.remove('button');
-                button.classList.add('button__disabled');
-                button.setAttribute('disabled', 'true');
-            }
+            checkActiveNumClasses();
         });
 
-        const oneActiveNum = Array.from(numElements).some(elem => elem.classList.contains('active'));
-        const calculatorResets = document.querySelectorAll('.calculator__reset');
+        const calculatorImplantationButton = document.querySelectorAll('.calculator-implantation__button');
+        function checkActiveNumClasses() {
+            const activeElements = Array.from(numElement).filter(elem => elem.classList.contains('active'));
+            const allActiveNum = activeElements.length >= 3;
+            calculatorImplantationButton.forEach(button => {
+                if (allActiveNum) {
+                    button.classList.remove('button__disabled');
+                    button.classList.add('button');
+                    button.removeAttribute('disabled');
+                } else {
+                    button.classList.remove('button');
+                    button.classList.add('button__disabled');
+                    button.setAttribute('disabled', 'true');
+                }
+            });
 
-        calculatorResets.forEach(reset => {
+            const oneActiveNum = activeElements.length > 0;
+
             if (oneActiveNum) {
-                reset.classList.add('active');
+                calculatorImplantationReset.classList.add('active');
             } else {
-                reset.classList.remove('active');
+                calculatorImplantationReset.classList.remove('active');
             }
+        }
+
+        checkActiveNumClasses();
+
+        const observerCheckImplantation = new MutationObserver(checkActiveNumClasses);
+
+        numElement.forEach(elem => {
+            observerCheckImplantation.observe(elem, { attributes: true, attributeFilter: ['class'] });
+        });
+
+        const moveCostImplantation = document.querySelector('.moveCostImplantation');
+        const calculatorImplantationPrice = document.querySelector('.calculator-implantation__price');
+        moveCostImplantation.addEventListener('click', () => {
+            calculatorImplantationPrice.classList.add('active');
+        });
+
+        calculatorImplantationReset.addEventListener('click', () => {
+            plasticCheckbox.checked = false;
+            temporaryCheckbox.checked = false;
+
+            numElement.forEach(item => item.classList.remove('active'));
+
+            if (choices1) choices1.setChoiceByValue('');
+            if (choices2) choices2.setChoiceByValue('');
+            if (choices3) choices3.setChoiceByValue('');
+
+            const innerTextType = document.querySelector('.innerTextType');
+            const innerPlastic = document.querySelector('.innerPlastic');
+            const innerCrown = document.querySelector('.innerCrown');
+
+            if (innerTextType) innerTextType.textContent = '';
+            if (innerPlastic) innerPlastic.textContent = '';
+            if (innerCrown) innerCrown.textContent = '';
+
+            calculatorImplantationPrice.classList.remove('active');
+            calculateTotalPrice();
+            checkActiveNumClasses();
         });
     }
-
-    checkActiveNumClasses();
-
-    const observerCheckImplantation = new MutationObserver(checkActiveNumClasses);
-
-    numElements.forEach(elem => {
-        observerCheckImplantation.observe(elem, { attributes: true, attributeFilter: ['class'] });
-    });
-
-
-    const moveCostImplantation = document.querySelector('.moveCostImplantation')
-    const calculatorImplantationPrice = document.querySelector('.calculator-implantation__price')
-    moveCostImplantation.addEventListener('click', () => {
-        calculatorImplantationPrice.classList.add('active')
-    })
-
 });

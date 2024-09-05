@@ -1,7 +1,7 @@
 .calculator__inf-implantation {
   display: grid;
   grid-template-columns: 53.1rem 66.5rem;
-  grid-template-rows: 48.7rem;
+  grid-template-rows: 50rem;
   gap: 2rem;
 }
 
@@ -16,7 +16,7 @@
 
 .calculator-implantation {
   border-radius: 1.2rem;
-  padding: 0 4rem;
+  padding: 0 4rem 4rem;
   background-color: var(--white);
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
@@ -44,7 +44,7 @@
 }
 
 .calculator__inf-right.calculator-implantation__inf-right {
-  grid-template-columns: 53.1rem 52rem;
+  grid-template-columns: 53.1rem 56rem;
   grid-template-rows: 32.8rem;
 }
 
