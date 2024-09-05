@@ -79,7 +79,12 @@
   display: none;
   @include breakpoint($sm-bp) {
     display: block;
+    padding-right: 0.5rem;
   }
+}
+
+.choices__list--dropdown .block-desc {
+  display: none;
 }
 
 form span.block-desc {
@@ -158,6 +163,11 @@ form span.block-desc {
   color: var(--color1);
   font-size: 1.6rem;
   min-height: auto;
+  @include breakpoint($sm-bp) {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
 }
 
 .choices__list--single {
@@ -186,6 +196,8 @@ form span.block-desc {
     display: flex;
     gap: 0.2rem;
     font-weight: 700;
+    max-width: 99%;
+    overflow: hidden;
   }
 }
 
@@ -314,12 +326,32 @@ form span.icon-button__bg.bg-icon__level {
   }
 }
 
+.calculator-implantation__line1--radio,
 .calculator__line1--radio {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: start;
   gap: 2.6rem;
   align-items: center;
+}
+
+.calculator-implantation__line1--radio {
+  @include breakpoint($sm-bp) {
+    align-items: flex-end;
+    gap: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .checkbox-custom-label {
+    @include breakpoint($sm-bp) {
+      padding-top: 1rem;
+    }
+  }
+}
+
+.calculator-implantation__line1--radio,
+.calculator__line1--radio {
   @include breakpoint($sm-bp) {
     align-items: flex-start;
     gap: 0;
@@ -412,6 +444,12 @@ form span.icon-button__bg.bg-icon__level {
   gap: 1.6rem;
 
   & .calculator__line1--radio {
+    grid-template-rows: 2.4rem ;
+    @include breakpoint($sm-bp) {
+      grid-template-rows: auto;
+    }
+  }
+  & .calculator-implantation__line1--radio {
     grid-template-rows: 2.4rem ;
     @include breakpoint($sm-bp) {
       grid-template-rows: auto;
@@ -542,6 +580,7 @@ button.calculator__price-button.button__mob {
   }
 }
 
+.calculator-implantation__line1--radio .checkbox-custom:checked+.calculator__subtitle-line.checkbox-custom-label:before,
 .calculator__line1--radio .checkbox-custom:checked+.calculator__subtitle-line.checkbox-custom-label:before {
   @include breakpoint($sm-bp) {
     width: 2.4rem;

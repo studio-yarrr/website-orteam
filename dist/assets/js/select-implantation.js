@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectElement3 = document.querySelector('.js-choice__implantation3');
         const numElement = document.querySelectorAll('.calculator__num');
         const calculatorImplantationReset = document.querySelector('.calculator-implantation__reset');
+        const firstOption = selectElement1.querySelector('option');
+        const firstOption2 = selectElement2.querySelector('option');
+        const firstOption3 = selectElement3.querySelector('option');
+
+        firstOption.innerHTML = `<span class="block-desc">1. </span> ${firstOption.textContent}`;
+        firstOption2.innerHTML = `<span class="block-desc">2. </span> ${firstOption2.textContent}`;
+        firstOption3.innerHTML = `<span class="block-desc">3. </span> ${firstOption3.textContent}`;
 
         let priceImplantationType = 0;
         let priceImplantationPlastic = 0;
@@ -22,9 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+
+
         selectElement1.addEventListener('change', function (event) {
             const selectedValue = event.target.value;
             const selectedText = event.target.options[event.target.selectedIndex].text;
+
 
             switch (selectedValue) {
                 case 'neodent':

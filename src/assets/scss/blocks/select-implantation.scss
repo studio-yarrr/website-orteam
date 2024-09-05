@@ -3,6 +3,13 @@
   grid-template-columns: 53.1rem 66.5rem;
   grid-template-rows: 50rem;
   gap: 2rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .calculator-implantation__price {
@@ -41,11 +48,24 @@
   display: grid;
   grid-template-columns: 4.2rem 35.3rem 2.4rem;
   gap: 1.6rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 4.2rem 28rem 2.4rem;
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 26.3rem 2.4rem;
+  }
+
 }
 
 .calculator__inf-right.calculator-implantation__inf-right {
   grid-template-columns: 53.1rem 56rem;
   grid-template-rows: 32.8rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: repeat(2,1fr);
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
 }
 
 form span.icon-button__bg.icon1 {
