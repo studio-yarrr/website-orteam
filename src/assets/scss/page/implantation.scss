@@ -649,7 +649,7 @@
 .implantation__reason {
   display: grid;
   grid-template-columns: repeat(2, 49.5rem);
-  grid-template-rows: 33.7rem;
+  grid-template-rows: 31.7rem;
   gap: 2rem;
   justify-content: center;
   margin-bottom: 17.9rem;
@@ -682,9 +682,9 @@
 }
 
 .implantation__reason-right {
-  background-color: var(--green);
+  background-color: var(--color1);
 }
 
 .implantation__reason-left {
-  background-color: var(--color1);
+  background-color: var(--green);
 }

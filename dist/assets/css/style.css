@@ -7378,6 +7378,7 @@ a.order4 .list__item {
         justify-content: flex-start;
         padding: 1.2rem;
         height: 39rem;
+        gap: 1.6rem;
     }
 }
 
@@ -13945,7 +13946,7 @@ div .view-icon {
 .implantation__reason {
     display: grid;
     grid-template-columns: repeat(2, 49.5rem);
-    grid-template-rows: 33.7rem;
+    grid-template-rows: 31.7rem;
     gap: 2rem;
     -ms-flex-pack: center;
     justify-content: center;
@@ -13990,11 +13991,11 @@ div .view-icon {
 }
 
 .implantation__reason-right {
-    background-color: var(--green);
+    background-color: var(--color1);
 }
 
 .implantation__reason-left {
-    background-color: var(--color1);
+    background-color: var(--green);
 }
 
 /*------footer-----*/

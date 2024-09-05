@@ -560,7 +560,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
           if (window.matchMedia('(min-width: 1020px)').matches) {
               maxLength = 260;
           } else if (window.matchMedia('(min-width: 400px)').matches) {
-              maxLength = 240;
+              maxLength = 295;
           } else {
               maxLength = 280;
           }
