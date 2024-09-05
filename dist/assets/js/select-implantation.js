@@ -7,13 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectElement3 = document.querySelector('.js-choice__implantation3');
         const numElement = document.querySelectorAll('.calculator__num');
         const calculatorImplantationReset = document.querySelector('.calculator-implantation__reset');
-        const firstOption = selectElement1.querySelector('option');
-        const firstOption2 = selectElement2.querySelector('option');
-        const firstOption3 = selectElement3.querySelector('option');
-
-        firstOption.innerHTML = `<span class="block-desc">1. </span> ${firstOption.textContent}`;
-        firstOption2.innerHTML = `<span class="block-desc">2. </span> ${firstOption2.textContent}`;
-        firstOption3.innerHTML = `<span class="block-desc">3. </span> ${firstOption3.textContent}`;
 
         let priceImplantationType = 0;
         let priceImplantationPlastic = 0;
@@ -25,7 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
             choices1 = new Choices(selectElement1, {
                 itemSelectText: "",
                 searchEnabled: false,
-                shouldSort: false
+                shouldSort: false,
+                callbackOnCreateTemplates: function (template) {
+                    return {
+                        item: (classNames, data) => {
+                            return template(`
+                        <div class="${classNames.item} ${data.highlighted ? classNames.highlightedState : classNames.itemSelectable}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
+                        <span class="block-desc">1. </span>${data.label}
+                        </div>
+                        `);
+                        },
+                        choice: (classNames, data) => {
+                            return template(`
+                        <div class="${classNames.item} ${classNames.itemChoice} ${data.disabled ? classNames.itemDisabled : classNames.itemSelectable}" data-select-text="${this.config.itemSelectText}" data-choice ${data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable'} data-id="${data.id}" data-value="${data.value}" ${data.groupId > 0 ? 'role="treeitem"' : 'role="option"'}>
+                        <span class="block-desc">1. </span>${data.label}
+                        </div>
+                        `);
+                        }
+                    };
+                }
             });
         }
 
@@ -47,6 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 default:
                     priceImplantationType = 0;
             }
+
+            if(selectElement1) {
+                let choicesInner1 = selectElement1.closest('.choices');
+                choicesInner1.classList.add('border-choices');
+            }
+
             const innerTextType = document.querySelector('.innerTextType');
 
             innerTextType.textContent = selectedText;
@@ -65,7 +82,26 @@ document.addEventListener('DOMContentLoaded', () => {
             choices2 = new Choices(selectElement2, {
                 itemSelectText: "",
                 searchEnabled: false,
-                shouldSort: false
+                shouldSort: false,
+                callbackOnCreateTemplates: function (template) {
+                    return {
+                        item: (classNames, data) => {
+                            return template(`
+                            <div class="${classNames.item} ${data.highlighted ? classNames.highlightedState : classNames.itemSelectable}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
+                            <span class="block-desc">2. </span>${data.label}
+                            </div>
+                            `);
+                        },
+                        choice: (classNames, data) => {
+                            return template(`
+                            <div class="${classNames.item} ${classNames.itemChoice} ${data.disabled ? classNames.itemDisabled : classNames.itemSelectable}" data-select-text="${this.config.itemSelectText}" data-choice ${data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable'} data-id="${data.id}" data-value="${data.value}" ${data.groupId > 0 ? 'role="treeitem"' : 'role="option"'}>
+                            <span class="block-desc">2. </span>${data.label}
+                            </div>
+                            `);
+                        }
+                    };
+                }
+
             });
         }
 
@@ -87,6 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     priceImplantationPlastic = 0;
             }
 
+            if(selectElement2) {
+                let choicesInner2 = selectElement2.closest('.choices');
+                choicesInner2.classList.add('border-choices');
+            }
+
             const innerPlastic = document.querySelector('.innerPlastic');
 
             innerPlastic.textContent = selectedText;
@@ -105,7 +146,25 @@ document.addEventListener('DOMContentLoaded', () => {
             choices3 = new Choices(selectElement3, {
                 itemSelectText: "",
                 searchEnabled: false,
-                shouldSort: false
+                shouldSort: false,
+                callbackOnCreateTemplates: function (template) {
+                    return {
+                        item: (classNames, data) => {
+                            return template(`
+                            <div class="${classNames.item} ${data.highlighted ? classNames.highlightedState : classNames.itemSelectable}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''} ${data.disabled ? 'aria-disabled="true"' : ''}>
+                            <span class="block-desc">3. </span>${data.label}
+                            </div>
+                            `);
+                        },
+                        choice: (classNames, data) => {
+                            return template(`
+                        <div class="${classNames.item} ${classNames.itemChoice} ${data.disabled ? classNames.itemDisabled : classNames.itemSelectable}" data-select-text="${this.config.itemSelectText}" data-choice ${data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable'} data-id="${data.id}" data-value="${data.value}" ${data.groupId > 0 ? 'role="treeitem"' : 'role="option"'}>
+                        <span class="block-desc">3. </span>${data.label}
+                        </div>
+                        `);
+                        }
+                    };
+                }
             });
         }
 
@@ -119,6 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
                 default:
                     priceImplantationCrown = 0;
+            }
+
+            if(selectElement3) {
+                let choicesInner3 = selectElement3.closest('.choices');
+                choicesInner3.classList.add('border-choices');
             }
 
             const innerCrown = document.querySelector('.innerCrown');
@@ -222,6 +286,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (innerTextType) innerTextType.textContent = '';
             if (innerPlastic) innerPlastic.textContent = '';
             if (innerCrown) innerCrown.textContent = '';
+
+            const choicesInner = document.querySelectorAll('.choices');
+            choicesInner.forEach(elem => elem.classList.remove('border-choices'));
+
 
             calculatorImplantationPrice.classList.remove('active');
             calculateTotalPrice();

@@ -80,7 +80,7 @@ form span.icon-button__bg.icon1 {
   }
   @include breakpoint($sm-bp) {
     width: 26.1rem;
-    transform: translate(-106%, -80%);
+    transform: translate(-106%, -31%);
     pointer-events: auto;
   }
 }
@@ -100,8 +100,8 @@ form span.icon-button__bg.icon2 {
   }
   @include breakpoint($sm-bp) {
     width: 26.1rem;
-    height: 8.7rem;
-    transform: translate(-106%, -80%);
+    height: 12.9rem;
+    transform: translate(-106%, -35%);
     pointer-events: auto;
   }
 }
@@ -121,8 +121,8 @@ form span.icon-button__bg.icon3 {
   }
   @include breakpoint($sm-bp) {
     width: 26.1rem;
-    height: 8.7rem;
-    transform: translate(-106%, -80%);
+    height: 12.9rem;
+    transform: translate(-106%, -9%);
     pointer-events: auto;
   }
 }
@@ -142,8 +142,8 @@ form span.icon-button__bg.icon4 {
   }
   @include breakpoint($sm-bp) {
     width: 26.1rem;
-    height: 8.7rem;
-    transform: translate(-106%, -80%);
+    height: 12.9rem;
+    transform: translate(-106%, -4%);
     pointer-events: auto;
   }
 }
@@ -162,8 +162,8 @@ form span.icon-button__bg.icon5 {
     display: block;
   }
   @include breakpoint($sm-bp) {
-    width: 26.1rem;
-    height: 8.7rem;
+    width: 27rem;
+    height: 16rem;
     transform: translate(-106%, -80%);
     pointer-events: auto;
   }

@@ -815,8 +815,13 @@ const blog = document.querySelector('.blog');
                     icons[index].classList.add('active');
                 }
 
-                calculator.classList.add('active');
-                calculatorImplantation.classList.add('active');
+                if(calculator) {
+                    calculator.classList.add('active');
+                }
+
+                if(calculatorImplantation) {
+                    calculatorImplantation.classList.add('active');
+                }
             }
         });
     });
@@ -833,8 +838,12 @@ const blog = document.querySelector('.blog');
 
             if (!clickedInside) {
                 icons.forEach(icon => icon.classList.remove('active'));
-                calculator.classList.remove('active');
-                calculatorImplantation.classList.remove('active');
+                if(calculator) {
+                    calculator.classList.remove('active');
+                }
+                if(calculatorImplantation) {
+                    calculatorImplantation.classList.remove('active');
+                }
             }
         }
     });
@@ -852,3 +861,4 @@ const blog = document.querySelector('.blog');
   }
 
 });
+

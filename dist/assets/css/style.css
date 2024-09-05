@@ -5301,8 +5301,8 @@ form span.icon-button__bg.icon1.active {
 @media (max-width: 768px) {
     form span.icon-button__bg.icon1 {
         width: 26.1rem;
-        -webkit-transform: translate(-106%, -80%);
-        transform: translate(-106%, -80%);
+        -webkit-transform: translate(-106%, -31%);
+        transform: translate(-106%, -31%);
         pointer-events: auto;
     }
 }
@@ -5327,9 +5327,9 @@ form span.icon-button__bg.icon2.active {
 @media (max-width: 768px) {
     form span.icon-button__bg.icon2 {
         width: 26.1rem;
-        height: 8.7rem;
-        -webkit-transform: translate(-106%, -80%);
-        transform: translate(-106%, -80%);
+        height: 12.9rem;
+        -webkit-transform: translate(-106%, -35%);
+        transform: translate(-106%, -35%);
         pointer-events: auto;
     }
 }
@@ -5354,9 +5354,9 @@ form span.icon-button__bg.icon3.active {
 @media (max-width: 768px) {
     form span.icon-button__bg.icon3 {
         width: 26.1rem;
-        height: 8.7rem;
-        -webkit-transform: translate(-106%, -80%);
-        transform: translate(-106%, -80%);
+        height: 12.9rem;
+        -webkit-transform: translate(-106%, -9%);
+        transform: translate(-106%, -9%);
         pointer-events: auto;
     }
 }
@@ -5381,9 +5381,9 @@ form span.icon-button__bg.icon4.active {
 @media (max-width: 768px) {
     form span.icon-button__bg.icon4 {
         width: 26.1rem;
-        height: 8.7rem;
-        -webkit-transform: translate(-106%, -80%);
-        transform: translate(-106%, -80%);
+        height: 12.9rem;
+        -webkit-transform: translate(-106%, -4%);
+        transform: translate(-106%, -4%);
         pointer-events: auto;
     }
 }
@@ -5407,8 +5407,8 @@ form span.icon-button__bg.icon5.active {
 
 @media (max-width: 768px) {
     form span.icon-button__bg.icon5 {
-        width: 26.1rem;
-        height: 8.7rem;
+        width: 27rem;
+        height: 16rem;
         -webkit-transform: translate(-106%, -80%);
         transform: translate(-106%, -80%);
         pointer-events: auto;
