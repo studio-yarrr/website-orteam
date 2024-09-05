@@ -5415,6 +5415,21 @@ form span.icon-button__bg.icon5.active {
     }
 }
 
+@media (max-width: 768px) {
+    .calculator-implantation__price div h3 {
+        text-align: center;
+        font-size: 2.4rem;
+        line-height: 3.1rem;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator-item .calculator__subtitle-line.calculator-implantation__subtitle-line {
+        white-space: pre-wrap;
+    }
+}
+
 /*------header-----*/
 .header {
     padding: 2.4rem 1rem 2.4rem 2.4rem;

@@ -267,6 +267,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const calculatorImplantationPrice = document.querySelector('.calculator-implantation__price');
         moveCostImplantation.addEventListener('click', () => {
             calculatorImplantationPrice.classList.add('active');
+            const buttonMob = document.querySelectorAll('.button__mob');
+            buttonMob.forEach(button => button.classList.add('active'));
         });
 
         calculatorImplantationReset.addEventListener('click', () => {
