@@ -414,7 +414,7 @@ const alignersSwiper = document.querySelector('.aligners-swiper');
 const slider16 = new Swiper('.implantation-banner__slider', {
     spaceBetween: 20,
     speed: 800,
-    slidesPerView: 3,
+    slidesPerView: 1.45,
     loop: true,
     pagination: {
         el: '.implantation-pagination',

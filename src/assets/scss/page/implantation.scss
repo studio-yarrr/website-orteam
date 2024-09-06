@@ -312,7 +312,6 @@
   }
 }
 
-
 .implantation-num h2,
 .implantation__about h2 {
   max-width: 55%;
@@ -327,7 +326,7 @@
   line-height: 2.8rem;
   max-width: 50%;
   @include breakpoint($sm-bp) {
-    max-width: 100%;
+    max-width: 95%;
     text-align: center;
     font-size: 1.6rem;
     line-height: 2.1rem;
