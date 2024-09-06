@@ -10498,7 +10498,7 @@ select {
 }
 
 .about__title h1 {
-    margin-top: 8.4rem;
+    margin-top: 6rem;
 }
 
 @media (max-width: 1024px) {
