@@ -291,7 +291,7 @@ const slider11 = new Swiper('.doctor-certificate__swiper', {
 })
 
 const slider12 = new Swiper('.case-swiper', {
-    spaceBetween: 20,
+    spaceBetween: 40,
     speed: 800,
     navigation: {
         nextEl: '.case-button-next',
@@ -304,6 +304,7 @@ const slider12 = new Swiper('.case-swiper', {
     breakpoints: {
         320: {
             slidesPerView: 1.25,
+            spaceBetween: 20,
         },
         768: {
             slidesPerView: 2,

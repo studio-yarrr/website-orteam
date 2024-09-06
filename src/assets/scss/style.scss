@@ -566,8 +566,11 @@ a:hover {
 }
 
 .case__buttons-container {
-  right: 6%;
+  right: 5%;
   z-index: 22;
+  @include breakpoint($xxl_bp) {
+    right: 0;
+  }
 }
 
 .accordion__title.active {

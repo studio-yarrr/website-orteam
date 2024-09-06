@@ -879,8 +879,14 @@ a:hover {
 }
 
 .case__buttons-container {
-    right: 6%;
+    right: 5%;
     z-index: 22;
+}
+
+@media (max-width: 1440px) {
+    .case__buttons-container {
+        right: 0;
+    }
 }
 
 .accordion__title.active {
@@ -10357,6 +10363,18 @@ select {
 
 .case__item-slide.swiper-slide-active {
     width: 45rem;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    padding-top: 3rem;
+    height: 56rem;
+}
+
+@media (max-width: 768px) {
+    .case__item-slide.swiper-slide-active {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        padding-top: 0;
+    }
 }
 
 .swiper-slide-active .case__img {
@@ -10388,7 +10406,7 @@ select {
 .case__item-slide.swiper-slide-active::before {
     content: "До";
     position: absolute;
-    top: 0;
+    top: 5%;
     left: -11%;
     font-size: 1.6rem;
     font-weight: 700;
@@ -10402,6 +10420,7 @@ select {
         text-transform: lowercase;
         left: 3%;
         z-index: 1;
+        top: 0;
     }
 }
 
@@ -10421,7 +10440,7 @@ select {
         color: var(--white);
         text-transform: lowercase;
         left: 3%;
-        bottom: 12%;
+        bottom: 32%;
         z-index: 1;
     }
 }

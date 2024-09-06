@@ -184,7 +184,13 @@
 
 .case__item-slide.swiper-slide-active {
   width: 45rem;
-
+  transform: scale(1.1);
+  padding-top: 3rem;
+  height: 56rem;
+  @include breakpoint($sm-bp) {
+    transform: scale(1);
+    padding-top: 0;
+  }
 }
 .swiper-slide-active .case__img {
   height: 38rem;
@@ -210,7 +216,7 @@
 .case__item-slide.swiper-slide-active::before {
   content: 'До';
   position: absolute;
-  top: 0;
+  top: 5%;
   left: -11%;
   font-size: 1.6rem;
   font-weight: 700;
@@ -221,6 +227,7 @@
     text-transform: lowercase;
     left: 3%;
     z-index: 1;
+    top: 0;
   }
 }
 
@@ -237,7 +244,7 @@
     color: var(--white);
     text-transform: lowercase;
     left: 3%;
-    bottom: 12%;
+    bottom: 32%;
     z-index: 1;
   }
 }
