@@ -13998,6 +13998,16 @@ div .view-icon {
     background-color: var(--green);
 }
 
+#implantation-team {
+    margin-top: 8.4rem;
+}
+
+@media (max-width: 768px) {
+    #implantation-team {
+        margin-top: 6.4rem;
+    }
+}
+
 /*------footer-----*/
 .footer {
     background-color: var(--white);

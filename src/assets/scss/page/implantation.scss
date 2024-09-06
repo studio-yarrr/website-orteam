@@ -688,3 +688,11 @@
 .implantation__reason-left {
   background-color: var(--green);
 }
+
+
+#implantation-team {
+  margin-top: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 6.4rem;
+  }
+}
