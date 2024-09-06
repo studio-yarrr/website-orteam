@@ -727,10 +727,20 @@ const blog = document.querySelector('.blog');
     const headContainer = document.getElementById('headContainerBlog');
     const headingHead = document.getElementById('headingHeadBlog');
     const icon = headContainer.querySelector('.heading-icon');
+    const sortContainerBlog = document.getElementById('sortContainerBlog');
+      const blogSort = document.getElementById('blogSort');
 
     headContainer.addEventListener('click', () => {
       headingHead.classList.toggle('active');
       icon.classList.toggle('active');
+        blogSort.classList.remove('active');
+    });
+
+    sortContainerBlog.addEventListener('click', () => {
+      if (blogSort) {
+          blogSort.classList.toggle('active');
+          headingHead.classList.remove('active');
+      }
     });
 
 
@@ -849,15 +859,6 @@ const blog = document.querySelector('.blog');
     });
 
 
-    const sortContainerBlog = document.getElementById('sortContainerBlog');
 
-  if (sortContainerBlog) {
-    sortContainerBlog.addEventListener('click', () => {
-      const blogSort = document.getElementById('blogSort');
-      if (blogSort) {
-        blogSort.classList.toggle('active');
-      }
-    });
-  }
 
 });
