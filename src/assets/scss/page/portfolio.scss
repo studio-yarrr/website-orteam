@@ -1,9 +1,9 @@
 .portfolio {
-  padding: 8.4rem 0 10.4rem;
+  padding: 6rem 0 10.4rem;
   display: flex;
   flex-direction: column;
   @include breakpoint($xl-bp) {
-    padding: 5.6rem 0 7.2rem;
+    padding: 3.2rem 0 7.2rem;
   }
 }
 
@@ -16,9 +16,9 @@
 }
 
 .portfolio__container {
-  margin: 10.4rem 0 5.6rem;
+  margin: 5.6rem 0;
   @include breakpoint($xl-bp) {
-    margin: 5.6rem 0 ;
+    margin: 5.6rem 0 2.4rem;
   }
 }
 

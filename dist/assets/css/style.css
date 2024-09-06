@@ -9902,7 +9902,7 @@ select {
 }
 
 .portfolio {
-    padding: 8.4rem 0 10.4rem;
+    padding: 6rem 0 10.4rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -9911,7 +9911,7 @@ select {
 
 @media (max-width: 1024px) {
     .portfolio {
-        padding: 5.6rem 0 7.2rem;
+        padding: 3.2rem 0 7.2rem;
     }
 }
 
@@ -9925,12 +9925,12 @@ select {
 }
 
 .portfolio__container {
-    margin: 10.4rem 0 5.6rem;
+    margin: 5.6rem 0;
 }
 
 @media (max-width: 1024px) {
     .portfolio__container {
-        margin: 5.6rem 0;
+        margin: 5.6rem 0 2.4rem;
     }
 }
 
