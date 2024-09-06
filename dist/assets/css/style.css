@@ -4146,6 +4146,7 @@ button.swiper-pagination-bullet {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 2.4rem;
+    margin-top: 2.4rem;
 }
 
 @media (max-width: 768px) {
