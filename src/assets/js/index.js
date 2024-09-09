@@ -858,8 +858,5 @@ const blog = document.querySelector('.blog');
         }
     });
 
-
-
-
 });
 
