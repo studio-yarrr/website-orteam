@@ -418,6 +418,13 @@
   gap: 2rem;
 }
 
+#standarts-operation {
+  margin-top: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 6.4rem;
+  }
+}
+
 .operation-ortem__item {
   border-radius: 1.2rem;
   background-color: var(--white);

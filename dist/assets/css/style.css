@@ -5974,12 +5974,12 @@ form span.icon-button__bg.icon5.active {
     }
 }
 
-.list__item {
+.list__item p {
     max-width: 84%;
 }
 
 @media (max-width: 1024px) {
-    .list__item {
+    .list__item p {
         max-width: 100%;
     }
 }
@@ -14615,6 +14615,16 @@ div .view-icon {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 2rem;
+}
+
+#standarts-operation {
+    margin-top: 8.4rem;
+}
+
+@media (max-width: 768px) {
+    #standarts-operation {
+        margin-top: 6.4rem;
+    }
 }
 
 .operation-ortem__item {

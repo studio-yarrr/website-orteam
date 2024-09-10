@@ -225,7 +225,7 @@
   }
 }
 
-.list__item {
+.list__item p {
   max-width: 84%;
   @include breakpoint($xl-bp) {
     max-width: 100%;
