@@ -19,7 +19,7 @@
   background-image: url("../images/operation/operation-banner.png");
   background-repeat: no-repeat;
   border-radius: 1.2rem;
-  padding: 6rem 1rem 6.1rem 5.6rem;
+  padding: 6rem 1rem 3.1rem 5.6rem;
   background-size: inherit;
   margin-bottom: 10.4rem;
   @include breakpoint($xxl-bp) {
@@ -68,9 +68,6 @@
   font-size: 2.4rem;
   line-height: 2.9rem;
   text-align: center;
-  max-width: 85%;
-  margin-right: auto;
-  margin-left: auto;
   @include breakpoint($sm-bp) {
     font-size: 1.6rem;
     line-height: 2.1rem;
@@ -119,7 +116,9 @@
   line-height: 3.8rem;
   color: var(--white);
   margin-bottom: 2rem;
+  max-width: 80%;
   @include breakpoint($sm-bp) {
+    max-width: 100%;
     font-family: "Cygre-Bold", sans-serif;
     font-size: 2.4rem;
     line-height: 3.1rem;
@@ -138,7 +137,7 @@
   display: grid;
   grid-template-columns: 23.7rem 36.1rem;
   background-color: var(--white);
-  grid-template-rows:  7rem 15rem 7rem;
+  grid-template-rows:  6rem 15rem 7rem;
   border-radius: 1.2rem;
   @include breakpoint($sm-bp) {
     grid-template-columns: 8rem auto 4rem;
@@ -396,13 +395,17 @@
 }
 
 .reason-operation__swiper {
-  height: 38rem;
+  height: 41rem;
 }
 
 .operation-ortem {
   display: grid;
   grid-template-columns: 28.3rem 90.7rem;
   gap: 2rem;
+  margin-bottom: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 6.4rem;
+  }
 }
 
 .operation-ortem__img {

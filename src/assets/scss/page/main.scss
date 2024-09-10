@@ -225,6 +225,13 @@
   }
 }
 
+.list__item {
+  max-width: 84%;
+  @include breakpoint($xl-bp) {
+    max-width: 100%;
+  }
+}
+
 a:hover .list__item {
   background-color: var(--green);
   color: var(--white);
@@ -286,12 +293,14 @@ a:hover .list__item {
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
+  background-position: 100% 100%;
 }
 
 .card--bg6 {
   background-image: url("../images/bg/card-bg2.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 100% 100%;
   @include breakpoint($xl-bp) {
     background-position: center center;
   }
@@ -500,6 +509,12 @@ a:hover .list__item {
   }
 }
 
+.content__list-container.content-operation__list-container {
+  @include breakpoint($xxl_bp) {
+    width: 46rem;
+  }
+}
+
 .content__list {
   display: flex;
   flex-direction: column;
@@ -515,8 +530,18 @@ a:hover .list__item {
   }
 }
 
+.content__list.content-operation__list {
+  white-space: normal;
+}
+
 .content__list li:hover {
   color: var(--color2);
+}
+
+.content__list li {
+  list-style-position: inside;
+  padding-left: 2rem;
+  text-indent: -2rem;
 }
 
 sup {
@@ -544,6 +569,7 @@ sup {
   border-top-right-radius: 1.2rem;
   border-bottom-right-radius: 1.2rem;
   height: 100%;
+  width: 100%;
   @include breakpoint($sm-bp) {
     border-top-right-radius: 1.2rem;
     border-top-left-radius: 1.2rem;
