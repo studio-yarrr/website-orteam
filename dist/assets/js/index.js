@@ -72,6 +72,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
+    const reviewTexts7 = document.querySelectorAll('.reviews__item-text7');
+
+
+    if(reviewTexts7) {
+        const reviewPopups7 = document.querySelectorAll('.review-popup7');
+
+        reviewPopups7.forEach(function(popup, index) {
+            popup.innerHTML = reviewTexts7[index].innerHTML;
+        });
+    }
+
 
     const caseTextBlock = document.querySelector('.case2__inf-bottom');
     if(caseTextBlock) {
@@ -529,7 +540,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
   }
 
-  let ps = document.querySelectorAll('.point');
+
+    let ps = document.querySelectorAll('.point');
 
   if(ps) {
       ps.forEach(function(p) {

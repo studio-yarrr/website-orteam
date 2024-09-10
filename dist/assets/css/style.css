@@ -3959,28 +3959,28 @@ button.swiper-pagination-bullet {
         opacity: 0;
         -webkit-transform: scale(0);
         transform: scale(0);
-        transition: all 2s;
+        transition: all 1s;
     }
 
     .element-animation-scale.element-show {
         opacity: 1;
         -webkit-transform: scale(1);
         transform: scale(1);
-        transition: all 2s;
+        transition: all 1s;
     }
 
     .element-animation-left {
         opacity: 0;
         -webkit-transform: translateX(-40%);
         transform: translateX(-40%);
-        transition-duration: 1s;
+        transition-duration: 0.5s;
     }
 
     .element-animation-right {
         opacity: 0;
         -webkit-transform: translateX(40%);
         transform: translateX(40%);
-        transition-duration: 1s;
+        transition-duration: 0.5s;
     }
 
     .element-animation-left.element-show,
@@ -3988,45 +3988,45 @@ button.swiper-pagination-bullet {
         opacity: 1;
         -webkit-transform: translateX(0);
         transform: translateX(0);
-        transition-duration: 1s;
+        transition-duration: 0.5s;
     }
 
     .element-animation {
         -webkit-transform: translateY(5rem);
         transform: translateY(5rem);
         opacity: 0;
-        transition-duration: 1s;
+        transition-duration: 0.5s;
     }
 
     .element-animation.element-show {
         -webkit-transform: translateY(0);
         transform: translateY(0);
         opacity: 1;
-        transition-duration: 2s;
+        transition-duration: 1s;
     }
 
     .element-animation-bottom {
         opacity: 0;
         -webkit-transform: translateY(60%);
         transform: translateY(60%);
-        transition-duration: 2s;
+        transition-duration: 1s;
     }
 
     .element-animation-bottom.element-show {
         opacity: 1;
         -webkit-transform: translateY(0);
         transform: translateY(0);
-        transition-duration: 2s;
+        transition-duration: 1s;
     }
 
     .element-animation-opacity {
         opacity: 0;
-        transition: all 2s;
+        transition: all 1s;
     }
 
     .element-animation-opacity.element-show {
         opacity: 1;
-        transition: all 2s;
+        transition: all 1s;
     }
 }
 
@@ -10477,6 +10477,7 @@ select {
     }
 }
 
+.review-popup7,
 .review-popup6,
 .review-popup5,
 .review-popup4,
@@ -10487,6 +10488,7 @@ select {
     display: none;
 }
 
+.review-popup7:hover,
 .review-popup6:hover,
 .review-popup5:hover,
 .review-popup4:hover,
@@ -14560,6 +14562,63 @@ div .view-icon {
 
 .reason-operation__swiper {
     height: 38rem;
+}
+
+.operation-ortem {
+    display: grid;
+    grid-template-columns: 28.3rem 90.7rem;
+    gap: 2rem;
+}
+
+.operation-ortem__img {
+    height: 7.8rem;
+}
+
+.operation-ortem__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.operation-ortem__item {
+    border-radius: 1.2rem;
+    background-color: var(--white);
+    padding: 2.4rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+@media (max-width: 768px) {
+    .operation-ortem__item {
+        padding: 1.2rem;
+        gap: 1.2rem;
+    }
+}
+
+.operation-ortem__text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.operation-ortem__img {
+    margin-top: 9.5rem;
+    position: sticky;
+    top: 9.5rem;
+    z-index: 10;
+}
+
+@media (max-width: 1024px) {
+    .operation-ortem__img {
+        position: static;
+    }
 }
 
 /*------footer-----*/

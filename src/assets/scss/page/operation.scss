@@ -398,3 +398,49 @@
 .reason-operation__swiper {
   height: 38rem;
 }
+
+.operation-ortem {
+  display: grid;
+  grid-template-columns: 28.3rem 90.7rem;
+  gap: 2rem;
+}
+
+.operation-ortem__img {
+  height: 7.8rem;
+}
+
+.operation-ortem__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.operation-ortem__item {
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+    gap: 1.2rem;
+  }
+}
+
+.operation-ortem__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.operation-ortem__img {
+  margin-top: 9.5rem;
+  position: sticky;
+  top: 9.5rem;
+  z-index: 10;
+  @include breakpoint($xl-bp) {
+    position: static;
+  }
+}
+
