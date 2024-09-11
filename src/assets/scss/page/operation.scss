@@ -39,21 +39,30 @@
   }
 }
 
+.banner__container.banner__operation {
+  @include breakpoint($xl-bp) {
+    margin-top: 5rem;
+  }
+}
+
 .operation-banner h1 {
   font-size: 4rem;
   line-height: 4.8rem;
   margin-bottom: 3.2rem;
   text-align: center;
+  @include breakpoint($xl-bp) {
+    text-align: left;
+  }
   @include breakpoint($sm-bp) {
     font-size: 1.6rem;
     line-height: 1.92rem;
     margin-bottom: 2rem;
     height: 21rem;
     display: grid;
-    place-items: center;
+    padding-top: 2.8rem;
     width: 60%;
     margin-right: 30%;
-    text-align: left;
+
   }
 }
 
@@ -68,7 +77,11 @@
   font-size: 2.4rem;
   line-height: 2.9rem;
   text-align: center;
+  @include breakpoint($xl-bp) {
+    text-align: left;
+  }
   @include breakpoint($sm-bp) {
+    text-align: center;
     font-size: 1.6rem;
     line-height: 2.1rem;
     background-color: var(--white);
@@ -83,6 +96,38 @@
   width: 1.2rem;
   height: 1.2rem;
   margin: 1.8rem auto 0;
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
+}
+
+.aligners__plan#step-operation {
+  @include breakpoint($sm-bp) {
+    margin-top: 0;
+  }
+
+  & h2 {
+    @include breakpoint($sm-bp) {
+      text-align: center;
+    }
+  }
+
+  & .aligners__plan-heading {
+    @include breakpoint($sm-bp) {
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      margin-top: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  & .center {
+    @include breakpoint($sm-bp) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+  }
 }
 
 .operation__about {
@@ -91,6 +136,10 @@
   grid-template-rows: 30.7rem;
   gap: 2rem;
   margin-bottom: 8.3rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
     grid-template-rows: 40.5rem 27.5rem;
@@ -131,6 +180,9 @@
   flex-direction: column;
   gap: 1.2rem;
   font-size: 1.5rem;
+  @include breakpoint($sm-bp) {
+    max-width: 93%;
+  }
 }
 
 .operation__about-right {
@@ -139,6 +191,11 @@
   background-color: var(--white);
   grid-template-rows:  6rem 15rem 7rem;
   border-radius: 1.2rem;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 23.7rem auto;
+    grid-template-rows: auto;
+    overflow: hidden;
+  }
   @include breakpoint($sm-bp) {
     grid-template-columns: 8rem auto 4rem;
     column-gap: 1.2rem;
@@ -155,6 +212,7 @@
       padding-right: 0;
       order: 4;
       grid-column: span 3;
+      margin-top: 1.2rem;
     }
   }
 }
@@ -190,7 +248,6 @@
 .operation__about-subtext {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
   padding-left: 2rem;
   @include breakpoint($sm-bp) {
     padding-left: 0;
@@ -200,6 +257,16 @@
   & div {
     color: var(--grey);
   }
+
+  & b.hide-desc {
+    @include breakpoint($sm-bp) {
+      line-height: 2;
+    }
+  }
+
+  & b.hide {
+    margin-bottom: 1rem;
+  }
 }
 
 .step-title {
@@ -208,7 +275,7 @@
 }
 
 .operation__plan-content {
-  padding: 2rem;
+  padding: 2rem 1.8rem 2rem;
   background-color: var(--white);
   @include breakpoint($sm-bp) {
     order: 1;
@@ -253,7 +320,7 @@
 
 .operation__surgery-container {
   display: grid;
-  grid-template-columns: 86.2rem 33.4rem;
+  grid-template-columns: auto 33.4rem;
   grid-template-rows: 53.6rem;
   gap: 2rem;
   @include breakpoint($sm-bp) {
@@ -265,11 +332,9 @@
   }
 }
 
-
 .operation__surgery-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   gap: 1.2rem;
   border-radius: 1.2rem;
@@ -280,10 +345,49 @@
   }
 }
 
+.operation__text-item {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+  &.active {
+    @include breakpoint($sm-bp) {
+      display: block;
+    }
+  }
+}
+
+.operation__text-item:first-child {
+  @include breakpoint($sm-bp) {
+    display: block;
+  }
+}
+
+.operation__text-item:nth-child(2) {
+  @include breakpoint($sm-bp) {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 40px);
+  }
+}
+
+.operation__text-item:nth-child(2)::after {
+  @include breakpoint($sm-bp) {
+   content: "...";
+  }
+}
+
+.operation__text-item.active:nth-child(2)::after {
+  content: "";
+}
+
 .operation__img  img{
   width: 100%;
   height: 40.9rem;
   overflow: hidden;
+  @include breakpoint($sm-bp) {
+    height: 27rem;
+  }
 }
 
 .operation__surgery-person {
@@ -295,6 +399,9 @@
 .operation__img-subscribe {
   padding-top: 1.4rem;
   position: relative;
+  @include breakpoint($sm-bp) {
+    padding-bottom: 3rem;
+  }
 }
 
 .operation__img-title {
@@ -307,22 +414,28 @@
 .operation__img-text {
   text-align: center;
   color: var(--grey);
+  @include breakpoint($sm-bp) {
+    max-width: 94%;
+  }
 }
 
 .operation__img-subscribe a.button {
   position: absolute;
   bottom: -58%;
   left: 13%;
+  @include breakpoint($sm-bp) {
+    bottom: -13%;
+  }
 }
 
 .operation__linc {
   display: none;
   @include breakpoint($sm-bp) {
-    margin-top: 2.4rem;
     margin-right: 0;
     color: var(--grey);
     position: relative;
     display: inline-block;
+    margin-left: 70%;
   }
 }
 
@@ -342,6 +455,14 @@
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: 28.6rem 38rem;
   gap: 2rem;
+  @include breakpoint($xl-bp) {
+    grid-template-rows: 28.6rem 10rem 40rem;
+  }
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 40rem 6rem;
+    gap: 4rem;
+  }
 }
 
 .reason-operation__inf {
@@ -351,13 +472,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include breakpoint($xl-bp) {
+    grid-column: span 2;
+  }
   @include breakpoint($sm-bp) {
+    grid-column: span 1;
     padding: 1.2rem;
+    order: 1;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 1.2rem;
   }
 }
 
 .reason-operation__inf h2 {
   max-width: 60%;
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+  }
 }
 
 .reason-operation-text {
@@ -371,15 +503,33 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  @include breakpoint($xl-bp) {
+    grid-column: span 2;
+  }
+  @include breakpoint($sm-bp) {
+    grid-column: span 1;
+    order: 3;
+  }
 }
 
 .reason-operation__inf-item div {
-  max-width: 70%;
+  max-width: 78%;
   text-align: end;
+  @include breakpoint($sm-bp) {
+    max-width: 100%;
+    text-align: left;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+  }
 }
 
 .reason-operation__slider {
   grid-column: span 2;
+  @include breakpoint($sm-bp) {
+    order: 2;
+    margin-left: 1.5rem;
+    grid-column: span 1;
+  }
 }
 
 .reason-slide {
@@ -392,10 +542,29 @@
   font-family: "Cygre-Bold", sans-serif;
   font-weight: 700;
   padding: 1.6rem 2rem 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 0.8rem 1rem 1.2rem;
+    text-align: right;
+    font-size: 1.5rem;
+  }
 }
 
 .reason-operation__swiper {
   height: 41rem;
+  @include breakpoint($xl-bp) {
+    height: 33rem;
+    margin-top: 2.7rem;
+  }
+  @include breakpoint($sm-bp) {
+    overflow: hidden;
+    position: relative;
+    width: calc(100vw - 1.5rem);
+    max-width: 34rem;
+  }
+}
+
+.pagination.reason-operation__pagination {
+  position: relative;
 }
 
 .operation-ortem {
@@ -403,13 +572,18 @@
   grid-template-columns: 28.3rem 90.7rem;
   gap: 2rem;
   margin-bottom: 8.4rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     margin-bottom: 6.4rem;
+    grid-template-columns: 1fr;
+    margin-top: 16rem;
   }
 }
 
 .operation-ortem__img {
   height: 7.8rem;
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
 }
 
 .operation-ortem__content {
@@ -435,6 +609,10 @@
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
     gap: 1.2rem;
+  }
+
+  & h2 {
+    text-align: center;
   }
 }
 

@@ -7,7 +7,7 @@
         </p>
         <div class="banner__slider">
             <div class="swiper-container">
-                <div class="swiper-wrapper banner__container">
+                <div class="swiper-wrapper banner__container banner__operation">
                     <div class="swiper-slide banner__item">
                         <div class="banner__item-title">Понятно работаем</div>
                         <div>
@@ -77,8 +77,8 @@
             </div>
         </div>
         <div class="operation__about-subtext">
-            <b class="dn--mob">Панков В.Е.</b>
-            <!--            <b >Владислав Панков</b>-->
+            <b class="hide">Панков В.Е.</b>
+            <b class="hide-desc">Владислав Панков</b>
             <div>Главный врач<br><span class="dn--mob">Основатель</span> клиники Orteam</div>
         </div>
     </div>
@@ -409,21 +409,21 @@
     <h2>Ортогнатическая хирургия в клинике Orteam</h2>
     <div class="operation__surgery-container">
         <div class="operation__surgery-text">
-            <div>Мы проводим хирургическое лечение только в 12% случаев. Именно у такого количества пациентов асимметрия
+            <div class="operation__text-item">Мы проводим хирургическое лечение только в 12% случаев. Именно у такого количества пациентов асимметрия
                 лица настолько выражена, что без изменения формы и размера челюстей невозможно достичь хорошего
                 результата.
             </div>
-            <div>В области ортогнатической хирургии Orteam тесно сотрудничает с ПСПбГМУ им. Павлова. Оперирующий хирург
-                в нашей команде — Чугунов Никита Анатольевич.
+            <div class="operation__text-item">В области ортогнатической хирургии Orteam тесно сотрудничает с ПСПбГМУ им. Павлова. Оперирующий хирург
+                в нашей команде — Чугунов Никита Анатольевич
             </div>
-            <div>Он консультирует пациентов по операциям в стенах клиники. Операции и реабилитация проводятся
+            <div class="operation__text-item">Он консультирует пациентов по операциям в стенах клиники. Операции и реабилитация проводятся
                 в отделении челюстно-лицевой хирургии ПСПбГМУ им. Павлова. Тесное сотрудничество ортодонта
                 и челюстно-лицевого хирурга гарантирует предсказуемый результат.
             </div>
-            <div>Мы также помогаем пациентам получить квоту на <b>бесплатное проведение операции</b> в рамках
+            <div class="operation__text-item">Мы также помогаем пациентам получить квоту на <b>бесплатное проведение операции</b> в рамках
                 системы ОМС
             </div>
-            <div>Большинство наших пациентов пользуются возможностью пройти ортогнатическую операцию бесплатно
+            <div class="operation__text-item">Большинство наших пациентов пользуются возможностью пройти ортогнатическую операцию бесплатно
                 и сэкономить от 300 тысяч рублей. Но мы сотрудничаем и с другими хирургами из Санкт-Петербурга и Москвы,
                 которые проводят операции на коммерческой основе.
             </div>
@@ -466,6 +466,7 @@
             </div>
         </div>
         <div class="reason-operation__slider">
+            <h2 class="hide-desc">Скелетные аномалии</h2>
             <div class="reason-operation__swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide reason-slide">
@@ -494,7 +495,7 @@
                     </div>
                 </div>
             </div>
-
+            <div class="pagination reason-operation__pagination"></div>
         </div>
     </div>
 </section>
@@ -690,7 +691,7 @@
         <div class="standards__item order5 element-animation-left">
             <div class="standards__item-img">
                 <picture class="standards__item-img--border">
-                    <source srcset="assets/images/doc-mob.jpg" media="(max-width:1024px)">
+                    <source srcset="assets/images/operation/operation-doc__mob.png" media="(max-width:1024px)">
                     <img src="assets/images/operation/operation-doc.png" alt="image">
                 </picture>
             </div>
@@ -1633,7 +1634,7 @@
 </section>
 
 <section class="video wrapper">
-    <h2 class="team__titlem">Видео нашего Youtube-канала</h2>
+    <h2 class="team__titlem hide">Видео нашего Youtube-канала</h2>
     <h2 class="video__title">Наш You-Tube</h2>
     <div class="video__slider">
         <div class="video-swiper">

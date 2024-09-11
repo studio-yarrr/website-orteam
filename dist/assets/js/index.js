@@ -584,6 +584,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
   }
 
+    let onListOperation = document.querySelector('.onListOperation');
+
+    onListOperation.addEventListener('click', () => {
+        const operationItems = document.querySelectorAll('.operation__text-item');
+        operationItems.forEach( item => {
+            item.classList.toggle('active')
+        })
+        if(onListOperation.textContent === 'Развернуть') {
+            onListOperation.textContent = 'Свернуть';
+        } else {
+            onListOperation.textContent = 'Развернуть'
+        }
+    })
 
 
   const answer = document.querySelector('.answer');

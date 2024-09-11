@@ -294,6 +294,9 @@ a:hover .list__item {
   background-repeat: no-repeat;
   justify-content: center;
   background-position: 100% 100%;
+  @include breakpoint($sm-bp) {
+    background-size: contain;
+  }
 }
 
 .card--bg6 {
@@ -512,6 +515,9 @@ a:hover .list__item {
 .content__list-container.content-operation__list-container {
   @include breakpoint($xxl_bp) {
     width: 46rem;
+  }
+  @include breakpoint($sm-bp) {
+    width: 32rem;
   }
 }
 
