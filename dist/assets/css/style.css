@@ -670,7 +670,6 @@ a:hover {
     .price-swiper {
         height: 55rem;
         position: relative;
-        padding-bottom: 3rem;
     }
 }
 
@@ -6752,6 +6751,8 @@ a:hover .team__linc-text::before {
 
 @media (max-width: 1024px) {
     .standards__container {
+        grid-template-columns: 1fr 1fr 35rem;
+        grid-template-rows: repeat(2, 23.2rem);
         margin-top: 2.4rem;
         gap: 1rem;
     }
@@ -14162,6 +14163,12 @@ div .view-icon {
 @media (max-width: 1024px) {
     .banner__container.banner__operation {
         margin-top: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner__container.banner__operation {
+        margin-top: 0;
     }
 }
 

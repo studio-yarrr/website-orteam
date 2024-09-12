@@ -43,6 +43,9 @@
   @include breakpoint($xl-bp) {
     margin-top: 5rem;
   }
+  @include breakpoint($sm-bp) {
+    margin-top: 0;
+  }
 }
 
 .operation-banner h1 {

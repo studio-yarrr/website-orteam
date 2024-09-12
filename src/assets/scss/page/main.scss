@@ -829,6 +829,8 @@ a:hover .team__linc-text::before {
   grid-template-columns: 1fr 1fr 33rem;
   grid-template-rows: repeat(2, 25.2rem);
   @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr 1fr 35rem;
+    grid-template-rows: repeat(2, 23.2rem);
     margin-top: 2.4rem;
     gap: 1rem;
   }
