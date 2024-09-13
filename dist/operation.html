@@ -110,25 +110,25 @@
             <div class="banner__slider">
                 <div class="swiper-container">
                     <div class="swiper-wrapper banner__container banner__operation">
-                        <div class="swiper-slide banner__item">
+                        <div class="swiper-slide operation__item">
                             <div class="banner__item-title">Понятно работаем</div>
                             <div>
                                 Составляем и полностью реализуем план лечения на основе медицинской аналитики
                             </div>
                         </div>
-                        <div class="swiper-slide banner__item">
+                        <div class="swiper-slide operation__item">
                             <div class="banner__item-title">Понятно объясняем</div>
                             <div>
                                 Расскажем о нюансах лечения настолько подробно, насколько вы захотите
                             </div>
                         </div>
-                        <div class="swiper-slide banner__item">
+                        <div class="swiper-slide operation__item">
                             <div class="banner__item-title">Понятные цены</div>
                             <div>
                                 Цены как на сайте, без доплат. Удобный тарифный план и способ оплаты для каждого
                             </div>
                         </div>
-                        <div class="swiper-slide banner__item">
+                        <div class="swiper-slide operation__item">
                             <div class="banner__item-title">Понятные гарантии</div>
                             <div>
                                 Уложимся в сроки или долечим бесплатно. Бессрочная гарантия на результат
@@ -162,7 +162,7 @@
         <div class="operation__about-right">
             <div class="operation__about-img">
                 <picture>
-                    <source srcset="assets/images/operation/image-doc__mob.png" media="(max-width:1024px)">
+                    <source srcset="assets/images/operation/image-doc__mob.png" media="(max-width:768px)">
                     <img src="assets/images/operation/image-doc.png" alt="image">
                 </picture>
             </div>
@@ -187,7 +187,7 @@
     </section>
     
     <section class="content wrapper">
-        <div class="content__left">
+        <div class="content__left operation-content__left">
             <div class="content__list-container content-operation__list-container">
                 <ol class="content__list content-operation__list">
                     <li>
@@ -244,7 +244,7 @@
             </div>
             <div class="content__br">
                 <picture class="content__img">
-                    <source srcset="assets/images/operation/image-content__mob.png" media="(max-width:1024px)">
+                    <source srcset="assets/images/operation/image-content__mob.png" media="(max-width:768px)">
                     <img src="assets/images/operation/image-content.png" alt="banner" class="content__img">
                 </picture>
             </div>
@@ -532,21 +532,23 @@
                 <div class="operation__linc onListOperation hide-desc">Развернуть</div>
             </div>
             <div class="operation__surgery-person">
-                <div>
-                    <picture class="operation__img">
-                        <source srcset="assets/images/operation/operation-doc__mob.png" media="(max-width:1024px)">
-                        <img src="assets/images/operation/operation-doc.png" alt="banner" class="content__img">
-                    </picture>
-                </div>
-                <div class="operation__img-subscribe">
-                    <div class="operation__img-title">Чугунов Никита Анатольевич</div>
-                    <div class="operation__img-text">
-                        Врач стоматолог-хирург, имплантолог, челюстно-лицевой хирург
+                <div class="operation__surgery-content">
+                    <div>
+                        <picture class="operation__img">
+                            <source srcset="assets/images/operation/operation-doc__mob-card.png" media="(max-width:768px)">
+                            <img src="assets/images/operation/operation-doc.png" alt="banner" class="content__img">
+                        </picture>
                     </div>
-                    <a href="#" class="button button-standards">
-                        Смотреть страницу врача
-                    </a>
+                    <div class="operation__img-subscribe">
+                        <div class="operation__img-title">Чугунов Никита Анатольевич</div>
+                        <div class="operation__img-text">
+                            Врач стоматолог-хирург, имплантолог, челюстно-лицевой хирург
+                        </div>
+                    </div>
                 </div>
+                <a href="#" class="button button-standards button--card-person">
+                    Смотреть страницу врача
+                </a>
             </div>
         </div>
     </section>
@@ -1016,15 +1018,21 @@
                 <p>Проводим еженедельные консилиумы, разбираем сложные случаи, новые протоколы и методы лечения</p>
             </div>
             <div class="standards__item order5 element-animation-left">
-                <div class="standards__item-img">
-                    <picture class="standards__item-img--border">
-                        <source srcset="assets/images/operation/operation-doc__mob.png" media="(max-width:1024px)">
-                        <img src="assets/images/operation/operation-doc.png" alt="image">
-                    </picture>
+                <div class="standards__content-card">
+                    <div class="standards__item-img">
+                        <picture class="operation__img">
+                            <source srcset="assets/images/operation/operation-doc__mob-card2.png" media="(max-width:768px)">
+                            <img src="assets/images/operation/operation-doc.png" alt="banner" class="content__img">
+                        </picture>
+                    </div>
+                    <div class="operation__img-subscribe">
+                        <div class="operation__img-title">Чугунов Никита Анатольевич</div>
+                        <div class="operation__img-text">
+                            Врач стоматолог-хирург, имплантолог, челюстно-лицевой хирург
+                        </div>
+                    </div>
                 </div>
-                <p class="standards__img-title">Чугунов Никита Анатольевич</p>
-                <p class="standards__img-subtitle">Врач стоматолог-хирург, имплантолог, челюстно-лицевой хирург</p>
-                <a href="#" class="button button-standards">
+                <a href="#" class="button button-standards button--card-person">
                     Смотреть страницу врача
                 </a>
             </div>
@@ -1815,7 +1823,7 @@
         </div>
     </section>
     
-    <section class="articles wrapper" id="articles-operation">
+    <section class="articles articles__wrapper" id="articles-operation">
         <h2 class="team__title">Наши статьи о брекетах</h2>
         <h2 class="articles__title">Статьи</h2>
         <div class="articles__slider">
@@ -1960,7 +1968,7 @@
         </div>
     </section>
     
-    <section class="video wrapper">
+    <section class="video articles__wrapper">
         <h2 class="team__titlem hide">Видео нашего Youtube-канала</h2>
         <h2 class="video__title">Наш You-Tube</h2>
         <div class="video__slider">
