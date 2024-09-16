@@ -83,6 +83,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
+    const reviewTexts8 = document.querySelectorAll('.reviews__item-text8');
+
+
+    if(reviewTexts8) {
+        const reviewPopups8 = document.querySelectorAll('.review-popup8');
+
+        reviewPopups8.forEach(function(popup, index) {
+            popup.innerHTML = reviewTexts8[index].innerHTML;
+        });
+    }
+
 
     const caseTextBlock = document.querySelector('.case2__inf-bottom');
     if(caseTextBlock) {
