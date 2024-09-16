@@ -586,18 +586,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     let onListOperation = document.querySelector('.onListOperation');
 
-    onListOperation.addEventListener('click', () => {
-        const operationItems = document.querySelectorAll('.operation__text-item');
-        operationItems.forEach( item => {
-            item.classList.toggle('active')
+    if(onListOperation) {
+        onListOperation.addEventListener('click', () => {
+            const operationItems = document.querySelectorAll('.operation__text-item');
+            operationItems.forEach(item => {
+                item.classList.toggle('active')
+            })
+            if (onListOperation.textContent === 'Развернуть') {
+                onListOperation.textContent = 'Свернуть';
+            } else {
+                onListOperation.textContent = 'Развернуть'
+            }
         })
-        if(onListOperation.textContent === 'Развернуть') {
-            onListOperation.textContent = 'Свернуть';
-        } else {
-            onListOperation.textContent = 'Развернуть'
-        }
-    })
-
+    }
 
   const answer = document.querySelector('.answer');
 
@@ -882,6 +883,29 @@ const blog = document.querySelector('.blog');
             }
         }
     });
+
+
+    const dysfunctionName = document.querySelector('.dysfunction__tab-name');
+    const dysfunctionSubtitles = document.querySelectorAll('.dysfunction__subtitle');
+    const dysfunctionText = document.querySelectorAll('.dysfunction__text');
+
+    if (dysfunctionName) {
+        dysfunctionName.addEventListener('click', (event) => {
+            let target = event.target;
+            if (target.classList.contains('dysfunction__subtitle')) {
+
+                dysfunctionSubtitles.forEach(item => item.classList.remove('active'));
+                dysfunctionText.forEach(item => item.classList.remove('active'));
+
+
+                target.classList.add('active');
+
+
+                const index = Array.from(dysfunctionSubtitles).indexOf(target);
+                dysfunctionText[index].classList.add('active');
+            }
+        });
+    }
 
 });
 

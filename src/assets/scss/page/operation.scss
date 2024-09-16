@@ -54,6 +54,16 @@
   }
 }
 
+.articulation__item:nth-child(2) {
+  background: #DDDFE466;
+}
+
+.articulation__item:nth-child(4) {
+  background: #DDDFE466;
+
+}
+
+
 .banner__container.banner__operation {
   @include breakpoint($xl-bp) {
     margin-top: 5rem;
