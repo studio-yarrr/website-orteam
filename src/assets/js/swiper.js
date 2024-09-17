@@ -4,7 +4,7 @@ function isMobile() {
 
 if (isMobile()) {
     const swiperBanner =  new Swiper('.swiper-container', {
-        slidesPerView: 1.5,
+        slidesPerView: 1.4,
         spaceBetween: 20,
         pagination: {
             el: '.banner-pagination',

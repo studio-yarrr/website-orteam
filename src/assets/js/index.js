@@ -918,5 +918,27 @@ const blog = document.querySelector('.blog');
         });
     }
 
+    const standards = document.querySelectorAll('.standards');
+
+    if (standards) {
+        const changeOrder = document.querySelectorAll('.changeOrder');
+
+        changeOrder.forEach(item => {
+            item.addEventListener('click', () => {
+                const currentOrder4 = document.querySelector('.order4');
+
+                if (currentOrder4) {
+
+                    const currentClass = Array.from(item.classList).find(cls => cls.startsWith('order') && cls !== 'order4');
+
+                    currentOrder4.classList.remove('order4');
+                    currentOrder4.classList.add(currentClass);
+
+                    item.classList.remove(currentClass);
+                    item.classList.add('order4');
+                }
+            });
+        });
+    }
 });
 

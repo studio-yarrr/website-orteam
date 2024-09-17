@@ -51,16 +51,34 @@
     gap: 2rem;
     background-color: var(--white);
     border: none;
+    //color: var(--white);
+  }
+}
+
+.articulation__item:nth-child(1) {
+  @include breakpoint($sm-bp) {
+    background-color: var(--color1);
   }
 }
 
 .articulation__item:nth-child(2) {
   background: #DDDFE466;
+  @include breakpoint($sm-bp) {
+    background-color: var(--green);
+  }
+}
+
+.articulation__item:nth-child(3) {
+  @include breakpoint($sm-bp) {
+    background-color: var(--color1);
+  }
 }
 
 .articulation__item:nth-child(4) {
   background: #DDDFE466;
-
+  @include breakpoint($sm-bp) {
+    background-color: var(--green);
+  }
 }
 
 

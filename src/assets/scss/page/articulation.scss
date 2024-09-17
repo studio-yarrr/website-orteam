@@ -35,6 +35,9 @@
     background-size: contain;
     background-position: top;
     margin-bottom: 6.4rem;
+    padding: 0;
+    height: 73rem;
+    position: relative;
   }
 }
 
@@ -48,6 +51,7 @@
     border-radius: 1.2rem;
     padding: 1.2rem;
     background-color: var(--white);
+    width: 32rem;
   }
 }
 
@@ -78,6 +82,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include breakpoint($sm-bp) {
+    position: absolute;
+    bottom: 0;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
+
+.articulation__inf .button {
+  @include breakpoint($sm-bp) {
+    width: 32rem;
+  }
 }
 
 .articulation__item {
@@ -90,8 +106,35 @@
   border: 1px solid #C8CACD;
   @include breakpoint($xl-bp) {
     gap: 2rem;
-    background-color: var(--white);
+    color: var(--white);
     border: none;
+  }
+}
+
+.articulation__item:nth-child(1) {
+  background: #DDDFE466;
+  @include breakpoint($sm-bp) {
+    background-color: var(--color1);
+  }
+}
+
+.articulation__item:nth-child(2) {
+  background: #DDDFE466;
+  @include breakpoint($sm-bp) {
+    background-color: var(--green);
+  }
+}
+
+.articulation__item:nth-child(3) {
+  @include breakpoint($sm-bp) {
+    background-color: var(--color1);
+  }
+}
+
+.articulation__item:nth-child(4) {
+  background: #DDDFE466;
+  @include breakpoint($sm-bp) {
+    background-color: var(--green);
   }
 }
 
@@ -109,7 +152,7 @@
 .articulation__access-top {
   grid-template-rows: 35rem;
   @include breakpoint($xl-bp) {
-    grid-template-rows: 49rem 13.7rem;
+    grid-template-rows: 48rem 13.7rem;
   }
 }
 
@@ -118,6 +161,7 @@
   margin-top: 5.6rem;
   @include breakpoint($xl-bp) {
     grid-template-rows: auto 13.7rem auto;
+    margin-top: 2.4rem;
   }
 }
 
@@ -130,6 +174,24 @@
   border-radius: 1.2rem;
   @include breakpoint($xl-bp) {
     padding: 1.2rem;
+  }
+}
+
+.articulation__access-left h2,
+.articulation__access-right h2,
+.articulation__top-item h2 {
+  @include breakpoint($xl-bp) {
+    font-family: "Cygre-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+
+.articulation__access-left h2,
+.articulation__access-right h2 {
+  @include breakpoint($xl-bp) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -189,6 +251,11 @@
   }
 }
 
+.articulation__access-img {
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
 .articulation__dysfunction {
   border-radius: 1.2rem;
   background-color: var(--white);
@@ -204,6 +271,7 @@
     grid-template-columns: 1fr;
     background-color: transparent;
     gap: 2.4rem;
+    padding: 0;
   }
 }
 
@@ -222,6 +290,9 @@
     font-size: 2.8rem;
     line-height: 3.3rem;
     border-right: none;
+    height: auto;
+    text-align: center;
+    display: block;
   }
 }
 
@@ -256,12 +327,17 @@
   }
 }
 
+.dysfunction__subtitle:hover {
+  cursor: pointer;
+}
+
 .dysfunction__text {
   display: none;
   flex-direction: column;
   gap: 3.2rem;
   padding-left: 4.5rem;
   @include breakpoint($sm-bp) {
+    display: flex;
     border-radius: 1.2rem;
     background-color: var(--white);
     padding: 1.2rem;
@@ -269,6 +345,12 @@
 
   &.active {
     display: flex;
+  }
+}
+
+.dysfunction__text:nth-child(1) {
+  @include breakpoint($sm-bp) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -311,7 +393,22 @@
   gap: 2.4rem;
 
   & li::marker {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+}
+
+.dysfunction__tab-list li {
+  position: relative;
+}
+
+.dysfunction__tab-list li span {
+  position: absolute;
+  left: 2.5%;
+  @include breakpoint($sm-bp) {
+    left: 4%;
+    font-family: "Cygre-Bold", sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
   }
 }
 
@@ -335,7 +432,7 @@
     background-color: transparent;
     grid-template-rows: repeat(2, 1fr);
     margin-bottom: 2.4rem;
-    width: fit-content;
+    width: auto;
   }
 
   & div {
@@ -355,6 +452,9 @@
       text-align: center;
       z-index: 1;
       font-weight: 700;
+      @include breakpoint($sm-bp) {
+        width: auto;
+      }
     }
 
     &.active::before {
@@ -372,6 +472,30 @@
 
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  & div:nth-child(1) {
+    @include breakpoint($sm-bp) {
+      border-bottom-left-radius: 1.2rem;
+    }
+  }
+
+  & div:nth-child(2) {
+    @include breakpoint($sm-bp) {
+      border-bottom-right-radius: 1.2rem;
+    }
+  }
+
+  & div:nth-child(3) {
+    @include breakpoint($sm-bp) {
+      border-top-left-radius: 1.2rem;
+    }
+  }
+
+  & div:nth-child(4) {
+    @include breakpoint($sm-bp) {
+      border-top-right-radius: 1.2rem;
     }
   }
 }
@@ -393,12 +517,16 @@
   }
 }
 
-.aligners-img:nth-child(4) {
+.articulation__plan-container .aligners-img:nth-child(4) {
   background-color: var(--white);
-  padding: 7.3rem 2rem 2rem;
+  padding: 10rem 2rem 2rem;
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
   }
+}
+
+.articulation__plan-container .aligners-img:nth-child(4) .step-title {
+  margin-bottom: 1.6rem;
 }
 
 .articulation-symptoms {
@@ -412,7 +540,7 @@
   text-align: center;
   margin-bottom: 5.6rem;
   @include breakpoint($sm-bp) {
-    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -431,6 +559,9 @@
 .articulation-symptoms__img {
   border-radius: 1.2rem;
   overflow: hidden;
+  @include breakpoint($sm-bp) {
+    order: 2;
+  }
 }
 
 .articulation-symptoms__text {
@@ -441,6 +572,7 @@
   @include breakpoint($sm-bp) {
     grid-template-rows: 14.8rem 40rem;
     gap: 2.4rem;
+    order: 1;
   }
 }
 
@@ -462,12 +594,18 @@
   background-color: var(--green);
   border-radius: 1.2rem;
   padding: 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
 }
 
 .articulation-symptoms__item:nth-child(2) {
   background-color: var(--color1);
   border-radius: 1.2rem;
   padding: 2rem;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem;
+  }
 }
 
 .articulation-symptoms__list {
@@ -555,4 +693,36 @@
     }
   }
 
+}
+
+.articulation-standards__item.order5 {
+  background-color: var(--white);
+  border-radius: 1.2rem;
+  position: relative;
+  grid-row: span 2;
+  @include breakpoint($sm-bp) {
+    height: 18rem;
+    border: 1px solid var(--color2);
+    padding: 1.2rem;
+  }
+}
+
+.articulation-standards__item-img {
+  height: 40rem;
+  margin-bottom: 1rem;
+  @include breakpoint($xl-bp) {
+    height: 37rem;
+  }
+  @include breakpoint($sm-bp) {
+    height: 6.9rem;
+  }
+}
+
+.articulation-standards__content-card {
+  @include breakpoint($sm-bp) {
+    display: grid;
+    grid-template-columns: 8rem auto;
+    grid-template-rows: 7rem;
+    gap: 1.2rem;
+  }
 }

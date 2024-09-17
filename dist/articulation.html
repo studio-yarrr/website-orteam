@@ -381,7 +381,9 @@
                         <li>Моделируем движение челюсти в виртуальном или аналоговом артикуляторе</li>
                     </ul>
                 </div>
-    
+            </div>
+            <div class="hide-desc articulation__access-img">
+                <img src="assets/images/articulation/access2__mob.jpg" alt="image">
             </div>
             <div class="articulation__access-right">
                 <h2>Лечение ДВНЧС</h2>
@@ -390,9 +392,7 @@
                         Ортодонты и ортопеды Orteam в равной мере работают с ВНЧС, что позволяет корректно определить
                         причины ДВНЧС и выбрать наиболее подходящий способ лечения.
                     </div>
-                    <div class="hide-desc">
-                        <img src="assets/images/articulation/access2__mob.jpg" alt="banner" class="content__img">
-                    </div>
+    
                     <div>
                         Каждый клинический случай обсуждается коллегиально. Лечение ВНЧС может быть как исключительно
                         ортодонтическим, так и только ортопедическим или комплексным. Сплинт-терапия может проводиться
@@ -420,15 +420,15 @@
                 </div>
                 <div>
                     <ul class="dysfunction__tab-list">
-                        <li>Ортодонтическиие
+                        <li><span>Ортодонтическиие</span>
                             <div>Неправильный прикус в различных проявлениях</div>
                         </li>
                         <li>
-                            Ортопедические
+                            <span>Ортопедические</span>
                             <div>Отсутствие или разрушение/стираемость зубов</div>
                         </li>
                         <li>
-                            Ятрогенные
+                            <span>Ятрогенные</span>
                             <div>Пломбы или коронки имеют неправильную высоту и не дают челюстям правильно смыкаться
                                 либо препятствуют физиологическим движениям.
                             </div>
@@ -447,11 +447,11 @@
                 <div>
                     <div class="dysfunction__tab-title">Нестоматологические причины</div>
                     <ul class="dysfunction__tab-list">
-                        <li>Травма ЧЛО
+                        <li><span>Травма ЧЛО</span>
                         </li>
-                        <li>Инфекционные заболевания
+                        <li><span>Инфекционные заболевания</span>
                         </li>
-                        <li>Аутоимунные заболевания
+                        <li><span>Аутоимунные заболевания</span>
                         </li>
                     </ul>
                 </div>
@@ -475,7 +475,7 @@
                     <img src="assets/images/articulation/tab-1.jpg" alt="image">
                 </picture>
             </div>
-            <div class="aligners-img">
+            <div class="aligners-img articulation-img">
                 <picture>
                     <source srcset="assets/images/articulation/tab-2__mob.jpg" media="(max-width:1024px)">
                     <img src="assets/images/articulation/tab-2.jpg" alt="image">
@@ -554,7 +554,8 @@
             </div>
             <div class="articulation-symptoms__text">
                 <div class="articulation-symptoms__item">
-                    <div class="articulation-symptoms__title">Самые распространённые симптомы</div>
+                    <div class="articulation-symptoms__title"><span class="hide">Самые</span> <span class="hide">распространённые</span><span class="hide-desc">
+                        Распространённые</span> симптомы</div>
                     <div>Хруст, щелчки и боли в области козелка при открывании рта</div>
                 </div>
                 <div class="articulation-symptoms__item">
@@ -672,28 +673,26 @@
     <section class="standards wrapper" id="standards-articulation">
         <h2 class="team__title">Стандарты лечения Orteam</h2>
         <div class="standards__container">
-            <a href="#" target="_blank" class="order4">
-                <div class="list__item list__item--darc">
-                    <h3>
-                        Углублённая диагностика для каждого
-                    </h3>
-                    <div class="standards__item-bottom">
-                        <p>Проанализируем исходную ситуацию, от кариесов до состояния ВНЧС и дыхательных путей</p>
-                        <div class="icon">
-                            <img src="assets/images/download.svg" alt="icon">
-                        </div>
-                    </div>
+            <div class="list__item list__item--border list__item--darc order4 changeOrder">
+                <h3>
+                    Углублённая диагностика для каждого
+                </h3>
+                <div class="standards__item-bottom">
+                    <p>Проанализируем исходную ситуацию, от кариесов до состояния ВНЧС и дыхательных путей</p>
+                    <a href="#" class="icon">
+                        <img src="assets/images/download.svg" alt="icon">
+                    </a>
                 </div>
-            </a>
-            <div class="list__item order3">
+            </div>
+            <div class="list__item list__item--light order3 changeOrder">
                 <h3>
                     Обсуждение хода лечения на консилиумах
                 </h3>
                 <p>Проводим еженедельные консилиумы, разбираем сложные случаи, новые протоколы и методы лечения</p>
             </div>
-            <div class="standards__item order5t">
-                <div class="standards__content-card">
-                    <div class="standards__item-img">
+            <div class="articulation-standards__item order5">
+                <div class="articulation-standards__content-card">
+                    <div class="articulation-standards__item-img">
                         <picture class="standards__item-img--border">
                             <source srcset="./assets/images/articulation/standard-img.jpg" media="(max-width:768px)">
                             <img src="assets/images/articulation/standard--img.jpg" alt="image">
@@ -708,13 +707,13 @@
                     Смотреть страницу врача
                 </a>
             </div>
-            <div class="list__item order2">
+            <div class="list__item list__item--green order2 changeOrder">
                 <h3>
                     Нивелируем человеческий фактор
                 </h3>
                 <p>Ключевые этапы, такие как план лечения или непрямая фиксация, проходят двухуровневую проверку</p>
             </div>
-            <div class="list__item standards--darc order1">
+            <div class="list__item standards--darc list__item--light order1 changeOrder">
                 <h3>
                     Лечение под контролем ведущего ортодонта
                 </h3>

@@ -950,25 +950,26 @@ a:hover .team__linc-text::before {
 .order1 {
   @include breakpoint($sm-bp) {
     order: 1;
-    background-color: var(--white);
-    color: var(--color1);
   }
 }
 
 .order2 {
   @include breakpoint($sm-bp) {
     order: 2;
+    margin-top: -33%;
+  }
+}
+
+.list__item--green {
+  @include breakpoint($sm-bp) {
     color: var(--white);
     background: #405F64;
-    margin-top: -33%;
   }
 }
 
 .order3 {
   @include breakpoint($sm-bp) {
     order: 3;
-    background-color: var(--white);
-    color: var(--color1);
     margin-top: -68%;
   }
 }
@@ -993,7 +994,16 @@ a:hover .team__linc-text::before {
   }
 }
 
-a.order4 .list__item {
+.list__item--light {
+  @include breakpoint($sm-bp) {
+    background-color: var(--white);
+    color: var(--color1);
+  }
+}
+
+
+
+div.order4 .list__item {
   border: 1px solid transparent;
   @include breakpoint($sm-bp) {
     border: 1px solid var(--color2);
