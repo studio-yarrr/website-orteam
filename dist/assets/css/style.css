@@ -6901,12 +6901,6 @@ a:hover .team__linc-text::before {
     object-fit: fill;
 }
 
-@media (max-width: 1024px) {
-    .standards__item-img--border img {
-        height: 37rem;
-    }
-}
-
 @media (max-width: 768px) {
     .standards__item-img--border img {
         border-top-right-radius: 0;

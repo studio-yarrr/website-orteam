@@ -940,9 +940,6 @@ a:hover .team__linc-text::before {
   border-top-right-radius: 1.2rem;
   border-top-left-radius: 1.2rem;
   object-fit: fill;
-  @include breakpoint($xl-bp) {
-    height: 37rem;
-  }
   @include breakpoint($sm-bp) {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
