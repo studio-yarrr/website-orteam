@@ -16045,6 +16045,58 @@ div .view-icon {
     }
 }
 
+.inf-services__wrapper {
+    max-width: 90rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 1025px) {
+    .inf-services__wrapper {
+        max-width: 90rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .inf-services__wrapper {
+        max-width: 32rem;
+    }
+}
+
+.inf-services {
+    margin-top: 8rem;
+    margin-bottom: 10.4rem;
+}
+
+@media (max-width: 768px) {
+    .inf-services {
+        margin-top: 1.6rem;
+        margin-bottom: 7.2rem;
+    }
+}
+
+.inf-services h1 {
+    margin-bottom: 5.6rem;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+}
+
+@media (max-width: 768px) {
+    .inf-services h1 {
+        margin-bottom: 2.4rem;
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+}
+
+.inf-services__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
 /*------footer-----*/
 .footer {
     background-color: var(--white);

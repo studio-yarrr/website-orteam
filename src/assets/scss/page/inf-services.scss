@@ -1,0 +1,39 @@
+.inf-services__wrapper {
+  max-width: 90rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include breakpoint($hh) {
+    max-width: 90rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    max-width: 32rem;
+  }
+}
+
+.inf-services {
+  margin-top: 8rem;
+  margin-bottom: 10.4rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 1.6rem;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.inf-services h1 {
+  margin-bottom: 5.6rem;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 2.4rem;
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+
+.inf-services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
