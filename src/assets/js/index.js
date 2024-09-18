@@ -925,24 +925,26 @@ const blog = document.querySelector('.blog');
 
         changeOrder.forEach(item => {
             item.addEventListener('click', () => {
-                const currentOrder4 = document.querySelector('.order4');
+                if (window.innerWidth < 1024) {
+                    const currentOrder4 = document.querySelector('.order4');
 
-                if (currentOrder4) {
-                    const currentClass = Array.from(item.classList).find(cls => cls.startsWith('order') && cls !== 'order4');
+                    if (currentOrder4) {
+                        const currentClass = Array.from(item.classList).find(cls => cls.startsWith('order') && cls !== 'order4');
 
-                    item.classList.add('move-to-front');
-                    currentOrder4.classList.add('hidden');
+                        item.classList.add('move-to-front');
+                        currentOrder4.classList.add('hidden');
 
-                    setTimeout(() => {
-                        currentOrder4.classList.remove('order4');
-                        currentOrder4.classList.add(currentClass);
+                        setTimeout(() => {
+                            currentOrder4.classList.remove('order4');
+                            currentOrder4.classList.add(currentClass);
 
-                        item.classList.remove(currentClass);
-                        item.classList.add('order4');
+                            item.classList.remove(currentClass);
+                            item.classList.add('order4');
 
-                        currentOrder4.classList.remove('hidden');
-                        item.classList.remove('move-to-front');
-                    }, 500);
+                            currentOrder4.classList.remove('hidden');
+                            item.classList.remove('move-to-front');
+                        }, 500);
+                    }
                 }
             });
         });

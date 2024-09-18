@@ -265,7 +265,7 @@
   align-items: center;
   margin-top: 10.4rem;
   margin-bottom: 8.4rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     margin-top: 6.4rem;
     margin-bottom: 6.4rem;
     grid-template-columns: 1fr;
@@ -286,7 +286,7 @@
   height: 36rem;
   display: flex;
   align-items: center;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     font-size: 2.8rem;
     line-height: 3.3rem;
     border-right: none;
@@ -304,7 +304,7 @@
   height: 36rem;
   border-right: 1px solid #DDDFE4;
   justify-content: center;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: none;
   }
 }
@@ -313,7 +313,7 @@
   font-size: 2.4rem;
   line-height: 2.8rem;
   text-align: center;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     font-family: "Cygre-Bold", sans-serif;
     font-weight: 700;
     font-size: 2.4rem;
@@ -336,7 +336,7 @@
   flex-direction: column;
   gap: 3.2rem;
   padding-left: 4.5rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: flex;
     border-radius: 1.2rem;
     background-color: var(--white);
@@ -349,7 +349,7 @@
 }
 
 .dysfunction__text:nth-child(1) {
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     margin-bottom: 2rem;
   }
 }
@@ -360,7 +360,7 @@
   font-size: 2.4rem;
   line-height: 3.1rem;
   margin-bottom: 1.6rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     text-align: center;
   }
 }
@@ -370,7 +370,7 @@
   height: 22rem;
   border-radius: 1.2rem;
   overflow: hidden;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     width: 30rem;
   }
 }
@@ -380,7 +380,7 @@
   height: 38rem;
   border-radius: 1.2rem;
   overflow: hidden;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     width: 30rem;
     height: 22rem;
   }
@@ -405,7 +405,7 @@
   position: absolute;
   left: 2.5%;
   display: inline-block;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     left: 4%;
     font-family: "Cygre-Bold", sans-serif;
     font-weight: 700;
