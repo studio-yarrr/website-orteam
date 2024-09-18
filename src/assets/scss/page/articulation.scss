@@ -709,9 +709,10 @@
 
 .articulation-standards__item-img {
   height: 40rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   @include breakpoint($xl-bp) {
     height: 37rem;
+    margin-bottom: 1rem;
   }
   @include breakpoint($sm-bp) {
     height: 6.9rem;

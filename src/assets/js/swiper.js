@@ -146,10 +146,14 @@ const slider5 = new Swiper('.reviews__swiper', {
         },
 
         768: {
-            slidesPerView: 3,
+            slidesPerView:1.20,
         },
 
         1024: {
+            slidesPerView: 3,
+        },
+
+        1140: {
             slidesPerView: 4,
         }
 

@@ -583,7 +583,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
           if (window.matchMedia('(min-width: 1020px)').matches) {
               maxLength = 260;
           } else if (window.matchMedia('(min-width: 400px)').matches) {
-              maxLength = 295;
+              maxLength = 260;
           } else {
               maxLength = 280;
           }

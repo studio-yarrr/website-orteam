@@ -16010,12 +16010,13 @@ div .view-icon {
 
 .articulation-standards__item-img {
     height: 40rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 @media (max-width: 1024px) {
     .articulation-standards__item-img {
         height: 37rem;
+        margin-bottom: 1rem;
     }
 }
 
