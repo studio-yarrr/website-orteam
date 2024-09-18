@@ -15300,21 +15300,15 @@ div .view-icon {
     gap: 2rem;
 }
 
-@media (max-width: 1024px) {
-    .articulation__access-top,
-  .articulation__access-bottom {
-        gap: 2.4rem;
-        grid-template-columns: 1fr;
-    }
-}
-
 .articulation__access-top {
     grid-template-rows: 35rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .articulation__access-top {
         grid-template-rows: 48rem 13.7rem;
+        gap: 2.4rem;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -15325,8 +15319,16 @@ div .view-icon {
 
 @media (max-width: 1024px) {
     .articulation__access-bottom {
-        grid-template-rows: auto 13.7rem auto;
         margin-top: 2.4rem;
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .articulation__access-bottom {
+        grid-template-rows: auto 13.7rem auto;
+        gap: 2.4rem;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -15439,8 +15441,15 @@ div .view-icon {
 }
 
 .articulation__access-img {
-    border-radius: 1.2rem;
-    overflow: hidden;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .articulation__access-img {
+        display: block;
+        border-radius: 1.2rem;
+        overflow: hidden;
+    }
 }
 
 .articulation__dysfunction {
