@@ -15628,6 +15628,7 @@ div .view-icon {
 .dysfunction__tab-list li span {
     position: absolute;
     left: 2.5%;
+    display: inline-block;
 }
 
 @media (max-width: 768px) {

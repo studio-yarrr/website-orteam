@@ -404,6 +404,7 @@
 .dysfunction__tab-list li span {
   position: absolute;
   left: 2.5%;
+  display: inline-block;
   @include breakpoint($sm-bp) {
     left: 4%;
     font-family: "Cygre-Bold", sans-serif;
