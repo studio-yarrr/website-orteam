@@ -484,3 +484,26 @@ const slider18 = new Swiper('.reason-operation__swiper', {
         }
     },
 })
+
+const slider19 = new Swiper('.online__swiper', {
+    spaceBetween: 20,
+    speed: 800,
+    slidesPerView:4,
+    loop: true,
+    pagination: {
+        el: '.online__swiper__pagination',
+        clickable: true,
+    },
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1.35,
+        },
+        768: {
+            slidesPerView: 4,
+        },
+        1024: {
+            slidesPerView: 4,
+        }
+    },
+})
