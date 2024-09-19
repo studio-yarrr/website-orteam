@@ -16166,8 +16166,16 @@ div .view-icon {
         background-position: top;
         margin-bottom: 4.4rem;
         padding: 0;
-        height: 73rem;
+        height: 58rem;
         position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    .online .button {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
     }
 }
 
@@ -16195,6 +16203,16 @@ div .view-icon {
     gap: 4rem;
 }
 
+@media (max-width: 768px) {
+    .online__text {
+        position: absolute;
+        bottom: 12%;
+        background-color: var(--white);
+        border-radius: 1.2rem;
+        padding: 1.2rem;
+    }
+}
+
 .online__text .button {
     -ms-flex-item-align: center;
     align-self: center;
@@ -16208,7 +16226,7 @@ div .view-icon {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 2.4rem;
-    list-style: square inside;
+    list-style: square;
 }
 
 @media (max-width: 768px) {
@@ -16216,6 +16234,21 @@ div .view-icon {
         font-size: 1.6rem;
         line-height: 2.1rem;
         gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .online__list li::marker {
+        color: var(--color2);
+    }
+}
+
+@media (max-width: 768px) {
+    .online__list li {
+        display: list-item;
+        list-style-position: inside;
+        padding-left: 2rem;
+        text-indent: -2rem;
     }
 }
 
@@ -16228,9 +16261,10 @@ div .view-icon {
 }
 
 .online__questions {
-    background-image: url("../images/online/sign.png");
+    background-image: url("../images/online/sing.png");
+    background-position: 97% 54%;
     background-repeat: no-repeat;
-    background-position: center right;
+    background-size: 29rem;
     border-radius: 1.2rem;
     background-color: var(--white);
     padding: 10.4rem 4rem;
@@ -16240,6 +16274,8 @@ div .view-icon {
 @media (max-width: 768px) {
     .online__questions {
         margin-bottom: 6.4rem;
+        background-image: none;
+        padding: 1.2rem;
     }
 }
 
@@ -16251,8 +16287,24 @@ div .view-icon {
     margin-top: 4rem;
 }
 
+@media (max-width: 768px) {
+    .online__questions-container {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 2rem;
+    }
+}
+
 .online__questions h2 {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .online__questions h2 {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
 }
 
 .online__questions-list {
@@ -16278,6 +16330,13 @@ div .view-icon {
     color: var(--color2);
 }
 
+.online__questions-list li {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 2rem;
+    text-indent: -2rem;
+}
+
 .online__questions-list li span {
     position: relative;
     left: -2.5%;
@@ -16287,6 +16346,12 @@ div .view-icon {
     display: grid;
     grid-template-columns: 80.4rem 39rem;
     gap: 1.9rem;
+}
+
+@media (max-width: 768px) {
+    .online__complex {
+        grid-template-columns: 1fr;
+    }
 }
 
 .online__complex-content {
@@ -16299,7 +16364,8 @@ div .view-icon {
 @media (max-width: 768px) {
     .online__complex-content {
         background-color: transparent;
-        margin-bottom: 6.4rem;
+        margin-bottom: -1.6rem;
+        padding: 0;
     }
 }
 
@@ -16338,6 +16404,7 @@ div .view-icon {
 @media (max-width: 768px) {
     .online__complex-cards {
         grid-template-columns: 1fr;
+        margin-top: 3.5rem;
     }
 }
 
@@ -16402,6 +16469,12 @@ div .view-icon {
     gap: 4rem;
 }
 
+@media (max-width: 768px) {
+    .online__card-right .online__card_text {
+        gap: 1rem;
+    }
+}
+
 .online__line {
     width: 100%;
     height: 0.1rem;
@@ -16412,11 +16485,18 @@ div .view-icon {
     display: -ms-flexbox;
     display: flex;
     gap: 1.5rem;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .online__sign-clock {
     width: 2.4rem;
     height: 2.4rem;
+}
+
+.online__sign-clock img {
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 
 .online__icon-text {
@@ -16445,6 +16525,8 @@ div .view-icon {
 @media (max-width: 768px) {
     .online__process-slider {
         margin-top: 2.4rem;
+        padding-left: 2rem;
+        position: relative;
     }
 }
 
@@ -16506,6 +16588,14 @@ div .view-icon {
     justify-content: space-between;
 }
 
+@media (max-width: 1024px) {
+    .online__linc {
+        position: static;
+        width: 100%;
+        height: 14rem;
+    }
+}
+
 .online__linc-inf {
     display: -ms-flexbox;
     display: flex;
@@ -16513,6 +16603,25 @@ div .view-icon {
     justify-content: space-between;
     -ms-flex-align: end;
     align-items: flex-end;
+}
+
+@media (max-width: 1024px) {
+    .online__record {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .online__linc h2 {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .record-content.online__record-content {
+        height: 9rem;
+    }
 }
 
 /*------footer-----*/

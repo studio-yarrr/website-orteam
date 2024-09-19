@@ -37,8 +37,16 @@
     background-position: top;
     margin-bottom: 4.4rem;
     padding: 0;
-    height: 73rem;
+    height: 58rem;
     position: relative;
+  }
+}
+
+.online .button {
+  @include breakpoint($sm-bp) {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 }
 
@@ -59,7 +67,13 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
-
+  @include breakpoint($sm-bp) {
+    position: absolute;
+    bottom: 12%;
+    background-color: var(--white);
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+  }
 }
 
 .online__text .button {
@@ -72,11 +86,26 @@
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  list-style: square inside;
+  list-style: square;
   @include breakpoint($sm-bp) {
     font-size: 1.6rem;
     line-height: 2.1rem;
     gap: 1.2rem;
+  }
+}
+
+.online__list li::marker {
+  @include breakpoint($sm-bp) {
+    color: var(--color2);
+  }
+}
+
+.online__list li {
+  @include breakpoint($sm-bp) {
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 2rem;
+    text-indent: -2rem;
   }
 }
 
@@ -89,15 +118,18 @@
 }
 
 .online__questions {
-  background-image: url("../images/online/sign.png");
+  background-image: url('../images/online/sing.png');
+  background-position: 97% 54%;
   background-repeat: no-repeat;
-  background-position: center right;
+  background-size: 29rem;
   border-radius: 1.2rem;
   background-color: var(--white);
   padding: 10.4rem 4rem;
   margin-bottom: 10.4rem;
   @include breakpoint($sm-bp) {
     margin-bottom: 6.4rem;
+    background-image: none;
+    padding: 1.2rem;
   }
 }
 
@@ -105,10 +137,19 @@
   display: flex;
   justify-content: space-between;
   margin-top: 4rem;
+  @include breakpoint($sm-bp) {
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
 }
 
 .online__questions h2 {
   text-align: center;
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
 }
 
 .online__questions-list {
@@ -123,11 +164,17 @@
     line-height: 2.1rem;
     gap: 2rem;
   }
-
 }
 
 .online__questions-list li::marker {
   color: var(--color2);
+}
+
+.online__questions-list li {
+  display: list-item;
+  list-style-position: inside;
+  padding-left: 2rem;
+  text-indent: -2rem;
 }
 
 .online__questions-list li span {
@@ -139,7 +186,9 @@
   display: grid;
   grid-template-columns: 80.4rem 39rem;
   gap: 1.9rem;
-
+  @include breakpoint($sm-bp) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .online__complex-content {
@@ -149,7 +198,8 @@
   margin-bottom: 8.4rem;
   @include breakpoint($sm-bp) {
     background-color: transparent;
-    margin-bottom: 6.4rem;
+    margin-bottom: -1.6rem;
+    padding: 0;
   }
 }
 
@@ -182,6 +232,7 @@
   margin-top: 6rem;
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
+    margin-top: 3.5rem;
   }
 }
 
@@ -239,6 +290,9 @@
 
 .online__card-right .online__card_text {
   gap: 4rem;
+  @include breakpoint($sm-bp) {
+    gap: 1rem;
+  }
 }
 
 .online__line {
@@ -250,11 +304,16 @@
 .online__icon {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .online__sign-clock {
   width: 2.4rem;
   height: 2.4rem;
+}
+
+.online__sign-clock img {
+  object-fit: contain;
 }
 
 .online__icon-text {
@@ -276,6 +335,8 @@
   margin-top: 5.6rem;
   @include breakpoint($sm-bp) {
     margin-top: 2.4rem;
+    padding-left: 2rem;
+    position: relative;
   }
 }
 
@@ -325,10 +386,34 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include breakpoint($xl-bp) {
+    position: static;
+    width: 100%;
+    height: 14rem;
+  }
 }
 
 .online__linc-inf {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.online__record {
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
+}
+
+.online__linc h2 {
+  @include breakpoint($xl-bp) {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+
+.record-content.online__record-content {
+  @include breakpoint($xl-bp) {
+    height: 9rem;
+  }
 }
