@@ -85,12 +85,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     const reviewTexts8 = document.querySelectorAll('.reviews__item-text8');
 
-
     if(reviewTexts8) {
         const reviewPopups8 = document.querySelectorAll('.review-popup8');
 
         reviewPopups8.forEach(function(popup, index) {
             popup.innerHTML = reviewTexts8[index].innerHTML;
+        });
+    }
+
+    const reviewTexts9 = document.querySelectorAll('.reviews__item-text9');
+
+
+    if(reviewTexts9) {
+        const reviewPopups9 = document.querySelectorAll('.review-popup9');
+
+        reviewPopups9.forEach(function(popup, index) {
+            popup.innerHTML = reviewTexts9[index].innerHTML;
         });
     }
 

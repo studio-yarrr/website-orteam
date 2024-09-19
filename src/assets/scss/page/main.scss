@@ -1288,6 +1288,7 @@ a:hover .team__linc-text::before {
   background-position: bottom right;
   height: 62rem;
   margin-bottom: 8.7rem;
+  position: relative;
   @include breakpoint($cos_bp) {
     max-width: 126rem;
     margin-left: calc((100% - 120rem) / 2);

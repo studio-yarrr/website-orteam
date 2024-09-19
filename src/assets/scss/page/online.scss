@@ -263,6 +263,10 @@
 }
 
 .online__process {
+  margin-bottom: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 6.4rem;
+  }
   h2 {
     text-align: center;
   }
@@ -304,4 +308,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 15.4rem;
+  align-items: center;
+}
+
+.online__linc {
+  width: 59rem;
+  height: 19rem;
+  border-radius: 1.2rem;
+  background-color: var(--color1);
+  padding: 1.6rem;
+  color: var(--white);
+  position: absolute;
+  top: 0;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.online__linc-inf {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
