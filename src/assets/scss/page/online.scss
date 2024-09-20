@@ -57,7 +57,9 @@
 }
 
 .online .button {
+  display: none;
   @include breakpoint($sm-bp) {
+    display: block;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -95,7 +97,11 @@
 }
 
 .online__text .button {
+  display: block;
   align-self: center;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
 }
 
 .online__list {
@@ -208,8 +214,12 @@
 
 .online__complex {
   display: grid;
-  grid-template-columns: 85rem 42rem;
+  grid-template-columns: 80rem 39rem;
   gap: 1.9rem;
+  @include breakpoint($xxl_bp) {
+    grid-template-columns: 85rem 42rem;
+    justify-items: center;
+  }
   @include breakpoint($xl-bp) {
     grid-template-columns: 1fr;
     justify-items: center;

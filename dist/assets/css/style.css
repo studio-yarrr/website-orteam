@@ -16191,8 +16191,13 @@ div .view-icon {
     }
 }
 
+.online .button {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .online .button {
+        display: block;
         width: 100%;
         position: absolute;
         bottom: 0;
@@ -16242,8 +16247,15 @@ div .view-icon {
 }
 
 .online__text .button {
+    display: block;
     -ms-flex-item-align: center;
     align-self: center;
+}
+
+@media (max-width: 768px) {
+    .online__text .button {
+        display: none;
+    }
 }
 
 .online__list {
@@ -16384,8 +16396,15 @@ div .view-icon {
 
 .online__complex {
     display: grid;
-    grid-template-columns: 85rem 42rem;
+    grid-template-columns: 80rem 39rem;
     gap: 1.9rem;
+}
+
+@media (max-width: 1440px) {
+    .online__complex {
+        grid-template-columns: 85rem 42rem;
+        justify-items: center;
+    }
 }
 
 @media (max-width: 1024px) {
