@@ -240,9 +240,11 @@
 
 .online__complex h2 {
   text-align: center;
-  max-width: 73%;
   margin-left: auto;
   margin-right: auto;
+  @include breakpoint($xxl-bp) {
+    max-width: 73%;
+  }
   @include breakpoint($xl-bp) {
     max-width: 100%;
   }
