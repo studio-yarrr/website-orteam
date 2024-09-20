@@ -6002,7 +6002,7 @@ form span.icon-button__bg.icon5.active {
 }
 
 .list__item {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     border-radius: 1.2rem;
     padding: 1.6rem;
     overflow: hidden;
@@ -6014,6 +6014,12 @@ form span.icon-button__bg.icon5.active {
     -ms-flex-direction: column;
     flex-direction: column;
     height: 100%;
+}
+
+@media (max-width: 1440px) {
+    .list__item {
+        font-size: 1.7rem;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -13797,6 +13803,7 @@ div .view-icon {
 }
 
 .implantation__item-title {
+    font-family: "Cygre-Bold", sans-serif;
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;
@@ -13806,6 +13813,18 @@ div .view-icon {
     .implantation__item-title {
         font-size: 2rem;
         line-height: 2.6rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .implantation__item-text {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .implantation__item-text {
+        font-size: 1.6rem;
     }
 }
 
