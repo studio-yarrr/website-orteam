@@ -1563,6 +1563,9 @@ a:hover .team__linc-text::before {
 .braces__text {
   margin-top: 2.4rem;
   max-width: 37%;
+  @include breakpoint($xl-bp) {
+    margin-left: 5rem;
+  }
   @include breakpoint($sm-bp) {
     margin: 2.4rem 0;
     max-width: 100%;
@@ -1606,6 +1609,9 @@ a:hover .team__linc-text::before {
 .braces__text-subslider {
   max-width: 40%;
   margin-top: 2.4rem;
+  @include breakpoint($xl-bp) {
+    margin-left: 5rem;
+  }
   @include breakpoint($sm-bp) {
     max-width: 100%;
   }
@@ -2086,7 +2092,7 @@ a.analytics__button {
 .articles__item-linc {
   justify-content: center;
   display: flex;
-  margin-top: 3.7rem;
+  margin-top: 1.7rem;
   position: relative;
   @include breakpoint($sm-bp) {
     margin-top: 1.3rem;

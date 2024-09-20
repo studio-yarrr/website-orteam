@@ -433,13 +433,7 @@ a:hover {
     }
 }
 
-.doctor-certificate__swiper,
-.process-swiper,
-.video-swiper,
-.articles-swiper,
-.braces__swiper,
 .doc__swiper,
-.process__swiper,
 .details__swiper,
 .list__swiper {
     width: 100%;
@@ -449,13 +443,7 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .doctor-certificate__swiper,
-  .process-swiper,
-  .video-swiper,
-  .articles-swiper,
-  .braces__swiper,
-  .doc__swiper,
-  .process__swiper,
+    .doc__swiper,
   .details__swiper,
   .list__swiper {
         max-width: 120rem;
@@ -463,13 +451,7 @@ a:hover {
 }
 
 @media (max-width: 1440px) {
-    .doctor-certificate__swiper,
-  .process-swiper,
-  .video-swiper,
-  .articles-swiper,
-  .braces__swiper,
-  .doc__swiper,
-  .process__swiper,
+    .doc__swiper,
   .details__swiper,
   .list__swiper {
         max-width: 130rem;
@@ -477,13 +459,7 @@ a:hover {
 }
 
 @media (max-width: 1024px) {
-    .doctor-certificate__swiper,
-  .process-swiper,
-  .video-swiper,
-  .articles-swiper,
-  .braces__swiper,
-  .doc__swiper,
-  .process__swiper,
+    .doc__swiper,
   .details__swiper,
   .list__swiper {
         max-width: 90rem;
@@ -491,13 +467,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .doctor-certificate__swiper,
-  .process-swiper,
-  .video-swiper,
-  .articles-swiper,
-  .braces__swiper,
-  .doc__swiper,
-  .process__swiper,
+    .doc__swiper,
   .details__swiper,
   .list__swiper {
         position: relative;
@@ -538,10 +508,8 @@ a:hover {
     }
 }
 
-.video__wrapper,
 .price__wrapper,
 .price__wrapper,
-.process__wrapper,
 .aligners__wrapper {
     width: 100%;
     max-width: 121.6rem;
@@ -550,40 +518,32 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .video__wrapper,
+    .price__wrapper,
   .price__wrapper,
-  .price__wrapper,
-  .process__wrapper,
   .aligners__wrapper {
         max-width: 120rem;
     }
 }
 
 @media (max-width: 1440px) {
-    .video__wrapper,
+    .price__wrapper,
   .price__wrapper,
-  .price__wrapper,
-  .process__wrapper,
   .aligners__wrapper {
         max-width: 130rem;
     }
 }
 
 @media (max-width: 1024px) {
-    .video__wrapper,
+    .price__wrapper,
   .price__wrapper,
-  .price__wrapper,
-  .process__wrapper,
   .aligners__wrapper {
         max-width: 90rem;
     }
 }
 
 @media (max-width: 768px) {
-    .video__wrapper,
+    .price__wrapper,
   .price__wrapper,
-  .price__wrapper,
-  .process__wrapper,
   .aligners__wrapper {
         position: relative;
         width: calc(100vw - 1.5rem);
@@ -591,6 +551,8 @@ a:hover {
     }
 }
 
+.braces__wrapper,
+.video__wrapper,
 .team__wrapper {
     width: 100%;
     max-width: 121.6rem;
@@ -599,26 +561,39 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .team__wrapper {
+    .braces__wrapper,
+  .video__wrapper,
+  .team__wrapper {
         max-width: 120rem;
     }
 }
 
 @media (max-width: 1440px) {
-    .team__wrapper {
+    .braces__wrapper,
+  .video__wrapper,
+  .team__wrapper {
         max-width: 130rem;
     }
 }
 
 @media (max-width: 768px) {
-    .team__wrapper {
+    .braces__wrapper,
+  .video__wrapper,
+  .team__wrapper {
         position: relative;
         width: calc(100vw - 1.5rem);
         padding-left: 1.5rem;
     }
 }
 
-.articles__wrapper,
+.articles__slider,
+.video__slider,
+.implantation__slider,
+.doctor-certificate__slider,
+.braces__swiper,
+.process__swiper,
+.articles-swiper,
+.video-swiper,
 .team__swiper,
 .reviews__slider {
     width: 100%;
@@ -628,7 +603,14 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .articles__wrapper,
+    .articles__slider,
+  .video__slider,
+  .implantation__slider,
+  .doctor-certificate__slider,
+  .braces__swiper,
+  .process__swiper,
+  .articles-swiper,
+  .video-swiper,
   .team__swiper,
   .reviews__slider {
         max-width: 120rem;
@@ -636,7 +618,14 @@ a:hover {
 }
 
 @media (max-width: 1440px) {
-    .articles__wrapper,
+    .articles__slider,
+  .video__slider,
+  .implantation__slider,
+  .doctor-certificate__slider,
+  .braces__swiper,
+  .process__swiper,
+  .articles-swiper,
+  .video-swiper,
   .team__swiper,
   .reviews__slider {
         max-width: 130rem;
@@ -644,7 +633,14 @@ a:hover {
 }
 
 @media (max-width: 1024px) {
-    .articles__wrapper,
+    .articles__slider,
+  .video__slider,
+  .implantation__slider,
+  .doctor-certificate__slider,
+  .braces__swiper,
+  .process__swiper,
+  .articles-swiper,
+  .video-swiper,
   .team__swiper,
   .reviews__slider {
         max-width: 100%;
@@ -653,7 +649,14 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .articles__wrapper,
+    .articles__slider,
+  .video__slider,
+  .implantation__slider,
+  .doctor-certificate__slider,
+  .braces__swiper,
+  .process__swiper,
+  .articles-swiper,
+  .video-swiper,
   .team__swiper,
   .reviews__slider {
         position: relative;
@@ -7701,6 +7704,12 @@ a:hover .team__linc-text::before {
     max-width: 37%;
 }
 
+@media (max-width: 1024px) {
+    .braces__text {
+        margin-left: 5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .braces__text {
         margin: 2.4rem 0;
@@ -7753,6 +7762,12 @@ a:hover .team__linc-text::before {
 .braces__text-subslider {
     max-width: 40%;
     margin-top: 2.4rem;
+}
+
+@media (max-width: 1024px) {
+    .braces__text-subslider {
+        margin-left: 5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -8367,7 +8382,7 @@ a.analytics__button {
     justify-content: center;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 3.7rem;
+    margin-top: 1.7rem;
     position: relative;
 }
 
@@ -8915,8 +8930,18 @@ a.articles__item:hover div.articles-text .articles__item-title {
 
 .reviews__heading {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 59rem 47rem;
     grid-template-rows: 23.5rem;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .reviews__heading {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 19rem;
+        gap: 2.6rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -9139,6 +9164,10 @@ a.articles__item:hover div.articles-text .articles__item-title {
     .guarantee-text {
         text-indent: 2.5rem;
     }
+}
+
+.guarantee-text {
+    margin-bottom: 1.2rem;
 }
 
 .guarantee__content {
@@ -10093,6 +10122,24 @@ select {
     .doctor .video {
         margin-top: 2.4rem;
     }
+}
+
+.doctor__articles {
+    margin-bottom: 8.4rem;
+}
+
+@media (max-width: 768px) {
+    .doctor__articles {
+        margin-bottom: 6.4rem;
+    }
+}
+
+.doctor__articles .articles__slider {
+    padding-top: 0;
+}
+
+.doctor__articles .articles__slider .articles__buttons {
+    top: 103%;
 }
 
 .portfolio {

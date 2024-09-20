@@ -249,13 +249,7 @@ a:hover {
   }
 }
 
-.doctor-certificate__swiper,
-.process-swiper,
-.video-swiper,
-.articles-swiper,
-.braces__swiper,
 .doc__swiper,
-.process__swiper,
 .details__swiper,
 .list__swiper {
   width: 100%;
@@ -302,10 +296,9 @@ a:hover {
   }
 }
 
-.video__wrapper,
+
 .price__wrapper,
 .price__wrapper,
-.process__wrapper,
 .aligners__wrapper {
   width: 100%;
   max-width: 121.6rem;
@@ -328,6 +321,8 @@ a:hover {
   }
 }
 
+.braces__wrapper,
+.video__wrapper,
 .team__wrapper {
   width: 100%;
   max-width: 121.6rem;
@@ -347,7 +342,14 @@ a:hover {
   }
 }
 
-.articles__wrapper,
+.articles__slider,
+.video__slider,
+.implantation__slider,
+.doctor-certificate__slider,
+.braces__swiper,
+.process__swiper,
+.articles-swiper,
+.video-swiper,
 .team__swiper,
 .reviews__slider {
   width: 100%;

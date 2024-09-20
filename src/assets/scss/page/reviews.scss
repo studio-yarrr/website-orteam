@@ -57,8 +57,14 @@
 
 .reviews__heading {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 59rem 47rem;
   grid-template-rows: 23.5rem;
+  justify-content: space-between;
+  @include breakpoint($xl-bp) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 19rem;
+    gap: 2.6rem;
+  }
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
     grid-template-rows: 14rem auto;

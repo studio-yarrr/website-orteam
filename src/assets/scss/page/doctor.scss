@@ -293,3 +293,18 @@
     margin-top: 2.4rem;
   }
 }
+
+.doctor__articles {
+  margin-bottom: 8.4rem;
+  @include breakpoint($sm-bp) {
+    margin-bottom: 6.4rem;
+  }
+}
+
+.doctor__articles .articles__slider {
+  padding-top: 0;
+}
+
+.doctor__articles .articles__slider .articles__buttons {
+  top: 103%;
+}
