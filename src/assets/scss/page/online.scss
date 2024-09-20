@@ -1,4 +1,3 @@
-.online__process-wrapper,
 .online__wrapper {
   width: 100%;
   max-width: 121.6rem;
@@ -16,6 +15,21 @@
   }
 }
 
+.online__process-wrapper {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  @include breakpoint($cos_bp) {
+    max-width: 120rem;
+  }
+  @include breakpoint($cos_bp) {
+    max-width: 120rem;
+  }
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
+}
+
 .online {
   background-image: url("../images/online/online-banner.png");
   background-repeat: no-repeat;
@@ -27,7 +41,7 @@
     background-size: cover;
   }
   @include breakpoint($xl-bp) {
-    background-size: contain;
+    padding: 2rem 4rem;
   }
   @include breakpoint($sm-bp) {
     background-image: url("../images/online/online-banner__mob.png");
@@ -37,7 +51,7 @@
     background-position: top;
     margin-bottom: 4.4rem;
     padding: 0;
-    height: 58rem;
+    height: 60rem;
     position: relative;
   }
 }
@@ -67,6 +81,10 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  align-items: center;
+  @include breakpoint($xl-bp) {
+    margin-bottom: 2rem;
+  }
   @include breakpoint($sm-bp) {
     position: absolute;
     bottom: 12%;
@@ -101,7 +119,7 @@
 }
 
 .online__list li {
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: list-item;
     list-style-position: inside;
     padding-left: 2rem;
@@ -175,6 +193,12 @@
   list-style-position: inside;
   padding-left: 2rem;
   text-indent: -2rem;
+  @include breakpoint($xl-bp) {
+    text-indent: -3rem;
+  }
+  @include breakpoint($sm-bp) {
+    text-indent: -2rem;
+  }
 }
 
 .online__questions-list li span {
@@ -184,10 +208,11 @@
 
 .online__complex {
   display: grid;
-  grid-template-columns: 80.4rem 39rem;
+  grid-template-columns: 85rem 42rem;
   gap: 1.9rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 }
 
@@ -196,7 +221,7 @@
   background-color: var(--white);
   padding: 2rem;
   margin-bottom: 8.4rem;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     background-color: transparent;
     margin-bottom: -1.6rem;
     padding: 0;
@@ -205,6 +230,12 @@
 
 .online__complex h2 {
   text-align: center;
+  max-width: 73%;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint($xl-bp) {
+    max-width: 100%;
+  }
 }
 
 .online__complex-img {
@@ -220,7 +251,7 @@
   margin-bottom: 2rem;
   border-radius: 1.2rem;
   overflow: hidden;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
     display: none;
   }
 }
@@ -412,7 +443,7 @@
   }
 }
 
-.record-content.online__record-content {
+.online__record-content.record-content {
   @include breakpoint($xl-bp) {
     height: 9rem;
   }

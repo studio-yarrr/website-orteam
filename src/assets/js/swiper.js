@@ -500,7 +500,7 @@ const slider19 = new Swiper('.online__swiper', {
             slidesPerView: 1.35,
         },
         768: {
-            slidesPerView: 4,
+            slidesPerView: 3,
         },
         1024: {
             slidesPerView: 4,
