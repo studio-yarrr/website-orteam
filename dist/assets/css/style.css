@@ -16156,6 +16156,12 @@ div .view-icon {
     }
 }
 
+@media (max-width: 1025px) {
+    .online__process-wrapper {
+        max-width: 90rem;
+    }
+}
+
 .online {
     background-image: url("../images/online/online-banner.png");
     background-repeat: no-repeat;
@@ -16582,9 +16588,16 @@ div .view-icon {
     margin-bottom: 8.4rem;
 }
 
+@media (max-width: 1440px) {
+    .online__process {
+        margin-top: 2.4rem;
+    }
+}
+
 @media (max-width: 768px) {
     .online__process {
         margin-bottom: 6.4rem;
+        margin-top: 0;
     }
 }
 
@@ -16615,6 +16628,15 @@ div .view-icon {
 
 .online__swiper {
     height: 32.6rem;
+}
+
+@media (max-width: 1024px) {
+    .online__swiper {
+        overflow: hidden;
+        position: relative;
+        width: calc(100vw - 1.5rem);
+        max-width: 90rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -16692,9 +16714,14 @@ div .view-icon {
     }
 }
 
+.online__record-content.record-content {
+    margin-top: 8.4rem;
+}
+
 @media (max-width: 1024px) {
     .online__record-content.record-content {
         height: 9rem;
+        margin-top: 2.4rem;
     }
 }
 

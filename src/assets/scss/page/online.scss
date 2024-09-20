@@ -28,6 +28,9 @@
   @include breakpoint($xxl_bp) {
     max-width: 130rem;
   }
+  @include breakpoint($hh) {
+    max-width: 90rem;
+  }
 }
 
 .online {
@@ -366,8 +369,12 @@
 
 .online__process {
   margin-bottom: 8.4rem;
+  @include breakpoint($xxl_bp) {
+    margin-top: 2.4rem;
+  }
   @include breakpoint($sm-bp) {
     margin-bottom: 6.4rem;
+    margin-top: 0;
   }
   h2 {
     text-align: center;
@@ -394,6 +401,12 @@
 
 .online__swiper {
   height: 32.6rem;
+  @include breakpoint($xl-bp) {
+    overflow: hidden;
+    position: relative;
+    width: calc(100vw - 1.5rem);
+    max-width: 90rem;
+  }
   @include breakpoint($sm-bp) {
     overflow: hidden;
     position: relative;
@@ -456,7 +469,9 @@
 }
 
 .online__record-content.record-content {
+  margin-top: 8.4rem;
   @include breakpoint($xl-bp) {
     height: 9rem;
+    margin-top: 2.4rem;
   }
 }
