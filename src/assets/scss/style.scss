@@ -152,7 +152,8 @@ input {
   }
 
   @include breakpoint($hh) {
-    max-width: 90rem;
+    max-width: 100%;
+    padding-left: 5.5rem;
   }
   @include breakpoint($sm-bp) {
     max-width: 100%;
@@ -252,7 +253,6 @@ a:hover {
 .process-swiper,
 .video-swiper,
 .articles-swiper,
-.team__swiper,
 .braces__swiper,
 .doc__swiper,
 .process__swiper,
@@ -303,12 +303,10 @@ a:hover {
 }
 
 .video__wrapper,
-.articles__wrapper,
 .price__wrapper,
 .price__wrapper,
 .process__wrapper,
-.aligners__wrapper,
-.team__wrapper {
+.aligners__wrapper {
   width: 100%;
   max-width: 121.6rem;
   margin: 0 auto;
@@ -330,6 +328,27 @@ a:hover {
   }
 }
 
+.team__wrapper {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  overflow: hidden;
+  @include breakpoint($cos_bp) {
+    max-width: 120rem;
+  }
+
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
+  @include breakpoint($sm-bp) {
+    position: relative;
+    width: calc(100vw - 1.5rem);
+    padding-left: 1.5rem;
+  }
+}
+
+.articles__wrapper,
+.team__swiper,
 .reviews__slider {
   width: 100%;
   max-width: 121.6rem;
@@ -344,14 +363,14 @@ a:hover {
   }
 
   @include breakpoint($xl-bp) {
-    max-width: 90rem;
+    max-width: 100%;
+    padding-left: 5.5rem;
   }
 
   @include breakpoint($sm-bp) {
     position: relative;
     width: calc(100vw - 1.5rem);
     padding-left: 1.5rem;
-    //max-width: 35rem;
   }
 }
 
@@ -534,6 +553,9 @@ a:hover {
   right: 0;
   gap: 2.4rem;
   align-items: center;
+  @include breakpoint($xl-bp) {
+    right: 5%;
+  }
   @include breakpoint($sm-bp) {
     display: none;
   }

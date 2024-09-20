@@ -248,7 +248,7 @@
 
   & .aligners__details-text:nth-child(1) {
     background-size: 21rem;
-    background-position: 97% bottom;
+    background-position: 97% 91%;
     background-image: url("../images/bg/plus-bg.svg");
     background-repeat: no-repeat;
     @include breakpoint($sm-bp) {
@@ -440,6 +440,7 @@
   & div {
     padding: 1.2rem 2.4rem;
     background-color: var(--bg-grey);
+    white-space: nowrap;
     @include breakpoint($xl-bp) {
       padding: 0.8rem 1.8rem;
     }

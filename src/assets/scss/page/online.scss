@@ -444,8 +444,11 @@
   justify-content: space-between;
   @include breakpoint($xl-bp) {
     position: static;
-    width: 100%;
+    width: fit-content;
     height: 14rem;
+  }
+  @include breakpoint($sm-bp) {
+    width: 100%;
   }
 }
 
@@ -473,5 +476,6 @@
   @include breakpoint($xl-bp) {
     height: 9rem;
     margin-top: 2.4rem;
+    background-image: none;
   }
 }

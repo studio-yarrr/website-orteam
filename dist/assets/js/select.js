@@ -261,8 +261,9 @@ document.addEventListener('DOMContentLoaded', () => {
        if (isTreatmentSelected) {
          finalTotal /= 2;
        }
+       const formattedTotal = finalTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
-       totalOutput.textContent = `${finalTotal} ₽`;
+       totalOutput.textContent = `${formattedTotal} ₽`;
      }
 
      const buttonCalculators = document.querySelectorAll('.calculator__button');

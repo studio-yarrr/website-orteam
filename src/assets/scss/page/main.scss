@@ -211,7 +211,7 @@
 }
 
 .list__item {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   border-radius: 1.2rem;
   padding: 1.6rem;
   overflow: hidden;
@@ -437,10 +437,10 @@ a:hover .list__item {
 
 .card--bg3 img {
   position: absolute;
-  bottom: -11%;
-  height: 9rem;
-  left: 5%;
-  max-width: 35rem;
+  bottom: -12%;
+  height: 10rem;
+  left: 4%;
+  max-width: 36rem;
   @include breakpoint($xl-bp) {
     height: 6rem;
     object-fit: contain;
@@ -678,6 +678,7 @@ sup {
   border-radius: 1.2rem;
   border: 1px solid var(--color2);
   overflow: hidden;
+  background-color: var(--white);
 
   @include breakpoint($sm-bp) {
     flex-direction: column;
@@ -977,8 +978,10 @@ a:hover .team__linc-text::before {
 }
 
 .bg-white {
-  background-color: var(--white);
-  color: var(--color1);
+  @include breakpoint($sm-bp) {
+    background-color: var(--white);
+    color: var(--color1);
+  }
 }
 
 .bg-chlorine {
@@ -1100,6 +1103,10 @@ a:hover .team__linc-text::before {
   @include breakpoint($sm-bp) {
     bottom: -1rem;
   }
+}
+
+.details__item-subtitle:hover::after {
+  background-color: var(--color2);
 }
 
 .details__item-subtitle--dark::after {
@@ -1489,6 +1496,10 @@ a:hover .team__linc-text::before {
   bottom: -0.3rem;
 }
 
+.reviews__linc:hover::before {
+  background-color: var(--color2);
+}
+
 .reviews__linc:hover {
   cursor: pointer;
   color: var(--color2);
@@ -1583,7 +1594,7 @@ a:hover .team__linc-text::before {
 }
 
 .braces__item-img {
-  height: 38rem;
+  height: 43rem;
   @include breakpoint($sm-bp) {
     height: 32rem;
   }
@@ -1600,7 +1611,7 @@ a:hover .team__linc-text::before {
 .video__slider,
 .articles__slider,
 .braces__slider {
-  padding-top: 3.6rem;
+  padding-top: 5.6rem;
   position: relative;
   @include breakpoint($sm-bp) {
     padding-top: 1.6rem;
@@ -1964,7 +1975,7 @@ a.analytics__button {
 
 .questions__subtitle {
   background-color: var(--color1);
-  padding: 2rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1995,7 +2006,13 @@ a.analytics__button {
   background-color: var(--white);
 }
 
-.questions__block div {
+.questions__block-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.questions__block .questions__block-item {
   padding: 2rem;
 }
 
@@ -2064,13 +2081,31 @@ a.analytics__button {
 }
 
 .articles__item-linc {
-  text-decoration: underline;
   justify-content: center;
   display: flex;
   margin-top: 3.7rem;
+  position: relative;
   @include breakpoint($sm-bp) {
     margin-top: 1.3rem;
   }
+}
+
+.articles__item-linc::before {
+  content: '';
+  position: absolute;
+  height: 0.1rem;
+  background-color: var(--color1);
+  width: 50%;
+  bottom: -0.3rem;
+}
+
+.articles__item-linc:hover::before {
+  content: '';
+  position: absolute;
+  height: 0.1rem;
+  background-color: var(--color2);
+  width: 50%;
+  bottom: -0.3rem;
 }
 
 .articles {
@@ -2105,7 +2140,7 @@ a.articles__item:hover div.articles-text .articles__item-title {
 .video-item__title {
   font-weight: 700;
   overflow: hidden;
-  height: 2em;
+  height: 3em;
 }
 
 .video-item {
@@ -2125,7 +2160,6 @@ a.articles__item:hover div.articles-text .articles__item-title {
 }
 
 .video-text__slider div {
-  height: 2em;
   @include breakpoint($sm-bp) {
     height: 3em;
   }
