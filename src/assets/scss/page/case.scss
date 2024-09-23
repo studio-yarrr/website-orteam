@@ -72,9 +72,21 @@
 .case__img-banner {
   border-radius: 1.2rem;
   overflow: hidden;
+  position: relative;
   @include breakpoint($xl-bp) {
     display: none;
   }
+}
+
+.case__img-banner--visible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.case__img-banner:hover .case__img-banner--visible {
+  z-index: 1;
 }
 
 .case__text {

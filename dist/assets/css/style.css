@@ -596,6 +596,7 @@ a:hover {
     }
 }
 
+.articles__slider,
 .implantation__slider,
 .doctor-certificate__slider,
 .braces__swiper,
@@ -611,7 +612,8 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .implantation__slider,
+    .articles__slider,
+  .implantation__slider,
   .doctor-certificate__slider,
   .braces__swiper,
   .process__swiper,
@@ -624,7 +626,8 @@ a:hover {
 }
 
 @media (max-width: 1440px) {
-    .implantation__slider,
+    .articles__slider,
+  .implantation__slider,
   .doctor-certificate__slider,
   .braces__swiper,
   .process__swiper,
@@ -637,7 +640,8 @@ a:hover {
 }
 
 @media (max-width: 1024px) {
-    .implantation__slider,
+    .articles__slider,
+  .implantation__slider,
   .doctor-certificate__slider,
   .braces__swiper,
   .process__swiper,
@@ -651,7 +655,8 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .implantation__slider,
+    .articles__slider,
+  .implantation__slider,
   .doctor-certificate__slider,
   .braces__swiper,
   .process__swiper,
@@ -8259,6 +8264,12 @@ a.analytics__button {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .questions__subtitle {
+        padding: 1.2rem 1.2rem;
+    }
+}
+
 .questions__question {
     font-weight: 700;
     color: var(--white);
@@ -8357,7 +8368,7 @@ a.analytics__button {
 
 @media (max-width: 768px) {
     .articles__item {
-        height: 43rem;
+        height: 44rem;
     }
 }
 
@@ -10508,12 +10519,24 @@ select {
 .case__img-banner {
     border-radius: 1.2rem;
     overflow: hidden;
+    position: relative;
 }
 
 @media (max-width: 1024px) {
     .case__img-banner {
         display: none;
     }
+}
+
+.case__img-banner--visible {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.case__img-banner:hover .case__img-banner--visible {
+    z-index: 1;
 }
 
 .case__text {

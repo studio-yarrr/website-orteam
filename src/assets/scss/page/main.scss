@@ -1993,6 +1993,9 @@ a.analytics__button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include breakpoint($sm-bp) {
+    padding: 1.2rem 1.2rem;
+  }
 }
 
 .questions__question {
@@ -2073,7 +2076,7 @@ a.analytics__button {
   flex-direction: column;
   height: 55rem;
   @include breakpoint($sm-bp) {
-    height: 43rem;
+    height: 44rem;
   }
 }
 
