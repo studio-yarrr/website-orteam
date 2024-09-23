@@ -23,7 +23,7 @@
     background-image: url("../images/banner-mob.png");
     padding:0;
     gap: 3rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 2.4rem;
     background-size: contain;
     background-position: top;
   }
@@ -1567,7 +1567,7 @@ a:hover .team__linc-text::before {
     margin-left: 5rem;
   }
   @include breakpoint($sm-bp) {
-    margin: 2.4rem 0;
+    margin: 3rem 0;
     max-width: 100%;
     padding: 0 2.4rem;
   }
@@ -1614,6 +1614,8 @@ a:hover .team__linc-text::before {
   }
   @include breakpoint($sm-bp) {
     max-width: 100%;
+    margin-left: 2rem;
+    margin-right: 1rem;
   }
 }
 
@@ -2184,5 +2186,53 @@ a.articles__item:hover div.articles-text .articles__item-title {
   margin: 10rem auto;
   @include breakpoint($sm-bp) {
     margin: 5.4rem auto 7.5rem;
+  }
+}
+
+.surgery__item-text--visible {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.surgery__item-text--visible:first-child {
+  @include breakpoint($sm-bp) {
+    display: block;
+  }
+}
+
+.surgery__item-text--visible:nth-child(2) {
+  @include breakpoint($sm-bp) {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 40px);
+  }
+}
+
+.surgery__item-text--visible:nth-child(2)::after {
+  @include breakpoint($sm-bp) {
+    content: "...";
+  }
+}
+
+.analytics__text--visible {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.analytics__text--visible:first-child {
+  @include breakpoint($sm-bp) {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 40px);
+  }
+}
+
+.analytics__text--visible:first-child {
+  @include breakpoint($sm-bp) {
+    content: "...";
   }
 }

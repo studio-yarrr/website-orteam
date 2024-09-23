@@ -596,8 +596,6 @@ a:hover {
     }
 }
 
-.articles__slider,
-.video__slider,
 .implantation__slider,
 .doctor-certificate__slider,
 .braces__swiper,
@@ -613,9 +611,7 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .articles__slider,
-  .video__slider,
-  .implantation__slider,
+    .implantation__slider,
   .doctor-certificate__slider,
   .braces__swiper,
   .process__swiper,
@@ -628,9 +624,7 @@ a:hover {
 }
 
 @media (max-width: 1440px) {
-    .articles__slider,
-  .video__slider,
-  .implantation__slider,
+    .implantation__slider,
   .doctor-certificate__slider,
   .braces__swiper,
   .process__swiper,
@@ -643,9 +637,7 @@ a:hover {
 }
 
 @media (max-width: 1024px) {
-    .articles__slider,
-  .video__slider,
-  .implantation__slider,
+    .implantation__slider,
   .doctor-certificate__slider,
   .braces__swiper,
   .process__swiper,
@@ -659,9 +651,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .articles__slider,
-  .video__slider,
-  .implantation__slider,
+    .implantation__slider,
   .doctor-certificate__slider,
   .braces__swiper,
   .process__swiper,
@@ -5772,7 +5762,7 @@ form span.icon-button__bg.icon5.active {
         background-image: url("../images/banner-mob.png");
         padding: 0;
         gap: 3rem;
-        margin-bottom: 1.4rem;
+        margin-bottom: 2.4rem;
         background-size: contain;
         background-position: top;
     }
@@ -7722,7 +7712,7 @@ a:hover .team__linc-text::before {
 
 @media (max-width: 768px) {
     .braces__text {
-        margin: 2.4rem 0;
+        margin: 3rem 0;
         max-width: 100%;
         padding: 0 2.4rem;
     }
@@ -7783,6 +7773,8 @@ a:hover .team__linc-text::before {
 @media (max-width: 768px) {
     .braces__text-subslider {
         max-width: 100%;
+        margin-left: 2rem;
+        margin-right: 1rem;
     }
 }
 
@@ -8509,6 +8501,54 @@ a.articles__item:hover div.articles-text .articles__item-title {
 @media (max-width: 768px) {
     .record__container {
         margin: 5.4rem auto 7.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .surgery__item-text--visible {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .surgery__item-text--visible:first-child {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .surgery__item-text--visible:nth-child(2) {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .surgery__item-text--visible:nth-child(2)::after {
+        content: "...";
+    }
+}
+
+@media (max-width: 768px) {
+    .analytics__text--visible {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .analytics__text--visible:first-child {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .analytics__text--visible:first-child {
+        content: "...";
     }
 }
 
@@ -14900,8 +14940,8 @@ div .view-icon {
 
 @media (max-width: 768px) {
     .operation__img img {
-        height: 9rem;
-        width: 7rem;
+        height: 11rem;
+        width: 8rem;
         border-radius: 1.2rem;
     }
 }
