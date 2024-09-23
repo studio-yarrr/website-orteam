@@ -850,8 +850,8 @@ a:hover .team__linc-text::before {
 .standards__content-card {
   @include breakpoint($sm-bp) {
     display: grid;
-    grid-template-columns: 8rem auto;
-    grid-template-rows: 11.1rem;
+    grid-template-columns: 7rem auto;
+    grid-template-rows: 9rem;
     gap: 1.2rem;
   }
 }
@@ -892,7 +892,7 @@ a:hover .team__linc-text::before {
     height: 37rem;
   }
   @include breakpoint($sm-bp) {
-    height: 11rem;
+    height: 9rem;
   }
 }
 
@@ -1814,6 +1814,9 @@ a.analytics__button {
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.1rem;
+  @include breakpoint($sm-bp) {
+    text-align: center;
+  }
 }
 
 .price__sum {

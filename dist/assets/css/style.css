@@ -229,6 +229,12 @@ select {
     outline: none;
 }
 
+.price__title-proposal {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: var(--grey);
+}
+
 img {
     width: 100%;
     height: 100%;
@@ -709,7 +715,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .price-swiper {
-        height: 55rem;
+        height: 58rem;
         position: relative;
     }
 }
@@ -6831,8 +6837,8 @@ a:hover .team__linc-text::before {
 @media (max-width: 768px) {
     .standards__content-card {
         display: grid;
-        grid-template-columns: 8rem auto;
-        grid-template-rows: 11.1rem;
+        grid-template-columns: 7rem auto;
+        grid-template-rows: 9rem;
         gap: 1.2rem;
     }
 }
@@ -6888,7 +6894,7 @@ a:hover .team__linc-text::before {
 @media (max-width: 768px) {
     .surgery__img,
   .standards__item-img {
-        height: 11rem;
+        height: 9rem;
     }
 }
 
@@ -8031,6 +8037,12 @@ a.analytics__button {
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;
+}
+
+@media (max-width: 768px) {
+    .price__title {
+        text-align: center;
+    }
 }
 
 .price__sum {
@@ -13264,7 +13276,7 @@ div .view-icon {
         background-image: none;
         display: block;
         padding: 0;
-        margin-top: 5.6rem;
+        margin-top: 7.6rem;
         height: auto;
     }
 }
@@ -14888,8 +14900,8 @@ div .view-icon {
 
 @media (max-width: 768px) {
     .operation__img img {
-        height: 11rem;
-        width: 8rem;
+        height: 9rem;
+        width: 7rem;
         border-radius: 1.2rem;
     }
 }
