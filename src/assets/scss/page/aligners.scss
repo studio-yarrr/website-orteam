@@ -535,6 +535,9 @@
   height: 57rem;
   padding: 6.8rem 5.6rem 6.8rem 0;
   margin-top: 5.6rem;
+  @include breakpoint($xxl_bp) {
+    padding: 6.8rem 7rem 6.8rem 0;
+  }
   @include breakpoint($sm-bp) {
     background-image: none;
     display: block;

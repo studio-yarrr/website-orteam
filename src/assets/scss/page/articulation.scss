@@ -388,7 +388,7 @@
 }
 
 .dysfunction__tab2-img {
-  width: 50rem;
+  width: 45rem;
   height: 38rem;
   border-radius: 1.2rem;
   overflow: hidden;
@@ -413,7 +413,7 @@
   position: relative;
 }
 
-.dysfunction__tab-list li span {
+.dysfunction__tab-list li div.dysfunction__tab-text {
   position: absolute;
   left: 2.5%;
   display: inline-block;
@@ -443,6 +443,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.articulation-steps h2 {
+  @include breakpoint($xl-bp) {
+    text-align: center;
+  }
 }
 
 .articulation__params {
@@ -717,7 +723,7 @@
     @include breakpoint($sm-bp) {
       order: 1;
       grid-column: span 2;
-      max-width: 70%;
+      max-width: 85%;
     }
   }
 

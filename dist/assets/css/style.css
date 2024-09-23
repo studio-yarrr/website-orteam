@@ -6403,7 +6403,7 @@ a:hover .list__item {
 
 @media (max-width: 1440px) {
     .content__list-container.content-operation__list-container {
-        width: 46rem;
+        width: 47rem;
     }
 }
 
@@ -6832,7 +6832,7 @@ a:hover .team__linc-text::before {
 @media (max-width: 768px) {
     .standards__content-card {
         display: grid;
-        grid-template-columns: 7rem auto;
+        grid-template-columns: 8rem auto;
         grid-template-rows: 9rem;
         gap: 1.2rem;
     }
@@ -13334,6 +13334,12 @@ div .view-icon {
     margin-top: 5.6rem;
 }
 
+@media (max-width: 1440px) {
+    .aligners-num {
+        padding: 6.8rem 7rem 6.8rem 0;
+    }
+}
+
 @media (max-width: 768px) {
     .aligners-num {
         background-image: none;
@@ -15825,7 +15831,7 @@ div .view-icon {
 }
 
 .dysfunction__tab2-img {
-    width: 50rem;
+    width: 45rem;
     height: 38rem;
     border-radius: 1.2rem;
     overflow: hidden;
@@ -15855,14 +15861,14 @@ div .view-icon {
     position: relative;
 }
 
-.dysfunction__tab-list li span {
+.dysfunction__tab-list li div.dysfunction__tab-text {
     position: absolute;
     left: 2.5%;
     display: inline-block;
 }
 
 @media (max-width: 1024px) {
-    .dysfunction__tab-list li span {
+    .dysfunction__tab-list li div.dysfunction__tab-text {
         left: 4%;
         margin-bottom: 0.8rem;
     }
@@ -15894,6 +15900,12 @@ div .view-icon {
     flex-direction: column;
     -ms-flex-align: center;
     align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .articulation-steps h2 {
+        text-align: center;
+    }
 }
 
 .articulation__params {
@@ -16238,7 +16250,7 @@ div .view-icon {
         -ms-flex-order: 1;
         order: 1;
         grid-column: span 2;
-        max-width: 70%;
+        max-width: 85%;
     }
 }
 
