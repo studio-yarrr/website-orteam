@@ -551,6 +551,7 @@ a:hover {
     }
 }
 
+.process__wrapper,
 .braces__wrapper,
 .video__wrapper,
 .team__wrapper {
@@ -561,7 +562,8 @@ a:hover {
 }
 
 @media (max-width: 1700px) {
-    .braces__wrapper,
+    .process__wrapper,
+  .braces__wrapper,
   .video__wrapper,
   .team__wrapper {
         max-width: 120rem;
@@ -569,7 +571,8 @@ a:hover {
 }
 
 @media (max-width: 1440px) {
-    .braces__wrapper,
+    .process__wrapper,
+  .braces__wrapper,
   .video__wrapper,
   .team__wrapper {
         max-width: 130rem;
@@ -577,7 +580,8 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .braces__wrapper,
+    .process__wrapper,
+  .braces__wrapper,
   .video__wrapper,
   .team__wrapper {
         position: relative;
