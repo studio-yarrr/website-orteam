@@ -64,6 +64,20 @@
   gap: 0.5rem;
   align-items: center;
   justify-content: flex-end;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.entry__text-container div h3,
+.entry__text-container div div.entry__slang h3,
+.entry__text-container div.entry__video2 h3,
+.entry__text-container div.entry__video1 h3 {
+  @include breakpoint($sm-bp) {
+    font-weight: 700;
+   font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
 }
 
 div .view-icon {

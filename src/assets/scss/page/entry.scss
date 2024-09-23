@@ -30,6 +30,14 @@
   }
 }
 
+.entry__text-container div h3,
+.entry__top-text h1 {
+  @include breakpoint($sm-bp) {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+}
+
 .entry__item-stars {
   width: 100%;
   display: flex;

@@ -11815,6 +11815,23 @@ select {
     justify-content: flex-end;
 }
 
+@media (max-width: 768px) {
+    .views__container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .entry__text-container div h3,
+  .entry__text-container div div.entry__slang h3,
+  .entry__text-container div.entry__video2 h3,
+  .entry__text-container div.entry__video1 h3 {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+}
+
 div .view-icon {
     width: 1.6rem;
     height: 1.6rem;
@@ -12313,6 +12330,14 @@ div .view-icon {
 @media (max-width: 1024px) {
     .entry__top-text {
         padding: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .entry__text-container div h3,
+  .entry__top-text h1 {
+        font-size: 2rem;
+        line-height: 2.6rem;
     }
 }
 
