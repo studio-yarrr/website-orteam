@@ -34,6 +34,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  gap: 0.3rem;
   @include breakpoint($xl-bp) {
     display: none;
   }
@@ -60,6 +61,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
+  @include breakpoint($sm-bp) {
+    display: flex;
+  }
 }
 
 .entry__bottom-level {
@@ -224,6 +228,13 @@
   text-align: center;
   margin-top: 2.4rem;
   color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.entry__slang-person .line {
+  margin-top: 2rem;
 }
 
 .entry__image-banner {
@@ -260,6 +271,9 @@
   background-color: var(--color1);
   padding: 1.2rem;
   top: 165%;
+  @include breakpoint($sm-bp) {
+    top: 118%;
+  }
   &.active {
     display: flex;
   }
@@ -267,6 +281,11 @@
 
 .entry_inf-data {
   position: relative;
+}
+
+
+.entry_inf-data:hover .view__inf {
+  display: flex;
 }
 
 .view__text {
@@ -282,4 +301,13 @@
 .day:hover {
   cursor: pointer;
   color: var(--color1);
+}
+
+.day::before {
+  content: '• ';
+  color: inherit;
+}
+
+.entry-subtitle {
+  margin-bottom: 2.4rem;
 }

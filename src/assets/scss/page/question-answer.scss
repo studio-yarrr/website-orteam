@@ -31,7 +31,6 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem;
-  gap: 2rem;
   width: 85rem;
   background: var(--white);
   border-radius: 1.2rem;
@@ -65,9 +64,6 @@
   gap: 0.5rem;
   align-items: center;
   justify-content: flex-end;
-  @include breakpoint($sm-bp) {
-    display: none;
-  }
 }
 
 div .view-icon {
@@ -90,6 +86,8 @@ div .view-icon {
   display: flex;
   gap: 2.4rem;
   align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .answer__person-name {
@@ -221,6 +219,7 @@ div .view-icon {
   padding-top: 0.4rem;
   @include breakpoint($sm-bp) {
     padding-top: 0rem;
+    line-height: 1.5rem;
   }
 }
 

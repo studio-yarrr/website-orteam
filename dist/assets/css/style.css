@@ -11140,6 +11140,9 @@ select {
     padding-top: 1.6rem;
     -ms-flex-align: center;
     align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
 }
 
 .about__slide-button {
@@ -11765,7 +11768,6 @@ select {
     -ms-flex-align: start;
     align-items: flex-start;
     padding: 2rem;
-    gap: 2rem;
     width: 85rem;
     background: var(--white);
     border-radius: 1.2rem;
@@ -11813,12 +11815,6 @@ select {
     justify-content: flex-end;
 }
 
-@media (max-width: 768px) {
-    .views__container {
-        display: none;
-    }
-}
-
 div .view-icon {
     width: 1.6rem;
     height: 1.6rem;
@@ -11848,6 +11844,8 @@ div .view-icon {
     gap: 2.4rem;
     -ms-flex-align: center;
     align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .answer__person-name {
@@ -12009,6 +12007,7 @@ div .view-icon {
 @media (max-width: 768px) {
     .checkbox-custom-label {
         padding-top: 0rem;
+        line-height: 1.5rem;
     }
 }
 
@@ -12323,6 +12322,7 @@ div .view-icon {
     display: flex;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    gap: 0.3rem;
 }
 
 @media (max-width: 1024px) {
@@ -12358,6 +12358,13 @@ div .view-icon {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .entry__top-level {
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 .entry__bottom-level {
@@ -12562,6 +12569,15 @@ div .view-icon {
     text-align: center;
     margin-top: 2.4rem;
     color: var(--grey);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.entry__slang-person .line {
+    margin-top: 2rem;
 }
 
 .entry__image-banner {
@@ -12609,6 +12625,12 @@ div .view-icon {
     top: 165%;
 }
 
+@media (max-width: 768px) {
+    .view__inf {
+        top: 118%;
+    }
+}
+
 .view__inf.active {
     display: -ms-flexbox;
     display: flex;
@@ -12616,6 +12638,11 @@ div .view-icon {
 
 .entry_inf-data {
     position: relative;
+}
+
+.entry_inf-data:hover .view__inf {
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .view__text {
@@ -12633,6 +12660,15 @@ div .view-icon {
 .day:hover {
     cursor: pointer;
     color: var(--color1);
+}
+
+.day::before {
+    content: "• ";
+    color: inherit;
+}
+
+.entry-subtitle {
+    margin-bottom: 2.4rem;
 }
 
 .aligners__banner {
