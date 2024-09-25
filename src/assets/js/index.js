@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const listDoctors = document.getElementById('listDoctors');
     const selectDoctors = document.getElementById('selectDoctors');
     const ulList = document.querySelectorAll('.doctors__item');
-    const doctorsCard = document.querySelectorAll('.doctors__content-item');
+    const doctorsCard = document.querySelectorAll('.doctors-page__content-item');
 
     ulList.forEach(li => {
         const option = document.createElement('option');
@@ -412,14 +412,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
             });
 
             doctorsCard.forEach(card => {
-                card.style.display = 'none';
                 const cardCategory = card.getAttribute('data-item');
-                card.style.display = cardCategory === selectedValue || selectedValue === 'all'
-                    ? 'flex'
-                    : 'none';
+                card.style.display = (cardCategory === selectedValue || selectedValue === 'all') ? 'flex' : 'none';
             });
         }
     }
+
 
     if (listDoctors || selectDoctors) {
         listDoctors.addEventListener('click', cardFilter);
