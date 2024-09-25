@@ -38,7 +38,8 @@
 
 .portfolio__content {
   margin-top: 5.6rem;
-  display: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio__content__top {

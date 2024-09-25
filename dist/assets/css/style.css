@@ -10268,7 +10268,10 @@ select {
 
 .portfolio__content {
     margin-top: 5.6rem;
-    display: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .portfolio__content__top {
