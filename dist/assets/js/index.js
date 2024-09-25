@@ -968,6 +968,33 @@ const blog = document.querySelector('.blog');
         });
     }
 
+    const requisitesPage = document.querySelector('.requisites__page');
 
+    if (requisitesPage) {
+        const printPage = document.querySelector('.printPage');
+        const downloadRequisites = document.querySelector('.downloadRequisites');
+
+        printPage.addEventListener('click', () => {
+            const originalContents = document.body.innerHTML;
+            const printContents = document.querySelector('.requisites__content').innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        });
+
+        downloadRequisites.addEventListener('click', () => {
+            const content = document.querySelector('.requisites__content').innerHTML;
+            const blob = new Blob([content], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'requisites.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+    }
 
 });

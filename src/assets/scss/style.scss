@@ -124,6 +124,12 @@ input {
   width: 100%;
 }
 
+button:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .wrapper {
   width: 100%;
   max-width: 121.6rem;
