@@ -9914,7 +9914,7 @@ select {
 
 @media (max-width: 768px) {
     .bread-crumbs {
-        margin: 2.4rem 0;
+        margin: 2rem;
     }
 }
 
@@ -10056,11 +10056,6 @@ select {
     }
 }
 
-.doctor-inf__img picture img {
-    -o-object-fit: inherit;
-    object-fit: inherit;
-}
-
 .doctor-inf__icon {
     width: 2.4rem;
     height: 2.4rem;
@@ -10115,6 +10110,7 @@ select {
     .doctor-qualification {
         padding: 1.2rem;
         margin-bottom: 6.4rem;
+        max-width: 32rem;
     }
 }
 

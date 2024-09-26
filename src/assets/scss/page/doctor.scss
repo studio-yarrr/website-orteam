@@ -18,7 +18,7 @@
   color: var(--grey);
   margin: 3.2rem auto 5.6rem;
   @include breakpoint($sm-bp) {
-    margin: 2.4rem 0;
+    margin: 2rem;
   }
 }
 
@@ -126,10 +126,6 @@
   }
 }
 
-.doctor-inf__img picture img {
-  object-fit: inherit;
-}
-
 .doctor-inf__icon {
   width: 2.4rem;
   height: 2.4rem;
@@ -171,6 +167,7 @@
   @include breakpoint($sm-bp) {
     padding: 1.2rem;
     margin-bottom: 6.4rem;
+    max-width: 32rem;
   }
 }
 
