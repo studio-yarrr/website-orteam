@@ -670,8 +670,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         function sortItems(order) {
             const items = Array.from(container.querySelectorAll('.answer__item'));
             items.sort((a, b) => {
-                const dateA = parseDate(a.querySelector('.day').textContent);
-                const dateB = parseDate(b.querySelector('.day').textContent);
+                const dateA = parseDate(a.querySelector('.js-day').textContent);
+                const dateB = parseDate(b.querySelector('.js-day').textContent);
                 return order === 'new' ? dateB - dateA : dateA - dateB;
             });
             items.forEach(item => container.appendChild(item));
