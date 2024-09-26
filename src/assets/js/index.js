@@ -993,11 +993,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const downloadRequisites = document.querySelector('.downloadRequisites');
 
         printPage.addEventListener('click', () => {
-            const originalContents = document.body.innerHTML;
             const printContents = document.querySelector('.requisites__content').innerHTML;
+            const originalContents = document.body.innerHTML;
             document.body.innerHTML = printContents;
             window.print();
             document.body.innerHTML = originalContents;
+            location.reload(); // Добавлено для восстановления событий
         });
 
         downloadRequisites.addEventListener('click', () => {
@@ -1015,6 +1016,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
+
     const entryChere = document.querySelector('.share');
 
     if (entryChere) {
@@ -1028,5 +1030,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 iconChere.classList.remove('active');
             }
         });
+    }
+
+    // изменение формы числа в секции статья
+
+    const dayElement = document.querySelector('.day');
+    if (dayElement) {
+        const dateParts = dayElement.textContent.split('.');
+        const date = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
+        const options = { month: 'long', year: 'numeric' };
+        const formattedDate = date.toLocaleDateString('ru-RU', options).replace(' ', ', ');
+
+        const mobileDateElement = document.createElement('div');
+        mobileDateElement.classList.add('mobile-day');
+        mobileDateElement.textContent = formattedDate;
+
+        dayElement.insertAdjacentElement('afterend', mobileDateElement);
     }
 });

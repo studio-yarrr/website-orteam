@@ -114,6 +114,7 @@ img {
   justify-content: center;
   display: none;
   transition: opacity 0.3s ease;
+
   &.active {
     display: flex;
     opacity: 1;
@@ -183,7 +184,8 @@ h1 {
     line-height: 2.8rem;
   }
 
-  @include breakpoint($sm-bp) {}
+  @include breakpoint($sm-bp) {
+  }
 }
 
 h2 {
@@ -191,7 +193,8 @@ h2 {
   font-weight: 800;
   font-size: 3.2rem;
   line-height: 3.8rem;
-  @include breakpoint($xl-bp) {}
+  @include breakpoint($xl-bp) {
+  }
 
   @include breakpoint($sm-bp) {
     font-size: 2.8rem;
@@ -356,7 +359,7 @@ a:hover {
 }
 
 .articles__slider,
-//.video__slider,
+  //.video__slider,
 .implantation__slider,
 .doctor-certificate__slider,
 .braces__swiper,
@@ -406,7 +409,6 @@ a:hover {
     padding-left: 2rem;
   }
 }
-
 
 
 .list-pagination {
@@ -466,9 +468,9 @@ a:hover {
 .swiper-button-prev:after,
 .swiper-button-next:after,
 .process-button-prev:after,
-.process-button-next:after{
-  font-size: 2rem!important;
-  color: var(--color1)!important;
+.process-button-next:after {
+  font-size: 2rem !important;
+  color: var(--color1) !important;
 }
 
 
@@ -549,7 +551,7 @@ a:hover {
 .reviews-button-next:hover,
 .braces-button-prev:hover,
 .reviews-button-prev:hover,
-.braces-button-next:hover{
+.braces-button-next:hover {
   cursor: pointer;
 }
 
@@ -630,7 +632,7 @@ a:hover {
   transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out, visibility 0.1s ease-out;
 }
 
-.questions__svg svg.active  {
+.questions__svg svg.active {
   stroke: #4A6169;
   transform: rotate(180deg);
 }
@@ -660,7 +662,6 @@ a:hover {
 }
 
 .pagination.cost-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
-
 .list-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   @include breakpoint($sm-bp) {
     bottom: 5%;
@@ -789,6 +790,24 @@ a:hover {
   }
 }
 
+.rating-result {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.rating-result div {
+  color: var(--grey);
+}
+
+.rating-result > div:before {
+  content: '★';
+  font-size: 2.6rem;
+  display: inline-block;
+}
+
+.rating-result > div.active {
+  color: var(--color2);
+}
 
 
 
@@ -817,7 +836,6 @@ a:hover {
 @import './lib/swiper.scss';
 
 /*--------- components -------------*/
-
 
 
 /*--------- popup -------------*/

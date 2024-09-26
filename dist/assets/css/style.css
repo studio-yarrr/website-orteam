@@ -1151,6 +1151,26 @@ a:hover {
     }
 }
 
+.rating-result {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.4rem;
+}
+
+.rating-result div {
+    color: var(--grey);
+}
+
+.rating-result > div:before {
+    content: "★";
+    font-size: 2.6rem;
+    display: inline-block;
+}
+
+.rating-result > div.active {
+    color: var(--color2);
+}
+
 :root {
     --f-spinner-width: 36px;
     --f-spinner-height: 36px;
@@ -12374,11 +12394,15 @@ div .view-icon {
     }
 }
 
-.entry__item-stars span {
-    display: block;
-    background: url(../images/star.svg) center/contain no-repeat;
-    width: 1.6rem;
-    height: 1.6rem;
+.entry__top-level .rating-result {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+@media (max-width: 1024px) {
+    .entry__top-level .rating-result {
+        display: none;
+    }
 }
 
 .entry__top-text {
@@ -12720,7 +12744,7 @@ div .view-icon {
 
 @media (max-width: 768px) {
     .day {
-        margin-top: 1rem;
+        display: none;
     }
 }
 
@@ -12730,6 +12754,17 @@ div .view-icon {
 
 .iconChere.active {
     display: block;
+}
+
+.mobile-day {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-day {
+        display: block;
+        margin-top: 1rem;
+    }
 }
 
 .aligners__banner {

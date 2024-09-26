@@ -48,12 +48,13 @@
   }
 }
 
-.entry__item-stars span {
-  display: block;
-  background: url(../images/star.svg) center / contain no-repeat;
-  width: 1.6rem;
-  height: 1.6rem;
+.entry__top-level .rating-result {
+  justify-content: flex-end;
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
 }
+
 
 .entry__top-text {
   display: flex;
@@ -325,7 +326,7 @@
 
 .day {
   @include breakpoint($sm-bp) {
-    margin-top: 1rem;
+    display: none;
   }
 }
 
@@ -333,5 +334,13 @@
   display: none;
   &.active {
     display: block;
+  }
+}
+
+.mobile-day {
+  display: none;
+  @include breakpoint($sm-bp) {
+    display: block;
+    margin-top: 1rem;
   }
 }
