@@ -5846,7 +5846,7 @@ form span.icon-button__bg.icon5.active {
 }
 
 @media (max-width: 768px) {
-    .banner__inf h1 .title-mob {
+    .banner__page h1 .title-mob {
         margin-left: -0.5rem;
     }
 }
@@ -10287,7 +10287,7 @@ select {
 
 @media (max-width: 1024px) {
     .portfolio {
-        padding: 3.2rem 0 7.2rem;
+        padding: 3.2rem 0 0;
     }
 }
 
@@ -10334,6 +10334,12 @@ select {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+    .portfolio__content {
+        margin-top: 0;
+    }
 }
 
 .portfolio__content__top {
@@ -10485,8 +10491,13 @@ select {
 
 @media (max-width: 768px) {
     .portfolio__hygiene-img {
-        height: 13rem;
+        height: 15rem;
     }
+}
+
+.portfolio__hygiene-img img {
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 
 .case__list {
@@ -12363,7 +12374,7 @@ div .view-icon {
     display: inline-block;
 }
 
-.hidden {
+.hidden-filter {
     display: none;
 }
 
@@ -12856,9 +12867,16 @@ div .view-icon {
 }
 
 @media (max-width: 768px) {
-    .aligners__title {
+    .aligners__title .title-mob,
+  .aligners__title {
         font-size: 2rem;
         line-height: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .aligners__title .title-mob {
+        max-width: 68%;
     }
 }
 

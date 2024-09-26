@@ -36,10 +36,17 @@
   }
 }
 
+.aligners__title .title-mob,
 .aligners__title {
   @include breakpoint($sm-bp) {
     font-size: 2rem;
     line-height: 2.4rem;
+  }
+}
+
+.aligners__title .title-mob{
+  @include breakpoint($sm-bp) {
+    max-width: 68%;
   }
 }
 

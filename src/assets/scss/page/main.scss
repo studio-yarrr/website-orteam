@@ -38,7 +38,7 @@
   }
 }
 
-.banner__inf h1 .title-mob {
+.banner__page h1 .title-mob {
   @include breakpoint($sm-bp) {
     margin-left: -0.5rem;
   }

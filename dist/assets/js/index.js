@@ -827,13 +827,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
                 if (!isBaseChecked && !isLittleChecked) {
-                    article.classList.remove('hidden');
+                    article.classList.remove('hidden-filter');
                 }
 
                 else if ((isBaseChecked && heading === 'base') || (isLittleChecked && heading === 'little')) {
-                    article.classList.remove('hidden');
+                    article.classList.remove('hidden-filter');
                 } else {
-                    article.classList.add('hidden');
+                    article.classList.add('hidden-filter');
                 }
             });
         }
@@ -986,6 +986,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
+    //скачать
+
     const requisitesPage = document.querySelector('.requisites__page');
 
     if (requisitesPage) {
@@ -1016,7 +1018,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
-
+// поделиться
     const entryChere = document.querySelector('.share');
 
     if (entryChere) {
