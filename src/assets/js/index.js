@@ -1015,12 +1015,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
-    const entryChere = document.querySelector('.entry__bottom-level--item');
+    const entryChere = document.querySelector('.share');
 
-    if(entryChere) {
+    if (entryChere) {
         const iconChere = document.querySelector('.iconChere');
         entryChere.addEventListener('click', () => {
-            iconChere.classList.add('active')
-        })
+            iconChere.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!entryChere.contains(event.target)) {
+                iconChere.classList.remove('active');
+            }
+        });
     }
 });
