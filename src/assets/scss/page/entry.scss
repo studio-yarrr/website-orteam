@@ -86,6 +86,9 @@
   @include breakpoint($sm-bp) {
     display: none;
   }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .entry__bottom-level--text {
@@ -323,5 +326,12 @@
 .day {
   @include breakpoint($sm-bp) {
     margin-top: 1rem;
+  }
+}
+
+.iconChere {
+  display: none;
+  &.active {
+    display: block;
   }
 }

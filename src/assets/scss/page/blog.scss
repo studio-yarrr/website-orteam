@@ -71,3 +71,12 @@
     gap: 2rem;
   }
 }
+
+.little-container,
+.base-container {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}

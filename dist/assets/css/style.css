@@ -12296,6 +12296,15 @@ div .view-icon {
     }
 }
 
+.little-container,
+.base-container {
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
 .entry__top {
     display: grid;
     grid-template-columns: 49rem 69rem;
@@ -12419,6 +12428,10 @@ div .view-icon {
     .entry__bottom-level--item {
         display: none;
     }
+}
+
+.entry__bottom-level--item:hover {
+    cursor: pointer;
 }
 
 .entry__bottom-level--text {
@@ -12709,6 +12722,14 @@ div .view-icon {
     .day {
         margin-top: 1rem;
     }
+}
+
+.iconChere {
+    display: none;
+}
+
+.iconChere.active {
+    display: block;
 }
 
 .aligners__banner {
