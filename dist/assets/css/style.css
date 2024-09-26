@@ -3896,7 +3896,7 @@ button.swiper-pagination-bullet {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color1);
+    background-color: var(--color2);
     transition: width 0.3s ease;
 }
 
@@ -5615,7 +5615,7 @@ form span.icon-button__bg.icon5.active {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color1);
+    background-color: var(--color2);
     transition: width 0.3s ease;
 }
 
