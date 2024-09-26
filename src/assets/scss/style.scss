@@ -359,10 +359,8 @@ a:hover {
 }
 
 .articles__slider,
-  //.video__slider,
 .implantation__slider,
 .doctor-certificate__slider,
-.braces__swiper,
 .process__swiper,
 .articles-swiper,
 .video-swiper,
@@ -392,6 +390,31 @@ a:hover {
   }
 }
 
+.braces__swiper {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  overflow: hidden;
+  @include breakpoint($cos_bp) {
+    max-width: 120rem;
+  }
+
+  @include breakpoint($xxl_bp) {
+    max-width: 130rem;
+  }
+
+  @include breakpoint($xl-bp) {
+    max-width: 100%;
+    padding-left: 5.5rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    position: relative;
+    width: calc(100vw - 1.5rem);
+    padding-left: 1rem;
+  }
+}
+
 .price-swiper,
 .list__container {
   @include breakpoint($xl-bp) {
@@ -403,10 +426,15 @@ a:hover {
   }
 }
 
-.process__wrapper,
 .details__wrapper {
   @include breakpoint($sm-bp) {
     padding-left: 2rem;
+  }
+}
+
+.process__wrapper {
+  @include breakpoint($sm-bp) {
+    padding-left: 1rem;
   }
 }
 

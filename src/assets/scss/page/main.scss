@@ -34,7 +34,13 @@
    text-align: left;
    position: absolute;
     top: 2%;
-    left: 4%;
+    left: 5%;
+  }
+}
+
+.banner__inf h1 .title-mob {
+  @include breakpoint($sm-bp) {
+    margin-left: -0.5rem;
   }
 }
 
@@ -912,11 +918,9 @@ a:hover .team__linc-text::before {
 }
 
 .standards__img-content {
-  @include breakpoint($sm-bp) {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .standards--darc {
@@ -943,7 +947,7 @@ a:hover .team__linc-text::before {
 .standards__item-img--border img {
   border-top-right-radius: 1.2rem;
   border-top-left-radius: 1.2rem;
-  object-fit: fill;
+  object-fit: contain;
   @include breakpoint($sm-bp) {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
@@ -1566,7 +1570,7 @@ a:hover .team__linc-text::before {
     margin-left: 5rem;
   }
   @include breakpoint($sm-bp) {
-    margin: 3rem 0;
+    margin: 2rem 0 1.4rem;
     max-width: 100%;
     padding: 0 2.4rem;
   }
@@ -1672,6 +1676,9 @@ a:hover .team__linc-text::before {
   @include breakpoint($xl-bp) {
     gap: 2rem;
     grid-template-columns: 1fr;
+  }
+  @include breakpoint($xl-bp) {
+    margin-top: 2.4rem;
   }
 }
 
@@ -2237,7 +2244,7 @@ a.articles__item:hover div.articles-text .articles__item-title {
   }
 }
 
-.analytics__text--visible:first-child {
+.analytics__text--visible:first-child::after {
   @include breakpoint($sm-bp) {
     content: "...";
   }
