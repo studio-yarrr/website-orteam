@@ -873,7 +873,7 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    right: 0;
+    right: 1%;
     gap: 2.4rem;
     -ms-flex-align: center;
     align-items: center;
@@ -5757,8 +5757,8 @@ form span.icon-button__bg.icon5.active {
 
 /*------pages------*/
 .banner {
-    background-image: url("../images/banner.jpg");
-    background-size: inherit;
+    background-image: url("../images/main-banner.png");
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 6rem 5.6rem 2.4rem;
     border-radius: 1.2rem;
@@ -5770,7 +5770,6 @@ form span.icon-button__bg.icon5.active {
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 10.4rem;
-    background-position: center;
 }
 
 @media (max-width: 1440px) {
@@ -7238,7 +7237,7 @@ a:hover .team__linc-text::before {
 }
 
 .process__slider {
-    height: 40rem;
+    height: 38rem;
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -7880,7 +7879,6 @@ a:hover .team__linc-text::before {
     display: -ms-flexbox;
     display: flex;
     height: 40rem;
-    width: 60rem;
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-direction: column;
@@ -8092,14 +8090,18 @@ a.analytics__button {
     gap: 1.6rem;
     -ms-flex-item-align: start;
     align-self: flex-start;
+    text-align: left;
 }
 
 .price__list-item {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-    align-items: center;
     gap: 1rem;
+}
+
+.price__list-item p {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
 }
 
 .price__item-svg {

@@ -567,7 +567,7 @@ a:hover {
 .braces__buttons {
   display: flex;
   position: absolute;
-  right: 0;
+  right: 1%;
   gap: 2.4rem;
   align-items: center;
   @include breakpoint($xl-bp) {
