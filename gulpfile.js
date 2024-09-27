@@ -65,10 +65,12 @@ const path = {
 
 /* Tasks */
 function downloads(cb) {
-    return src(path.src.downloads, { base: srcPath + "assets/downloads/"})
-        .pipe(dest(path.build.downloads)) // Копируем файлы в папку dist
+    return src(path.src.downloads) // Убедитесь, что здесь правильный путь
+        .pipe(dest(path.build.downloads)) // Путь для сохранения файлов
+        .on('end', cb) // Обязательно вызывайте cb для завершения задачи
         .pipe(browserSync.reload({ stream: true }));
 }
+
 
 function serve() {
   browserSync.init({
