@@ -784,7 +784,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const checkboxes = document.querySelectorAll('.checkbox-custom');
         const itemsAnswer = document.querySelectorAll('.articles__item');
 
-        if(applyButton) {
+        if (applyButton) {
             applyButton.addEventListener('click', () => {
                 const selectedCategories = Array.from(checkboxes)
                     .filter(checkbox => checkbox.checked)
@@ -808,7 +808,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             });
         });
 
-        document.getElementById('selectAllHead').addEventListener('change', function() {
+        document.getElementById('selectAllHead').addEventListener('change', function () {
             const checkboxes = document.querySelectorAll('#headingHeadBlog .checkbox-custom');
             checkboxes.forEach(checkbox => checkbox.checked = this.checked);
         });
@@ -828,9 +828,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 if (!isBaseChecked && !isLittleChecked) {
                     article.classList.remove('hidden-filter');
-                }
-
-                else if ((isBaseChecked && heading === 'base') || (isLittleChecked && heading === 'little')) {
+                } else if ((isBaseChecked && heading === 'base') || (isLittleChecked && heading === 'little')) {
                     article.classList.remove('hidden-filter');
                 } else {
                     article.classList.add('hidden-filter');
@@ -845,6 +843,45 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
         updateArticlesVisibility();
+
+// фильтр новые и папулярные
+        const newBlogRadio = document.getElementById('newBlog');
+        const popularBlogRadio = document.getElementById('popularBlog');
+        const articlesContainer = document.getElementById('articlesContainer');
+        const articlesItem = Array.from(document.querySelectorAll('.articles__item'));
+
+        function filterArticlesBlog() {
+            let sortedArticlesBlog = [];
+
+            if (newBlogRadio.checked) {
+
+                sortedArticlesBlog = articlesItem.filter(article => article.dataset.status === 'blogNew');
+
+                const popularArticles = articlesItem.filter(article => article.dataset.status === 'blogPopular');
+                sortedArticlesBlog = sortedArticlesBlog.concat(popularArticles);
+            } else if (popularBlogRadio.checked) {
+
+                sortedArticlesBlog = articlesItem.filter(article => article.dataset.status === 'blogPopular');
+
+                const newArticles = articlesItem.filter(article => article.dataset.status === 'blogNew');
+                sortedArticlesBlog = sortedArticlesBlog.concat(newArticles);
+            } else {
+
+                sortedArticlesBlog = articlesItem;
+            }
+
+            articlesContainer.innerHTML = '';
+
+            sortedArticlesBlog.forEach(article => {
+                articlesContainer.appendChild(article);
+            });
+        }
+
+        newBlogRadio.addEventListener('change', filterArticlesBlog);
+        popularBlogRadio.addEventListener('change', filterArticlesBlog);
+
+
+        filterArticlesBlog();
 
     }
 
@@ -956,6 +993,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     const standards = document.querySelectorAll('.standards');
 
+    // стандарт
     if (standards) {
         const changeOrder = document.querySelectorAll('.changeOrder');
 
