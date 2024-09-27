@@ -31,7 +31,8 @@ const path = {
     images: distPath + "assets/images/",
     fonts: distPath + "assets/fonts/",
     videos: distPath + "assets/videos/",
-    audio: distPath + "assets/audio/",// Добавлено
+    audio: distPath + "assets/audio/",
+    downloads: distPath + "assets/downloads/",// Добавлено
   },
   src: {
     html: srcPath + "*.html",
@@ -44,6 +45,7 @@ const path = {
     fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
     videos: srcPath + "assets/videos/**/*.{mp4,webm}",
     audio: srcPath + "assets/audio/**/*.{mp3,webm}",// Добавлено
+    downloads: srcPath + "assets/downloads/**/*.{pdf}", // Путь к PDF
   },
   watch: {
     html: srcPath + "**/*.html",
@@ -56,11 +58,17 @@ const path = {
     fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
     videos: srcPath + "assets/videos/**/*.{mp4,webm}",
     audio: srcPath + "assets/audio/**/*.{mp3,webm}",// Добавлено
+    downloads: srcPath + "assets/downloads/**/*.{pdf}",
   },
   clean: "./" + distPath,
 };
 
 /* Tasks */
+function downloads(cb) {
+    return src(path.src.downloads, { base: srcPath + "assets/downloads/"})
+        .pipe(dest(path.build.downloads)) // Копируем файлы в папку dist
+        .pipe(browserSync.reload({ stream: true }));
+}
 
 function serve() {
   browserSync.init({
@@ -180,11 +188,12 @@ function watchFiles() {
   watch([path.watch.videos], videos);
   watch([path.watch.videos], audio);// Добавлено
   watch([path.watch.fonts], fonts);
+  watch([path.watch.downloads], downloads);
 }
 
 const build = series(
   clean,
-  parallel(html, php, css, js, images, videos, audio, fonts) // Добавлено php, audio
+  parallel(html, php, css, js, images, videos, audio, fonts, downloads ) // Добавлено php, audio
 );
 const dev = parallel(build, watchFiles, serve);
 
@@ -202,3 +211,4 @@ exports.clean = clean;
 exports.build = build;
 exports.dev = dev;
 exports.default = dev;
+exports.downloads = downloads;
